@@ -1,10 +1,19 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: About Us
 templateClass: tmpl-post
 menu:
   visible: true
   order: 2
 ---
 
-I am a person that writes stuff.
+Serge Egelman
+
+Elena Glassman
+
+Fredrik Heiding
+
+Stuart Schechter
+
+Chelse Swoopes
+

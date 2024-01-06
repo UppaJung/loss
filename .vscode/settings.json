@@ -4,5 +4,15 @@
   "deno.unstable": true,
   "deno.suggest.imports.hosts": {
     "https://deno.land": true
-  }
+  },
+  "cSpell.words": [
+    "Chelse",
+    "Egelman",
+    "Fredrik",
+    "Heiding",
+    "lume",
+    "pagefind",
+    "Qualtrics",
+    "Swoopes"
+  ]
 }

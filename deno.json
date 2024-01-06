@@ -1,11 +1,18 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.19.1/"
+    "lume/": "https://deno.land/x/lume@v2.0.0/"
   },
   "lock": false,
   "tasks": {
+    "analyze-watch": "deno run --watch --allow-read --allow-write analysis-src/main.ts",
+    "analyze": "deno run --allow-read --allow-write analysis-src/main.ts",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-inferrable-types"]
+    }
   }
 }
