@@ -38,6 +38,7 @@ site
     items: {
       title: "=title",
       content: "$.post-body",
+      description: "=description",
     },
   }))
   .use(resolveUrls())

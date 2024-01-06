@@ -4,7 +4,7 @@ export default function ({ search }, { url }) {
   const result = [];
 
   // Search tags
-  for (const tag of search.tags("type=posts")) {
+  for (const tag of search.values("type=posts")) {
     result.push({
       label: `Tag: ${tag}`,
       search: tag,

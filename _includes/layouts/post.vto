@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/base.vto
 bodyClass: body-post
 ---
 <article class="post" data-pagefind-body>
@@ -7,18 +7,18 @@ bodyClass: body-post
     <h1 class="post-title">{{ title }}</h1>
 
     <nav class="post-tags">
-    {% for tag in tags %}
+    {{ for tag of tags }}
       <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>
-    {% endfor %}
+    {{ /for }}
     </nav>
 
-    <time class="post-date" datetime="{{ date | date('DATETIME') }}">
-      {{ date | date('HUMAN_DATE') }}
+    <time class="post-date" datetime="{{ date |> date('DATETIME') }}">
+      {{ date |> date('HUMAN_DATE') }}
     </time>
   </div>
 
   <div class="post-body">
-    {{ content | safe }}
+    {{ content |> safe }}
   </div>
 </article>
 
@@ -26,18 +26,18 @@ bodyClass: body-post
 
 <nav class="post-navigation">
   <ul>
-    {%- set previousPost = search.previousPage(url, "type=posts") %}
-    {%- if previousPost %}
+    {{ set previousPost = search.previousPage(url, "type=posts") }}
+    {{ if previousPost }}
     <li>
       ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
     </li>
-    {% endif %}
+    {{ /if }}
 
-    {%- set nextPost = search.nextPage(url, "type=posts") %}
-    {%- if nextPost %}
+    {{ set nextPost = search.nextPage(url, "type=posts") }}
+    {{ if nextPost }}
     <li>
       <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
     </li>
-    {% endif %}
+    {{ /if }}
   </ul>
 </nav>

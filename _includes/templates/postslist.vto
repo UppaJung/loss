@@ -1,0 +1,24 @@
+<ul class="postList">
+  {{ for data of postslist }}
+  <li class="postList-post">
+    <a href="{{ data.url }}" class="postList-title"{{ if data.url === url }} aria-current="page"{{ /if }}>
+      {{ if data.title }}
+        <strong>{{ data.title }}</strong>
+      {{ else }}
+        <code>{{ post.url }}</code>
+      {{ /if }}
+    </a>
+
+    <time class="postList-date" datetime="{{ data.date |> date('DATETIME') }}">
+      {{ data.date |> date('HUMAN_DATE') }}
+    </time>
+
+    {{ for tag of data.tags }}
+    {{ set page = search.page("type=tag tag='" + tag + "'") }}
+    {{ if page }}
+    <a href="{{ page.data.url  }}" class="tag">{{ tag }}</a>
+    {{ /if }}
+    {{ /for }}
+  </li>
+{{ /for }}
+</ul>

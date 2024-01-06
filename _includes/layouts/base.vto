@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or site.title }}</title>
-    <meta name="description" content="{{ description or site.description }}">
+    <title>{{ title ?? site.title }}</title>
+    {{# <meta name="description" content="{{ description || site.description }}"> #}}
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
@@ -17,13 +17,13 @@
       </a>
 
       <ul class="navbar-links">
-      {%- for entry in search.pages("menu.visible=true", "menu.order") %}
+      {{ for data of search.pages("menu.visible=true", "menu.order") }}
         <li>
-          <a href="{{ entry.data.url }}"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-            {{ entry.data.menu.title or entry.data.title }}
+          <a href="{{ data.url }}"{{ if data.url == url }} aria-current="page"{{ /if }}>
+            {{ data.menu.title ?? data.title }}
           </a>
         </li>
-      {%- endfor %}
+      {{ /for }}
       </ul>
 
       <div class="navbar-search">
@@ -32,7 +32,7 @@
     </nav>
 
     <main class="{{ bodyClass }}">
-      {{ content | safe }}
+      {{ content |> safe }}
     </main>
 
     <footer></footer>

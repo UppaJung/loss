@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/post.vto
 title: About Us
 templateClass: tmpl-post
 menu:

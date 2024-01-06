@@ -1,0 +1,10 @@
+---
+layout: layouts/base.vto
+bodyClass: body-tag
+title: Tags
+---
+<h1>Tags</h1>
+
+{{ for data of search.pages("type=tag", "tag") }}
+  <a href="{{ data.url }}" class="tag is-big">{{ data.tag }}</a>
+{{ /for }}
