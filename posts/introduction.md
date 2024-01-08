@@ -1,6 +1,5 @@
 ---
 title: Project Introduction
-description: Why are we doing this?
 templateEngine: [vto, md]
 date: Git Last Modified
 tags:
