@@ -1,6 +1,7 @@
 .DS_Store
 _site
 _bin
-/raw-survey-data
+/analysis-input-raw
+/analysis-output
 /generated
 /out
