@@ -2,8 +2,9 @@ import { AnswerToMatchingQuestionList, AnswerToMatchingQuestion, decodeMatchingQ
 import { countAndPercentMacroSet, numberMacro } from "../latex.ts";
 import { tallyResponses, TotalAnswered } from "../utilities/tallyResponses.ts";
 import { aggregateResponses } from "../utilities/aggregateResponses.ts";
+import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
 
-export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: Record<string, string>[]) => {
+export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: AugmentedSurveyResponses) => {
   const macros = [] as string[];
 
   for (const [questionName, questionId] of MatchingScenariosLabelToId) {

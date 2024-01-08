@@ -3,10 +3,11 @@ import { ChartColors, transparentize } from "https://deno.land/x/fresh_charts@0.
 import { decodeMatchingQuestion, MatchingScenariosLabelToId, AnswerToMatchingQuestionList } from "../decode-questions/matching-question.ts";
 import { TotalAnswered, tallyResponses } from "../utilities/tallyResponses.ts";
 import { filterNull } from "../utilities/filterNull.ts";
+import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
-export const graphScenarioBarChart = (outPath: string, responses: Record<string, string>[]) => {
+export const graphScenarioBarChart = (outPath: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = MatchingScenariosLabelToId.map( ([label, ]) => label );
 	const scenarioTallies = MatchingScenariosLabelToId.map( ([_, scenarioId]) => 

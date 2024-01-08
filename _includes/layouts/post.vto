@@ -15,6 +15,13 @@ bodyClass: body-post
     <time class="post-date" datetime="{{ date |> date('DATETIME') }}">
       {{ date |> date('HUMAN_DATE') }}
     </time>
+
+    {{ if it.author }}
+      <div>
+        <label>Posted by:&nbsp;</label>
+        <span id={author}>{{ it.author }}
+      </span>
+    {{ /if }}
   </div>
 
   <div class="post-body">

@@ -1,8 +1,8 @@
-export const getPathOfMostRecentInputTsvFile = async (inputDataPath = "./raw-survey-data") => {
+export const getPathOfMostRecentInputTsvFile = async (inputDataPath = "./analysis-input-raw") => {
   const tsvFileEntries = (await Array.fromAsync(Deno.readDir(inputDataPath)))
     .filter(entry => entry.isFile && entry.name.endsWith(".tsv"));
   const tsvFileEntriesWithDate = await Promise.all(tsvFileEntries.map(async (entry) => {
-    return { ...entry, date: (await Deno.stat(`./raw-survey-data/${entry.name}`)).mtime };
+    return { ...entry, date: (await Deno.stat(`${inputDataPath}/${entry.name}`)).mtime };
   }));
   const [mostRecentTsvFileEntry] = tsvFileEntriesWithDate.sort(
     (a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0)

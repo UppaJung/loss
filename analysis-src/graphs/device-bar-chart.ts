@@ -3,10 +3,11 @@ import { ChartColors, transparentize } from "https://deno.land/x/fresh_charts@0.
 import { tallyResponses } from "../utilities/tallyResponses.ts";
 import { filterNull } from "../utilities/filterNull.ts";
 import { decodePhoneTypeQuestion, decodeTabletTypeQuestion, decodeComputerTypeQuestion, PhoneTypeList, TabletTypeList, ComputerTypeList } from "../decode-questions/device.ts";
+import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
-export const graphDeviceBarChart = (outPath: string, responses: Record<string, string>[]) => {
+export const graphDeviceBarChart = (outPath: string, responses: AugmentedSurveyResponses) => {
 
 	const [hackedTallies, lockedTallies] = (["hacked", "locked"] as const).map( scenario => tallyResponses(filterNull(responses.map( response => 
 		decodePhoneTypeQuestion(response[`${scenario}-phone-type`]) ??
@@ -26,7 +27,7 @@ export const graphDeviceBarChart = (outPath: string, responses: Record<string, s
 		backgroundColor: ChartColors.Blue,
 	}];
 	// console.log(`datasets`, datasets);
-	Deno.writeTextFileSync(`${outPath}device-bar-chart.svg`, chart({
+	Deno.writeTextFileSync(`${outPath}/device-bar-chart.svg`, chart({
 		type: "bar", height: 400, width: 800,
 		data: {
 			labels,
