@@ -22,7 +22,7 @@ jobs:
           deno-version: v1.39.2
 
       - name: Build site
-        run: deno task build --location=https://uppajung.github.io/loss-blog-lume/
+        run: deno task build --location=/loss/
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
