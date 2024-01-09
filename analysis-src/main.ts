@@ -1,11 +1,10 @@
 import { generateScenarioMatchingQuestionMacros } from "./data-macros/scenario-matching-question.ts";
 import { getPathOfMostRecentInputTsvFile } from "./utilities/getPathOfMostRecentInputTsvFile.ts";
-import { graphScenarioBarChartData } from "./graph-data/scenario-matching-question.ts";
 import { readQualtricsDataTabSeparatedNewLinesRemovedUTF16 } from "./utilities/readQualtricsDataTabSeparatedNewLinesRemovedUTF16.ts";
 import { SurveyKey, augmentSurveyResponses } from "./SurveyResponse.ts";
 import { generateLossStoryMarkdown } from "./markdown/loss-stories.ts";
 import { generateSummaryStatistics } from "./data/summary-statistics.ts";
-import { graphDeviceBarChartData } from "./graph-data/device-bar-chart.ts";
+import { generateGraphData } from "./graph-data/index.ts";
 
 const getResponsesFromMostRecentInputDataFile = async () => {
   const fileInfo = await getPathOfMostRecentInputTsvFile();
@@ -25,14 +24,13 @@ const analyzeData = async () => {
   console.log(`Analyzing ${baseName} with ${finishedResponses.length} finished responses of ${responses.length} total.}`);
 
   const cohort = baseName;
-  const graphDataPath = makePath(`analysis-src/generated-data/${cohort}/graph-inputs`);
-  graphScenarioBarChartData(graphDataPath, augmentedSurveyResponses);
-  graphDeviceBarChartData(graphDataPath, augmentedSurveyResponses);
-
+  generateGraphData(cohort, augmentedSurveyResponses);
+  
   const lumeDataPath = makePath(`analysis-src/generated-data/${cohort}/lume`);
   generateSummaryStatistics(lumeDataPath, augmentedSurveyResponses);
   const latexPath = makePath(`analysis-output/latex/${cohort}`);
   generateScenarioMatchingQuestionMacros(latexPath, augmentedSurveyResponses);
+  
   const markdownPath = makePath(`analysis-src/generated-data/${cohort}/markdown`);
   generateLossStoryMarkdown(markdownPath, augmentedSurveyResponses);
 }

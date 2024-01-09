@@ -1,4 +1,5 @@
 import { answerSpec } from "../utilities/validateAnswer.ts";
+import { ScenarioLabel } from "./scenario-labels.ts";
 
 export enum AnswerToMatchingQuestion {
   MatchedTopThree = 'Original',
@@ -17,14 +18,14 @@ export const [decodeMatchingQuestion, AnswerToMatchingQuestionList] = answerSpec
 ]);
 
 export const MatchingScenariosLabelToId = [
-  ['Hacked Device', 'hacked-device'],
-  ['Locked Device', 'locked-device'],
-  ['Hacked Acct', 'hacked-acct'],
-  ['Locked Acct', 'locked-acct'],
-  ['Hacked Social', 'hacked-soc'],
-  ['Locked Social', 'locked-soc'],
-  ['Hacked Financial', 'hacked-bank'],
-  ['Locked Financial', 'locked-bank'],
-  ['Hacked Pwds', 'hacked-pwds'],
-  ['Locked Pwds', 'locked-pwds'],
+  [ScenarioLabel.HackedDevice, 'hacked-device'],
+  [ScenarioLabel.LockedDevice, 'locked-device'],
+  [ScenarioLabel.HackedAcct, 'hacked-acct'],
+  [ScenarioLabel.LockedAcct, 'locked-acct'],
+  [ScenarioLabel.HackedSocial, 'hacked-soc'],
+  [ScenarioLabel.LockedSocial, 'locked-soc'],
+  [ScenarioLabel.HackedFinancial, 'hacked-bank'],
+  [ScenarioLabel.LockedFinancial, 'locked-bank'],
+  [ScenarioLabel.HackedPwds, 'hacked-pwds'],
+  [ScenarioLabel.LockedPwds, 'locked-pwds'],
 ] as const;
