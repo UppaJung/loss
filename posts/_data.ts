@@ -1,0 +1,1 @@
+export {data} from "../analysis-src/generated-data/Pilot6/lume/data.ts";

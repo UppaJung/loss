@@ -1,10 +1,11 @@
 import { generateScenarioMatchingQuestionMacros } from "./data-macros/scenario-matching-question.ts";
 import { getPathOfMostRecentInputTsvFile } from "./utilities/getPathOfMostRecentInputTsvFile.ts";
-import { graphScenarioBarChart } from "./graphs/scenario-matching-question.ts";
+import { graphScenarioBarChartData } from "./graph-data/scenario-matching-question.ts";
 import { readQualtricsDataTabSeparatedNewLinesRemovedUTF16 } from "./utilities/readQualtricsDataTabSeparatedNewLinesRemovedUTF16.ts";
-import { graphDeviceBarChart } from "./graphs/device-bar-chart.ts";
 import { SurveyKey, augmentSurveyResponses } from "./SurveyResponse.ts";
 import { generateLossStoryMarkdown } from "./markdown/loss-stories.ts";
+import { generateSummaryStatistics } from "./data/summary-statistics.ts";
+import { graphDeviceBarChartData } from "./graph-data/device-bar-chart.ts";
 
 const getResponsesFromMostRecentInputDataFile = async () => {
   const fileInfo = await getPathOfMostRecentInputTsvFile();
@@ -22,12 +23,17 @@ const analyzeData = async () => {
   const finishedResponses = responses.filter(response => (response.Finished ?? "").toLocaleLowerCase() === "true");
   const augmentedSurveyResponses = augmentSurveyResponses(finishedResponses);;
   console.log(`Analyzing ${baseName} with ${finishedResponses.length} finished responses of ${responses.length} total.}`);
-  const latexPath = makePath(`analysis-output/latex/${baseName}`);
+
+  const cohort = baseName;
+  const graphDataPath = makePath(`analysis-src/generated-data/${cohort}/graph-inputs`);
+  graphScenarioBarChartData(graphDataPath, augmentedSurveyResponses);
+  graphDeviceBarChartData(graphDataPath, augmentedSurveyResponses);
+
+  const lumeDataPath = makePath(`analysis-src/generated-data/${cohort}/lume`);
+  generateSummaryStatistics(lumeDataPath, augmentedSurveyResponses);
+  const latexPath = makePath(`analysis-output/latex/${cohort}`);
   generateScenarioMatchingQuestionMacros(latexPath, augmentedSurveyResponses);
-  const graphPath = makePath(`analysis-output/graphs/${baseName}`);
-  graphScenarioBarChart(graphPath, augmentedSurveyResponses);
-  graphDeviceBarChart(graphPath, augmentedSurveyResponses);
-  const markdownPath = makePath(`analysis-output/markdown/${baseName}`);
+  const markdownPath = makePath(`analysis-src/generated-data/${cohort}/markdown`);
   generateLossStoryMarkdown(markdownPath, augmentedSurveyResponses);
 }
 

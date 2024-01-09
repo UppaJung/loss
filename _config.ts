@@ -9,6 +9,9 @@ import pageFind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
 
+import { generateGraphs } from "./graphing/generate-graphs/index.ts";
+generateGraphs();
+
 const site = lume({
   location: new URL("https://example.com/"),
 });

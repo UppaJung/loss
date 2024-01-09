@@ -8,6 +8,7 @@ tags:
   - methodology
 ---
 
+There were {{ data.numberOfParticipants }} participants in this pilot.
 
 <figure>
   <img src="/graphs/pilot6/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
@@ -20,4 +21,4 @@ tags:
 </figure>
 
 
-{{ include "../analysis-output/markdown/Pilot6/loss-stories.md" }}
+{{ include "../analysis-src/generated-data/Pilot6/markdown/loss-stories.md" }}
