@@ -3,5 +3,6 @@ _site
 _bin
 /analysis-input-raw
 /analysis-output
-/generated
+/generated-by-analysis/latex
+/graphs
 /out
