@@ -1,6 +1,6 @@
 ---
 title: Pilot 6
-author: <a href="https://www.stuartschechter.org">Stuart</a>
+# author: <a href="https://www.stuartschechter.org">Stuart</a>
 templateEngine: [vto, md]
 date: Git Last Modified
 tags:
