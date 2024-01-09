@@ -58,7 +58,7 @@ deno task build
 
 `index.vto` - The site's home page in vento format
 
-`posts` - Contains blog posts
+`posts/` - Contains blog posts
 
 `404.md` - The blog's 404 not found page
 
