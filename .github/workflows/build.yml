@@ -19,7 +19,7 @@ jobs:
 
       - uses: denoland/setup-deno@v1 
         with:
-          deno-version: v2.0.2
+          deno-version: v1.39.2
 
       - name: Build site
         run: deno task build --location=https://uppajung.github.io/loss-blog-lume/
