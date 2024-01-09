@@ -4,14 +4,14 @@
 export const labels = [
 	"Hacked Device",
 	"Locked Device",
-	"Hacked Acct",
-	"Locked Acct",
+	"Hacked Account",
+	"Locked Account",
 	"Hacked Social",
 	"Locked Social",
 	"Hacked Financial",
 	"Locked Financial",
-	"Hacked Pwds",
-	"Locked Pwds"
+	"Hacked Passwords",
+	"Locked Passwords"
 ];
 export const absoluteData = {
 	"Within Year": [

@@ -6,7 +6,7 @@ import { AnswerToRecencyQuestion, AnswerToRecencyQuestionList } from "../../anal
 
 export const graphScenarioRecencyBarChart = (outputPath: string, labels: string[], data: Record<AnswerToRecencyQuestion, readonly number[]>) => {
 	const datasets = AnswerToRecencyQuestionList.map( (answer, index) => {
-		const color = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, "rgb(224 ,224 ,224)", "rgb(248, 248, 248)", ChartColors.Yellow][index];
+		const color = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, ChartColors.Green, ChartColors.Purple, ChartColors.Grey][index];
 		return {
 			label: answer,
 			data: data[answer],
