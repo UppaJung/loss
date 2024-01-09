@@ -9,8 +9,9 @@ import pageFind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
 
-import { generateGraphs } from "./graphing/generate-graphs/index.ts";
-generateGraphs();
+// Generate graphs that need not be stored in the repository but are needed for the blog.
+import { generateBlogInputs } from "./src/generate-blog-inputs/index.ts";
+generateBlogInputs();
 
 const site = lume({
   location: new URL("https://example.com/"),
@@ -19,7 +20,7 @@ const site = lume({
 site
   .ignore("README.md")
   .copy("img")
-  .copy("analysis-output/graphs", "graphs")
+  .copy("graphs")
   .use(postcss())
   .use(date())
   .use(codeHighlight())

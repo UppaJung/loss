@@ -1,6 +1,6 @@
 import { chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
-import { AnswerToMatchingQuestionList } from "../../analysis-src/decode-questions/matching-question.ts";
-import type { AnswerToMatchingQuestion } from "../../analysis-src/decode-questions/matching-question.ts";
+import { AnswerToMatchingQuestionList } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
+import type { AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 

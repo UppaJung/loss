@@ -27,4 +27,4 @@ There were {{ data.numberOfParticipants }} participants in this pilot.
 </figure>
 
 
-{{ include "../analysis-src/generated-data/Pilot6/markdown/loss-stories.md" }}
+{{ include "../generated-by-analysis/Pilot6/markdown/loss-stories.md" }}

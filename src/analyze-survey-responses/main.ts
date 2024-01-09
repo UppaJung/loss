@@ -26,12 +26,12 @@ const analyzeData = async () => {
   const cohort = baseName;
   generateGraphData(cohort, augmentedSurveyResponses);
   
-  const lumeDataPath = makePath(`analysis-src/generated-data/${cohort}/lume`);
+  const lumeDataPath = makePath(`generated-by-analysis/${cohort}/lume`);
   generateSummaryStatistics(lumeDataPath, augmentedSurveyResponses);
-  const latexPath = makePath(`analysis-output/latex/${cohort}`);
+  const latexPath = makePath(`generated-by-analysis/latex/${cohort}`);
   generateScenarioMatchingQuestionMacros(latexPath, augmentedSurveyResponses);
   
-  const markdownPath = makePath(`analysis-src/generated-data/${cohort}/markdown`);
+  const markdownPath = makePath(`generated-by-analysis/${cohort}/markdown`);
   generateLossStoryMarkdown(markdownPath, augmentedSurveyResponses);
 }
 

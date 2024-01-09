@@ -1,1 +1,1 @@
-export {data} from "../analysis-src/generated-data/Pilot6/lume/summary-statistics-data.ts";
+export {data} from "../generated-by-analysis/Pilot6/lume/summary-statistics-data.ts";

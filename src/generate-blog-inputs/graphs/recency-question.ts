@@ -1,6 +1,6 @@
 import { chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { ChartColors, transparentize } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
-import { AnswerToRecencyQuestion, AnswerToRecencyQuestionList } from "../../analysis-src/decode-questions/recency-question.ts";
+import { AnswerToRecencyQuestion, AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
