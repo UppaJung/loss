@@ -53,9 +53,15 @@ deno task build
 ##### Lume 2.0.2 blog files
 
 `_config.ts` - Blog configuration code
+
 `data/site.yaml` - Blog configuration data
+
 `index.vto` - The site's home page in vento format
+
 `posts` - Contains blog posts
+
 `404.md` - The blog's 404 not found page
+
 `archive.page.js` - Javascript that products a summary of all posts hosted in the blog's `posts` directory
+
 `archive.page.js` - Javascript that products a summary of all posts hosted in the blog's `posts` directory
