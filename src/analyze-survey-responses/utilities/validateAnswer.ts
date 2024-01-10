@@ -14,7 +14,9 @@ export function validateAnswer<T extends string = string>(specifiers: AnswerSpec
     }, undefined)
       ?? ((answer === "" || returnUndefinedIfValueUnexpected) ? undefined :
       (() => {
-          throw new Error(`Answer "${answer}" did not map to any of ${specifiers.map(([_, response]) => `"${response}"`).join(", ")}`);
+        console.log((`Answer "${answer}" did not map to any of ${specifiers.map(([spec, response]) => `'${spec.toString()}'=>'${response}'`).join(", ")}`));
+        return undefined;
+//          throw new Error(`Answer "${answer}" did not map to any of ${specifiers.map(([_, response]) => `"${response}"`).join(", ")}`);
       })());
     // console.log(`validated ${answer} as ${result ?? "?"} from ${specifiers.map(([_, response]) => `"${response}"`).join(", ")}`);
     return result;

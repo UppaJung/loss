@@ -8,6 +8,8 @@ If you do not have deno, you will need to [install deno](https://docs.deno.com/r
 
 To analyze the raw data, you will need access to the tab-separated value exports generated from Qualtrics. They are generated with line-breaks removed. (We are not committing into the public repository lest we risk accidentally exposing PII that might have snuck in there.)
 
+<img style="max-height: 50vh; margin-left: auto; margin-right: auto; display: flex;" src="./README/Exporting.png">
+
  - Create an `analysis-input-raw` directory and copy the .TSV files there. Current data files required for analysis are:
     - `Pilot6.tsv`
 

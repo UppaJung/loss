@@ -21,7 +21,7 @@ const analyzeData = async () => {
   const {responses, baseName} = await getResponsesFromMostRecentInputDataFile();
   const finishedResponses = responses.filter(response => (response.Finished ?? "").toLocaleLowerCase() === "true");
   const augmentedSurveyResponses = augmentSurveyResponses(finishedResponses);;
-  console.log(`Analyzing ${baseName} with ${finishedResponses.length} finished responses of ${responses.length} total.}`);
+  console.log(`Analyzing ${baseName} with ${finishedResponses.length} finished responses of ${responses.length} total.`);
 
   const cohort = baseName;
   generateGraphData(cohort, augmentedSurveyResponses);

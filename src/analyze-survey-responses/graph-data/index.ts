@@ -1,5 +1,6 @@
 import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
 import { makePath } from "../main.ts";
+import { accountTypeData } from "./account-type.ts";
 import { graphDeviceBarChartData } from "./device-bar-chart.ts";
 import { graphScenarioBarChartData } from "./scenario-matching-question.ts";
 import { graphScenarioRecencyBarChartData } from "./scenario-recency.ts";
@@ -11,4 +12,5 @@ export const generateGraphData = (cohort: string, augmentedSurveyResponses: Augm
   graphScenarioBarChartData(graphDataPath, augmentedSurveyResponses);
   graphDeviceBarChartData(graphDataPath, augmentedSurveyResponses);
   graphScenarioRecencyBarChartData(graphDataPath, augmentedSurveyResponses);
+  accountTypeData(graphDataPath, augmentedSurveyResponses);
 }
