@@ -19,7 +19,7 @@ export const graphDeviceBarChart = (outputPath: string, labels: string[], data: 
 	}];
 	// console.log(`datasets`, datasets);
 	Deno.writeTextFileSync(`${outputPath}/device-bar-chart.svg`, chart({
-		type: "bar", height: 400, width: 800,
+		type: "bar", height: 600, width: 1200,
 		data: {
 			labels,
 			datasets,

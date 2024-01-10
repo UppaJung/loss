@@ -16,7 +16,7 @@ export const graphScenarioRecencyBarChart = (outputPath: string, labels: string[
 		} as const;
 	});
 	Deno.writeTextFileSync(`${outputPath}/scenario-recency-bar-chart.svg`, chart({
-		type: "bar", height: 400, width: 800,
+		type: "bar", height: 600, width: 1200,
 		data: {
 			labels: labels, datasets,
 		},

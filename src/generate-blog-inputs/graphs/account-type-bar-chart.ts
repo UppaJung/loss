@@ -18,7 +18,7 @@ export const graphAccountTypeBarChart = (outputPath: string, labels: string[], d
 	}];
 	// console.log(`datasets`, datasets);
 	Deno.writeTextFileSync(`${outputPath}/account-type-bar-chart.svg`, chart({
-		type: "bar", height: 400, width: 800,
+		type: "bar", height: 600, width: 1200,
 		data: {
 			labels,
 			datasets,
