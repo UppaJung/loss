@@ -19,6 +19,7 @@ const site = lume({
 
 site
   .ignore("README.md")
+  .ignore("/generated-by-analysis")
   .copy("img")
   .copy("graphs")
   .use(postcss())
