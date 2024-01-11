@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.vto
-bodyClass: body-supplement
+bodyClass: supplement
 ---
 <article class="supplement" data-pagefind-body>
-  <div class="supplement-header">
-    <h1 class="supplement-title">{{ title }}</h1>
-
-  <div class="supplement-content">
+  <header>
+    <h1 class=".title">{{ title }}</h1>
+  </header>
+  <main >
     {{ content |> safe }}
-  </div>
+  </main>
 </article>
