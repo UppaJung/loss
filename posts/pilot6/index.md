@@ -37,5 +37,10 @@ We asked participants who had a device compromised/stolen or locked what type of
 
 <figure>
   <img src="/graphs/pilot6/account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
-  <figcaption>The types of accounts that were participants had compromised or were locked out of.</figcaption>
+  <figcaption>The types of accounts that participants had compromised or were locked out of.</figcaption>
+</figure>
+
+<figure>
+  <img src="/graphs/pilot6/social-account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
+  <figcaption>The types of social accounts that participants had compromised or were locked out of.</figcaption>
 </figure>

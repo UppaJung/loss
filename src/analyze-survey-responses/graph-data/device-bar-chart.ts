@@ -17,13 +17,13 @@ export const graphDeviceBarChartData = (path: string, responses: AugmentedSurvey
 
 	const labels = [...PhoneTypeList, ...TabletTypeList, ...ComputerTypeList];
 	const data = {
-		hacked: labels.map( label => hackedTallies[label] ?? 0 ),
-		locked: labels.map( label => lockedTallies[label] ?? 0 )
+		compromised: labels.map( label => hackedTallies[label] ?? 0 ),
+		lockedOut: labels.map( label => lockedTallies[label] ?? 0 )
 	};
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
 Deno.writeTextFileSync(`${path}/${codeFileNameWithoutExtension}-data.ts`, `${warningHeaderTs
 	}export const labels = ${JSON.stringify(labels, undefined, "\t")};${"\n"
-	}export const data = ${JSON.stringify(data, undefined, "\t")} as const;`);
+	}export const data = ${JSON.stringify(data, undefined, "\t")};`);
 };

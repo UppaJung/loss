@@ -14,7 +14,7 @@ export const labels = [
 	"Other Computer"
 ];
 export const data = {
-	"hacked": [
+	"compromised": [
 		5,
 		8,
 		0,
@@ -26,7 +26,7 @@ export const data = {
 		0,
 		0
 	],
-	"locked": [
+	"lockedOut": [
 		4,
 		7,
 		0,
@@ -38,4 +38,4 @@ export const data = {
 		0,
 		0
 	]
-} as const;
+};
