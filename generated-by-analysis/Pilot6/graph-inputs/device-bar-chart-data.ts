@@ -14,7 +14,7 @@ export const labels = [
 	"Other Computer"
 ];
 export const data = {
-	"compromised": [
+	"Compromised": [
 		5,
 		8,
 		0,
@@ -26,7 +26,7 @@ export const data = {
 		0,
 		0
 	],
-	"lockedOut": [
+	"Locked Out": [
 		4,
 		7,
 		0,

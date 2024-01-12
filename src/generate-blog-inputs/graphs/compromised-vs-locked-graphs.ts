@@ -4,20 +4,20 @@ import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
 export const graphCompromisedVsLockedOut = ({labels, data, xTitle, yTitle = "Number of Participants"}: {
 	labels: string[],
 	data: {
-			compromised: number[],
-			lockedOut: number[]
+			"Compromised": number[],
+			"Locked Out": number[]
 		}
 	xTitle?: string,
 	yTitle?: string,
 	}, chartOptions: ChartOptions<"bar"> = {}) => {
 	const datasets =	[{
-		data: data.compromised,
+		data: data["Compromised"],
 		label: "Compromised",
 		borderColor: ChartColors.Red,
 		backgroundColor: ChartColors.Red,
 	},
 	{
-		data: data.lockedOut,
+		data: data["Locked Out"],
 		label: "Locked out",
 		borderColor: ChartColors.Blue,
 		backgroundColor: ChartColors.Blue,
@@ -31,7 +31,6 @@ export const graphCompromisedVsLockedOut = ({labels, data, xTitle, yTitle = "Num
 				...chartOptions.scales?.x,
 				title: {
 					display: xTitle != null,
-					align: "center",
 					font: {
 						weight: "bold",
 					},

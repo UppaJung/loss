@@ -17,8 +17,8 @@ export const graphDeviceBarChartData = (path: string, responses: AugmentedSurvey
 
 	const labels = [...PhoneTypeList, ...TabletTypeList, ...ComputerTypeList];
 	const data = {
-		compromised: labels.map( label => hackedTallies[label] ?? 0 ),
-		lockedOut: labels.map( label => lockedTallies[label] ?? 0 )
+		"Compromised": labels.map( label => hackedTallies[label] ?? 0 ),
+		"Locked Out": labels.map( label => lockedTallies[label] ?? 0 )
 	};
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

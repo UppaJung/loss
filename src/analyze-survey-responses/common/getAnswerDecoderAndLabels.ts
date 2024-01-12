@@ -11,7 +11,7 @@ export function decodeAnswer<T extends string = string>(specifiers: AnswerSpecif
       return satisfiesSpecifier ? response : responseAlreadyFound;
     }, undefined)
       ?? ((answer === "") ? undefined :
-        (!throwExceptionIfValueUnexpected) ? (() => {
+        (throwExceptionIfValueUnexpected !== true) ? (() => {
           console.log((`Answer "${answer}" did not map to any of ${specifiers.map(([spec, response]) => `'${spec.toString()}'=>'${response}'`).join(", ")}`));
           return undefined;
         })() :

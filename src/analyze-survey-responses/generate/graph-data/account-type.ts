@@ -1,52 +1,34 @@
 import { tallyResponses } from "../../common/tallyResponses.ts";
 import { filterNull } from "../../common/filterNull.ts";
-import type { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import type { AugmentedSurveyResponses, SurveyKey } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { AccountTypeQuestionList, FinancialAccountTypeQuestionList, SocialAccountTypeQuestionList, decodeAccountTypeQuestion, decodeFinancialAccountTypeQuestion, decodeSocialAccountTypeQuestion } from "../../decode-questions/account-type.ts";
+import { numeric } from "../../common/numeric.ts";
 
-export const accountTypeData = (path: string, responses: AugmentedSurveyResponses) => {
+export const accountTypeData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
 
-	const [hackedEmailTallies, lockedEmailTallies] = (["hacked", "locked"] as const).map( failureMode => 
-		tallyResponses(filterNull(responses.map( response => 
-			decodeAccountTypeQuestion(response[`${failureMode}-acct-type`]))))
-	);
-	const emailLabels = [...AccountTypeQuestionList];
-	const emailData = {
-		'compromised': emailLabels.map( label => hackedEmailTallies[label] ?? 0 ),
-		'lockedOut': emailLabels.map( label => lockedEmailTallies[label] ?? 0 )
+
+	// const decodeAndTallyResponses = <LABEL extends string>(key: SurveyKey, decodeFn: (answer: string) => LABEL | undefined): Partial<Record<LABEL, number>> =>
+	// 	tallyResponses(filterNull(responses.map( response => response[key]).map( decodeFn )));
+
+	const decodeAndTallyResponses = <LABEL extends string>(labels: readonly LABEL[], keyFn: (failureMode: 'hacked' | 'locked') => SurveyKey, decodeFn: (answer: string) => LABEL | undefined) => {
+		const [compromisedTallies, lockedTallies] = (["hacked", "locked"] as const).map( failureMode => 
+			tallyResponses(filterNull(responses.map( response => response[keyFn(failureMode)]).map( decodeFn ))));
+		const data = {
+			'Compromised': labels.map( label => numeric(compromisedTallies[label]) ),
+			'Locked Out': labels.map( label => numeric(lockedTallies[label]) )
+		}
+		return {labels: [...labels], data};
+	}
+
+	const data = {
+		emailAccount: decodeAndTallyResponses(AccountTypeQuestionList, (failureMode) => `${failureMode}-acct-type`, decodeAccountTypeQuestion),
+		socialAccount: decodeAndTallyResponses(SocialAccountTypeQuestionList, (failureMode) => `${failureMode}-soc-type`, decodeSocialAccountTypeQuestion),
+		financialAccount: decodeAndTallyResponses(FinancialAccountTypeQuestionList, (failureMode) => `${failureMode}-bank-type`, decodeFinancialAccountTypeQuestion),
 	};
-
-	const [hackedSocialTallies, lockedSocialTallies] = (["hacked", "locked"] as const).map( failureMode => 
-		tallyResponses(filterNull(responses.map( response => 
-			decodeSocialAccountTypeQuestion(response[`${failureMode}-soc-type`]))))
-	);
-	const socialLabels = [...SocialAccountTypeQuestionList];
-	const socialData = {
-		'compromised': socialLabels.map( label => hackedSocialTallies[label] ?? 0 ),
-		'lockedOut': socialLabels.map( label => lockedSocialTallies[label] ?? 0 )
-	};
-
-	const [hackedFinancialTallies, lockedFinancialTallies] = (["hacked", "locked"] as const).map( failureMode => 
-		tallyResponses(filterNull(responses.map( response => 
-			decodeFinancialAccountTypeQuestion(response[`${failureMode}-bank-type`]))))
-	);
-	const financialLabels = [...FinancialAccountTypeQuestionList];
-	const financialData = {
-		'compromised': financialLabels.map( label => hackedFinancialTallies[label] ?? 0 ),
-		'lockedOut': financialLabels.map( label => lockedFinancialTallies[label] ?? 0 )
-	};
-
 	const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
+
 	Deno.writeTextFileSync(`${path}/${codeFileNameWithoutExtension}-data.ts`, `${warningHeaderTs
-		}export const emailAccount = {${"\n\t"
-			}labels: ${JSON.stringify(emailLabels, undefined, "\t\t")}${",\n\t"
-			}data: ${JSON.stringify(emailData, undefined, "\t\t")}${"};\n\n"
-		}export const socialAccount = {${"\n\t"
-			}labels: ${JSON.stringify(socialLabels, undefined, "\t\t")}${",\n\t"
-			}data: ${JSON.stringify(socialData, undefined, "\t\t")}${"};\n\n"
-		}export const financialAccount = {${"\n\t"
-			}labels: ${JSON.stringify(financialLabels, undefined, "\t\t")}${",\n\t"
-			}data: ${JSON.stringify(financialData, undefined, "\t\t")}${"};\n\n"
-		}`);
+		}export const data = ${JSON.stringify(data, undefined, "\t")};${"\n"}`);
 };
