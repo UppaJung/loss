@@ -5,53 +5,117 @@ export const data = {
 	"emailAccount": {
 		"labels": [
 			"Apple",
+			"Apple",
+			"Google",
 			"Google",
 			"Microsoft",
+			"Microsoft",
+			"Other",
 			"Other"
 		],
 		"data": {
-			"Compromised": [
+			"Original": [
 				0,
-				6,
-				3,
+				0,
+				1,
+				1,
+				1,
+				1,
+				0,
+				1
+			],
+			"Added": [
+				0,
+				0,
+				1,
+				0,
+				1,
+				0,
+				0,
 				0
 			],
-			"Locked Out": [
+			"Not Worst": [
+				0,
 				3,
-				11,
 				4,
-				1
+				10,
+				1,
+				3,
+				0,
+				0
 			]
 		}
 	},
 	"socialAccount": {
 		"labels": [
 			"Facebook",
+			"Facebook",
+			"Instagram",
 			"Instagram",
 			"Twitter/X",
+			"Twitter/X",
+			"SnapChat",
 			"SnapChat",
 			"WhatsApp",
+			"WhatsApp",
+			"WeChat",
 			"WeChat",
 			"Signal",
+			"Signal",
+			"Other",
 			"Other"
 		],
 		"data": {
-			"Compromised": [
-				9,
-				3,
+			"Original": [
+				2,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
 				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				1,
+				0,
+				2,
+				0,
+				0,
+				0,
+				2,
 				2,
 				1,
 				0,
 				0,
-				1
+				0,
+				0,
+				0,
+				1,
+				0
 			],
-			"Locked Out": [
+			"Not Worst": [
+				6,
 				4,
 				1,
-				0,
-				2,
 				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
 				0,
 				0,
 				0
@@ -61,28 +125,47 @@ export const data = {
 	"financialAccount": {
 		"labels": [
 			"Credit Card",
+			"Credit Card",
+			"Credit Union",
 			"Credit Union",
 			"Retirement",
+			"Retirement",
+			"Brokerage",
 			"Brokerage",
 			"Paypal",
+			"Paypal",
+			"Venmo",
 			"Venmo",
 			"Cryptocurrency",
+			"Cryptocurrency",
 			"Bank",
+			"Bank",
+			"Other",
 			"Other"
 		],
 		"data": {
-			"Compromised": [
-				3,
+			"Original": [
+				2,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				4,
 				1,
-				0,
-				0,
-				0,
 				1,
-				0,
-				6,
-				1
+				0
 			],
-			"Locked Out": [
+			"Added": [
+				0,
 				1,
 				0,
 				0,
@@ -90,7 +173,35 @@ export const data = {
 				0,
 				0,
 				0,
-				5,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				1,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				4,
+				0,
 				0
 			]
 		}

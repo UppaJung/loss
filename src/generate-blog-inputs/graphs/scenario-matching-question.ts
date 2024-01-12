@@ -2,7 +2,6 @@ import { chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { AnswerToMatchingQuestionList } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import type { AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 
-// const RANGE = {count: 3, min: -30, max: 30};
 
 export const graphScenarioBarChart = (labels: string[], data: Record<AnswerToMatchingQuestion, readonly number[]>) => {
 	const datasets = AnswerToMatchingQuestionList.map( (answer, index) => {
