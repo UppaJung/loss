@@ -1,3 +1,8 @@
+/**
+ * Get the path of the most-recent .tsv file in the `analysis-input-raw` directory.
+ * @param inputDataPath \
+ * @returns 
+ */
 export const getPathOfMostRecentInputTsvFile = async (inputDataPath = "./analysis-input-raw") => {
   const tsvFileEntries = (await Array.fromAsync(Deno.readDir(inputDataPath)))
     .filter(entry => entry.isFile && entry.name.endsWith(".tsv"));

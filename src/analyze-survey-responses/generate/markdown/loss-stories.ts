@@ -1,6 +1,6 @@
-import { SurveyKeys, AugmentedSurveyResponses } from "../SurveyResponse.ts";
-import { getReflectedCodeFileInfo } from "../utilities/getReflectedCodeFileInfo.ts";
-import { makeSafeForMarkdown } from "./common/makeSafeForMarkdown.ts";
+import { SurveyKeys, AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
+import { makeSafeForMarkdown } from "../../common/makeSafeForMarkdown.ts";
 
 const {warningHeaderHtml, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 

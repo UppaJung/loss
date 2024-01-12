@@ -1,4 +1,4 @@
-import { answerSpec } from "../utilities/validateAnswer.ts";
+import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import { ScenarioLabel } from "./scenario-labels.ts";
 
 export enum AccountTypeQuestion {
@@ -8,7 +8,7 @@ export enum AccountTypeQuestion {
   Other = 'Other',
 };
 
-export const [decodeAccountTypeQuestion, AccountTypeQuestionList] = answerSpec([
+export const [decodeAccountTypeQuestion, AccountTypeQuestionList] = getAnswerDecoderAndLabels([
   ["Apple", AccountTypeQuestion.Apple],
   ["Google", AccountTypeQuestion.Google],
   ["Microsoft", AccountTypeQuestion.Microsoft],
@@ -31,7 +31,7 @@ export enum SocialAccountTypeQuestion {
   Other = 'Other',
 };
 
-export const [decodeSocialAccountTypeQuestion, SocialAccountTypeQuestionList] = answerSpec([
+export const [decodeSocialAccountTypeQuestion, SocialAccountTypeQuestionList] = getAnswerDecoderAndLabels([
   ["Facebook", SocialAccountTypeQuestion.Facebook],
   ["Instagram", SocialAccountTypeQuestion.Instagram],
   ["Twitter", SocialAccountTypeQuestion.Twitter],

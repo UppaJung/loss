@@ -1,8 +1,8 @@
-import { tallyResponses } from "../utilities/tallyResponses.ts";
-import { filterNull } from "../utilities/filterNull.ts";
-import type { AugmentedSurveyResponses } from "../SurveyResponse.ts";
-import { getReflectedCodeFileInfo } from "../utilities/getReflectedCodeFileInfo.ts";
-import { AccountTypeQuestionList, SocialAccountTypeQuestionList, decodeAccountTypeQuestion, decodeSocialAccountTypeQuestion } from "../decode-questions/account-type.ts";
+import { tallyResponses } from "../../common/tallyResponses.ts";
+import { filterNull } from "../../common/filterNull.ts";
+import type { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
+import { AccountTypeQuestionList, SocialAccountTypeQuestionList, decodeAccountTypeQuestion, decodeSocialAccountTypeQuestion } from "../../decode-questions/account-type.ts";
 
 export const accountTypeData = (path: string, responses: AugmentedSurveyResponses) => {
 

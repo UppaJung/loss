@@ -1,8 +1,8 @@
-import { tallyResponses } from "../utilities/tallyResponses.ts";
-import { filterNull } from "../utilities/filterNull.ts";
-import { decodePhoneTypeQuestion, decodeTabletTypeQuestion, decodeComputerTypeQuestion, PhoneTypeList, TabletTypeList, ComputerTypeList } from "../decode-questions/device.ts";
-import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
-import { getReflectedCodeFileInfo } from "../utilities/getReflectedCodeFileInfo.ts";
+import { tallyResponses } from "../../common/tallyResponses.ts";
+import { filterNull } from "../../common/filterNull.ts";
+import { decodePhoneTypeQuestion, decodeTabletTypeQuestion, decodeComputerTypeQuestion, PhoneTypeList, TabletTypeList, ComputerTypeList } from "../../decode-questions/device.ts";
+import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 

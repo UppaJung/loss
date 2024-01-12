@@ -1,5 +1,5 @@
-import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
-import { makePath } from "../main.ts";
+import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { makePath } from "../../main.ts";
 import { accountTypeData } from "./account-type.ts";
 import { graphDeviceBarChartData } from "./device-bar-chart.ts";
 import { graphScenarioBarChartData } from "./scenario-matching-question.ts";

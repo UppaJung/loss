@@ -1,4 +1,4 @@
-import { answerSpec } from "../utilities/validateAnswer.ts";
+import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 
 export enum DeviceType {
 	Phone = 'Phone',
@@ -7,7 +7,7 @@ export enum DeviceType {
 	Other = 'Other Device'
 };
 
-export const [decodeDeviceTypeQuestion, DeviceTypeList] = answerSpec([
+export const [decodeDeviceTypeQuestion, DeviceTypeList] = getAnswerDecoderAndLabels([
 	["Phone", DeviceType.Phone],
 	["Tablet", DeviceType.Tablet],
 	["Computer", DeviceType.Computer],
@@ -20,7 +20,7 @@ export enum PhoneType {
 	Other = 'Other Phone',
 };
 
-export const [decodePhoneTypeQuestion, PhoneTypeList] = answerSpec([
+export const [decodePhoneTypeQuestion, PhoneTypeList] = getAnswerDecoderAndLabels([
 	["iPhone", PhoneType.iPhone],
 	["Android", PhoneType.Android],
 	["other", PhoneType.Other],
@@ -32,7 +32,7 @@ export enum TabletType {
 	Other = 'Other Tablet',
 };
 
-export const [decodeTabletTypeQuestion, TabletTypeList] = answerSpec([
+export const [decodeTabletTypeQuestion, TabletTypeList] = getAnswerDecoderAndLabels([
 	["iPad", TabletType.iPad],
 	["Android", TabletType.Android],
 	["other", TabletType.Other],
@@ -45,7 +45,7 @@ export enum ComputerType {
 	Other = 'Other Computer',
 };
 
-export const [decodeComputerTypeQuestion, ComputerTypeList] = answerSpec([
+export const [decodeComputerTypeQuestion, ComputerTypeList] = getAnswerDecoderAndLabels([
 	["Mac", ComputerType.Mac],
 	["Windows", ComputerType.Windows],
 	["UNIX", ComputerType.UNIX],

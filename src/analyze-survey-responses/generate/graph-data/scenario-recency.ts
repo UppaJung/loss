@@ -1,9 +1,9 @@
-import { TotalAnswered, tallyResponses } from "../utilities/tallyResponses.ts";
-import { filterNull } from "../utilities/filterNull.ts";
-import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
-import { ScenarioLabels } from "../decode-questions/scenario-labels.ts";
-import { AnswerToRecencyQuestion, AnswerToRecencyQuestionList, ScenarioLabelWithRecencyIdTuples, decodeRecencyQuestion } from "../decode-questions/recency-question.ts";
-import { getReflectedCodeFileInfo } from "../utilities/getReflectedCodeFileInfo.ts";
+import { TotalAnswered, tallyResponses } from "../../common/tallyResponses.ts";
+import { filterNull } from "../../common/filterNull.ts";
+import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { ScenarioLabels } from "../../decode-questions/scenario-labels.ts";
+import { AnswerToRecencyQuestionLabels, AnswerToRecencyQuestionList, ScenarioLabelWithRecencyIdTuples, decodeRecencyQuestion } from "../../decode-questions/recency-question.ts";
+import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
@@ -17,12 +17,12 @@ export const graphScenarioRecencyBarChartData = (path: string, responses: Augmen
 	const answerDataAbsolute = AnswerToRecencyQuestionList.reduce( (result, answer) => {
 		result[answer] = scenarioTallies.map( tally => tally[answer] ?? 0 );
 		return result;
-	 }, {} as Record<AnswerToRecencyQuestion, number[]>
+	 }, {} as Record<AnswerToRecencyQuestionLabels, number[]>
 	);
 	const answerDataPercent = AnswerToRecencyQuestionList.reduce( (result, answer) => {
 			result[answer] = scenarioTallies.map( tally => 100 * (tally[answer] ?? 0) / tally[TotalAnswered] );
 			return result;
-	 	}, {} as Record<AnswerToRecencyQuestion, number[]>
+	 	}, {} as Record<AnswerToRecencyQuestionLabels, number[]>
 	);
 
 	const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

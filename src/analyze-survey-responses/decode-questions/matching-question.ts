@@ -1,4 +1,4 @@
-import { answerSpec } from "../utilities/validateAnswer.ts";
+import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import { ScenarioLabel } from "./scenario-labels.ts";
 
 export enum AnswerToMatchingQuestion {
@@ -9,7 +9,7 @@ export enum AnswerToMatchingQuestion {
   Impossible = 'Impossible',
 };
 
-export const [decodeMatchingQuestion, AnswerToMatchingQuestionList] = answerSpec([
+export const [decodeMatchingQuestion, AnswerToMatchingQuestionList] = getAnswerDecoderAndLabels([
   ["I included", AnswerToMatchingQuestion.MatchedTopThree],
   ["should have included", AnswerToMatchingQuestion.AddToTopThree],
   ["not among", AnswerToMatchingQuestion.BelowTopThree],

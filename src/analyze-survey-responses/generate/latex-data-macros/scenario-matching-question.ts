@@ -1,8 +1,8 @@
-import { AnswerToMatchingQuestionList, AnswerToMatchingQuestion, decodeMatchingQuestion, MatchingScenariosLabelToId } from "../decode-questions/matching-question.ts";
-import { countAndPercentMacroSet, numberMacro } from "../latex.ts";
-import { tallyResponses, TotalAnswered } from "../utilities/tallyResponses.ts";
-import { aggregateResponses } from "../utilities/aggregateResponses.ts";
-import { AugmentedSurveyResponses } from "../SurveyResponse.ts";
+import { AnswerToMatchingQuestionList, AnswerToMatchingQuestion, decodeMatchingQuestion, MatchingScenariosLabelToId } from "../../decode-questions/matching-question.ts";
+import { countAndPercentMacroSet, numberMacro } from "../../common/latex.ts";
+import { tallyResponses, TotalAnswered } from "../../common/tallyResponses.ts";
+import { aggregateResponses } from "../../common/aggregateResponses.ts";
+import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 
 export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: AugmentedSurveyResponses) => {
   const macros = [] as string[];
@@ -12,9 +12,9 @@ export const generateScenarioMatchingQuestionMacros = (outPath: string, response
     macros.push(
       numberMacro(`${questionName}${`Answered`}`, answers[TotalAnswered] ?? 0),
       ...countAndPercentMacroSet(`${questionName}${`Yes`}`,
-        aggregateResponses(answers, AnswerToMatchingQuestion.MatchedTopThree, AnswerToMatchingQuestion.AddToTopThree, AnswerToMatchingQuestion.BelowTopThree), answers._totalAnswered ?? 0),
+        aggregateResponses(answers, AnswerToMatchingQuestion.MatchedTopThree, AnswerToMatchingQuestion.AddToTopThree, AnswerToMatchingQuestion.BelowTopThree), answers[TotalAnswered] ?? 0),
       ...countAndPercentMacroSet(`${questionName}${`No`}`,
-        aggregateResponses(answers, AnswerToMatchingQuestion.CouldHappen, AnswerToMatchingQuestion.Impossible), answers._totalAnswered ?? 0),
+        aggregateResponses(answers, AnswerToMatchingQuestion.CouldHappen, AnswerToMatchingQuestion.Impossible), answers[TotalAnswered] ?? 0),
       ...AnswerToMatchingQuestionList
         .map((answer) => countAndPercentMacroSet(
           `${questionName}${answer}` as const,
