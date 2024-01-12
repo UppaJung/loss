@@ -57,3 +57,40 @@ export const socialAccount = {
 		]
 }};
 
+export const financialAccount = {
+	labels: [
+		"Credit Card",
+		"Credit Union",
+		"Retirement",
+		"Brokerage",
+		"Paypal",
+		"Venmo",
+		"Cryptocurrency",
+		"Bank",
+		"Other"
+],
+	data: {
+		"compromised": [
+				3,
+				1,
+				0,
+				0,
+				0,
+				1,
+				0,
+				6,
+				1
+		],
+		"lockedOut": [
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				5,
+				0
+		]
+}};
+

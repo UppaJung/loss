@@ -46,3 +46,34 @@ export const SocialAccountTypeLabelToId = [
   [ScenarioLabel.HackedAcct, 'hacked-soc-type'],
   [ScenarioLabel.LockedAcct, 'locked-soc-type'],
 ] as const;
+
+
+export enum FinancialAccountTypeQuestion {
+  CreditCard = "Credit Card",
+  CreditUnion = "Credit Union",
+  Retirement = "Retirement",
+  Brokerage = "Brokerage",
+  Paypal = "Paypal",
+  Venmo = "Venmo",
+  Cryptocurrency = "Cryptocurrency",
+  Bank = "Bank",
+  Other = "Other",
+};
+
+export const [decodeFinancialAccountTypeQuestion, FinancialAccountTypeQuestionList] = getAnswerDecoderAndLabels([
+  
+  ["credit card", FinancialAccountTypeQuestion.CreditCard],
+  ["credit union", FinancialAccountTypeQuestion.CreditUnion],
+  ["retirement", FinancialAccountTypeQuestion.Retirement],
+  ["brokerage", FinancialAccountTypeQuestion.Brokerage],
+  ["paypal", FinancialAccountTypeQuestion.Paypal],
+  ["venmo", FinancialAccountTypeQuestion.Venmo],
+  ["cryptocurrency", FinancialAccountTypeQuestion.Cryptocurrency],
+  ["bank", FinancialAccountTypeQuestion.Bank],
+  ["Other", FinancialAccountTypeQuestion.Other],
+]);
+
+export const FinancialAccountTypeLabelToId = [
+  [ScenarioLabel.HackedAcct, 'hacked-bank-type'],
+  [ScenarioLabel.LockedAcct, 'locked-bank-type'],
+] as const;

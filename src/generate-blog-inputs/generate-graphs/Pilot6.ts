@@ -7,22 +7,20 @@ import * as AccountTypeData from "../../../generated-by-analysis/Pilot6/graph-in
 import { graphScenarioRecencyBarChart } from "../graphs/recency-question.ts";
 import { graphCompromisedVsLockedOut } from "../graphs/compromised-vs-locked-graphs.ts";
 
-export const generatePilot6Graphs = () => {
-	const cohort = "Pilot6";
+
+export const generateGraphs = (cohort: string = "Pilot6") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
-	Deno.writeTextFileSync(`${outputPath}/device-bar-chart.svg`,
-		graphCompromisedVsLockedOut({
-			labels: DeviceBarGraph.labels, data: DeviceBarGraph.data,
-			xTitle: "Device Type",
-		}));
-	Deno.writeTextFileSync(`${outputPath}/account-type-bar-chart.svg`,
-		graphCompromisedVsLockedOut({
-			...AccountTypeData.emailAccount,
-			xTitle: "Account Type",}));
-			Deno.writeTextFileSync(`${outputPath}/social-account-type-bar-chart.svg`,
-			graphCompromisedVsLockedOut({
-				...AccountTypeData.socialAccount,
-				xTitle: "Social Account Type",}));
-		graphScenarioBarChart(outputPath, ScenarioMatching.labels, ScenarioMatching.data);
-	graphScenarioRecencyBarChart(outputPath, ScenarioRecency.labels, ScenarioRecency.absoluteData);
+	const writeSvg = (name: string, svg: string) => Deno.writeTextFileSync(`${outputPath}${name}.svg`, svg);
+
+	writeSvg(`device-bar-chart`, graphCompromisedVsLockedOut({
+		labels: DeviceBarGraph.labels, data: DeviceBarGraph.data, xTitle: "Device Type",
+	}));
+	writeSvg(`account-type-bar-chart`, graphCompromisedVsLockedOut({
+		...AccountTypeData.emailAccount, xTitle: "Account Type",}));
+	writeSvg(`social-account-type-bar-chart`, graphCompromisedVsLockedOut({
+		...AccountTypeData.socialAccount, xTitle: "Social Account Type",}));
+	writeSvg(`financial-account-type-bar-chart`, graphCompromisedVsLockedOut({
+		...AccountTypeData.financialAccount,xTitle: "Financial Account Type",}));
+	writeSvg(`scenario-bar-chart`, graphScenarioBarChart(ScenarioMatching.labels, ScenarioMatching.data));
+	writeSvg(`scenario-recency-bar-chart`, graphScenarioRecencyBarChart(ScenarioRecency.labels, ScenarioRecency.absoluteData));
 }

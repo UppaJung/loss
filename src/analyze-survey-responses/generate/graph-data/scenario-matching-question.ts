@@ -5,8 +5,6 @@ import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { percentage } from "../../common/numeric.ts";
 
-// const RANGE = {count: 3, min: -30, max: 30};
-
 export const graphScenarioBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = MatchingScenariosLabelToId.map( ([label, ]) => label );

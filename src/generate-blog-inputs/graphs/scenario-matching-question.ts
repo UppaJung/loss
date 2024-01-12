@@ -4,7 +4,7 @@ import type { AnswerToMatchingQuestion } from "../../analyze-survey-responses/de
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
-export const graphScenarioBarChart = (outputPath: string, labels: string[], data: Record<AnswerToMatchingQuestion, readonly number[]>) => {
+export const graphScenarioBarChart = (labels: string[], data: Record<AnswerToMatchingQuestion, readonly number[]>) => {
 	const datasets = AnswerToMatchingQuestionList.map( (answer, index) => {
 		const color = ["rgb(196,0,0)", "rgb(224,148,0)", "rgb(180 ,180 ,224)", "rgb(224, 224 ,224)", "rgb(248, 248, 248)"][index];
 		return {
@@ -15,7 +15,7 @@ export const graphScenarioBarChart = (outputPath: string, labels: string[], data
 			// stack: `stack ${index}`,
 		} as const;
 	});
-	Deno.writeTextFileSync(`${outputPath}/scenario-bar-chart.svg`, chart({
+	return chart({
 		type: "bar", height: 600, width: 1200,
 		data: {
 			labels: labels, datasets,
@@ -27,5 +27,5 @@ export const graphScenarioBarChart = (outputPath: string, labels: string[], data
 				y: { beginAtZero: true, stacked: true, max: 100 }
 			},
 		},
-	}));
+	});
 };

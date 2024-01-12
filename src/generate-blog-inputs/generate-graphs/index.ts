@@ -1,5 +1,5 @@
-import { generatePilot6Graphs } from "./Pilot6.ts";
+import * as Pilot6 from "./Pilot6.ts";
 
 export const generateGraphs = () => {
-	generatePilot6Graphs();
+	Pilot6.generateGraphs();
 }

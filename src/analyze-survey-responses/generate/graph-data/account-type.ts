@@ -2,7 +2,7 @@ import { tallyResponses } from "../../common/tallyResponses.ts";
 import { filterNull } from "../../common/filterNull.ts";
 import type { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
-import { AccountTypeQuestionList, SocialAccountTypeQuestionList, decodeAccountTypeQuestion, decodeSocialAccountTypeQuestion } from "../../decode-questions/account-type.ts";
+import { AccountTypeQuestionList, FinancialAccountTypeQuestionList, SocialAccountTypeQuestionList, decodeAccountTypeQuestion, decodeFinancialAccountTypeQuestion, decodeSocialAccountTypeQuestion } from "../../decode-questions/account-type.ts";
 
 export const accountTypeData = (path: string, responses: AugmentedSurveyResponses) => {
 
@@ -10,7 +10,6 @@ export const accountTypeData = (path: string, responses: AugmentedSurveyResponse
 		tallyResponses(filterNull(responses.map( response => 
 			decodeAccountTypeQuestion(response[`${failureMode}-acct-type`]))))
 	);
-
 	const emailLabels = [...AccountTypeQuestionList];
 	const emailData = {
 		'compromised': emailLabels.map( label => hackedEmailTallies[label] ?? 0 ),
@@ -21,11 +20,20 @@ export const accountTypeData = (path: string, responses: AugmentedSurveyResponse
 		tallyResponses(filterNull(responses.map( response => 
 			decodeSocialAccountTypeQuestion(response[`${failureMode}-soc-type`]))))
 	);
-
 	const socialLabels = [...SocialAccountTypeQuestionList];
 	const socialData = {
 		'compromised': socialLabels.map( label => hackedSocialTallies[label] ?? 0 ),
 		'lockedOut': socialLabels.map( label => lockedSocialTallies[label] ?? 0 )
+	};
+
+	const [hackedFinancialTallies, lockedFinancialTallies] = (["hacked", "locked"] as const).map( failureMode => 
+		tallyResponses(filterNull(responses.map( response => 
+			decodeFinancialAccountTypeQuestion(response[`${failureMode}-bank-type`]))))
+	);
+	const financialLabels = [...FinancialAccountTypeQuestionList];
+	const financialData = {
+		'compromised': financialLabels.map( label => hackedFinancialTallies[label] ?? 0 ),
+		'lockedOut': financialLabels.map( label => lockedFinancialTallies[label] ?? 0 )
 	};
 
 	const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
@@ -35,7 +43,10 @@ export const accountTypeData = (path: string, responses: AugmentedSurveyResponse
 			}labels: ${JSON.stringify(emailLabels, undefined, "\t\t")}${",\n\t"
 			}data: ${JSON.stringify(emailData, undefined, "\t\t")}${"};\n\n"
 		}export const socialAccount = {${"\n\t"
-		}labels: ${JSON.stringify(socialLabels, undefined, "\t\t")}${",\n\t"
-		}data: ${JSON.stringify(socialData, undefined, "\t\t")}${"};\n\n"
-	}`);
+			}labels: ${JSON.stringify(socialLabels, undefined, "\t\t")}${",\n\t"
+			}data: ${JSON.stringify(socialData, undefined, "\t\t")}${"};\n\n"
+		}export const financialAccount = {${"\n\t"
+			}labels: ${JSON.stringify(financialLabels, undefined, "\t\t")}${",\n\t"
+			}data: ${JSON.stringify(financialData, undefined, "\t\t")}${"};\n\n"
+		}`);
 };
