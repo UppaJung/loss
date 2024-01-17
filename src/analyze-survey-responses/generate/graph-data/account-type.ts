@@ -24,13 +24,14 @@ export const accountTypeData = (path: string, responses: AugmentedSurveyResponse
 			));
 		const data = Object.fromEntries(
 			AnswersIndicatingMatch.map( match => ([
-				match,
-					labels.map( label =>  ([
-							numeric(compromisedTallies[match][label]),
-							numeric(lockedTallies[match][label]),
-						])).flat()
-				])) ) as Record<AnswerIndicatingMatch, number[]>;
-		return {labels: [...labels.map( l => [l, l])].flat(), data};
+					match, {
+						'Compromised': labels.map( label => numeric(compromisedTallies[match][label])),
+						'Locked Out': labels.map( label =>  numeric(lockedTallies[match][label])),
+					}
+				]
+			))
+		) as Record<AnswerIndicatingMatch, {'Compromised': number[], 'Locked Out': number[]}>;
+		return {labels, data};
 	}
 
 	const data = {

@@ -5,205 +5,220 @@ export const data = {
 	"emailAccount": {
 		"labels": [
 			"Apple",
-			"Apple",
-			"Google",
 			"Google",
 			"Microsoft",
-			"Microsoft",
-			"Other",
 			"Other"
 		],
 		"data": {
-			"Original": [
-				0,
-				0,
-				1,
-				1,
-				1,
-				1,
-				0,
-				1
-			],
-			"Added": [
-				0,
-				0,
-				1,
-				0,
-				1,
-				0,
-				0,
-				0
-			],
-			"Not Worst": [
-				0,
-				3,
-				4,
-				10,
-				1,
-				3,
-				0,
-				0
-			]
+			"Original": {
+				"Compromised": [
+					0,
+					1,
+					1,
+					0
+				],
+				"Locked Out": [
+					0,
+					1,
+					1,
+					1
+				]
+			},
+			"Added": {
+				"Compromised": [
+					0,
+					1,
+					1,
+					0
+				],
+				"Locked Out": [
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"Not Worst": {
+				"Compromised": [
+					0,
+					4,
+					1,
+					0
+				],
+				"Locked Out": [
+					3,
+					10,
+					3,
+					0
+				]
+			}
 		}
 	},
 	"socialAccount": {
 		"labels": [
 			"Facebook",
-			"Facebook",
-			"Instagram",
 			"Instagram",
 			"Twitter/X",
-			"Twitter/X",
-			"SnapChat",
 			"SnapChat",
 			"WhatsApp",
-			"WhatsApp",
-			"WeChat",
 			"WeChat",
 			"Signal",
-			"Signal",
-			"Other",
 			"Other"
 		],
 		"data": {
-			"Original": [
-				2,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			],
-			"Added": [
-				1,
-				0,
-				2,
-				0,
-				0,
-				0,
-				2,
-				2,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				1,
-				0
-			],
-			"Not Worst": [
-				6,
-				4,
-				1,
-				1,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			]
+			"Original": {
+				"Compromised": [
+					2,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"Locked Out": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0
+				]
+			},
+			"Added": {
+				"Compromised": [
+					1,
+					2,
+					0,
+					2,
+					1,
+					0,
+					0,
+					1
+				],
+				"Locked Out": [
+					0,
+					0,
+					0,
+					2,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"Not Worst": {
+				"Compromised": [
+					6,
+					1,
+					1,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"Locked Out": [
+					4,
+					1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			}
 		}
 	},
 	"financialAccount": {
 		"labels": [
 			"Credit Card",
-			"Credit Card",
-			"Credit Union",
 			"Credit Union",
 			"Retirement",
-			"Retirement",
-			"Brokerage",
 			"Brokerage",
 			"Paypal",
-			"Paypal",
-			"Venmo",
 			"Venmo",
 			"Cryptocurrency",
-			"Cryptocurrency",
 			"Bank",
-			"Bank",
-			"Other",
 			"Other"
 		],
 		"data": {
-			"Original": [
-				2,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				4,
-				1,
-				1,
-				0
-			],
-			"Added": [
-				0,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			],
-			"Not Worst": [
-				1,
-				0,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				2,
-				4,
-				0,
-				0
-			]
+			"Original": {
+				"Compromised": [
+					2,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					4,
+					1
+				],
+				"Locked Out": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0
+				]
+			},
+			"Added": {
+				"Compromised": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0
+				],
+				"Locked Out": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"Not Worst": {
+				"Compromised": [
+					1,
+					1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					2,
+					0
+				],
+				"Locked Out": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					4,
+					0
+				]
+			}
 		}
 	}
 };

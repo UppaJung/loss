@@ -31,21 +31,21 @@ We asked participants who had a device compromised/stolen or locked what type of
 
 <figure>
   <img src="/graphs/pilot6/device-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
-  <figcaption>The absolute number of devices of each type that were hacked or that participants were locked out of.</figcaption>
+  <figcaption>The absolute number of devices of each type that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
 </figure>
 
 
 <figure>
   <img src="/graphs/pilot6/account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
-  <figcaption>The types of accounts that participants had compromised or were locked out of.</figcaption>
+  <figcaption>The types of accounts that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
 </figure>
 
 <figure>
   <img src="/graphs/pilot6/social-account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
-  <figcaption>The types of social accounts that participants had compromised or were locked out of.</figcaption>
+  <figcaption>The types of social accounts that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
 </figure>
 
 <figure>
   <img src="/graphs/pilot6/financial-account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
-  <figcaption>The types of financial accounts that participants had compromised or were locked out of.</figcaption>
+  <figcaption>The types of financial accounts that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
 </figure>
