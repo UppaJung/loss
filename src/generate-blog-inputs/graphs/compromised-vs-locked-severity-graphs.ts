@@ -36,7 +36,7 @@ export const graphCompromisedVsLockedOutSeverity = ({labels, data, xTitle, yTitl
 				position: 'bottom',
 				ticks: {
 					callback: function(_label: string | number, index: number) {
-						return index % 2 === 0 ? "Compromised" : "Locked Out";
+						return index % 2 === 0 ? "Hacked" : "Locked";
 					}
 				}
 			},
@@ -46,7 +46,7 @@ export const graphCompromisedVsLockedOutSeverity = ({labels, data, xTitle, yTitl
 				position: 'bottom',
 				ticks: {
 					callback: function(label: string | number, index: number) {
-						console.log(`called ticks ${label} ${index}`)
+						// console.log(`called ticks ${label} ${index}`)
 						return index % 2 === 0 ? labels[index] : "";
 					}
 				},
@@ -72,7 +72,7 @@ export const graphCompromisedVsLockedOutSeverity = ({labels, data, xTitle, yTitl
 			} as NonNullable<ChartOptions<"bar">["scales"]>["y"],
 		},
 	} satisfies ChartOptions<"bar">;
-	console.log("Chart", {options, datasets});
+	// console.log("Chart", {options, datasets});
 	const svg = chart<"bar">({
 		type: "bar", height: 600, width: 1200, options,
 		data: {
