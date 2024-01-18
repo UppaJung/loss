@@ -17,12 +17,12 @@ export const AnswerToMatchQuestionColors = {
   [AnswerToMatchingQuestion.Impossible]: "rgb(248, 248, 248)",
 } satisfies  Record<AnswerToMatchingQuestion, string>;
 
-export const AnswersIndicatingMatch = [
+export const AnswersIndicatingParticipantExperiencedScenario = [
   AnswerToMatchingQuestion.MatchedTopThree,
   AnswerToMatchingQuestion.AddToTopThree,
   AnswerToMatchingQuestion.BelowTopThree,
 ] as const;
-export type AnswerIndicatingMatch = typeof AnswersIndicatingMatch[number];
+export type AnswerIndicatingParticipantExperiencedScenario = typeof AnswersIndicatingParticipantExperiencedScenario[number];
 
 export const [decodeMatchingQuestion, AnswerToMatchingQuestionList] = getAnswerDecoderAndLabels([
   ["I included", AnswerToMatchingQuestion.MatchedTopThree],

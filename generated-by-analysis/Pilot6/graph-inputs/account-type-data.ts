@@ -10,42 +10,40 @@ export const data = {
 			"Other"
 		],
 		"data": {
-			"Original": {
-				"Compromised": [
+			"Compromised": {
+				"Original": [
 					0,
 					1,
 					1,
 					0
 				],
-				"Locked Out": [
-					0,
-					1,
-					1,
-					1
-				]
-			},
-			"Added": {
-				"Compromised": [
+				"Added": [
 					0,
 					1,
 					1,
 					0
 				],
-				"Locked Out": [
-					0,
-					0,
-					0,
-					0
-				]
-			},
-			"Not Worst": {
-				"Compromised": [
+				"Not Worst": [
 					0,
 					4,
 					1,
 					0
+				]
+			},
+			"Locked Out": {
+				"Original": [
+					0,
+					1,
+					1,
+					1
 				],
-				"Locked Out": [
+				"Added": [
+					0,
+					0,
+					0,
+					0
+				],
+				"Not Worst": [
 					3,
 					10,
 					3,
@@ -66,8 +64,8 @@ export const data = {
 			"Other"
 		],
 		"data": {
-			"Original": {
-				"Compromised": [
+			"Compromised": {
+				"Original": [
 					2,
 					0,
 					0,
@@ -77,19 +75,7 @@ export const data = {
 					0,
 					0
 				],
-				"Locked Out": [
-					0,
-					0,
-					0,
-					0,
-					1,
-					0,
-					0,
-					0
-				]
-			},
-			"Added": {
-				"Compromised": [
+				"Added": [
 					1,
 					2,
 					0,
@@ -99,19 +85,7 @@ export const data = {
 					0,
 					1
 				],
-				"Locked Out": [
-					0,
-					0,
-					0,
-					2,
-					0,
-					0,
-					0,
-					0
-				]
-			},
-			"Not Worst": {
-				"Compromised": [
+				"Not Worst": [
 					6,
 					1,
 					1,
@@ -120,8 +94,30 @@ export const data = {
 					0,
 					0,
 					0
+				]
+			},
+			"Locked Out": {
+				"Original": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0
 				],
-				"Locked Out": [
+				"Added": [
+					0,
+					0,
+					0,
+					2,
+					0,
+					0,
+					0,
+					0
+				],
+				"Not Worst": [
 					4,
 					1,
 					0,
@@ -147,8 +143,8 @@ export const data = {
 			"Other"
 		],
 		"data": {
-			"Original": {
-				"Compromised": [
+			"Compromised": {
+				"Original": [
 					2,
 					0,
 					0,
@@ -159,20 +155,7 @@ export const data = {
 					4,
 					1
 				],
-				"Locked Out": [
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					1,
-					0
-				]
-			},
-			"Added": {
-				"Compromised": [
+				"Added": [
 					0,
 					0,
 					0,
@@ -183,20 +166,7 @@ export const data = {
 					0,
 					0
 				],
-				"Locked Out": [
-					1,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0
-				]
-			},
-			"Not Worst": {
-				"Compromised": [
+				"Not Worst": [
 					1,
 					1,
 					0,
@@ -206,8 +176,32 @@ export const data = {
 					0,
 					2,
 					0
+				]
+			},
+			"Locked Out": {
+				"Original": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0
 				],
-				"Locked Out": [
+				"Added": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"Not Worst": [
 					0,
 					0,
 					0,

@@ -1,5 +1,5 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
-import { AnswerIndicatingMatch, AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
+import { AnswerIndicatingParticipantExperiencedScenario, AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
 
 const numberOfTimesStringPreviouslySeenObject: Record<string, number> = {};
@@ -9,49 +9,53 @@ const numberOfTimesStringPreviouslySeen = (s: string): number => {
 	return result;
 }
 
-export const graphCompromisedVsLockedOutSeverity = ({labels, data, xTitle, yTitle = "Number of Participants"}: {
-	labels: string[],
-	data: Record<AnswerIndicatingMatch, {'Compromised': number[], 'Locked Out': number[]}>
+export const graphCompromisedVsLockedOutSeverity = <LABEL extends string = string>({labels, data, xTitle, yTitle = "Number of Participants"}: {
+	labels: LABEL[],
+	data: {
+		'Compromised': Record<AnswerIndicatingParticipantExperiencedScenario, number[]>,
+		'Locked Out': Record<AnswerIndicatingParticipantExperiencedScenario, number[]>
+	}
 	xTitle?: string,
 	yTitle?: string,
-	}, chartOptions: ChartOptions<"bar"> = {}) => {
+	}, chartOptions: ChartOptions<"bar"> = {}
+): string => {
 	const datasets =	[{
 		stack: "stack 0",
-		data: data[AnswerToMatchingQuestion.MatchedTopThree].Compromised,
+		data: data['Compromised'][AnswerToMatchingQuestion.MatchedTopThree],
 		label: AnswerToMatchingQuestion.MatchedTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
 	},
 	{
 		stack: "stack 0",
-		data: data[AnswerToMatchingQuestion.AddToTopThree].Compromised,
+		data: data['Compromised'][AnswerToMatchingQuestion.AddToTopThree],
 		label: AnswerToMatchingQuestion.AddToTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
 	},
 	{
 		stack: "stack 0",
-		data: data[AnswerToMatchingQuestion.BelowTopThree].Compromised,
+		data: data['Compromised'][AnswerToMatchingQuestion.BelowTopThree],
 		label: AnswerToMatchingQuestion.BelowTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
 	}, {
 		stack: "stack 1",
-		data: data[AnswerToMatchingQuestion.MatchedTopThree]["Locked Out"],
+		data: data["Locked Out"][AnswerToMatchingQuestion.MatchedTopThree],
 		label: AnswerToMatchingQuestion.MatchedTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
 	},
 	{
 		stack: "stack 1",
-		data: data[AnswerToMatchingQuestion.AddToTopThree]["Locked Out"],
+		data: data["Locked Out"][AnswerToMatchingQuestion.AddToTopThree],
 		label: AnswerToMatchingQuestion.AddToTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
 	},
 	{
 		stack: "stack 1",
-		data: data[AnswerToMatchingQuestion.BelowTopThree]["Locked Out"],
+		data: data["Locked Out"][AnswerToMatchingQuestion.BelowTopThree],
 		label: AnswerToMatchingQuestion.BelowTopThree,
 		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
 		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
