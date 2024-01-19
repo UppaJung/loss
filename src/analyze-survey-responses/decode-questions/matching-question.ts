@@ -1,4 +1,5 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
+import type { SurveyKey } from "../survey-keys/index.ts";
 import { ScenarioLabel } from "./scenario-labels.ts";
 
 export enum AnswerToMatchingQuestion {
@@ -31,6 +32,32 @@ export const [decodeMatchingQuestion, AnswerToMatchingQuestionList] = getAnswerD
   ["but I worry it could happen", AnswerToMatchingQuestion.CouldHappen],
   ["could not happen", AnswerToMatchingQuestion.Impossible],
 ]);
+
+export enum PairedScenario {
+  Device = 'Device',
+  Account = 'Account',
+  Social = 'Social',
+  Bank = 'Bank',
+  Passwords = 'Passwords'
+};
+
+export const PairedScenarios = [
+  PairedScenario.Device,
+  PairedScenario.Account,
+  PairedScenario.Social,
+  PairedScenario.Bank,
+  PairedScenario.Passwords,
+] as const;
+
+export const scenarioMatchingQuestionId = (failureMode: 'hacked' | 'locked', scenario: PairedScenario) => {
+  switch (scenario) {
+    case PairedScenario.Device: return `${failureMode}-device` as const satisfies SurveyKey;
+    case PairedScenario.Account: return `${failureMode}-acct` as const satisfies SurveyKey;
+    case PairedScenario.Social: return `${failureMode}-soc` as const satisfies SurveyKey;
+    case PairedScenario.Bank: return `${failureMode}-bank` as const satisfies SurveyKey;
+    case PairedScenario.Passwords: return `${failureMode}-pwds` as const satisfies SurveyKey;
+  }
+}
 
 export const MatchingScenariosLabelToId = [
   [ScenarioLabel.HackedDevice, 'hacked-device'],

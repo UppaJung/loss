@@ -1,74 +1,50 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
-import { AnswerIndicatingParticipantExperiencedScenario, AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
+import { AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
 
-const numberOfTimesStringPreviouslySeenObject: Record<string, number> = {};
-const numberOfTimesStringPreviouslySeen = (s: string): number => {
-	const result = numberOfTimesStringPreviouslySeenObject[s] ?? 0;
-	numberOfTimesStringPreviouslySeenObject[s] = result + 1;
-	return result;
-}
 
-export const graphCompromisedVsLockedOutSeverity = <LABEL extends string = string>({labels, data, xTitle, yTitle = "Number of Participants"}: {
-	labels: LABEL[],
+
+export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatchingQuestion>({
+	labels, data, xTitle, yTitle = "Number of Participants", asPercentOf,
+	matchingQuestions,
+	colors = AnswerToMatchQuestionColors as Record<ANSWER, string>,
+}: {
+	labels: string[],
+	asPercentOf?: number,
 	data: {
-		'Compromised': Record<AnswerIndicatingParticipantExperiencedScenario, number[]>,
-		'Locked Out': Record<AnswerIndicatingParticipantExperiencedScenario, number[]>
+		'Compromised': Record<ANSWER, number[]>,
+		'Locked Out': Record<ANSWER, number[]>
 	}
+	matchingQuestions: readonly ANSWER[],
+	colors?: Record<ANSWER, string>,
 	xTitle?: string,
 	yTitle?: string,
 	}, chartOptions: ChartOptions<"bar"> = {}
 ): string => {
-	const datasets =	[{
-		stack: "stack 0",
-		data: data['Compromised'][AnswerToMatchingQuestion.MatchedTopThree],
-		label: AnswerToMatchingQuestion.MatchedTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
-	},
-	{
-		stack: "stack 0",
-		data: data['Compromised'][AnswerToMatchingQuestion.AddToTopThree],
-		label: AnswerToMatchingQuestion.AddToTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
-	},
-	{
-		stack: "stack 0",
-		data: data['Compromised'][AnswerToMatchingQuestion.BelowTopThree],
-		label: AnswerToMatchingQuestion.BelowTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
-	}, {
-		stack: "stack 1",
-		data: data["Locked Out"][AnswerToMatchingQuestion.MatchedTopThree],
-		label: AnswerToMatchingQuestion.MatchedTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.MatchedTopThree],
-	},
-	{
-		stack: "stack 1",
-		data: data["Locked Out"][AnswerToMatchingQuestion.AddToTopThree],
-		label: AnswerToMatchingQuestion.AddToTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.AddToTopThree],
-	},
-	{
-		stack: "stack 1",
-		data: data["Locked Out"][AnswerToMatchingQuestion.BelowTopThree],
-		label: AnswerToMatchingQuestion.BelowTopThree,
-		borderColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
-		backgroundColor: AnswerToMatchQuestionColors[AnswerToMatchingQuestion.BelowTopThree],
-	}] satisfies ChartDataset<"bar">[];
+	const convert: (values: number[]) => number[] = asPercentOf != null ?
+		values => values.map( n => 100 * n / asPercentOf) :
+		values => values.map( n => n) ;
+	const datasets = (['Compromised', 'Locked Out'] as const).map( (failureMode, index) =>
+	matchingQuestions.map( experiencedScenario => ({
+		stack: `stack ${index}`,
+		data: convert(data[failureMode][experiencedScenario]),
+		label: experiencedScenario,
+		borderColor: colors[experiencedScenario],
+		backgroundColor: colors[experiencedScenario],
+	}))).flat() satisfies ChartDataset<"bar">[];
+	const previouslySeenSet = new Set<string>();
+	const previouslySeen = (s: string): boolean => {
+		const seen = previouslySeenSet.has(s);
+		previouslySeenSet.add(s);
+		return seen;
+	}
 	const options = {
 		devicePixelRatio: 1,
 		...chartOptions,
 		plugins: {
 			legend: {
 				labels: {
-					filter: function(legendItem) {
-						return (numberOfTimesStringPreviouslySeen(legendItem.text) % 2) === 0;
-					}
+					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
 				}
 			}
 		},

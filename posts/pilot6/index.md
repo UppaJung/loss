@@ -17,7 +17,7 @@ We then told participants we would "describe technology-related harms that that 
 
 <figure>
   <img src="/graphs/pilot6/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
-  <figcaption>The percent of participants who had experienced each harm scenario. Losses due to failures of security measures to protect participants from attack are paired against harms due to security measures themselves harming participants.</figcaption>
+  <figcaption>The percent of participants who had experienced each harm scenario. Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar).</figcaption>
 </figure>
 
 When participants reported having suffered one of the described scenarios, we asked them how recently they had experienced it.
