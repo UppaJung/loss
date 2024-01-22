@@ -29,8 +29,8 @@ export const stringCountSentenceFragment = (counts: {total: number, instances: R
 
 export const stringCountSentence = (counts: {total: number, instances: Record<string, number>}) => `${
 	counts.total === 0 ? `No participant provided a free-entry response` :
-	counts.total > 1 ? 'Participants provided free entry responses: ' :
-	'Participant provided a free entry response: '
+	counts.total > 1 ? `${counts.total} participants provided free entry responses: ` :
+	`${counts.total} participant provided a free entry response: `
 }${stringCountSentenceFragment(counts)}.`;
 
 export const generateFreeTextMacros = (outPath: string, responses: AugmentedSurveyResponses) => {
