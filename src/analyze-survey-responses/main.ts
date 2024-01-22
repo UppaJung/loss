@@ -5,6 +5,7 @@ import { SurveyKey, augmentSurveyResponses } from "./survey-keys/index.ts";
 import { generateLossStoryMarkdown } from "./generate/markdown/loss-stories.ts";
 import { generateSummaryStatistics } from "./generate/lume-data/summary-statistics.ts";
 import { generateGraphData } from "./generate/graph-data/index.ts";
+import { generateFreeTextMacros } from "./generate/lume-data/free-text.ts";
 
 const getResponsesFromMostRecentInputDataFile = async () => {
   const fileInfo = await getPathOfMostRecentInputTsvFile();
@@ -37,6 +38,7 @@ const analyzeCohort = (responses: Record<SurveyKey, string>[], cohort: string) =
   // Generate data that can be imported into lume blog/markdown/website materials
   const lumeDataPath = makePath(`generated-by-analysis/${cohort}/lume`);
   generateSummaryStatistics(lumeDataPath, augmentedSurveyResponses);
+  generateFreeTextMacros(lumeDataPath, augmentedSurveyResponses);
 
   // Generate markdown files that can be imported
   const markdownPath = makePath(`generated-by-analysis/${cohort}/markdown`);
