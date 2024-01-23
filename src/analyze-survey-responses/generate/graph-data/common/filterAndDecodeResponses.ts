@@ -1,13 +1,12 @@
 import { tallyResponses } from "../../../common/tallyResponses.ts";
-import type { AugmentedSurveyResponse, AugmentedSurveyResponses, SurveyKey } from "../../../survey-keys/index.ts";
 import { numeric } from "../../../common/numeric.ts";
 import { AnswersIndicatingParticipantExperiencedScenario, AnswerIndicatingParticipantExperiencedScenario, decodeMatchingQuestion } from "../../../decode-questions/matching-question.ts";
 
-export const filterAndDecodeExperiencedScenarioResponses = <LABEL extends string>(
-  responses: AugmentedSurveyResponses<SurveyKey>,
+export const filterAndDecodeExperiencedScenarioResponses = <LABEL extends string, SURVEY_KEY extends string, RESPONSE extends Record<Exclude<SURVEY_KEY, "startDate">, string>>(
+  responses: (RESPONSE)[],
   labels: readonly LABEL[],
-  matchingQuestionKey: SurveyKey,
-  decodeFn: (response: AugmentedSurveyResponse<SurveyKey>) =>LABEL | undefined
+  matchingQuestionKey: Exclude<SURVEY_KEY, "startDate">,
+  decodeFn: (response: RESPONSE) =>LABEL | LABEL[] | undefined
 ) => Object.fromEntries(AnswersIndicatingParticipantExperiencedScenario.map(match => {
   const talliedResponses = tallyResponses(
     responses.filter(response => decodeMatchingQuestion(response[matchingQuestionKey]) === match).map(decodeFn)

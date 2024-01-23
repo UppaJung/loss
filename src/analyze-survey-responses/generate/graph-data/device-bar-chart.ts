@@ -1,5 +1,5 @@
-import { decodePhoneTypeQuestion, decodeTabletTypeQuestion, decodeComputerTypeQuestion, PhoneTypeList, TabletTypeList, ComputerTypeList } from "../../decode-questions/device.ts";
-import { AugmentedSurveyResponse, AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { decodeDetailedDeviceType, DetailedDeviceTypeList } from "../../decode-questions/device.ts";
+import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { filterAndDecodeExperiencedScenarioResponses } from "./common/filterAndDecodeResponses.ts";
 
@@ -7,17 +7,12 @@ import { filterAndDecodeExperiencedScenarioResponses } from "./common/filterAndD
 
 export const graphDeviceBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
-	const decodeResponse = (failureMode: "hacked" | "locked") => (response: AugmentedSurveyResponse) =>
-		decodePhoneTypeQuestion(response[`${failureMode}-phone-type`]) ??
-		decodeTabletTypeQuestion(response[`${failureMode}-tablet-type`]) ??
-		decodeComputerTypeQuestion(response[`${failureMode}-pc-type`]);
-
-		const labels = [...PhoneTypeList, ...TabletTypeList, ...ComputerTypeList];
+	const labels = DetailedDeviceTypeList;
 	const data = {
 		"Compromised":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device", decodeResponse("hacked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device", decodeDetailedDeviceType("hacked")),
 		"Locked Out":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device", decodeResponse("locked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device", decodeDetailedDeviceType("locked")),
 	} as const;
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

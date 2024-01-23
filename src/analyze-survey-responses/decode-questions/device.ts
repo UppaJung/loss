@@ -1,4 +1,5 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
+import { AugmentedSurveyResponse } from "../survey-keys/index.ts";
 
 export enum DeviceType {
 	Phone = 'Phone',
@@ -52,4 +53,10 @@ export const [decodeComputerTypeQuestion, ComputerTypeList] = getAnswerDecoderAn
 	["other", ComputerType.Other],
 ]);
 
+export const DetailedDeviceTypeList = [...PhoneTypeList, ...TabletTypeList, ...ComputerTypeList];
+
+export const decodeDetailedDeviceType = (failureMode: "hacked" | "locked") => (response: AugmentedSurveyResponse) =>
+decodePhoneTypeQuestion(response[`${failureMode}-phone-type`]) ??
+decodeTabletTypeQuestion(response[`${failureMode}-tablet-type`]) ??
+decodeComputerTypeQuestion(response[`${failureMode}-pc-type`]);
 

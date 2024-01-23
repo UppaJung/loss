@@ -46,6 +46,26 @@ We asked participants who had a device compromised/stolen or locked what type of
 </figure>
 
 <figure>
-  <img src="/graphs/pilot6/financial-account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
+  <img src="/graphs/pilot6/financial-account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or compromised."/>
   <figcaption>The types of financial accounts that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
+</figure>
+
+<figure>
+  <img src="/graphs/pilot6/hacked-device-how-bar-chart.svg" alt="A bar chart summarizing how devices were compromised."/>
+  <figcaption>How devices were compromised.</figcaption>
+</figure>
+
+<figure>
+  <img src="/graphs/pilot6/locked-device-how-bar-chart.svg" alt="A bar chart summarizing how participants reported being locked out of their devices."/>
+  <figcaption>How users were locked out of their devices.</figcaption>
+</figure>
+
+<figure>
+  <img src="/graphs/pilot6/locked-device-recdat-bar-chart.svg" alt="TBD"/>
+  <figcaption>TBD</figcaption>
+</figure>
+
+<figure>
+  <img src="/graphs/pilot6/locked-device-rec-bar-chart.svg" alt="TBD"/>
+  <figcaption>TBD</figcaption>
 </figure>

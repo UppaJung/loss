@@ -8,11 +8,17 @@ export type TotalAnswered = typeof TotalAnswered;
  * @returns An array of answers to the number of times they appear in the array.
  */
 export const tallyResponses = <RESPONSE extends string>(
-  responses: (RESPONSE | undefined)[]
+  responses: (RESPONSE | RESPONSE[] | undefined)[]
 ): Record<RESPONSE | TotalAnswered, number> =>
   responses.reduce((res, response) => {
     if (response != null && response != "") {
-      res[response] = (res[response] ?? 0) + 1;
+      if (Array.isArray(response)) {
+        response.forEach(r => {
+          res[r] = (res[r] ?? 0) + 1;
+        });
+      } else {
+        res[response] = (res[response] ?? 0) + 1;
+      }
       res[TotalAnswered] = (res[TotalAnswered] ?? 0) + 1;
     }
     return res;
