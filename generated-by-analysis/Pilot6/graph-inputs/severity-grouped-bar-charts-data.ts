@@ -44,7 +44,7 @@ export const BarGraphs = {
 		}
 	},
 	"locked-device-how": {
-		"xTitle": "How did the user get locked out of the device",
+		"xTitle": "How did the participant get locked out of the device",
 		"labels": [
 			"Forgot PIN/Password",
 			"Unrecognized Fingerprint",
@@ -146,6 +146,675 @@ export const BarGraphs = {
 				4,
 				1,
 				2,
+				0
+			]
+		}
+	},
+	"hacked-acct-how": {
+		"xTitle": "How did the participant get locked out of the account",
+		"labels": [
+			"Knowingly-Abused Access",
+			"Unknowingly-Abused Access",
+			"Regretted Permitting",
+			"Unauthorized Access (known person)",
+			"Unauthorized Access (unknown person)",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				1,
+				0,
+				0,
+				1,
+				1,
+				0
+			],
+			"Added": [
+				1,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"Not Worst": [
+				1,
+				0,
+				0,
+				0,
+				4,
+				0
+			]
+		}
+	},
+	"hacked-acct-type": {
+		"xTitle": "The type of account the participant was locked out of",
+		"labels": [
+			"Google",
+			"Microsoft",
+			"Apple",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				1,
+				1,
+				0,
+				0
+			],
+			"Added": [
+				1,
+				1,
+				0,
+				0
+			],
+			"Not Worst": [
+				4,
+				1,
+				0,
+				0
+			]
+		}
+	},
+	"hacked-acct-rec": {
+		"xTitle": "How long did it take to recover their account?",
+		"labels": [
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				2,
+				1,
+				0,
+				0
+			],
+			"Added": [
+				0,
+				1,
+				1,
+				0,
+				0
+			],
+			"Not Worst": [
+				2,
+				2,
+				0,
+				1,
+				0
+			]
+		}
+	},
+	"locked-acct-how": {
+		"xTitle": "How participants' email/drive accounts were locked",
+		"labels": [
+			"Forgot PIN/Password",
+			"PIN/Password No Longer Worked",
+			"Phone Number Lost",
+			"Device Lost",
+			"Password Manager Lost",
+			"Paper Lost",
+			"Electronic File Lost",
+			"Disuse",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				2,
+				1,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				1
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				11,
+				3,
+				2,
+				1,
+				2,
+				0,
+				0,
+				1,
+				2
+			]
+		}
+	},
+	"locked-acct-type": {
+		"xTitle": "The type of email/drive account locked",
+		"labels": [
+			"Google",
+			"Microsoft",
+			"Apple",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				1,
+				1,
+				0,
+				1
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				10,
+				3,
+				3,
+				0
+			]
+		}
+	},
+	"locked-acct-duration": {
+		"xTitle": "How time to recover a locked email/drive account",
+		"labels": [
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				2,
+				1,
+				0
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				6,
+				4,
+				3,
+				4,
+				0
+			]
+		}
+	},
+	"hacked-soc-how": {
+		"xTitle": "How participants' social accounts were compromised",
+		"labels": [
+			"Knowingly-Abused Access",
+			"Unknowingly-Abused Access",
+			"Regretted Permitting",
+			"Unauthorized Access (known person)",
+			"Unauthorized Access (unknown person)",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				0,
+				2,
+				0,
+				0
+			],
+			"Added": [
+				2,
+				1,
+				0,
+				1,
+				3,
+				0
+			],
+			"Not Worst": [
+				0,
+				0,
+				0,
+				2,
+				5,
+				0
+			]
+		}
+	},
+	"hacked-soc-type": {
+		"xTitle": "The type of social account compromised",
+		"labels": [
+			"Facebook",
+			"Instagram",
+			"Twitter/X",
+			"SnapChat",
+			"WhatsApp",
+			"WeChat",
+			"Signal",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				2,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				1,
+				2,
+				0,
+				2,
+				1,
+				0,
+				0,
+				1
+			],
+			"Not Worst": [
+				6,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	},
+	"hacked-soc-duration": {
+		"xTitle": "How time to recover a compromised financial account",
+		"labels": [
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				2,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				4,
+				2,
+				0,
+				1,
+				0
+			],
+			"Not Worst": [
+				4,
+				1,
+				2,
+				0,
+				1
+			]
+		}
+	},
+	"locked-soc-how": {
+		"xTitle": "How participants' social accounts were locked",
+		"labels": [
+			"Forgot PIN/Password",
+			"PIN/Password No Longer Worked",
+			"Phone Number Lost",
+			"Device Lost",
+			"Password Manager Lost",
+			"Paper Lost",
+			"Electronic File Lost",
+			"Disuse",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"Added": [
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				1
+			],
+			"Not Worst": [
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				1,
+				2
+			]
+		}
+	},
+	"locked-soc-type": {
+		"xTitle": "The type of social account locked",
+		"labels": [
+			"Facebook",
+			"Instagram",
+			"Twitter/X",
+			"SnapChat",
+			"WhatsApp",
+			"WeChat",
+			"Signal",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				2,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				4,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			]
+		}
+	},
+	"locked-soc-duration": {
+		"xTitle": "How time to recover a locked social account",
+		"labels": [
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				1,
+				0,
+				0
+			],
+			"Added": [
+				1,
+				1,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				2,
+				2,
+				0,
+				1,
+				0
+			]
+		}
+	},
+	"hacked-bank-how": {
+		"xTitle": "How participants' social financial were compromised",
+		"labels": [
+			"Knowingly-Abused Access",
+			"Unknowingly-Abused Access",
+			"Regretted Permitting",
+			"Unauthorized Access (known person)",
+			"Unauthorized Access (unknown person)",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				0,
+				1,
+				6,
+				0
+			],
+			"Added": [
+				0,
+				0,
+				1,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				1,
+				0,
+				0,
+				0,
+				3,
+				0
+			]
+		}
+	},
+	"hacked-bank-type": {
+		"xTitle": "The type of financial account compromised",
+		"labels": [
+			"Credit Card",
+			"Credit Union",
+			"Retirement",
+			"Brokerage",
+			"Paypal",
+			"Venmo",
+			"Cryptocurrency",
+			"Bank",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				2,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				4,
+				1
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				0
+			]
+		}
+	},
+	"locked-bank-how": {
+		"xTitle": "How participants' financial accounts were locked",
+		"labels": [
+			"Forgot PIN/Password",
+			"PIN/Password No Longer Worked",
+			"Phone Number Lost",
+			"Device Lost",
+			"Password Manager Lost",
+			"Paper Lost",
+			"Electronic File Lost",
+			"Disuse",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				2,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				0
+			]
+		}
+	},
+	"locked-bank-type": {
+		"xTitle": "The type of financial account locked",
+		"labels": [
+			"Credit Card",
+			"Credit Union",
+			"Retirement",
+			"Brokerage",
+			"Paypal",
+			"Venmo",
+			"Cryptocurrency",
+			"Bank",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				1,
+				0
+			],
+			"Added": [
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				4,
+				0
+			]
+		}
+	},
+	"locked-bank-dur": {
+		"xTitle": "How time to recover a locked financial account",
+		"labels": [
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				0,
+				1,
+				0,
+				0,
+				0
+			],
+			"Added": [
+				1,
+				0,
+				0,
+				0,
+				0
+			],
+			"Not Worst": [
+				1,
+				2,
+				0,
+				1,
 				0
 			]
 		}

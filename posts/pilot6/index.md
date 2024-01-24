@@ -60,12 +60,24 @@ We asked participants who had a device compromised/stolen or locked what type of
   <figcaption>How users were locked out of their devices.</figcaption>
 </figure>
 
-<figure>
-  <img src="/graphs/pilot6/locked-device-recdat-bar-chart.svg" alt="TBD"/>
-  <figcaption>TBD</figcaption>
-</figure>
+<figure><img src="/graphs/pilot6/locked-device-recdat-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-device-rec-bar-chart.svg" alt="TBD"/></figure>
 
-<figure>
-  <img src="/graphs/pilot6/locked-device-rec-bar-chart.svg" alt="TBD"/>
-  <figcaption>TBD</figcaption>
-</figure>
+<figure><img src="/graphs/pilot6/hacked-acct-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/hacked-acct-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/hacked-acct-rec-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-acct-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-acct-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-acct-duration-bar-chart.svg" alt="TBD"/></figure>
+
+<figure><img src="/graphs/pilot6/hacked-soc-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/hacked-soc-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-soc-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-soc-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-soc-duration-bar-chart.svg" alt="TBD"/></figure>
+
+<figure><img src="/graphs/pilot6/hacked-bank-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/hacked-bank-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-bank-how-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-bank-type-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot6/locked-bank-dur-bar-chart.svg" alt="TBD"/></figure>
