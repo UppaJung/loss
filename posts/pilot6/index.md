@@ -21,7 +21,7 @@ tags:
 
  - Missing question `hacked-bank-rec` and `hacked-pwds-rec` to match `hacked-soc-duration` and `hacked-acct-rec` (hacked-pwds-duration?) - DONE
 
- - for `hacked-*-duration`, the first option is now I never lost access - DONE
+ - for `hacked-*-duration`, the first option is now `I never lost access`` - DONE
 
  - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together?
 
