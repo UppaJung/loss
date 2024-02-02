@@ -30,8 +30,8 @@ tags:
  - Possible new scenario: systems and devices not doing what they say they're doing (failing to keep promises)
 
   - Add question for all scenarios: <i>On a scale of 1 (harmless) to 7 (devastating), how severe was the harm or loss?</i>
-   - (proposed by Serge)
-   - Do we like 'harmless' and 'devastating'?
+    - (proposed by Serge)
+    - Do we like 'harmless' and 'devastating'?
 
 
 ### Changes for analysis
