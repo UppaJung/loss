@@ -23,20 +23,23 @@ tags:
 
  - for `hacked-*-duration`, the first option is now `I never lost access`` - DONE
 
- - if PIN or password changed, who changed it?
+ - New scenario: backups and switching to new devices - DONE
+
+ - Possible new scenario: systems and devices not doing what they say they're doing (failing to keep promises) - DONE
+
+ - Verify that all capitalization of options is caps - DONE
+ - Verify that all options that start with "s the" becomes "The" - DONE
+
 
  - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together?
 
- - New scenario: backups and switching to new devices
-
- - Possible new scenario: systems and devices not doing what they say they're doing (failing to keep promises)
 
   - Add question for all scenarios: <i>Please rank the severity of the the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</i>
     - (proposed by Serge)
     - Goes at the end of each scenario before the tell us more.
 
- - Verify that all capitalization of options is caps
- - Verify that all options that start with "s the" becomes "The"
+
+ - if PIN or password changed, who changed it?
 
 ### Changes for analysis
  - Merge graphs for accounts when same questions asked for email, social, and financial
