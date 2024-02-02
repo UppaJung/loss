@@ -30,6 +30,10 @@ tags:
  - Verify that all capitalization of options is caps - DONE
  - Verify that all options that start with "s the" becomes "The" - DONE
 
+  - if PIN or password changed, who changed it? - DONE
+    - in progress. replicate locked-acct-pwho
+    - replicate locked-acct-how new option 2: "The PIN or password was recently changed"
+    - added locked-pwds-how
 
  - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together?
 
@@ -38,8 +42,6 @@ tags:
     - (proposed by Serge)
     - Goes at the end of each scenario before the tell us more.
 
-
- - if PIN or password changed, who changed it?
 
 ### Changes for analysis
  - Merge graphs for accounts when same questions asked for email, social, and financial
