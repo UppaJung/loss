@@ -11,23 +11,32 @@ tags:
 # To do
 ### Changes to survey for Pilot 7
 
- - Replace `worst` with `most harmful`
+ - Replace `worst` with `most harmful` - DONE
 
- - Replace <i>Yes, and I should have included it among my three worst</i> with <i>Yes and, in retrospect, I should have included that experience among my three most harmful</i>.
+ - Replace <i>Yes, and I should have included it above among my three worst</i> with <i>Yes and, in retrospect, I should have included that experience above among my three most harmful</i>. - DONE
 
- - For each scenario, if participant responds that a scenario should have been included among the three most harmful, ask <i>Should you have included that experience as your most harmful, second-most harmful, or third-most harmful experience?</i> options of `["most harmful", "second-most harmful", "third-most harmful"]`.
- 
- - Add question for all scenarios: <i>On a scale of 1 (harmless) to 7 (devastating), how severe was the harm or loss?</i>
-   - (proposed by Serge)
-   - Do we like 'harmless' and 'devastating'?
+ - For each scenario, if participant responds that a scenario should have been included among the three most harmful, ask <i>Should you have included that experience as your most harmful, second-most harmful, or third-most harmful experience?</i> options of `["most harmful", "second-most harmful", "third-most harmful"]`. - DONE
 
- - Missing question `hacked-bank-duration` to match `hacked-soc-duration` and `hacked-acct-duration`
+ - renamed `hacked-acct-rec` to `hacked-acct-duration`  - DONE
+
+ - Missing question `hacked-bank-rec` and `hacked-pwds-rec` to match `hacked-soc-duration` and `hacked-acct-rec` (hacked-pwds-duration?) - DONE
+
+ - for `hacked-*-duration`, the first option is now I never lost access - DONE
 
  - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together?
 
+ - New scenario: backups and switching to new devices
+
+ - Possible new scenario: systems and devices not doing what they say they're doing (failing to keep promises)
+
+  - Add question for all scenarios: <i>On a scale of 1 (harmless) to 7 (devastating), how severe was the harm or loss?</i>
+   - (proposed by Serge)
+   - Do we like 'harmless' and 'devastating'?
+
+
 ### Changes for analysis
  - Merge graphs for accounts when same questions asked for email, social, and financial
- 
+
  - Still a few missing graphs to clean up and add.
 
 ## Results
