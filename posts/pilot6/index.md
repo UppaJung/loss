@@ -35,12 +35,14 @@ tags:
     - replicate locked-acct-how new option 2: "The PIN or password was recently changed"
     - added locked-pwds-how
 
- - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together?
-
-
-  - Add question for all scenarios: <i>Please rank the severity of the the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</i>
+  - Add question for all scenarios: <i>Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</i>
     - (proposed by Serge)
     - Goes at the end of each scenario before the tell us more.
+    - DONE
+
+
+ - Can we reduce inconsistency between questions for devices and accounts, possibly using the same labels so we can graph them all together? - DONE
+
 
 
 ### Changes for analysis
