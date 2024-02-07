@@ -2,9 +2,11 @@ import { decodeDetailedDeviceType, DetailedDeviceTypeList } from "../../decode-q
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { filterAndDecodeExperiencedScenarioResponses } from "./common/filterAndDecodeResponses.ts";
-import { SurveyKeysPilot7 } from "../../survey-keys/index.ts";
+import { SurveyKeysPilot6 } from "../../survey-keys/index.ts";
 
-export const graphDeviceBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKeysPilot7>) => {
+// const RANGE = {count: 3, min: -30, max: 30};
+
+export const graphDeviceBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKeysPilot6>) => {
 
 	const labels = DetailedDeviceTypeList;
 	const data = {

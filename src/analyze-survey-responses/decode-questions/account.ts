@@ -54,24 +54,27 @@ export const [decodeAccountType, AccountTypeList] = getAnswerDecoderAndLabels([
 //I never recovered the account
 //Other (please describe)
 export enum RecoveryDurationLabels {
+  NeverLost = 'Never Lost',
   WithinDay = 'Within a Day',
   WithinWeek = 'Within a Week',
   Eventually = "Eventually",
-  Never = "Never",
+  Never = "Never Regained",
   Other = 'Other',
 };
 
 // hacked-acct-rec
-export const [decodeHackedAccountRecoveryDuration, HackedAccountRecoveryDurationList] = getAnswerDecoderAndLabels([
+export const [decodeHackedAccountRecoveryDuration, RecoveryDurationList] = getAnswerDecoderAndLabels([
+  ["never lost", RecoveryDurationLabels.NeverLost], 
   ["less than a day", RecoveryDurationLabels.WithinDay], 
   ["a day and a week", RecoveryDurationLabels.WithinWeek], 
-  ["I eventually did recover", RecoveryDurationLabels.Eventually], 
-  ["never recovered", RecoveryDurationLabels.Never], 
+  ["eventually", RecoveryDurationLabels.Eventually], 
+  ["never regained", RecoveryDurationLabels.Never], 
   ["Other", RecoveryDurationLabels.Other], 
 ]);
 
 // hacked-acct-rec
-export const [decodeLockedAccountRecoveryDuration, LockedAccountRecoveryDurationList] = getAnswerDecoderAndLabels([
+export const [decodeLockedAccountRecoveryDuration] = getAnswerDecoderAndLabels([
+  ["never lost", RecoveryDurationLabels.NeverLost], 
   ["less than a day", RecoveryDurationLabels.WithinDay], 
   ["a day and a week", RecoveryDurationLabels.WithinWeek], 
   ["not permanently", RecoveryDurationLabels.Eventually], 
@@ -79,6 +82,13 @@ export const [decodeLockedAccountRecoveryDuration, LockedAccountRecoveryDuration
   ["Other", RecoveryDurationLabels.Other], 
 ]);
 
+export const [decodeRecoveryDuration] = getAnswerDecoderAndLabels([
+  ["less than a day", RecoveryDurationLabels.WithinDay], 
+  ["a day and a week", RecoveryDurationLabels.WithinWeek], 
+  ["eventually", RecoveryDurationLabels.Eventually], 
+  ["never fully", RecoveryDurationLabels.Never], 
+  ["Other", RecoveryDurationLabels.Other], 
+]);
 
 
 export enum BankAccountTypeLabels {

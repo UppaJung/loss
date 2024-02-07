@@ -9,6 +9,8 @@ export const ScenarioLabel = {
 	LockedFinancial: 'Locked Financial',
 	HackedPwds: 'Hacked Passwords',
 	LockedPwds: 'Locked Passwords',
+	SwappedUpgraded: 'Swapped Device/OS',
+	BrokenPromise: 'Broken Promise',
 } as const;
 
 export type ScenarioLabel = typeof ScenarioLabel[keyof typeof ScenarioLabel];
@@ -24,4 +26,6 @@ export const ScenarioLabels = [
 	ScenarioLabel.LockedFinancial,
 	ScenarioLabel.HackedPwds,
 	ScenarioLabel.LockedPwds,
+	ScenarioLabel.SwappedUpgraded,
+	ScenarioLabel.BrokenPromise,
 ] as const;

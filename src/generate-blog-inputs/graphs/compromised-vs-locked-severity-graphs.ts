@@ -79,7 +79,10 @@ export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatch
 			},
 			y: {
 				type: "linear",
-				beginAtZero: true, 
+				beginAtZero: true,
+				ticks: {
+					precision: 0,
+				},
 				stacked: true,
 				...chartOptions.scales?.y,
 				title: {

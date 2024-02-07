@@ -3,8 +3,9 @@ import { TotalAnswered, tallyResponses } from "../../common/tallyResponses.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { percentage } from "../../common/numeric.ts";
+import { SurveyKey } from "../../survey-keys/index.ts";
 
-export const graphScenarioBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
+export const graphScenarioBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
 
 	
 	const labels = PairedScenarios;
@@ -28,10 +29,3 @@ export const graphScenarioBarChartData = (path: string, responses: AugmentedSurv
 			}export const labels = ${JSON.stringify(labels, undefined, "\t")};${"\n"
 			}export const data = ${JSON.stringify(data, undefined, "\t")};`);
 };
-
-/*
-{
-		'Compromised': Record<ANSWER, number[]>,
-		'Locked Out': Record<ANSWER, number[]>
-	}
-*/

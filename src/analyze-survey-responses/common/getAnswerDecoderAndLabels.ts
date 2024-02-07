@@ -24,7 +24,7 @@ export function decodeAnswer<T extends string = string>(specifiers: AnswerSpecif
   }
 }
 
-export function decodeMultipleAnswers<T extends string = string>(specifiers: AnswerSpecifier<T>[]) : (answer: string) => T[] {
+export function decodeMultipleAnswers<T extends string = string>(specifiers: AnswerSpecifier<T>[], instrument: boolean = false) : (answer: string) => T[] {
   return (answer: string = "") => {
     const answerLc = answer.toLocaleLowerCase();
     const result = specifiers.reduce((matches, [specifier, response]) => {
@@ -33,7 +33,10 @@ export function decodeMultipleAnswers<T extends string = string>(specifiers: Ans
         matches.push(response);
       }
       return matches
-    }, [] as T[])
+    }, [] as T[]);
+    if (instrument) {
+      console.log(`found ${result.join(", ")} in ${answer}`);
+    }
     return result;
   }
 }
@@ -62,8 +65,8 @@ export const getAnswerDecoderAndLabels = <T extends string = string>(specifiers:
  * (when specifier.test(answer) is called).
  * @returns A tuple containing the `validate` function followed by the array of valid tuples
  */
-export const getMultipleAnswerDecoderAndLabels = <T extends string = string>(specifiers: AnswerSpecifier<T>[]) => {
-  const decode = decodeMultipleAnswers(specifiers);
+export const getMultipleAnswerDecoderAndLabels = <T extends string = string>(specifiers: AnswerSpecifier<T>[], instrument: boolean = false) => {
+  const decode = decodeMultipleAnswers(specifiers, instrument);
   const labels = specifiers.map(([_, label]) => label);
   return [decode, labels] as const;
 }

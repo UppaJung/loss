@@ -3,8 +3,9 @@ import { countAndPercentMacroSet, numberMacro } from "../../common/latex.ts";
 import { tallyResponses, TotalAnswered } from "../../common/tallyResponses.ts";
 import { aggregateResponses } from "../../common/aggregateResponses.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { SurveyKeysPilot7 } from "../../survey-keys/index.ts";
 
-export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: AugmentedSurveyResponses) => {
+export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeysPilot7>) => {
   const macros = [] as string[];
 
   for (const [questionName, questionId] of MatchingScenariosLabelToId) {

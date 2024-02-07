@@ -1,5 +1,7 @@
-import * as ForCohort from "./generate-graphs-for-cohort.ts";
+import { generateGraphsPilot6 } from "./generate-graphs-for-pilot6.ts";
+import { generateGraphsPilot7 } from "./generate-graphs-for-pilot7.ts";
 
 export const generateGraphs = () => {
-	ForCohort.generateGraphs("Pilot6");
+	generateGraphsPilot6();
+	generateGraphsPilot7();
 }

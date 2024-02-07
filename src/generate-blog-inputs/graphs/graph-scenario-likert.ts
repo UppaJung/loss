@@ -1,32 +1,35 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
-import { AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
+
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
+import { LikertLabel, LikertLabels } from "../../analyze-survey-responses/generate/graph-data/likert.ts";
 
 
+export const LikertColors = LikertLabels.reduce( (r, label) => {
+	const shade = 210 - 25 * parseInt(label);
+	r[label] = `rgb(${shade},${shade},${shade})`;
+	return r;
+}, {} as Record<LikertLabel, string>);
 
-export const graphScenarioSeverity = <ANSWER extends AnswerToMatchingQuestion>({
-	labels, data, xTitle, yTitle = "Number of Participants", asPercentOf,
-	matchingQuestions,
-	colors = AnswerToMatchQuestionColors as Record<ANSWER, string>,
+export const graphScenarioLikert = ({
+	labels,
+	data,
+	xTitle,
+	yTitle = "Percent of Participants",
+	colors = LikertColors,
 }: {
 	labels: string[],
-	asPercentOf?: number,
-	data:  Record<ANSWER, number[]>,
-	matchingQuestions: readonly ANSWER[],
-	colors?: Record<ANSWER, string>,
+	data:  Record<LikertLabel, number[]>,
+	colors?: Record<LikertLabel, string>,
 	xTitle?: string,
 	yTitle?: string,
 	}, chartOptions: ChartOptions<"bar"> = {}
 ): string => {
-	const convert: (values: number[]) => number[] = asPercentOf != null ?
-		values => values.map( n => 100 * n / asPercentOf) :
-		values => values.map( n => n) ;
-	const datasets = matchingQuestions.map( experiencedScenario => ({
-		stack: '0',
-		data: convert(data[experiencedScenario]),
-		label: experiencedScenario,
-		borderColor: colors[experiencedScenario],
-		backgroundColor: colors[experiencedScenario],
+	const datasets = LikertLabels.map( likertLabel => ({
+		stack: 'ThereShouldBeOnly1Stack',
+		data: data[likertLabel],
+		label: likertLabel,
+		borderColor: colors[likertLabel],
+		backgroundColor: colors[likertLabel],
 	})) satisfies ChartDataset<"bar">[];
 	const previouslySeenSet = new Set<string>();
 	const previouslySeen = (s: string): boolean => {
@@ -60,6 +63,7 @@ export const graphScenarioSeverity = <ANSWER extends AnswerToMatchingQuestion>({
 				ticks: {
 					precision: 0,
 				},
+				max: 100,
 				stacked: true,
 				...chartOptions.scales?.y,
 				title: {
@@ -73,7 +77,7 @@ export const graphScenarioSeverity = <ANSWER extends AnswerToMatchingQuestion>({
 			} as NonNullable<ChartOptions<"bar">["scales"]>["y"],
 		},
 	} satisfies ChartOptions<"bar">;
-	// console.log("Chart", {options, datasets});
+	console.log("Chart", {options, labels, datasets});
 	const svg = chart<"bar">({
 		type: "bar", height: 600, width: 1200, options,
 		data: {

@@ -70,4 +70,7 @@ export const MatchingScenariosLabelToId = [
   [ScenarioLabel.LockedFinancial, 'locked-bank'],
   [ScenarioLabel.HackedPwds, 'hacked-pwds'],
   [ScenarioLabel.LockedPwds, 'locked-pwds'],
-] as const;
+  [ScenarioLabel.SwappedUpgraded, 'swap-device'],
+  [ScenarioLabel.BrokenPromise, 'disconnect'],
+] as const satisfies readonly [ScenarioLabel, SurveyKey][];
+

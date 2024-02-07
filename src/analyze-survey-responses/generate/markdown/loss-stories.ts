@@ -1,10 +1,11 @@
 import { SurveyKeys, AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { makeSafeForMarkdown } from "../../common/makeSafeForMarkdown.ts";
+import { SurveyKey } from "../../survey-keys/index.ts";
 
 const {warningHeaderHtml, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
-export const generateLossStoryMarkdown = (outPath: string, responses: AugmentedSurveyResponses) => {
+export const generateLossStoryMarkdown = (outPath: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
 		const losses = warningHeaderHtml + responses.map( 
 			response => `### Participant ${response.participantId}${"\n"}` + [SurveyKeys.Loss1, SurveyKeys.Loss2, SurveyKeys.Loss3].map( (key, index) => 
 				`${index + 1}. ${makeSafeForMarkdown(response[key])}${"\n"}`).join("\n")
