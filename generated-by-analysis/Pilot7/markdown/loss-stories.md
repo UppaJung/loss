@@ -168,3 +168,178 @@
 2. The second most harmful loss was when I lost access to Dropbox for my work files.  I was developing courses and lost all source files, and thus lost the ability to edit courses.
 
 3. The third most harmful was when my iPod broke.  It seemed inconsequential but it was not.  Music is therapy for me, and at the time, going to actual therapy was not as normalized.  I had just gotten married and didn’t realize that I was going to experience several personal tragedies.  Not having my music was really detrimental to my mental health and my productivity.
+
+### Participant 25
+1. Having my home robbed and my laptop stolen
+
+2. Having someone almost hack my social media account because I believed they were actually my friend.
+
+3. Having 150$ almost taken because the links on the page were misplaced
+
+### Participant 26
+1. When I was younger I experienced a lot of cyber bullying.
+
+2. I have had people harass me through my phone and steal my pictures.
+
+3. I lost my phone and therefore lost all my pictures.
+
+### Participant 27
+1. This was several years ago. I had left in my job and had started a drone, photography and videography business. Well, I crashed my drone and didn’t have insurance enough to cover it and my funds were low at the moment. That was pretty devastating.
+
+2. My laptop broke while I was in college, and working full time. I needed to bring it with me to study and didn’t have my files backed up. It was awful.
+
+3. My car broke down, which was needed to get me to and from work. I didn’t have proper money to take care of it at the time.
+
+### Participant 28
+1. i got stuck in a new city because my smart phone stop to work because it&#39;s battery died on me
+
+2. i was not able to call my wife when she need me because my smart phone run out of battery
+
+3. i got addict to social medias and waste all of time on snapchats and face book
+
+### Participant 29
+1. Having my credit card compromised.
+
+2. Choosing sitting on my ipad instead of exercising.
+
+3. Getting a virus on my computer.
+
+### Participant 30
+1. I dropped my phone in water and it completely messed it up and corroded the insides.
+
+2. I dropped my phone on the ground and it shattered the screen.
+
+3. My dog pulled my Xbox off where it was placed and dented it.
+
+### Participant 31
+1. Loss of time due to scrolling on social media, especially Tik Toc. This can take over 30 minutes of my day which is a big fat waste of time. I could be doing something way more valuable.
+
+2. Frustration with not being able to figure out certain technology. For example trying to figure out things in excel. Or word, or even chrome.
+
+3. Perhaps all the typing I do sometimes makes my hands hurt.
+
+### Participant 32
+1. My most harmful technology related harm or loss occurred on a trip outside of the country. I was attempting to withdraw money from an ATM in the foreign country, and I was entering my card’s pin but the system continued to say it was incorrect. The machine took my card and I was left in a foreign country without cash or a card.
+
+2. My second most harmful loss was more mentally draining. I was almost finished with a massive project for my job that had taken several days to prepare when our Teams site crashed and my work was lost. I had to start from scratch and became untrustworthy of the system.
+
+3. My third situation revolves around scam calls and schemes using payment services like PayPal and Venmo. I receive so many scam calls and messages that I have shut down my accounts before out of fear.
+
+### Participant 33
+1. I have lost multiple years worth of backed-up data on failing hard drives. This included sentimental data from my past, many memories, ect. This was an intense blow, and left me aimless and in despair to this day.
+
+2. I have had to make emergency large-value purchases to repair my computers when they have failed, often at times where I could not afford to make such fixes. This left me with debt and stress that I could not handle.
+
+3. I have experienced a slow but steady decline in happiness due to being connected to the internet and worldwide news. It has enabled me to learn more about the world around us, which includes atrocities I would not have known about otherwise.
+
+### Participant 34
+1. I would have to go with my neck. Specifically the left side by my shoulder. It&#39;s always bothering me, pretty much every day. And has since I started sitting at a desk for work 15 years ago. I have many things I use to alleviate this pain, such as tens machine, chiro-gun, cbd creams, hot/cold treatment, different pillows.
+
+2. I&#39;ve developed a terrible pain in my thumb in the past few months and it&#39;s most definitely from scrolling tik tok. I&#39;ve had to kind of limit my texting and/or switch fingers to scroll. I really do wonder the long term effects of cell phone use
+
+3. My eye has been twitching, and I think it&#39;s related to screen time. I work in front of a computer all day, plus get home and watch TV or play video games. All the while, I&#39;m on a cell phone constantly.
+
+### Participant 35
+1. Relying solely on navigation apps for directions can be harmful if the technology fails or leads you to the wrong place, potentially causing confusion or even danger, I’ve experienced this multiple times.
+
+2. Dependence on autocorrect features in communication apps has lead to embarrassing or misunderstood messages for me multiple times. Especially if the technology incorrectly changes words, affecting the intended meaning.
+
+3. Heavy reliance on social media for validation can negatively impact mental health, as constant comparison and seeking approval through likes and comments may contribute to feelings of inadequacy or low self-esteem.
+
+### Participant 36
+1. I have had my computer crash or break resulting in loss of my final assignment that was due for a class. This was a very stressful time as the computer crashed as I was wrapping up my project.
+
+2. I&#39;ve had several emails that were not sent and left in my draft folder for emails that needed to be sent. Luckily the emails didn&#39;t have a set deadline, but it did cause some delay in workflow for reports.
+
+3. My old desktop eventually broke as a result to overheating which resulted in loss of data as well. My computer&#39;s cooling system became so weak that it could not handle the powering up of the computer itself.
+
+### Participant 37
+1. I love taking photos and, back before cloud storage was a big thing, stored my photos on my computer&#39;s hard drive. One day the drive died and I lost a good number of the photos I had not backed up onto DVDs
+
+2. I had a crappy car once and whenever I would stop at a red light, there was a good chance it would stall. Luckily it never caused an accident, but it made driving it very anxiety inducing.
+
+3. There have been times when I have lost work due to autosaving or cloud storage malfunctions. This has cost me time and caused me frustrations.
+
+### Participant 38
+1. I lost copies of important documents I had put into a locked folder on my phone. When I got a new phone the documents were no longer available. They were only available on the phone where they had been locked and I broke that phone and could no longer access the documents.
+
+2. My external hard drive malfunctioned. I was unable to access anything on the hard drive and it was like only location where I had stored some photos and files. Due to this loss, I can no longer access these files.
+
+3. The boarding pass I had downloaded on my phone would not scan at TSA. I had to go back to the desk and get a physical boarding pass. Then, I had to wait in line again to get through security. It took a lot of extra time and made me concerned about missing my flight. It was a big hassle.
+
+### Participant 39
+1. I have had a friend attempt suicide before mostly due to interactions online. There was a lot of bullying after a post of theirs got a lot of attention, and it didn&#39;t help that they were already at a bad place in life due to other circumstances. It was a heartbreaking event and made me take a break from using the internet.
+
+2. This was not something that happened to me personally but to my younger cousin and their friends. I cannot remember the details, but there was some internet trend going around with kids where they follow the rules of a game and go as extreme as they can. This resulted in the rules telling some kids to do things that could easily hurt them. Luckily, no one I know was harmed by this, but it was still a terrible thing to experience second-hand and witness what this was doing to other kids.
+
+3. I was in a minor car accident as a teenager due to texting and driving. My friend at the time was driving on the frontage road with me and another friend in the car and was on their phone at the same time. When we went through an intersection, we t-boned another guy and went spinning across the road. Luckily no one was badly injured.
+
+### Participant 40
+1. Being on places like twitter, I was often exposed to hateful bigotry directed towards the minority groups that I&#39;m a part of, and this caused me to lose my happiness and feelings of safety. Not to a great extent, but sometimes I would be in a negative spiral reading all these negative posts and it would cause me great distress.
+
+2. Throughout the years I have had several internet-based friendships that I enjoyed very much, but after something suddenly happened to their accounts- either they were deleted by the user suddenly or they were banned for whatever reason, or the user slowly stopped using the site more and more- I would lose these people forever. We often did not know each other&#39;s real names so I had no way to find them again.
+
+3. The internet is so good as absorbing you into their world, it&#39;s literally designed to trapped you on the website, and it works. I have lost so much time I could have spent on more relaxing or more productive things to scrolling on the internet.
+
+### Participant 41
+1. Experian had a data breach and that  cause some issues for me. Someone tried to create accounts in my name and that ended up locking my social. It was a pain to get verified as myself.
+
+2. Someone pretended to be me on social media sites and this caused issues for me when someone I knew saw it. Everything got sorted out but this is still annoying.
+
+3. Someone hacked into my cloud and got compromising pictures of me. Then they blackmailed me and threatened release of the photos . Lose lose situation so I just let them release the photos.
+
+### Participant 42
+1. My cellphone screen breaking while on vacation out the country had no way to contact or check anything. Had to do everything in person for my travel back home. Had to rely on the hotel staff for my transportation, had I in person check in for my flight. Going without a phone for 5 days was horrible.
+
+2. Having the systems to crash while working and I work for an airline everything is about technology forward. Explaining to customers there is a delay because our systems crashed.
+
+3. Having a work from home job and the internet was down during Covid when everyone was working from home or doing school. Not being able to assist my customers was hard we was all new to Covid and not sure what was going on.
+
+### Participant 43
+1. The most serious damage I have suffered has been the theft of information and failure of the hard drive of my laptop due to a file that I received in an email that had been hacked from a co-worker, this caused me to lose important information about payments to suppliers. , sensitive information about clients, bank accounts and my agenda with data from our company, this led to having to make a significant security expense to avoid this problem in the future
+
+2. Our internal network suffered catastrophic damage that left us unable to do anything with it, this left us unable to access our inventory or the operations we were carrying out at that time.
+
+3. the loss of all the information on my Smartphone which left me without the ability to communicate and with the loss of a lot of information from my work, the operating system of my smartphone was damaged and I could not do anything else with it
+
+### Participant 44
+1. A few years ago, I received a number emails and notifications about my accounts being hacked. Specifically my backing accounts. Because of my reliance on technology and having my password stored on my computer, somebody was able to hack my computer and steal my passwords. They managed to get into my account and spend a good portion of my money. Thank God I was able to recoup the losses and minimize the damage.
+
+2. I recently had a hard drive crash. This hard drive contained many important files from my business. The hard drive contained backups of systems and important financial documents. I lost everything. Despite taking the drive to a data recovery shop, they were unable to retrieve it for me.
+
+3. Last year, while I was out I need to jog with my family, my phone slipped out of my pocket and fell on the hard concrete floor. It fell out, bounced on the hard concrete floor and then slipped into a ditch that was filled with water. Not only was it broken, but it was also ruined completely. That was a very expensive phone. The newest model of iPhone.
+
+### Participant 45
+1. Cyber-bullying through instagram has become a huge part of my day to day. Comments from strangers insulting me or bashing my account.
+
+2. My addiction to instagram and tik tok is really harmful to my days. I sometimes sit all evening on my phone and accomplish nothing.
+
+3. My facebook account was hacked and the person messaged inappropriate content to others.
+
+### Participant 46
+1. the equipment broke down quickly
+
+2. I cause problems
+
+3. It didn&#39;t work for me, I didn&#39;t know how to work it
+
+### Participant 47
+1. In the past, banking online has caused meto have my account hacked and I had to go through many loops to have my funds returned to my account.
+
+2. My dependance on technology has degraded my spelling capabilities which I was very proud of. This was caused due to using auto correct and auto fill.
+
+3. Depending on technology to communicate with others has caused some tension in the past. Instead of calling I would text and sometimes people would take what I texted the wrong way because they could not hear the tone in which I was meaning to portray.
+
+### Participant 48
+1. I once had a had drive failure while working on an assignment for school.  It set me back pretty far and I did not like it.
+
+2. A rumor spread about me through social media.  But I was able to squash it.
+
+3. My nintendo switch accidentally got put in the washing machine.  I lost the device as a result and all of my saves.
+
+### Participant 49
+1. The most harmful technology-related harm I&#39;ve experienced was the theft of my smartphone during a trip. It led to emotional distress, the loss of personal data, and the inconvenience of dealing with unauthorized access. Replacing the device and enhancing digital security resulted in financial and time-related losses.
+
+2. The second-most harmful technology-related harm was a phishing attack on my email, resulting in unauthorized access. Resolving it required time-consuming security measures, emphasizing the importance of online vigilance.
+
+3. The third-most harmful tech-related harm was accidentally deleting crucial files on my computer, causing a setback in projects. Retrieval efforts emphasized the importance of regular backups and careful data handling.

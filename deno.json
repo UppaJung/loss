@@ -6,6 +6,7 @@
   "tasks": {
     "analyze-watch": "deno run --watch --allow-read --allow-write src/analyze-survey-responses/main.ts",
     "analyze": "deno run --allow-read --allow-write src/analyze-survey-responses/main.ts",
+    "graphs": "deno run --allow-read --allow-write src/analyze-survey-responses/main.ts; deno run --allow-read --allow-write src/generate-blog-inputs/index.ts",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -"

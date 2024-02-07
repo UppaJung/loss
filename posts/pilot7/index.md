@@ -8,18 +8,27 @@ tags:
   - methodology
 ---
 
-### Notes
+### Stuart's notes on reading loss stories.
 
-Lots of great loss stories. Worth the read. After reading, participant 22's seem most likely to be the result of feeding the questions into an LLM (large language model).
+Lots of great loss stories. Worth the read. After reading, participant 22 and 49, they seem most likely to be the result of feeding the questions into an LLM (large language model). Participant 46 did not answer initial questions in a meaningful way.
+
+A number of respondents describe events that happened to friends or loved ones. We may want to emphasize that they should only harms due to themselves or due to their own reliance on technology. (Good meeting discussion topic.)
 
 ### Changes for analysis
+
+ - Integrate the classification(s) assigned into the page describing the stories.
+ 
  - Merge graphs for accounts when same questions asked for email, social, and financial
 
 ### Ideas for next pilot
 Possible scenarios:
- - Lost attention
- - Harassment
- - Mental health?
+ - Lost attention, wasted time, and addiction
+ - Harassment, bullying, impersonation, or embarrassment (or exposure to others being harassed, bullied, impersonated, or embarrassed)
+ - Harms due to others' use of, reliance on, or addiction to technology?
+ - Social distance as interactions become less personal
+ - Navigation and scheduling failures?
+ - General mental health decline?
+ - General social decline?
 
 
 ## Results
@@ -54,6 +63,8 @@ We asked participants who had a device compromised/stolen or locked what type of
 </figure>
 
 
+<figure><img src="/graphs/pilot7/hacked-device-dur-bar-chart.svg" alt="TBD"/></figure>
+
 <figure>
   <img src="/graphs/pilot7/account-type-bar-chart.svg" alt="A bar chart summarizing the number of devices of each type that were lost or hacked."/>
   <figcaption>The types of accounts that participants had suffered the compromise of (left bar in pair) or had been locked out of (right bar in pair).</figcaption>
@@ -81,11 +92,11 @@ We asked participants who had a device compromised/stolen or locked what type of
 
 
 <figure><img src="/graphs/pilot7/locked-device-recdat-bar-chart.svg" alt="TBD"/></figure>
-<figure><img src="/graphs/pilot7/locked-device-rec-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot7/locked-device-dur-bar-chart.svg" alt="TBD"/></figure>
 
 <figure><img src="/graphs/pilot7/hacked-acct-how-bar-chart.svg" alt="TBD"/></figure>
 <figure><img src="/graphs/pilot7/hacked-acct-type-bar-chart.svg" alt="TBD"/></figure>
-<figure><img src="/graphs/pilot7/hacked-acct-rec-bar-chart.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot7/hacked-acct-dur-bar-chart.svg" alt="TBD"/></figure>
 <figure><img src="/graphs/pilot7/locked-acct-how-bar-chart.svg" alt="TBD"/></figure>
 <figure><img src="/graphs/pilot7/locked-acct-type-bar-chart.svg" alt="TBD"/></figure>
 <figure><img src="/graphs/pilot7/locked-acct-dur-bar-chart.svg" alt="TBD"/></figure>

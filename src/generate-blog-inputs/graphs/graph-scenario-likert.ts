@@ -77,7 +77,7 @@ export const graphScenarioLikert = ({
 			} as NonNullable<ChartOptions<"bar">["scales"]>["y"],
 		},
 	} satisfies ChartOptions<"bar">;
-	console.log("Chart", {options, labels, datasets});
+	// console.log("Chart", {options, labels, datasets});
 	const svg = chart<"bar">({
 		type: "bar", height: 600, width: 1200, options,
 		data: {

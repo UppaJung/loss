@@ -16,31 +16,31 @@ export const labels = [
 export const data = {
 	"Compromised": {
 		"Original": [
+			1,
+			1,
+			0,
 			0,
 			1,
 			0,
 			0,
-			0,
-			0,
-			0,
-			1,
+			4,
 			0,
 			0
 		],
 		"Added": [
 			1,
+			1,
+			0,
+			1,
 			0,
 			0,
 			0,
-			0,
-			0,
-			0,
-			0,
+			2,
 			0,
 			0
 		],
 		"Not Worst": [
-			1,
+			4,
 			3,
 			1,
 			0,
@@ -55,18 +55,18 @@ export const data = {
 	"Locked Out": {
 		"Original": [
 			1,
+			1,
 			0,
 			0,
 			0,
 			0,
 			0,
-			0,
-			0,
+			1,
 			0,
 			0
 		],
 		"Added": [
-			0,
+			1,
 			0,
 			0,
 			0,
@@ -78,8 +78,8 @@ export const data = {
 			0
 		],
 		"Not Worst": [
-			3,
-			1,
+			7,
+			2,
 			0,
 			1,
 			0,

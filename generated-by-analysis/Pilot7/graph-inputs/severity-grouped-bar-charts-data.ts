@@ -15,30 +15,67 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				3,
+				2,
 				1,
 				1,
-				0,
 				0,
 				0,
 				0
 			],
 			"Added": [
+				3,
+				2,
 				1,
-				0,
-				0,
 				0,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				1,
-				4,
+				2,
+				5,
 				0,
+				3,
+				0,
+				0,
+				0
+			]
+		}
+	},
+	"hacked-device-dur": {
+		"xTitle": "How long did it take to recover the compromised device?",
+		"labels": [
+			"Never Lost",
+			"Within a Day",
+			"Within a Week",
+			"Eventually",
+			"Never Regained",
+			"Other"
+		],
+		"data": {
+			"Original": [
+				2,
+				1,
+				3,
+				0,
+				1,
+				0
+			],
+			"Added": [
 				2,
 				0,
+				1,
 				0,
+				3,
+				0
+			],
+			"Not Worst": [
+				3,
+				3,
+				0,
+				0,
+				4,
 				0
 			]
 		}
@@ -57,12 +94,12 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
+				1,
+				1,
 				0,
 				0,
 				1,
-				1,
+				2,
 				0,
 				0
 			],
@@ -70,7 +107,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -81,10 +118,10 @@ export const BarGraphs = {
 				2,
 				0,
 				0,
-				0,
 				1,
-				0,
-				1
+				1,
+				3,
+				2
 			]
 		}
 	},
@@ -98,21 +135,21 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				2,
-				0,
+				3,
+				1,
 				0,
 				0
 			],
 			"Added": [
 				0,
 				0,
-				0,
+				1,
 				0
 			],
 			"Not Worst": [
-				1,
-				2,
 				3,
+				3,
+				5,
 				0
 			]
 		}
@@ -131,11 +168,11 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				2,
+				4,
 				0
 			],
 			"Added": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -143,15 +180,15 @@ export const BarGraphs = {
 			],
 			"Not Worst": [
 				2,
+				4,
 				1,
-				1,
-				2,
+				4,
 				0
 			]
 		}
 	},
 	"hacked-acct-how": {
-		"xTitle": "How did the participant get locked out of the account",
+		"xTitle": "How was the participant's account compromised",
 		"labels": [
 			"Knowingly-Abused Access",
 			"Unknowingly-Abused Access",
@@ -182,13 +219,13 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				4,
+				8,
 				0
 			]
 		}
 	},
 	"hacked-acct-type": {
-		"xTitle": "The type of account the participant was locked out of",
+		"xTitle": "The type of account account compromised",
 		"labels": [
 			"Google",
 			"Microsoft",
@@ -209,15 +246,15 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				5,
 				1,
 				1,
-				1,
-				1
+				2
 			]
 		}
 	},
 	"hacked-acct-dur": {
-		"xTitle": "How long did it take to recover their account?",
+		"xTitle": "How long did it take to recover their compromised account?",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -244,10 +281,10 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				1,
-				1,
 				2,
-				0,
+				4,
+				2,
+				1,
 				0,
 				0
 			]
@@ -290,10 +327,10 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				7,
+				12,
+				3,
+				2,
 				1,
-				1,
-				0,
 				0,
 				0,
 				0,
@@ -324,15 +361,15 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				3,
-				3,
+				7,
 				4,
+				8,
 				1
 			]
 		}
 	},
 	"locked-acct-dur": {
-		"xTitle": "How time to recover a locked email/drive account",
+		"xTitle": "How much time to recover a locked email/drive account",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -360,10 +397,10 @@ export const BarGraphs = {
 			],
 			"Not Worst": [
 				0,
-				3,
+				6,
+				4,
+				8,
 				2,
-				5,
-				1,
 				0
 			]
 		}
@@ -384,7 +421,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				1,
+				4,
 				0
 			],
 			"Added": [
@@ -392,7 +429,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0
 			],
 			"Not Worst": [
@@ -400,7 +437,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				4,
+				7,
 				0
 			]
 		}
@@ -419,7 +456,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				1,
+				4,
 				0,
 				0,
 				0,
@@ -429,7 +466,7 @@ export const BarGraphs = {
 				0
 			],
 			"Added": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -439,9 +476,9 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				4,
-				0,
+				1,
+				5,
+				1,
 				1,
 				0,
 				0,
@@ -451,7 +488,7 @@ export const BarGraphs = {
 		}
 	},
 	"hacked-soc-dur": {
-		"xTitle": "How time to recover a compromised financial account",
+		"xTitle": "Time to recover a compromised financial account",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -463,14 +500,14 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
 				1,
-				0,
-				0,
+				1,
+				1,
+				1,
 				0
 			],
 			"Added": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -478,8 +515,8 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				1,
-				3,
+				2,
+				5,
 				0,
 				0,
 				1,
@@ -505,7 +542,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -524,15 +561,15 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				4,
+				5,
 				0,
 				0,
 				1,
-				0,
+				1,
 				0,
 				0,
 				1,
-				3
+				5
 			]
 		}
 	},
@@ -550,7 +587,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -570,9 +607,9 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				4,
-				1,
+				2,
+				5,
+				2,
 				0,
 				0,
 				0,
@@ -582,7 +619,7 @@ export const BarGraphs = {
 		}
 	},
 	"locked-soc-dur": {
-		"xTitle": "How time to recover a locked social account",
+		"xTitle": "How much time to recover a locked social account",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -597,7 +634,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0
 			],
 			"Added": [
@@ -611,9 +648,9 @@ export const BarGraphs = {
 			"Not Worst": [
 				0,
 				1,
+				4,
 				2,
-				1,
-				2,
+				4,
 				0
 			]
 		}
@@ -630,11 +667,11 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				1,
 				0,
 				0,
 				1,
-				4,
+				5,
 				0
 			],
 			"Added": [
@@ -649,8 +686,8 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				1,
 				2,
+				3,
 				0
 			]
 		}
@@ -674,10 +711,10 @@ export const BarGraphs = {
 				1,
 				0,
 				0,
+				1,
 				0,
 				0,
-				0,
-				3,
+				4,
 				0
 			],
 			"Added": [
@@ -698,8 +735,8 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
-				2,
+				1,
+				3,
 				0
 			]
 		}
@@ -718,8 +755,8 @@ export const BarGraphs = {
 			"Original": [
 				3,
 				2,
-				0,
-				0,
+				1,
+				1,
 				0,
 				0
 			],
@@ -732,10 +769,10 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
+				1,
 				3,
 				0,
-				0,
+				1,
 				0,
 				0
 			]
@@ -759,7 +796,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -778,10 +815,10 @@ export const BarGraphs = {
 				1
 			],
 			"Not Worst": [
-				5,
+				7,
 				0,
-				0,
-				0,
+				2,
+				1,
 				0,
 				0,
 				0,
@@ -810,7 +847,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0
@@ -834,13 +871,13 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				3,
+				7,
 				0
 			]
 		}
 	},
 	"locked-bank-dur": {
-		"xTitle": "How time to recover a locked financial account",
+		"xTitle": "How much time to recover a locked financial account",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -855,7 +892,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0
 			],
 			"Added": [
@@ -868,8 +905,8 @@ export const BarGraphs = {
 			],
 			"Not Worst": [
 				0,
-				3,
-				2,
+				4,
+				5,
 				1,
 				0,
 				0
@@ -895,7 +932,7 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				3,
+				7,
 				3,
 				1
 			]
@@ -923,15 +960,15 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				5,
+				6,
 				3,
-				3,
-				0,
 				1
 			]
 		}
 	},
 	"swap-device-dur": {
-		"xTitle": "How time to recover after harm from device/os swap/upgrade",
+		"xTitle": "How much time to recover after harm from device/os swap/upgrade",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -960,9 +997,9 @@ export const BarGraphs = {
 			"Not Worst": [
 				0,
 				0,
-				1,
 				2,
-				4,
+				2,
+				7,
 				0
 			]
 		}
@@ -977,9 +1014,9 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				2,
-				1,
-				2,
+				6,
+				3,
+				5,
 				0
 			],
 			"Added": [
@@ -989,9 +1026,9 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				1,
-				3,
+				2,
+				2,
+				4,
 				0
 			]
 		}
@@ -1006,9 +1043,9 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				2,
-				1,
-				2,
+				8,
+				3,
+				4,
 				0
 			],
 			"Added": [
@@ -1018,15 +1055,15 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				1,
-				1,
+				3,
 				2,
+				3,
 				0
 			]
 		}
 	},
 	"disconnect-dur": {
-		"xTitle": "How time to recover after harm from disconnect/broken promise",
+		"xTitle": "How much time to recover after harm from disconnect/broken promise",
 		"labels": [
 			"Never Lost",
 			"Within a Day",
@@ -1038,10 +1075,10 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
+				1,
 				2,
 				0,
-				3,
+				8,
 				0
 			],
 			"Added": [
@@ -1055,9 +1092,9 @@ export const BarGraphs = {
 			"Not Worst": [
 				0,
 				0,
+				4,
+				1,
 				2,
-				1,
-				1,
 				0
 			]
 		}

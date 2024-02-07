@@ -139,6 +139,13 @@ export const generateFreeTextMacros = (outPath: string, responses: AugmentedSurv
 		[SurveyKeys["locked-pwds-stored_10_TEXT"], "lockedPwdsStored"],
 		[SurveyKeys["locked-pwds-when_4_TEXT"], "lockedPwdsWhen"],
 		[SurveyKeys["locked-pwds-dur_7_TEXT"], "lockedPwdsDuration"],
+		[SurveyKeys["disconnect-dur_7_TEXT"], "brokenPromiseDuration"],
+		[SurveyKeys["disconnect-how_3_TEXT"], "brokenPromiseHow"],
+		[SurveyKeys["disconnect-harm_3_TEXT"], "brokenPromiseHarm"],
+		[SurveyKeys["swap-device-when_4_TEXT"], "swapUpgradeWhen"],
+		[SurveyKeys["swap-device-harm_3_TEXT"], "swapUpgradeHarm"],
+		[SurveyKeys["swap-device-what_3_TEXT"], "swapUpgradeHow"],
+		[SurveyKeys["gender_4_TEXT"], "gender"],
 //[		"Q15_4_TEXT": "Q15_4_TEXT",
 	 ] as const satisfies [keyof ((typeof responses)[number]), string][];
 

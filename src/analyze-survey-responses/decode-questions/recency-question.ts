@@ -1,4 +1,5 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
+import { SurveyKey } from "../survey-keys/index.ts";
 import { ScenarioLabel } from "./scenario-labels.ts";
 
 export enum AnswerToRecencyQuestionLabels {
@@ -30,4 +31,6 @@ export const ScenarioLabelWithRecencyIdTuples = [
   [ScenarioLabel.LockedFinancial, 'locked-bank-when'],
   [ScenarioLabel.HackedPwds, 'hacked-pwds-when'],
   [ScenarioLabel.LockedPwds, 'locked-pwds-when'],
-] as const;
+  [ScenarioLabel.SwappedUpgraded, 'swap-device-when'],
+  [ScenarioLabel.BrokenPromise, 'disconnect-when'],
+] as const satisfies [ScenarioLabel, SurveyKey][];

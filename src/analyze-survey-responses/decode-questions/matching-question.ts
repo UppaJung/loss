@@ -49,6 +49,17 @@ export const PairedScenarios = [
   PairedScenario.Passwords,
 ] as const;
 
+export const UnpairedScenarioLabels = [
+  ScenarioLabel.SwappedUpgraded,
+  ScenarioLabel.BrokenPromise,
+] as const;
+export type UnpairedScenarioLabel = typeof UnpairedScenarioLabels[number];
+
+export const UnpairedScenariosLabelToId = [
+  [ScenarioLabel.SwappedUpgraded, 'swap-device'],
+  [ScenarioLabel.BrokenPromise, 'disconnect'],
+] as const satisfies readonly [UnpairedScenarioLabel, SurveyKey][];
+
 export const scenarioMatchingQuestionId = (failureMode: 'hacked' | 'locked', scenario: PairedScenario) => {
   switch (scenario) {
     case PairedScenario.Device: return `${failureMode}-device` as const satisfies SurveyKey;

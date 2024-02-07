@@ -62,8 +62,9 @@ export enum RecoveryDurationLabels {
   Other = 'Other',
 };
 
-// hacked-acct-rec
-export const [decodeHackedAccountRecoveryDuration, RecoveryDurationList] = getAnswerDecoderAndLabels([
+
+// hacked-[device|acct|soc|bank]-dur
+export const [decodeHackedRecoveryDuration, RecoveryDurationList] = getAnswerDecoderAndLabels([
   ["never lost", RecoveryDurationLabels.NeverLost], 
   ["less than a day", RecoveryDurationLabels.WithinDay], 
   ["a day and a week", RecoveryDurationLabels.WithinWeek], 

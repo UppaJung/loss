@@ -43,7 +43,11 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	}));
 	writeSvg(`scenario-bar-chart`, graphCompromisedVsLockedOutSeverity({
 		matchingQuestions: AnswerToMatchingQuestionList,
-		...ScenarioMatching,
+		labels: [...ScenarioMatching.pairedScenarioLabels, ...ScenarioMatching.unpairedScenarioLabels],
+		data: {
+			"Compromised": ScenarioMatching.compromisedAndUnpairedScenarioData,
+			"Locked Out": ScenarioMatching.lockedOutScenarioData,
+		}, 
 		xTitle: "Scenario",
 		yTitle: "Percent of participants",
 	}));
