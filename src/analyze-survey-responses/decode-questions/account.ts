@@ -53,42 +53,57 @@ export const [decodeAccountType, AccountTypeList] = getAnswerDecoderAndLabels([
 //more than a week, but I eventually did recover the account
 //I never recovered the account
 //Other (please describe)
-export enum RecoveryDurationLabels {
-  NeverLost = 'Never Lost',
-  WithinDay = 'Within a Day',
-  WithinWeek = 'Within a Week',
-  Eventually = "Eventually",
+export enum RecoveryDurationLabel {
   Never = "Never Regained",
+  Eventually = "Eventually",
+  WithinWeek = 'Within a Week',
+  WithinDay = 'Within a Day',
   Other = 'Other',
+  NeverLost = 'Never Lost',
 };
 
 
 // hacked-[device|acct|soc|bank]-dur
-export const [decodeHackedRecoveryDuration, RecoveryDurationList] = getAnswerDecoderAndLabels([
-  ["never lost", RecoveryDurationLabels.NeverLost], 
-  ["less than a day", RecoveryDurationLabels.WithinDay], 
-  ["a day and a week", RecoveryDurationLabels.WithinWeek], 
-  ["eventually", RecoveryDurationLabels.Eventually], 
-  ["never regained", RecoveryDurationLabels.Never], 
-  ["Other", RecoveryDurationLabels.Other], 
+export const [decodeHackedRecoveryDuration, RecoveryDurationLabels] = getAnswerDecoderAndLabels([
+  ["never regained", RecoveryDurationLabel.Never], 
+  ["eventually", RecoveryDurationLabel.Eventually], 
+  ["a day and a week", RecoveryDurationLabel.WithinWeek], 
+  ["less than a day", RecoveryDurationLabel.WithinDay], 
+  ["Other", RecoveryDurationLabel.Other], 
+  ["never lost", RecoveryDurationLabel.NeverLost],
 ]);
 
 // hacked-acct-rec
 export const [decodeLockedAccountRecoveryDuration] = getAnswerDecoderAndLabels([
-  ["never lost", RecoveryDurationLabels.NeverLost], 
-  ["less than a day", RecoveryDurationLabels.WithinDay], 
-  ["a day and a week", RecoveryDurationLabels.WithinWeek], 
-  ["not permanently", RecoveryDurationLabels.Eventually], 
-  ["never regained", RecoveryDurationLabels.Never], 
-  ["Other", RecoveryDurationLabels.Other], 
+  ["never regained", RecoveryDurationLabel.Never], 
+  ["not permanently", RecoveryDurationLabel.Eventually], 
+  ["a day and a week", RecoveryDurationLabel.WithinWeek], 
+  ["less than a day", RecoveryDurationLabel.WithinDay], 
+  ["Other", RecoveryDurationLabel.Other], 
+  ["never lost", RecoveryDurationLabel.NeverLost],
 ]);
 
 export const [decodeRecoveryDuration] = getAnswerDecoderAndLabels([
-  ["less than a day", RecoveryDurationLabels.WithinDay], 
-  ["a day and a week", RecoveryDurationLabels.WithinWeek], 
-  ["eventually", RecoveryDurationLabels.Eventually], 
-  ["never fully", RecoveryDurationLabels.Never], 
-  ["Other", RecoveryDurationLabels.Other], 
+  ["less than a day", RecoveryDurationLabel.WithinDay], 
+  ["a day and a week", RecoveryDurationLabel.WithinWeek], 
+  ["eventually", RecoveryDurationLabel.Eventually], 
+  ["never fully", RecoveryDurationLabel.Never], 
+  ["Other", RecoveryDurationLabel.Other], 
+]);
+
+// 'locked-device-rec'
+//less than a day
+//between a day and a week
+//more than a week but not permanently
+//permanently (I never regained use of the device)
+//other (please describe)
+
+export const [decodeLockedDeviceRecoveryDuration] = getAnswerDecoderAndLabels([
+  ["less than a day", RecoveryDurationLabel.WithinDay],
+  ["a day and a week", RecoveryDurationLabel.WithinWeek],
+  ["not permanently", RecoveryDurationLabel.Eventually],
+  ["never regained use", RecoveryDurationLabel.Never],
+  ["other (please describe)", RecoveryDurationLabel.Other],
 ]);
 
 

@@ -40,7 +40,7 @@ export const graphScenarioSeverity = <ANSWER extends AnswerToMatchingQuestion>({
 		plugins: {
 			legend: {
 				labels: {
-					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
+//					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
 				}
 			}
 		},

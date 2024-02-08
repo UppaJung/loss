@@ -2,14 +2,17 @@ import { makePath } from "../../analyze-survey-responses/main.ts";
 import * as ScenarioMatching from "../../../generated-by-analysis/Pilot7/graph-inputs/scenario-matching-question-data.ts";
 import * as DeviceBarChart from "../../../generated-by-analysis/Pilot7/graph-inputs/device-bar-chart-data.ts";
 import * as ScenarioRecency from "../../../generated-by-analysis/Pilot7/graph-inputs/scenario-recency-data.ts";
+import * as RecoveryDuration from "../../../generated-by-analysis/Pilot7/graph-inputs/recovery-duration-data.ts";
 import * as ScenarioLikert from "../../../generated-by-analysis/Pilot7/graph-inputs/likert-data.ts";
 import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot7/graph-inputs/account-type-data.ts";
-import { graphScenarioRecencyBarChart } from "../graphs/recency-question.ts";
 import { graphScenarioSeverity } from "../graphs/scenario-severity-graphs.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
-import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/severity-grouped-bar-charts-data.ts"
+import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/severity-grouped-bar-charts-data.ts";
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
 import { graphScenarioLikert } from "../graphs/graph-scenario-likert.ts";
+import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
+import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
+import { barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
 
 export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
@@ -51,7 +54,12 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 		xTitle: "Scenario",
 		yTitle: "Percent of participants",
 	}));
-	writeSvg(`scenario-recency-bar-chart`, graphScenarioRecencyBarChart(ScenarioRecency.labels, ScenarioRecency.absoluteData));
+	writeSvg(`scenario-recency-bar-chart`, barChartWithSubBarsSvg({
+		xAxisCategoryLabels: ScenarioRecency.labels, subBarCategories: AnswerToRecencyQuestionList, data: ScenarioRecency.absoluteData
+	}));
+	writeSvg(`scenario-recovery-duration-bar-chart`, barChartWithSubBarsSvg({
+		xAxisCategoryLabels: RecoveryDuration.labels, subBarCategories: RecoveryDurationLabels, data: RecoveryDuration.absoluteData
+	}));
 	writeSvg(`scenario-harm-likert-absolute`, graphScenarioLikert({
 		yType: "absolute",
 		labels: ScenarioLikert.labels,

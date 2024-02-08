@@ -47,37 +47,37 @@ export const BarGraphs = {
 	"hacked-device-dur": {
 		"xTitle": "How long did it take to recover the compromised device?",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				2,
 				1,
-				3,
 				0,
+				3,
 				1,
-				0
+				0,
+				2
 			],
 			"Added": [
-				2,
+				3,
 				0,
 				1,
 				0,
-				3,
-				0
+				0,
+				2
 			],
 			"Not Worst": [
-				3,
-				3,
-				0,
-				0,
 				4,
-				0
+				0,
+				0,
+				3,
+				0,
+				3
 			]
 		}
 	},
@@ -158,32 +158,36 @@ export const BarGraphs = {
 	"locked-device-dur": {
 		"xTitle": "How long did it take to recover from the locked device?",
 		"labels": [
-			"Day",
-			"Week",
-			"Longer",
-			"Permanently",
-			"Other"
+			"Never Regained",
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				0,
 				4,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Added": [
+				0,
+				0,
+				0,
 				1,
-				0,
-				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				2,
 				4,
 				1,
 				4,
+				2,
+				0,
 				0
 			]
 		}
@@ -257,21 +261,21 @@ export const BarGraphs = {
 	"hacked-acct-dur": {
 		"xTitle": "How long did it take to recover their compromised account?",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				1,
 				0,
 				0,
 				0,
 				0,
-				0
+				0,
+				1
 			],
 			"Added": [
 				0,
@@ -282,12 +286,12 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				0,
+				1,
 				2,
 				4,
-				2,
-				1,
 				0,
-				0
+				2
 			]
 		}
 	},
@@ -372,19 +376,19 @@ export const BarGraphs = {
 	"locked-acct-dur": {
 		"xTitle": "How much time to recover a locked email/drive account",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
 				0,
-				0,
-				0,
 				1,
+				0,
+				0,
 				0,
 				0
 			],
@@ -397,11 +401,11 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				6,
-				4,
-				8,
 				2,
+				8,
+				4,
+				6,
+				0,
 				0
 			]
 		}
@@ -491,37 +495,37 @@ export const BarGraphs = {
 	"hacked-soc-dur": {
 		"xTitle": "Time to recover a compromised financial account",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
+				1,
+				1,
+				1,
+				1,
 				0,
-				1,
-				1,
-				1,
-				1,
 				0
 			],
 			"Added": [
-				1,
 				0,
 				0,
 				0,
 				0,
-				0
+				0,
+				1
 			],
 			"Not Worst": [
-				2,
+				1,
+				0,
+				0,
 				5,
 				0,
-				0,
-				1,
-				0
+				2
 			]
 		}
 	},
@@ -622,20 +626,20 @@ export const BarGraphs = {
 	"locked-soc-dur": {
 		"xTitle": "How much time to recover a locked social account",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				0,
-				0,
 				1,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Added": [
@@ -647,11 +651,11 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				1,
 				4,
 				2,
 				4,
+				1,
+				0,
 				0
 			]
 		}
@@ -745,21 +749,21 @@ export const BarGraphs = {
 	"hacked-bank-dur": {
 		"xTitle": "How long did it take to recover their bank account?",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				3,
-				2,
-				1,
-				1,
 				0,
-				0
+				1,
+				1,
+				2,
+				0,
+				3
 			],
 			"Added": [
 				0,
@@ -770,12 +774,12 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				0,
 				1,
+				0,
 				3,
 				0,
-				1,
-				0,
-				0
+				1
 			]
 		}
 	},
@@ -880,20 +884,20 @@ export const BarGraphs = {
 	"locked-bank-dur": {
 		"xTitle": "How much time to recover a locked financial account",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				0,
-				0,
 				1,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Added": [
@@ -906,9 +910,9 @@ export const BarGraphs = {
 			],
 			"Not Worst": [
 				0,
-				4,
-				5,
 				1,
+				5,
+				4,
 				0,
 				0
 			]
@@ -971,36 +975,36 @@ export const BarGraphs = {
 	"swap-device-dur": {
 		"xTitle": "How much time to recover after harm from device/os swap/upgrade",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				0,
-				0,
 				2,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Added": [
-				0,
-				0,
-				0,
-				0,
 				1,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
-				2,
-				2,
 				7,
+				2,
+				2,
+				0,
+				0,
 				0
 			]
 		}
@@ -1066,36 +1070,36 @@ export const BarGraphs = {
 	"disconnect-dur": {
 		"xTitle": "How much time to recover after harm from disconnect/broken promise",
 		"labels": [
-			"Never Lost",
-			"Within a Day",
-			"Within a Week",
-			"Eventually",
 			"Never Regained",
-			"Other"
+			"Eventually",
+			"Within a Week",
+			"Within a Day",
+			"Other",
+			"Never Lost"
 		],
 		"data": {
 			"Original": [
-				0,
-				1,
-				2,
-				0,
 				8,
+				0,
+				2,
+				1,
+				0,
 				0
 			],
 			"Added": [
-				0,
-				0,
-				0,
-				0,
 				1,
+				0,
+				0,
+				0,
+				0,
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
-				4,
-				1,
 				2,
+				1,
+				4,
+				0,
+				0,
 				0
 			]
 		}

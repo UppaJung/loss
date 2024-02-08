@@ -50,6 +50,6 @@ export const ScenarioLabelSurveyKeyPairs = [
 export const ScenarioLabelSurveyKeyMatchPairs = ScenarioLabelSurveyKeyPairs.map( ([label, key]) => [label, `${key}-match`] as const satisfies [ScenarioLabel, SurveyKey]);
 export const ScenarioLabelSurveyKeyInsertPairs = ScenarioLabelSurveyKeyPairs.map( ([label, key]) => [label, `${key}-insert`] as const satisfies [ScenarioLabel, SurveyKey]);
 
-export const ScenarioLabelToSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyPairs) as Record<ScenarioLabel, SurveyKey>;
-export const ScenarioLabelToMatchSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyMatchPairs) as Record<ScenarioLabel, SurveyKey>;
-export const ScenarioLabelToInsertSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyInsertPairs) as Record<ScenarioLabel, SurveyKey>;
+export const ScenarioLabelToSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyPairs) as Record<ScenarioLabel, typeof ScenarioLabelSurveyKeyPairs[number][1]> satisfies Record<ScenarioLabel, SurveyKey>;
+export const ScenarioLabelToMatchSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyMatchPairs) as Record<ScenarioLabel, typeof ScenarioLabelSurveyKeyMatchPairs[number][1]> satisfies Record<ScenarioLabel, SurveyKey>;
+export const ScenarioLabelToInsertSurveyKey = Object.fromEntries(ScenarioLabelSurveyKeyInsertPairs) as Record<ScenarioLabel, typeof ScenarioLabelSurveyKeyInsertPairs[number][1]> satisfies Record<ScenarioLabel, SurveyKey>;

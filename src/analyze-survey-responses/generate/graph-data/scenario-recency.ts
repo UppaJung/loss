@@ -5,8 +5,6 @@ import { ScenarioLabels } from "../../decode-questions/scenario-labels.ts";
 import { AnswerToRecencyQuestionLabels, AnswerToRecencyQuestionList, ScenarioLabelWithRecencyIdTuples, decodeRecencyQuestion } from "../../decode-questions/recency-question.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 
-// const RANGE = {count: 3, min: -30, max: 30};
-
 export const graphScenarioRecencyBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = ScenarioLabels;
@@ -29,7 +27,7 @@ export const graphScenarioRecencyBarChartData = (path: string, responses: Augmen
 	
 	Deno.writeTextFileSync(`${path}/${codeFileNameWithoutExtension}-data.ts`,
 		`${warningHeaderTs
-		}export const labels = ${JSON.stringify(labels, undefined, "\t")};${"\n"
+		}export const labels = ${JSON.stringify(labels, undefined, "\t")} as const; \n${ ''
 		}export const absoluteData = ${JSON.stringify(answerDataAbsolute, undefined, "\t")} as const;${"\n"
 		}export const percentData = ${JSON.stringify(answerDataPercent, undefined, "\t")} as const;`);
 };

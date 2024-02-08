@@ -47,7 +47,7 @@ export const graphScenarioLikert = ({
 		plugins: {
 			legend: {
 				labels: {
-					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
+//					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
 				}
 			}
 		},

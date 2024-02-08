@@ -3,11 +3,12 @@ import * as ScenarioMatching from "../../../generated-by-analysis/Pilot6/graph-i
 import * as DeviceBarChart from "../../../generated-by-analysis/Pilot6/graph-inputs/device-bar-chart-data.ts";
 import * as ScenarioRecency from "../../../generated-by-analysis/Pilot6/graph-inputs/scenario-recency-data.ts";
 import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot6/graph-inputs/account-type-data.ts";
-import { graphScenarioRecencyBarChart } from "../graphs/recency-question.ts";
 import { graphScenarioSeverity } from "../graphs/scenario-severity-graphs.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
-import { BarGraphs } from "../../../generated-by-analysis/Pilot6/graph-inputs/severity-grouped-bar-charts-data.ts"
+import { BarGraphs } from "../../../generated-by-analysis/Pilot6/graph-inputs/severity-grouped-bar-charts-data.ts";
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
+import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
+import { barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
 
 export const generateGraphsPilot6 = (cohort: string = "Pilot6") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
@@ -45,5 +46,7 @@ export const generateGraphsPilot6 = (cohort: string = "Pilot6") => {
 		xTitle: "Scenario",
 		yTitle: "Percent of participants"
 	}));
-	writeSvg(`scenario-recency-bar-chart`, graphScenarioRecencyBarChart(ScenarioRecency.labels, ScenarioRecency.absoluteData));
-}
+	writeSvg(`scenario-recency-bar-chart`, barChartWithSubBarsSvg({
+		xAxisCategoryLabels: ScenarioRecency.labels, subBarCategories: AnswerToRecencyQuestionList, data: ScenarioRecency.absoluteData
+	}));
+};

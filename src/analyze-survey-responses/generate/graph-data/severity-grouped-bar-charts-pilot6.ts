@@ -2,8 +2,8 @@ import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { filterAndDecodeExperiencedScenarioResponses } from "./common/filterAndDecodeResponses.ts";
 import { AnswerToHackedDeviceHowList, decodeHackedDeviceHow } from "../../decode-questions/hacked-device.ts";
-import { AnswerToLockedDeviceHowList, AnswerToLockedDeviceRecoveredDataList, AnswerToLockedDeviceRecoveryDurationList, decodeLockedDeviceHow, decodeLockedDeviceRecoveredData, decodeLockedDeviceRecoveryDuration } from "../../decode-questions/locked-device.ts";
-import { BankAccountTypeList, LockedAccountHowList, SocialAccountTypeList, decodeBankAccountType, decodeHackedAccountHow, decodeHackedRecoveryDuration, decodeSocialAccountType, decodeLockedAccountRecoveryDuration, RecoveryDurationList } from "../../decode-questions/account.ts";
+import { AnswerToLockedDeviceHowList, AnswerToLockedDeviceRecoveredDataList, decodeLockedDeviceHow, decodeLockedDeviceRecoveredData } from "../../decode-questions/locked-device.ts";
+import { BankAccountTypeList, LockedAccountHowList, SocialAccountTypeList, decodeBankAccountType, decodeHackedAccountHow, decodeHackedRecoveryDuration, decodeSocialAccountType, decodeLockedAccountRecoveryDuration, RecoveryDurationLabels, decodeLockedDeviceRecoveryDuration } from "../../decode-questions/account.ts";
 import { HackedAccountHowList } from "../../decode-questions/account.ts";
 import { decodeAccountType } from "../../decode-questions/account.ts";
 import { AccountTypeList } from "../../decode-questions/account.ts";
@@ -34,23 +34,23 @@ export const graphSeverityGroupedBarChartsDataPilot6 = (path: string, responses:
 		...graphData("How the device was compromised.", SurveyKeysPilot6["hacked-device"], SurveyKeysPilot6["hacked-device-how"], decodeHackedDeviceHow, AnswerToHackedDeviceHowList),
 		...graphData("How did the participant get locked out of the device", SurveyKeysPilot6["locked-device"], SurveyKeysPilot6["locked-device-how"], decodeLockedDeviceHow, AnswerToLockedDeviceHowList),
 		...graphData("Did you recover data from the locked device?", SurveyKeysPilot6["locked-device"], SurveyKeysPilot6["locked-device-recdat"], decodeLockedDeviceRecoveredData, AnswerToLockedDeviceRecoveredDataList),
-		...graphData("How long did it take to recover?", SurveyKeysPilot6["locked-device"], SurveyKeysPilot6["locked-device-rec"], decodeLockedDeviceRecoveryDuration, AnswerToLockedDeviceRecoveryDurationList),
+		...graphData("How long did it take to recover?", SurveyKeysPilot6["locked-device"], SurveyKeysPilot6["locked-device-rec"], decodeLockedDeviceRecoveryDuration, RecoveryDurationLabels),
 
 		...graphData("How did the participant get locked out of the account", SurveyKeysPilot6["hacked-acct"], SurveyKeysPilot6["hacked-acct-how"], decodeHackedAccountHow, HackedAccountHowList),
 		...graphData("The type of account the participant was locked out of", SurveyKeysPilot6["hacked-acct"], SurveyKeysPilot6["hacked-acct-type"], decodeAccountType, AccountTypeList),
-		...graphData("How long did it take to recover their account?", SurveyKeysPilot6["hacked-acct"], SurveyKeysPilot6["hacked-acct-rec"], decodeHackedRecoveryDuration, RecoveryDurationList),
+		...graphData("How long did it take to recover their account?", SurveyKeysPilot6["hacked-acct"], SurveyKeysPilot6["hacked-acct-rec"], decodeHackedRecoveryDuration, RecoveryDurationLabels),
 
 		...graphData("How participants' email/drive accounts were locked", SurveyKeysPilot6["locked-acct"], SurveyKeysPilot6["locked-acct-how"], decodeLockedAccountHow, LockedAccountHowList),
 		...graphData("The type of email/drive account locked", SurveyKeysPilot6["locked-acct"], SurveyKeysPilot6["locked-acct-type"], decodeAccountType, AccountTypeList),
-		...graphData("How time to recover a locked email/drive account", SurveyKeysPilot6["locked-acct"], SurveyKeysPilot6["locked-acct-duration"], decodeLockedAccountRecoveryDuration, RecoveryDurationList),
+		...graphData("How time to recover a locked email/drive account", SurveyKeysPilot6["locked-acct"], SurveyKeysPilot6["locked-acct-duration"], decodeLockedAccountRecoveryDuration, RecoveryDurationLabels),
 
 		...graphData("How participants' social accounts were compromised", SurveyKeysPilot6["hacked-soc"], SurveyKeysPilot6["hacked-soc-how"], decodeHackedAccountHow, HackedAccountHowList),
 		...graphData("The type of social account compromised", SurveyKeysPilot6["hacked-soc"], SurveyKeysPilot6["hacked-soc-type"], decodeSocialAccountType, SocialAccountTypeList),
-		...graphData("How time to recover a compromised financial account", SurveyKeysPilot6["hacked-soc"], SurveyKeysPilot6["hacked-soc-duration"], decodeHackedRecoveryDuration, RecoveryDurationList),
+		...graphData("How time to recover a compromised financial account", SurveyKeysPilot6["hacked-soc"], SurveyKeysPilot6["hacked-soc-duration"], decodeHackedRecoveryDuration, RecoveryDurationLabels),
 
 		...graphData("How participants' social accounts were locked", SurveyKeysPilot6["locked-soc"], SurveyKeysPilot6["locked-soc-how"], decodeLockedAccountHow, LockedAccountHowList),
 		...graphData("The type of social account locked", SurveyKeysPilot6["locked-soc"], SurveyKeysPilot6["locked-soc-type"], decodeSocialAccountType, SocialAccountTypeList),
-		...graphData("How time to recover a locked social account", SurveyKeysPilot6["locked-soc"], SurveyKeysPilot6["locked-soc-duration"], decodeLockedAccountRecoveryDuration, RecoveryDurationList),
+		...graphData("How time to recover a locked social account", SurveyKeysPilot6["locked-soc"], SurveyKeysPilot6["locked-soc-duration"], decodeLockedAccountRecoveryDuration, RecoveryDurationLabels),
 
 		...graphData("How participants' social financial were compromised", SurveyKeysPilot6["hacked-bank"], SurveyKeysPilot6["hacked-bank-how"], decodeHackedAccountHow, HackedAccountHowList),
 		...graphData("The type of financial account compromised", SurveyKeysPilot6["hacked-bank"], SurveyKeysPilot6["hacked-bank-type"], decodeBankAccountType, BankAccountTypeList),
@@ -59,7 +59,7 @@ export const graphSeverityGroupedBarChartsDataPilot6 = (path: string, responses:
 
 	...graphData("How participants' financial accounts were locked", SurveyKeysPilot6["locked-bank"], SurveyKeysPilot6["locked-bank-how"], decodeLockedAccountHow, LockedAccountHowList),
 	...graphData("The type of financial account locked", SurveyKeysPilot6["locked-bank"], SurveyKeysPilot6["locked-bank-type"], decodeBankAccountType, BankAccountTypeList),
-	...graphData("How time to recover a locked financial account", SurveyKeysPilot6["locked-bank"], SurveyKeysPilot6["locked-bank-dur"], decodeLockedAccountRecoveryDuration, RecoveryDurationList),
+	...graphData("How time to recover a locked financial account", SurveyKeysPilot6["locked-bank"], SurveyKeysPilot6["locked-bank-dur"], decodeLockedAccountRecoveryDuration, RecoveryDurationLabels),
 	};
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

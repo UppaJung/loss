@@ -44,7 +44,7 @@ export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatch
 		plugins: {
 			legend: {
 				labels: {
-					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
+//					filter: function(legendItem) { return !previouslySeen(legendItem.text);	}
 				}
 			}
 		},

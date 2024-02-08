@@ -15,7 +15,7 @@ export const labels = [
 	"Locked Passwords",
 	"Replaced Device/OS",
 	"Broken Promise"
-];
+] as const; 
 export const absoluteData = {
 	"Within Year": [
 		6,

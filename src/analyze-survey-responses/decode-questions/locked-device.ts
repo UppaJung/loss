@@ -50,25 +50,3 @@ export const [decodeLockedDeviceRecoveredData, AnswerToLockedDeviceRecoveredData
   ["regained access to all", AnswerToLockedDeviceRecoveredDataLabels.All],
   ["other (please describe)", AnswerToLockedDeviceRecoveredDataLabels.Other],
 ]);
-
-
-// 'locked-device-rec'
-//less than a day
-//between a day and a week
-//more than a week but not permanently
-//permanently (I never regained use of the device)
-//other (please describe)
-export enum AnswerToLockedDeviceRecoveryDurationLabels {
-  Day = 'Day',
-  Week = 'Week',
-  Longer = 'Longer',
-  Permanently = 'Permanently',
-  Other = 'Other',
-}
-export const [decodeLockedDeviceRecoveryDuration, AnswerToLockedDeviceRecoveryDurationList] = getAnswerDecoderAndLabels([
-  ["less than a day", AnswerToLockedDeviceRecoveryDurationLabels.Day],
-  ["a day and a week", AnswerToLockedDeviceRecoveryDurationLabels.Week],
-  ["not permanently", AnswerToLockedDeviceRecoveryDurationLabels.Longer],
-  ["never regained use", AnswerToLockedDeviceRecoveryDurationLabels.Permanently],
-  ["other (please describe)", AnswerToLockedDeviceRecoveryDurationLabels.Other],
-]);
