@@ -50,13 +50,13 @@ export const PairedScenarios = [
 ] as const;
 
 export const UnpairedScenarioLabels = [
-  ScenarioLabel.SwappedUpgraded,
+  ScenarioLabel.ReplacedOrUpgraded,
   ScenarioLabel.BrokenPromise,
 ] as const;
 export type UnpairedScenarioLabel = typeof UnpairedScenarioLabels[number];
 
 export const UnpairedScenariosLabelToId = [
-  [ScenarioLabel.SwappedUpgraded, 'swap-device'],
+  [ScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
   [ScenarioLabel.BrokenPromise, 'disconnect'],
 ] as const satisfies readonly [UnpairedScenarioLabel, SurveyKey][];
 
@@ -81,7 +81,7 @@ export const MatchingScenariosLabelToId = [
   [ScenarioLabel.LockedFinancial, 'locked-bank'],
   [ScenarioLabel.HackedPwds, 'hacked-pwds'],
   [ScenarioLabel.LockedPwds, 'locked-pwds'],
-  [ScenarioLabel.SwappedUpgraded, 'swap-device'],
+  [ScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
   [ScenarioLabel.BrokenPromise, 'disconnect'],
 ] as const satisfies readonly [ScenarioLabel, SurveyKey][];
 

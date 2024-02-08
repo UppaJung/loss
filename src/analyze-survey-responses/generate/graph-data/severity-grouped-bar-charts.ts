@@ -9,10 +9,10 @@ import { decodeAccountType } from "../../decode-questions/account.ts";
 import { AccountTypeList } from "../../decode-questions/account.ts";
 import { decodeLockedAccountHow } from "../../decode-questions/account.ts";
 import { SurveyKeysPilot7 } from "../../survey-keys/index.ts";
-import { decodeSwappedDeviceWhat } from "../../decode-questions/swap.ts";
-import { SwappedDeviceWhatList } from "../../decode-questions/swap.ts";
-import { decodeSwappedDeviceHarm } from "../../decode-questions/swap.ts";
-import { SwappedDeviceHarmList } from "../../decode-questions/swap.ts";
+import { decodeReplacedDeviceOrOsWhat } from "../../decode-questions/replaced-device-or-os.ts";
+import { ReplacedDeviceOrOsWhatList } from "../../decode-questions/replaced-device-or-os.ts";
+import { decodeReplacedDeviceOrOsHarm } from "../../decode-questions/replaced-device-or-os.ts";
+import { ReplacedDeviceOrOsHarmList } from "../../decode-questions/replaced-device-or-os.ts";
 import { decodeDisconnectWhat, DisconnectWhatList, decodeDisconnectHarm, DisconnectHarmList } from "../../decode-questions/disconnect.ts";
 
 
@@ -35,7 +35,7 @@ export const graphSeverityGroupedBarChartsData = (path: string, responses: Augme
 
 		...graphData("How did the participant get locked out of the device", SurveyKeys["locked-device"], SurveyKeys["locked-device-how"], decodeLockedDeviceHow, AnswerToLockedDeviceHowList),
 		...graphData("Did you recover data from the locked device?", SurveyKeys["locked-device"], SurveyKeys["locked-device-recdat"], decodeLockedDeviceRecoveredData, AnswerToLockedDeviceRecoveredDataList),
-		...graphData("How long did it take to recover?", SurveyKeys["locked-device"], SurveyKeys["locked-device-dur"], decodeLockedDeviceRecoveryDuration, AnswerToLockedDeviceRecoveryDurationList),
+		...graphData("How long did it take to recover from the locked device?", SurveyKeys["locked-device"], SurveyKeys["locked-device-dur"], decodeLockedDeviceRecoveryDuration, AnswerToLockedDeviceRecoveryDurationList),
 
 		...graphData("How was the participant's account compromised", SurveyKeys["hacked-acct"], SurveyKeys["hacked-acct-how"], decodeHackedAccountHow, HackedAccountHowList),
 		...graphData("The type of account account compromised", SurveyKeys["hacked-acct"], SurveyKeys["hacked-acct-type"], decodeAccountType, AccountTypeList),
@@ -61,8 +61,8 @@ export const graphSeverityGroupedBarChartsData = (path: string, responses: Augme
 		...graphData("The type of financial account locked", SurveyKeys["locked-bank"], SurveyKeys["locked-bank-type"], decodeBankAccountType, BankAccountTypeList),
 		...graphData("How much time to recover a locked financial account", SurveyKeys["locked-bank"], SurveyKeys["locked-bank-dur"], decodeLockedAccountRecoveryDuration, RecoveryDurationList),
 
-		...graphData("What went wrong during device/os swap/upgrade", SurveyKeys["swap-device"], SurveyKeys["swap-device-what"], decodeSwappedDeviceWhat, SwappedDeviceWhatList),
-		...graphData("The was the harm of a device/os swap/upgrade", SurveyKeys["swap-device"], SurveyKeys["swap-device-harm"], decodeSwappedDeviceHarm, SwappedDeviceHarmList),
+		...graphData("What went wrong during device/os swap/upgrade", SurveyKeys["swap-device"], SurveyKeys["swap-device-what"], decodeReplacedDeviceOrOsWhat, ReplacedDeviceOrOsWhatList),
+		...graphData("The was the harm of a device/os swap/upgrade", SurveyKeys["swap-device"], SurveyKeys["swap-device-harm"], decodeReplacedDeviceOrOsHarm, ReplacedDeviceOrOsHarmList),
 		...graphData("How much time to recover after harm from device/os swap/upgrade", SurveyKeys["swap-device"], SurveyKeys["swap-device-dur"], decodeRecoveryDuration, RecoveryDurationList),
 
 		...graphData("What went wrong during disconnect/broken promise", SurveyKeys["disconnect"], SurveyKeys["disconnect-how"], decodeDisconnectWhat, DisconnectWhatList),

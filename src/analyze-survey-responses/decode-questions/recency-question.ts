@@ -31,6 +31,6 @@ export const ScenarioLabelWithRecencyIdTuples = [
   [ScenarioLabel.LockedFinancial, 'locked-bank-when'],
   [ScenarioLabel.HackedPwds, 'hacked-pwds-when'],
   [ScenarioLabel.LockedPwds, 'locked-pwds-when'],
-  [ScenarioLabel.SwappedUpgraded, 'swap-device-when'],
+  [ScenarioLabel.ReplacedOrUpgraded, 'swap-device-when'],
   [ScenarioLabel.BrokenPromise, 'disconnect-when'],
 ] as const satisfies [ScenarioLabel, SurveyKey][];

@@ -8,19 +8,26 @@ tags:
   - methodology
 ---
 
+### New in this pilot
+
+We now have a scenario about replacing/upgrading devices as well as one about unexpected behavior and broken promises. We also have a likert scale (see the second and third graphs below.)
+
+Stuart updated the scripts so that the loss stories are annotated with the categorization that the participant matched them to.
+
 ### Stuart's notes on reading loss stories.
 
 Lots of great loss stories. Worth the read. After reading, participant 22 and 49, they seem most likely to be the result of feeding the questions into an LLM (large language model). Participant 46 did not answer initial questions in a meaningful way.
 
 A number of respondents describe events that happened to friends or loved ones. We may want to emphasize that they should only harms due to themselves or due to their own reliance on technology. (Good meeting discussion topic.)
 
-### Changes for analysis
+The distinction between having a device or account hacked is something that might have been clear in the 1990s, but with one's Apple ID or Google Account ID becoming our means of moving identity amongst devices, this line is now very blurred.
 
- - Integrate the classification(s) assigned into the page describing the stories.
- 
+### Changes for analysis in progress for this pilot
+
  - Merge graphs for accounts when same questions asked for email, social, and financial
 
-### Ideas for next pilot
+### Discussion for next pilot
+
 Possible scenarios:
  - Lost attention, wasted time, and addiction
  - Harassment, bullying, impersonation, or embarrassment (or exposure to others being harassed, bullied, impersonated, or embarrassed)
@@ -29,6 +36,8 @@ Possible scenarios:
  - Navigation and scheduling failures?
  - General mental health decline?
  - General social decline?
+
+Ordering effects of scenarios
 
 
 ## Results
@@ -40,13 +49,16 @@ Participants started by writing [loss stories](./loss-stories.md) about the thre
 
 We then told participants we would "describe technology-related harms that that have happened to others, and ask if they have also happened to" them.
 
-<figure><img src="/graphs/pilot7/scenario-harm-likert.svg" alt="TBD"/></figure>
-
 
 <figure>
   <img src="/graphs/pilot7/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
   <figcaption>The percent of participants who had experienced each harm scenario. Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar).</figcaption>
 </figure>
+
+
+<figure><img src="/graphs/pilot7/scenario-harm-likert-absolute.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot7/scenario-harm-likert-percent.svg" alt="TBD"/></figure>
+
 
 When participants reported having suffered one of the described scenarios, we asked them how recently they had experienced it.
 

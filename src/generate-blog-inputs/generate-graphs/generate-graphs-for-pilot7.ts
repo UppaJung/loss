@@ -52,7 +52,15 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 		yTitle: "Percent of participants",
 	}));
 	writeSvg(`scenario-recency-bar-chart`, graphScenarioRecencyBarChart(ScenarioRecency.labels, ScenarioRecency.absoluteData));
-	writeSvg(`scenario-harm-likert`, graphScenarioLikert({
+	writeSvg(`scenario-harm-likert-absolute`, graphScenarioLikert({
+		yType: "absolute",
+		labels: ScenarioLikert.labels,
+		data: ScenarioLikert.counts,
+		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
+		yTitle: "Number of Participants",
+	}))
+	writeSvg(`scenario-harm-likert-percent`, graphScenarioLikert({
+		yType: "percent",
 		labels: ScenarioLikert.labels,
 		data: ScenarioLikert.percents,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",

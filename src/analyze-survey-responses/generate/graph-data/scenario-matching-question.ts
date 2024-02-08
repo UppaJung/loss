@@ -5,15 +5,8 @@ import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.
 import { percentage } from "../../common/numeric.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
 import { UnpairedScenarioLabels } from "../../decode-questions/matching-question.ts";
-import { hackedDeviceHow } from "../../../../generated-by-analysis/Pilot6/lume/free-text-data.ts";
 
 const pairedScenarioLabels = PairedScenarios;
-
-const getTallies = (failureMode: 'hacked' | 'locked', responses: AugmentedSurveyResponses<SurveyKey>) => {
-	return pairedScenarioLabels.map( pairedScenario => scenarioMatchingQuestionId(failureMode, pairedScenario))
-		.map( key => tallyResponses(responses.map( response => decodeMatchingQuestion(response[key])) )
-	);
-}
 
 const aggregateTalliesAnswerToMatchingQuestionAsPercent = (
 	tallies: Record<AnswerToMatchingQuestion | '_totalAnswered', number>[]
@@ -25,29 +18,24 @@ const aggregateTalliesAnswerToMatchingQuestionAsPercent = (
 
 export const graphScenarioBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
 
-	const tally = (failureMode: 'hacked' | 'locked') => {
-		const tallies = pairedScenarioLabels.map( pairedScenario => scenarioMatchingQuestionId(failureMode, pairedScenario))
-			.map( key => tallyResponses(responses.map( response => decodeMatchingQuestion(response[key])) )
-		);
-		return aggregateTalliesAnswerToMatchingQuestionAsPercent(tallies);
-	}
-
-	const compromisedTallies = getTallies('hacked', responses);
-	const lockedOutTallies = getTallies('locked', responses);
+	const [compromisedTallies, lockedOutTallies] =
+		(['hacked', 'locked'] as const).map( failureMode => pairedScenarioLabels
+			.map( pairedScenario => scenarioMatchingQuestionId(failureMode, pairedScenario) )
+			.map( key => responses.map( response => decodeMatchingQuestion(response[key]) ) )
+			.map( tallyResponses )
+	);
 
 	const compromisedScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(compromisedTallies);
 	const lockedOutScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(lockedOutTallies);
 	
 	const unpairedScenarioLabels = UnpairedScenarioLabels;
 	const unpairedTallies = UnpairedScenariosLabelToId.map( ([_, id]) =>
-		tallyResponses(responses.map( response => response[id] ).map( decodeMatchingQuestion ))
-	);
+			responses.map( response => response[id] ).map( decodeMatchingQuestion )
+		).map( tallyResponses );
 	const unpairedScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(unpairedTallies);
 	const compromisedAndUnpairedScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent([
 		...compromisedTallies, ...unpairedTallies
 	])
-
-
 
 	const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 	

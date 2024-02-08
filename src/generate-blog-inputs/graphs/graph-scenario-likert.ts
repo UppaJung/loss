@@ -5,18 +5,22 @@ import { LikertLabel, LikertLabels } from "../../analyze-survey-responses/genera
 
 
 export const LikertColors = LikertLabels.reduce( (r, label) => {
-	const shade = 210 - 25 * parseInt(label);
-	r[label] = `rgb(${shade},${shade},${shade})`;
+	const green = 280 - 40 * parseInt(label);
+	const red = -40 + 40 * parseInt(label);
+	const blue = 0;
+	r[label] = `rgb(${red},${green},${blue})`;
 	return r;
 }, {} as Record<LikertLabel, string>);
 
 export const graphScenarioLikert = ({
+	yType,
 	labels,
 	data,
 	xTitle,
-	yTitle = "Percent of Participants",
+	yTitle = `${yType === "percent" ? 'Percent' : 'Number'} of Participants`,
 	colors = LikertColors,
 }: {
+	yType: "percent" | "absolute",
 	labels: string[],
 	data:  Record<LikertLabel, number[]>,
 	colors?: Record<LikertLabel, string>,
@@ -63,7 +67,7 @@ export const graphScenarioLikert = ({
 				ticks: {
 					precision: 0,
 				},
-				max: 100,
+				...(yType === 'percent' ? {max: 100} : {}),
 				stacked: true,
 				...chartOptions.scales?.y,
 				title: {
