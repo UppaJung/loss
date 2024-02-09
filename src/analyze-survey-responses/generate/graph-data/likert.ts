@@ -8,6 +8,15 @@ import { MatchingScenariosLabelToId } from "../../decode-questions/matching-ques
 
 export const LikertLabels = ['1','2','3','4','5','6','7'] as const;
 export type LikertLabel = typeof LikertLabels[number];
+export const LikertColors = LikertLabels.reduce( (r, label) => {
+	const green = 280 - 40 * parseInt(label);
+	const red = -40 + 40 * parseInt(label);
+	const blue = 0;
+	r[label] = `rgb(${red},${green},${blue})`;
+	return r;
+}, {} as Record<LikertLabel, string>);
+
+
 export const MatchingScenariosLabelToLikertId = MatchingScenariosLabelToId.map(
   ([l,k])=>([l,`${k}-lik_1`] satisfies [ScenarioLabel, SurveyKey])
 );

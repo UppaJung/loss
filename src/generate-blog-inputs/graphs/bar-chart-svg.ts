@@ -1,6 +1,7 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
+import { LikertLabel, LikertColors, LikertLabels } from "../../analyze-survey-responses/generate/graph-data/likert.ts";
 
 export interface BarChartParameters<X_AXIS_CATEGORY extends string = string> {
 	datasets: ChartDataset<"bar">[],
@@ -20,13 +21,14 @@ export const barChartSvg = <X_AXIS_CATEGORY extends string>({
 	chartOptions = {},
 }: BarChartParameters
 ): string => {
-	const previouslySeenSet = new Set<string>();
-	console.log('Refresh previouslySeen');
-	const previouslySeen = (s: string): boolean => {
-		const seen = previouslySeenSet.has(s);
-		console.log('previouslySeen', s, seen);
-		previouslySeenSet.add(s);
-		return seen;
+	const previouslySeenSet = new Map<string, number>();
+	const yStacks = new Set(datasets.map( d => d.stack)).size;
+	const filter = (legendItem: {text: string}): boolean => {
+		const s = legendItem.text;
+		const prevTimesSeen: number = previouslySeenSet.get(s) ?? 0;
+		previouslySeenSet.set(s, prevTimesSeen + 1);
+		const isForFirstStack = yStacks <= 1 ? true : prevTimesSeen % yStacks === 0;
+		return isForFirstStack;
 	}
 	const options = {
 		devicePixelRatio: 1,
@@ -34,7 +36,7 @@ export const barChartSvg = <X_AXIS_CATEGORY extends string>({
 		plugins: {
 			legend: {
 				labels: {
-					filter: function(legendItem) { return !previouslySeen(legendItem.text) || true	}
+					filter
 				}
 			}
 		},
@@ -82,7 +84,7 @@ export const barChartSvg = <X_AXIS_CATEGORY extends string>({
 };
 
 
-export interface SubBarChartOptions<SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string> extends Omit<BarChartParameters<X_AXIS_CATEGORY>, "datasets"> {
+export interface SubBarChartParameters<SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string> extends Omit<BarChartParameters<X_AXIS_CATEGORY>, "datasets"> {
 	subBarCategories: readonly SUB_BAR_CATEGORY[],
 	subBarColors?: Record<SUB_BAR_CATEGORY, string> | string[]
 	data: Record<SUB_BAR_CATEGORY, readonly number[]>,
@@ -94,7 +96,7 @@ export const barChartWithSubBarsSvg = <SUB_BAR_CATEGORY extends string, X_AXIS_C
 		subBarColors = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, ChartColors.Green, ChartColors.Purple, ChartColors.Grey],
 		data,
 		...args
-	}: SubBarChartOptions<SUB_BAR_CATEGORY, X_AXIS_CATEGORY>
+	}: SubBarChartParameters<SUB_BAR_CATEGORY, X_AXIS_CATEGORY>
 ): string => {
 	const datasets = subBarCategories.map( (subBarCategory, index) => ({
 		stack: 'ThereShouldBeOnly1Stack',
@@ -105,3 +107,14 @@ export const barChartWithSubBarsSvg = <SUB_BAR_CATEGORY extends string, X_AXIS_C
 	} satisfies ChartDataset<"bar">)) ;
 	return barChartSvg({...args, yType, datasets});
 };
+
+export interface LikertSubBarChartParameters<X_AXIS_CATEGORY extends string> extends Omit<BarChartParameters<X_AXIS_CATEGORY>, "datasets"> {
+	subBarColors?: Record<LikertLabel, string> | string[]
+	data: Record<LikertLabel, readonly number[]>,
+}
+
+ export const barChartWithLikertSubBarsSvg = <X_AXIS_CATEGORY extends string>({
+	subBarColors = LikertColors,
+	...args
+}: LikertSubBarChartParameters<X_AXIS_CATEGORY>
+): string => barChartWithSubBarsSvg({...args, subBarColors, subBarCategories: LikertLabels});;

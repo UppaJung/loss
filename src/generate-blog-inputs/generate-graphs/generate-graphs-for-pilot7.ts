@@ -5,22 +5,25 @@ import * as ScenarioRecency from "../../../generated-by-analysis/Pilot7/graph-in
 import * as RecoveryDuration from "../../../generated-by-analysis/Pilot7/graph-inputs/recovery-duration-data.ts";
 import * as ScenarioLikert from "../../../generated-by-analysis/Pilot7/graph-inputs/likert-data.ts";
 import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot7/graph-inputs/account-type-data.ts";
-import { graphScenarioSeverity } from "../graphs/scenario-severity-graphs.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/severity-grouped-bar-charts-data.ts";
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
-import { graphScenarioLikert } from "../graphs/graph-scenario-likert.ts";
 import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
-import { barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
+import { barChartWithLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
 
 export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
 	const writeSvg = (name: string, svg: string) => Deno.writeTextFileSync(`${outputPath}${name}.svg`, svg);
 
 	Object.entries(BarGraphs).forEach(([key, {labels, data, xTitle}]) => {
-		writeSvg(`${key}-bar-chart`, graphScenarioSeverity({
-			matchingQuestions: AnswersIndicatingParticipantExperiencedScenario, labels, data, xTitle,
+		// writeSvg(`${key}-bar-chart`, graphScenarioSeverity({
+		// 	matchingQuestions: AnswersIndicatingParticipantExperiencedScenario, labels, data, xTitle,
+		// }));
+		writeSvg(`${key}-bar-chart`, barChartWithSubBarsSvg({
+			xAxisCategoryLabels: labels,
+			subBarCategories: AnswersIndicatingParticipantExperiencedScenario,
+			data, xTitle,
 		}));
 	});
 	writeSvg(`device-bar-chart`, graphCompromisedVsLockedOutSeverity({
@@ -60,16 +63,16 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	writeSvg(`scenario-recovery-duration-bar-chart`, barChartWithSubBarsSvg({
 		xAxisCategoryLabels: RecoveryDuration.labels, subBarCategories: RecoveryDurationLabels, data: RecoveryDuration.absoluteData
 	}));
-	writeSvg(`scenario-harm-likert-absolute`, graphScenarioLikert({
+	writeSvg(`scenario-harm-likert-absolute`, barChartWithLikertSubBarsSvg({
 		yType: "absolute",
-		labels: ScenarioLikert.labels,
+		xAxisCategoryLabels: ScenarioLikert.labels,
 		data: ScenarioLikert.counts,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Number of Participants",
 	}))
-	writeSvg(`scenario-harm-likert-percent`, graphScenarioLikert({
+	writeSvg(`scenario-harm-likert-percent`, barChartWithLikertSubBarsSvg({
 		yType: "percent",
-		labels: ScenarioLikert.labels,
+		xAxisCategoryLabels: ScenarioLikert.labels,
 		data: ScenarioLikert.percents,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
