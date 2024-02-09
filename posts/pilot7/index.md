@@ -8,6 +8,8 @@ tags:
   - methodology
 ---
 
+[Qualtrics](https://harvard.az1.qualtrics.com/survey-builder/SV_8fiaLOqpnLLq7Ea/edit?SurveyID=SV_8fiaLOqpnLLq7Ea)
+
 ### New in this pilot
 
 We now have a scenario about replacing/upgrading devices as well as one about unexpected behavior and broken promises. We also have a likert scale (see the second and third graphs below.)
