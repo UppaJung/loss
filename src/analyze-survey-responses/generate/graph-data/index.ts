@@ -9,8 +9,6 @@ import { SurveyKey } from "../../survey-keys/index.ts";
 import { graphLikertBarChartData } from "./likert.ts";
 import { graphRecoveryDonationBarChartData } from "./recovery-duration.ts";
 
-// const RANGE = {count: 3, min: -30, max: 30};
-
 export const generateGraphData = (cohort: string, augmentedSurveyResponses: AugmentedSurveyResponses<SurveyKey>) => {
 	const graphDataPath = makePath(`generated-by-analysis/${cohort}/graph-inputs`);
   graphScenarioBarChartData(graphDataPath, augmentedSurveyResponses);

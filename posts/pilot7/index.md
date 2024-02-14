@@ -10,6 +10,10 @@ tags:
 
 [Qualtrics](https://harvard.az1.qualtrics.com/survey-builder/SV_8fiaLOqpnLLq7Ea/edit?SurveyID=SV_8fiaLOqpnLLq7Ea)
 
+[To-do list](./to-do.md)
+
+[Big discussion topic](./converse.md)
+
 ### New in this pilot
 
 We now have a scenario about replacing/upgrading devices as well as one about unexpected behavior and broken promises. We also have a likert scale (see the second and third graphs below.)
@@ -20,29 +24,11 @@ Stuart added a graph of duration of harm across scenarios.
 
 ### Stuart's notes on reading loss stories.
 
-Lots of great loss stories. Worth the read. After reading, participant 22 and 49, they seem most likely to be the result of feeding the questions into an LLM (large language model). Participant 46 did not answer initial questions in a meaningful way.
+Lots of great loss stories. Worth the read. After reading, participant 22 and 49, they seem most likely to be  the result of feeding the questions into an LLM (large language model). Participant 46 did not answer initial questions in a meaningful way.
 
 A number of respondents describe events that happened to friends or loved ones. We may want to emphasize that they should only harms due to themselves or due to their own reliance on technology. (Good meeting discussion topic.)
 
 The distinction between having a device or account hacked is something that might have been clear in the 1990s, but with one's Apple ID or Google Account ID becoming our means of moving identity amongst devices, this line is now very blurred.
-
-### Changes for analysis in progress for this pilot
-
- - Add a how graph over all hacked accounts
- - Add a how graph over all locked accounts.
-
-### Discussion for next pilot
-
-Possible scenarios:
- - Lost attention, wasted time, and addiction
- - Harassment, bullying, impersonation, or embarrassment (or exposure to others being harassed, bullied, impersonated, or embarrassed)
- - Harms due to others' use of, reliance on, or addiction to technology?
- - Social distance as interactions become less personal
- - Navigation and scheduling failures?
- - General mental health decline?
- - General social decline?
-
-Ordering effects of scenarios
 
 
 ## Results

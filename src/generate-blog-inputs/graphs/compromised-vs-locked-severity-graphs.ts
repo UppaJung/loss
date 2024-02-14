@@ -39,6 +39,7 @@ export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatch
 		datasets,
 		xAxisCategoryLabels: labels,
 		yTitle,
+		yStacked: true,
 		...rest
 	});
 };

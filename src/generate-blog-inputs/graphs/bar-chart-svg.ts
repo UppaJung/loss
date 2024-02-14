@@ -9,15 +9,18 @@ export interface BarChartParameters<X_AXIS_CATEGORY extends string = string> {
 	xAxisCategoryLabels: readonly X_AXIS_CATEGORY[],
 	xTitle?: string,
 	yTitle?: string,
+	xStacked?: true,
+	yStacked?: true,
 	chartOptions?: ChartOptions<"bar">
 }
 
 export const barChartSvg = <X_AXIS_CATEGORY extends string>({
-	yType,
+	yType = 'absolute',
 	xAxisCategoryLabels,
 	datasets,
 	xTitle,
 	yTitle = yType === null ? undefined : `${yType === "percent" ? 'Percent' : 'Number'} of Participants`,
+	xStacked, yStacked,
 	chartOptions = {},
 }: BarChartParameters
 ): string => {
@@ -42,6 +45,7 @@ export const barChartSvg = <X_AXIS_CATEGORY extends string>({
 		},
 		scales: {
 			x: {
+				...(xStacked ? {stacked: true} : {}),
 				type: 'category',
 				position: 'bottom',
 				title: {
@@ -57,7 +61,7 @@ export const barChartSvg = <X_AXIS_CATEGORY extends string>({
 					precision: 0,
 				},
 				...(yType === 'percent' ? {max: 100} : {}),
-				stacked: true,
+				...(yStacked ? {stacked: true} : {}),
 				...chartOptions.scales?.y,
 				title: {
 					display: yTitle != null,
@@ -91,21 +95,42 @@ export interface SubBarChartParameters<SUB_BAR_CATEGORY extends string, X_AXIS_C
 }
 
 export const barChartWithSubBarsSvg = <SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string>({
-		yType = 'absolute',
 		subBarCategories,
 		subBarColors = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, ChartColors.Green, ChartColors.Purple, ChartColors.Grey],
 		data,
-		...args
+		...rest
 	}: SubBarChartParameters<SUB_BAR_CATEGORY, X_AXIS_CATEGORY>
 ): string => {
 	const datasets = subBarCategories.map( (subBarCategory, index) => ({
-		stack: 'ThereShouldBeOnly1Stack',
+		stack: 'ThereShouldBeOnly1XStack',
 		data: [...data[subBarCategory]],
 		label: subBarCategory,
 		borderColor: Array.isArray(subBarColors) ? subBarColors[index % subBarColors.length] : subBarColors[subBarCategory],
 		backgroundColor: Array.isArray(subBarColors) ? subBarColors[index % subBarColors.length] : subBarColors[subBarCategory],
 	} satisfies ChartDataset<"bar">)) ;
-	return barChartSvg({...args, yType, datasets});
+	return barChartSvg({yStacked: true, datasets, ...rest});
+};
+
+export interface GroupBarChartParameters<LEGEND_CATEGORY extends string, AXIS_CATEGORY extends string> extends Omit<BarChartParameters<AXIS_CATEGORY>, "datasets"> {
+	legendCategories: readonly LEGEND_CATEGORY[],
+	legendColors?: Record<LEGEND_CATEGORY, string> | string[]
+	data: Record<LEGEND_CATEGORY, readonly number[]>,
+}
+export const barChartWithGroupsSvg = <LEGEND_CATEGORY extends string, X_AXIS_CATEGORY extends string>({
+	legendCategories,
+	legendColors = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, ChartColors.Green, ChartColors.Purple, ChartColors.Grey],
+	data,
+	...rest
+}: GroupBarChartParameters<LEGEND_CATEGORY, X_AXIS_CATEGORY>
+): string => {
+	const datasets = legendCategories.map( (legendCategory, index) => ({
+		stack: `X Stack for ${legendCategory}`,
+		data: [...data[legendCategory]],
+		label: legendCategory,
+		borderColor: Array.isArray(legendColors) ? legendColors[index % legendColors.length] : legendColors[legendCategory],
+		backgroundColor: Array.isArray(legendColors) ? legendColors[index % legendColors.length] : legendColors[legendCategory],
+	} satisfies ChartDataset<"bar">)) ;
+	return barChartSvg({xStacked: true, datasets, ...rest});
 };
 
 export interface LikertSubBarChartParameters<X_AXIS_CATEGORY extends string> extends Omit<BarChartParameters<X_AXIS_CATEGORY>, "datasets"> {
