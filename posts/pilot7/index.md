@@ -63,6 +63,11 @@ When participants reported having suffered one of the described scenarios, we as
   <figcaption>Recovery duration for each scenario (absolute figures).</figcaption>
 </figure>
 
+<figure>
+  <img src="/graphs/Pilot7/scatter-age-vs-scenario-count.svg" alt=""/>
+  <figcaption>Have older people experienced more types of harmful events?</figcaption>
+</figure>
+
 </details>
 <!-- ----------------------------------------------------- -->
 <details>

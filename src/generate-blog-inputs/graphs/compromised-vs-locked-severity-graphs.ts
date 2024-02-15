@@ -21,7 +21,7 @@ export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatch
 	colors?: Record<ANSWER, string>,
 	xTitle?: string,
 	yTitle?: string,
-	chartOptions: ChartOptions<"bar">
+	chartOptions?: ChartOptions<"bar">
 	}, 
 ): string => {
 	const convert: (values: number[]) => number[] = asPercentOf != null ?

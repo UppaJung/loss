@@ -4,6 +4,7 @@ import * as DeviceBarChart from "../../../generated-by-analysis/Pilot7/graph-inp
 import * as ScenarioRecency from "../../../generated-by-analysis/Pilot7/graph-inputs/scenario-recency-data.ts";
 import * as RecoveryDuration from "../../../generated-by-analysis/Pilot7/graph-inputs/recovery-duration-data.ts";
 import * as ScenarioLikert from "../../../generated-by-analysis/Pilot7/graph-inputs/likert-data.ts";
+import * as AgeVsScenariosMatched from "../../../generated-by-analysis/Pilot7/graph-inputs/age-data.ts";
 import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot7/graph-inputs/account-type-data.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/severity-grouped-bar-charts-data.ts";
@@ -11,6 +12,7 @@ import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-lo
 import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 import { barChartWithLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
+import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 
 export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
@@ -26,6 +28,11 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 			data, xTitle,
 		}));
 	});
+	writeSvg('scatter-age-vs-scenario-count', scatterPlotSvg({
+		xTitle: "Age",
+		yTitle: "Number of Scenarios Matched",
+		data: AgeVsScenariosMatched.data,
+	}));
 	writeSvg(`device-bar-chart`, graphCompromisedVsLockedOutSeverity({
 		matchingQuestions: AnswersIndicatingParticipantExperiencedScenario,
 		labels: DeviceBarChart.labels,

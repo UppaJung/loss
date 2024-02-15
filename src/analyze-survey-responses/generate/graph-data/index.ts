@@ -7,7 +7,8 @@ import { graphScenarioRecencyBarChartData } from "./scenario-recency.ts";
 import { graphSeverityGroupedBarChartsData } from "./severity-grouped-bar-charts.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
 import { graphLikertBarChartData } from "./likert.ts";
-import { graphRecoveryDonationBarChartData } from "./recovery-duration.ts";
+import { graphRecoveryDurationBarChartData } from "./recovery-duration.ts";
+import { getAgeScenariosMatchedScatterPlotData } from "./age.ts";
 
 export const generateGraphData = (cohort: string, augmentedSurveyResponses: AugmentedSurveyResponses<SurveyKey>) => {
 	const graphDataPath = makePath(`generated-by-analysis/${cohort}/graph-inputs`);
@@ -15,7 +16,8 @@ export const generateGraphData = (cohort: string, augmentedSurveyResponses: Augm
   graphDeviceBarChartData(graphDataPath, augmentedSurveyResponses);
   graphSeverityGroupedBarChartsData(graphDataPath, augmentedSurveyResponses);
   graphScenarioRecencyBarChartData(graphDataPath, augmentedSurveyResponses);
-  graphRecoveryDonationBarChartData(graphDataPath, augmentedSurveyResponses);
+  graphRecoveryDurationBarChartData(graphDataPath, augmentedSurveyResponses);
   accountTypeData(graphDataPath, augmentedSurveyResponses);
   graphLikertBarChartData(graphDataPath, augmentedSurveyResponses);
+  getAgeScenariosMatchedScatterPlotData(graphDataPath, augmentedSurveyResponses);
 }

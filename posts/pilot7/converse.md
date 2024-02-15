@@ -15,35 +15,35 @@ Now, instead of asking you how you might have suffered loss, we're going to ask 
 
 ## Loss of digital photos or videos
 
-The following two questions ask you about digital photos or videos you may have lost. We will ask you how many videos you have lost over your lifetime and how you lost them.
+The following two questions ask you about digital photos or videos you may have lost. We will ask you how many videos you have lost over your lifetime and the events that led to their loss.
 
 *How many photos or videos have you lost over your lifetime?*
 
   🔘 I have never lost any photos or videos \
-  🔘 I have lost less than one day of photos and/or videos \
-  🔘 I have lost at least one day of photos and/or videos, but less than one week of them \
-  🔘 I have lost at least one week of photos and/or videos, but less than one month of them \
-  🔘 I have lost at least one month of photos and/or videos, but less than one year of them \
-  🔘 I have lost at least one year of photos and/or videos, but less than five years of them \
-  🔘 I have lost at least five years of photos and/or videos
+  🔘 More than five years of photos and/or videos \
+  🔘 More than one year of photos and/or videos, but less than five years \
+  🔘 More than one month of photos and/or videos, but less than one year \
+  🔘 More than one week of photos and/or videos, but less than one month \
+  🔘 More than one day of photos and/or videos, but less than one week \
+  🔘 Less than one day of photos and/or videos \
 
-
-*How have you lost these photos and videos? (check **all** that apply)*
+*What events contributed to your loss of photos and videos? (check **all** that apply)*
 
  	☐ A phone storing the photos/videos was stolen \
  	☐ A phone storing the photos/videos broke or failed \
  	☐ A phone storing the photos/videos was lost \
  	☐ A phone storing the photos/videos was upgraded to a new phone and the photos/videos were not copied over \
- 	☐ A (non-phone) camera was stolen, broke, or lost \
+ 	☐ A (non-phone) camera storing the photos/videos was stolen, broke, or was lost \
  	☐ A memory card storing the photos/videos was stolen, broken, or lost after being removed from the phone or camera that took the photos/videos \
  	☐ A computer or hard drive storing the photos/videos broke or failed \
  	☐ A computer or hard drive storing the photos/videos was lost \
  	☐ A computer or hard drive storing the photos/videos was stolen \
  	☐ An online account that stored the photos/videos was compromised (hacked) and the photos/videos were deleted \
  	☐ An online account that stored the photos/videos permanently locked me (or us) out \
- 	☐ An online account that stored the photos/videos locked was deleted because of disuse \
- 	☐ An online account that stored the photos/videos locked was deleted because of lack of payment \
+ 	☐ An online account that stored the photos/videos was deleted because of disuse \
+ 	☐ An online account that stored the photos/videos was deleted because of lack of payment \
  	☐ Other (please describe)
+
 
 
 ##  Loss of chat messages

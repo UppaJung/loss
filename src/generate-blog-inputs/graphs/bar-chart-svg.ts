@@ -2,8 +2,9 @@ import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core
 import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
 import { LikertLabel, LikertColors, LikertLabels } from "../../analyze-survey-responses/generate/graph-data/likert.ts";
+import { ChartParameters } from "./ChartParameters.ts";
 
-export interface BarChartParameters<X_AXIS_CATEGORY extends string = string> {
+export interface BarChartParameters<X_AXIS_CATEGORY extends string = string>  extends ChartParameters{
 	datasets: ChartDataset<"bar">[],
 	yType?: "percent" | "absolute",
 	xAxisCategoryLabels: readonly X_AXIS_CATEGORY[],

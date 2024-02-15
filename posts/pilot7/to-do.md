@@ -20,4 +20,7 @@ tags:
  - General mental health decline?
  - General social decline?
 
-2. Ordering effects of scenarios
+2. How do we randomize the order of scenarios without increasing confusion between them?
+  - More wording about what is not in scope.
+	- Advance notice of all questions we will ask.
+

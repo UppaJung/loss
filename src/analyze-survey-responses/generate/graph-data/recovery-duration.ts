@@ -6,7 +6,7 @@ import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.
 import { decodeHackedRecoveryDuration, decodeLockedAccountRecoveryDuration, decodeRecoveryDuration, RecoveryDurationLabels, RecoveryDurationLabel } from "../../decode-questions/account.ts";
 
 
-export const graphRecoveryDonationBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
+export const graphRecoveryDurationBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = ScenarioLabels;
 	const scenarioTallies = ScenarioLabels.map( (scenarioLabel) => {
