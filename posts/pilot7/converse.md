@@ -27,6 +27,12 @@ The following two questions ask you about digital photos or videos you may have 
   🔘 More than one day of photos and/or videos, but less than one week \
   🔘 Less than one day of photos and/or videos \
 
+*Please rate how valuable these lost photos or videos were to you on a scale of 1 (none will be missed) to 7 (some were priceless).*
+
+How valuable were these photos to you?*
+  🔘 They included irreplaceable memories of events or people \
+  
+
 *What events contributed to your loss of photos and videos? (check **all** that apply)*
 
  	☐ A phone storing the photos/videos was stolen \
@@ -53,6 +59,7 @@ The following two questions ask you about chat messages you may have lost, inclu
 We will ask you about email messages separately, so don't include those here.
 
 *How many chat messages have you lost over your lifetime?*
+
   🔘 I have never lost any chat messages \
   🔘 I have lost less than one day of chat messages \
   🔘 I have lost at least one day of chat messages, but less than one week of them \
