@@ -7,10 +7,11 @@ date: Git Last Modified
 tags:
 ---
 
- - Add matching questions to harm-first scenarios (photos/videos and emails)
-
+ - Add matching questions to harm-first scenarios (photos/videos and emails)?
  - Add music as a loss category? (maybe not worth it?)
+ - Get permission to store prolific IDs for more fair payment?
+
+
  - Add a how graph over all hacked accounts
  - Add a how graph over all locked accounts.
-
 

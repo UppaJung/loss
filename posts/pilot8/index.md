@@ -24,10 +24,11 @@ A few answers were added mid-pilot after 10 participants and then after 20, so t
 
 ## Results
 
-There were {{ data.numberOfParticipants }} participants in this pilot.
+There were {{ data.numberOfParticipants }} participants in this pilot.  We paid more ($4.50) since the survey now takes a median of ~15 minutes. We learned that the great majority of people have lost photos and emails. Loss, it seems, is expected. This seems to capture something that our event-focused scenarios do not.
+
+The new event-focused scenarios seem to capture a good deal of what our old event-focused scenarios missed.
 
 Participants started by writing [loss stories](./loss-stories.md) about the three worst technology-related harms they had experienced. 
-
 
 We then told participants we would "describe technology-related harms that that have happened to others, and ask if they have also happened to" them.
 
