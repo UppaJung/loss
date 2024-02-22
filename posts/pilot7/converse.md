@@ -58,7 +58,7 @@ The following two questions ask you about chat messages you may have lost, inclu
 
 We will ask you about email messages separately, so don't include those here.
 
-*How many chat messages have you lost over your lifetime?*
+*How many chat messages, including text, images, and videos stored in your chats, have you lost over your lifetime?*
 
   🔘 I have never lost any chat messages \
   🔘 I have lost less than one day of chat messages \
@@ -93,7 +93,7 @@ We will ask you about email messages separately, so don't include those here.
  ### Other loss types we might use this approach for
 
  Has technology ever led to:
-  - harassment
+	- harassment
 	- embarrassment
 	- loss of work
 

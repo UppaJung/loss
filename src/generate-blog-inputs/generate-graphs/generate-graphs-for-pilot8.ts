@@ -1,20 +1,22 @@
 import { makePath } from "../../analyze-survey-responses/main.ts";
-import * as ScenarioMatching from "../../../generated-by-analysis/Pilot7/graph-inputs/scenario-matching-question-data.ts";
-import * as DeviceBarChart from "../../../generated-by-analysis/Pilot7/graph-inputs/device-bar-chart-data.ts";
-import * as ScenarioRecency from "../../../generated-by-analysis/Pilot7/graph-inputs/scenario-recency-data.ts";
-import * as RecoveryDuration from "../../../generated-by-analysis/Pilot7/graph-inputs/recovery-duration-data.ts";
-import * as ScenarioLikert from "../../../generated-by-analysis/Pilot7/graph-inputs/likert-data.ts";
-import * as AgeVsScenariosMatched from "../../../generated-by-analysis/Pilot7/graph-inputs/age-data.ts";
-import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot7/graph-inputs/account-type-data.ts";
+import * as ScenarioMatching from "../../../generated-by-analysis/Pilot8/graph-inputs/scenario-matching-question-data.ts";
+import * as DeviceBarChart from "../../../generated-by-analysis/Pilot8/graph-inputs/device-bar-chart-data.ts";
+import * as ScenarioRecency from "../../../generated-by-analysis/Pilot8/graph-inputs/scenario-recency-data.ts";
+import * as RecoveryDuration from "../../../generated-by-analysis/Pilot8/graph-inputs/recovery-duration-data.ts";
+import * as ScenarioLikert from "../../../generated-by-analysis/Pilot8/graph-inputs/likert-data.ts";
+import * as HarmScenarioLossDuration from "../../../generated-by-analysis/Pilot8/graph-inputs/harm-quantity-with-likert-severity-data.ts";
+import * as HarmScenarioLikert from "../../../generated-by-analysis/Pilot8/graph-inputs/harm-focused-likert-data.ts";
+import * as AgeVsScenariosMatched from "../../../generated-by-analysis/Pilot8/graph-inputs/age-data.ts";
+import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot8/graph-inputs/account-type-data.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
-import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/severity-grouped-bar-charts-data.ts";
+import { BarGraphs } from "../../../generated-by-analysis/Pilot8/graph-inputs/severity-grouped-bar-charts-data.ts";
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
 import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 
-export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
+export const generateGraphsPilot8 = (cohort: string = "Pilot8") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
 	const writeSvg = (name: string, svg: string) => Deno.writeTextFileSync(`${outputPath}${name}.svg`, svg);
 
@@ -80,8 +82,38 @@ export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {
 	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",
 		xAxisCategoryLabels: ScenarioLikert.labels,
-		data: ScenarioLikert.percents,
+		data: ScenarioLikert.percentsOfAnswered,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
-	}))
+	}));
+	writeSvg(`lost-photos-absolute`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "absolute",
+		xAxisCategoryLabels: HarmScenarioLossDuration.LostPhotos.labels,
+		data: HarmScenarioLossDuration.LostPhotos.counts,
+		xTitle: "Quantity of Photos/Videos Lost (as period of time)",
+		yTitle: "Number of Participants",
+	}));
+	writeSvg(`lost-emails-absolute`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "absolute",
+		xAxisCategoryLabels: HarmScenarioLossDuration.LostEmails.labels,
+		data: HarmScenarioLossDuration.LostEmails.counts,
+		xTitle: "Quantity of Emails Lost (as period of time)",
+		yTitle: "Number of Participants",
+	}));
+	writeSvg(`harm-likert-absolute`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "absolute",
+		xAxisCategoryLabels: HarmScenarioLikert.labels,
+		data: HarmScenarioLikert.counts,
+		xTitle: "Type of Data Lost",
+		yTitle: "Number of Participants",
+	}));
+	writeSvg(`harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
+		xAxisCategoryLabels: HarmScenarioLikert.labels,
+		data: HarmScenarioLikert.percentsOfResponses,
+		xTitle: "Type of Data Lost",
+		yTitle: "Percent of Responses",
+	}));
 }
+
+//HarmScenarioLossDuration

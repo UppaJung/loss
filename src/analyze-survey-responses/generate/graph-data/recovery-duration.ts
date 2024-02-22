@@ -1,23 +1,23 @@
 import { TotalAnswered, tallyResponses } from "../../common/tallyResponses.ts";
 import { filterNull } from "../../common/filterNull.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
-import { ScenarioLabels, ScenarioLabelToSurveyKey } from "../../decode-questions/scenario-labels.ts";
+import { EventScenarioLabels, EventScenarioLabelToSurveyKey } from "../../decode-questions/event-scenario-labels.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { decodeHackedRecoveryDuration, decodeLockedAccountRecoveryDuration, decodeRecoveryDuration, RecoveryDurationLabels, RecoveryDurationLabel } from "../../decode-questions/account.ts";
 
 
 export const graphRecoveryDurationBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
-	const labels = ScenarioLabels;
-	const scenarioTallies = ScenarioLabels.map( (scenarioLabel) => {
-		const surveyKey = `${ScenarioLabelToSurveyKey[scenarioLabel]}-dur` as const;
+	const labels = EventScenarioLabels;
+	const scenarioTallies = EventScenarioLabels.map( (scenarioLabel) => {
+		const surveyKey = `${EventScenarioLabelToSurveyKey[scenarioLabel]}-dur` as const;
 		const decode = surveyKey.startsWith('locked-device') ? decodeLockedAccountRecoveryDuration :
 			surveyKey.startsWith('locked') ? decodeLockedAccountRecoveryDuration :
 			surveyKey.startsWith('hacked') ? decodeHackedRecoveryDuration :
 			decodeRecoveryDuration
 		return tallyResponses(
 			filterNull(responses.map(
-				response => response[`${ScenarioLabelToSurveyKey[scenarioLabel]}-dur`]
+				response => response[`${EventScenarioLabelToSurveyKey[scenarioLabel]}-dur`]
 			)).map( decode  )
 		)
 	});

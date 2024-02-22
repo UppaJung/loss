@@ -1,5 +1,5 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
-import { ScenarioLabel } from "./scenario-labels.ts";
+import { EventScenarioLabel } from "./event-scenario-labels.ts";
 
 export enum AccountTypeQuestion {
   Apple = 'Apple',
@@ -16,8 +16,8 @@ export const [decodeAccountTypeQuestion, AccountTypeQuestionList] = getAnswerDec
 ]);
 
 export const AccountTypeLabelToId = [
-  [ScenarioLabel.HackedAcct, 'hacked-acct-type'],
-  [ScenarioLabel.LockedAcct, 'locked-acct-type'],
+  [EventScenarioLabel.HackedAcct, 'hacked-acct-type'],
+  [EventScenarioLabel.LockedAcct, 'locked-acct-type'],
 ] as const;
 
 export enum SocialAccountTypeQuestion {
@@ -43,8 +43,8 @@ export const [decodeSocialAccountTypeQuestion, SocialAccountTypeQuestionList] = 
 ]);
 
 export const SocialAccountTypeLabelToId = [
-  [ScenarioLabel.HackedAcct, 'hacked-soc-type'],
-  [ScenarioLabel.LockedAcct, 'locked-soc-type'],
+  [EventScenarioLabel.HackedAcct, 'hacked-soc-type'],
+  [EventScenarioLabel.LockedAcct, 'locked-soc-type'],
 ] as const;
 
 
@@ -74,6 +74,6 @@ export const [decodeFinancialAccountTypeQuestion, FinancialAccountTypeQuestionLi
 ]);
 
 export const FinancialAccountTypeLabelToId = [
-  [ScenarioLabel.HackedAcct, 'hacked-bank-type'],
-  [ScenarioLabel.LockedAcct, 'locked-bank-type'],
+  [EventScenarioLabel.HackedAcct, 'hacked-bank-type'],
+  [EventScenarioLabel.LockedAcct, 'locked-bank-type'],
 ] as const;

@@ -2,8 +2,8 @@ import { SurveyKeys } from "../../survey-keys/index.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { filterNull } from "../../common/filterNull.ts";
-import { SurveyKeysPilot7 } from "../../survey-keys/index.ts";
-import { SurveyKeysPilot6 } from "../../survey-keys/index.ts";
+import { SurveyKeyPilot7 } from "../../survey-keys/index.ts";
+import { SurveyKeyPilot6 } from "../../survey-keys/index.ts";
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
@@ -35,7 +35,7 @@ export const stringCountSentence = (counts: {total: number, instances: Record<st
 	`${counts.total} participant provided a free entry response: `
 }${stringCountSentenceFragment(counts)}.`;
 
-export const generateFreeTextMacrosPilot6 = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeysPilot6>) => {
+export const generateFreeTextMacrosPilot6 = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeyPilot6>) => {
 	const toGenerate = [
 		[SurveyKeysPilot6["hacked-device-how_4_TEXT"], "hackedDeviceHow"],
 		[SurveyKeysPilot6["hacked-device-type_4_TEXT"], "HackedDeviceType"],
@@ -95,7 +95,7 @@ export const generateFreeTextMacrosPilot6 = (outPath: string, responses: Augment
 };
 
 
-export const generateFreeTextMacros = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeysPilot7>) => {
+export const generateFreeTextMacros = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeyPilot7>) => {
 	const toGenerate = [
 		[SurveyKeys["hacked-device-how_4_TEXT"], "hackedDeviceHow"],
 		[SurveyKeys["hacked-device-type_4_TEXT"], "HackedDeviceType"],

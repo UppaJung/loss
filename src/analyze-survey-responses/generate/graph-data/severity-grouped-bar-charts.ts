@@ -8,7 +8,7 @@ import { HackedAccountHowList } from "../../decode-questions/account.ts";
 import { decodeAccountType } from "../../decode-questions/account.ts";
 import { AccountTypeList } from "../../decode-questions/account.ts";
 import { decodeLockedAccountHow } from "../../decode-questions/account.ts";
-import { SurveyKeysPilot7 } from "../../survey-keys/index.ts";
+import { SurveyKeyPilot7 } from "../../survey-keys/index.ts";
 import { decodeReplacedDeviceOrOsWhat } from "../../decode-questions/replaced-device-or-os.ts";
 import { ReplacedDeviceOrOsWhatList } from "../../decode-questions/replaced-device-or-os.ts";
 import { decodeReplacedDeviceOrOsHarm } from "../../decode-questions/replaced-device-or-os.ts";
@@ -16,7 +16,7 @@ import { ReplacedDeviceOrOsHarmList } from "../../decode-questions/replaced-devi
 import { decodeDisconnectWhat, DisconnectWhatList, decodeDisconnectHarm, DisconnectHarmList } from "../../decode-questions/disconnect.ts";
 
 
-export const graphSeverityGroupedBarChartsData = (path: string, responses: AugmentedSurveyResponses<SurveyKeysPilot7>) => {
+export const graphSeverityGroupedBarChartsData = (path: string, responses: AugmentedSurveyResponses<SurveyKeyPilot7>) => {
 
 	const graphData = <KEY extends keyof ((typeof responses)[number]), LABEL extends string>(
 		xTitle: string,

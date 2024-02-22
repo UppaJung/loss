@@ -1,6 +1,6 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import type { SurveyKey } from "../survey-keys/index.ts";
-import { ScenarioLabel } from "./scenario-labels.ts";
+import { EventScenarioLabel } from "./event-scenario-labels.ts";
 
 export enum AnswerToMatchingQuestion {
   MatchedTopThree = 'Original',
@@ -50,14 +50,14 @@ export const PairedScenarios = [
 ] as const;
 
 export const UnpairedScenarioLabels = [
-  ScenarioLabel.ReplacedOrUpgraded,
-  ScenarioLabel.BrokenPromise,
+  EventScenarioLabel.ReplacedOrUpgraded,
+  EventScenarioLabel.BrokenPromise,
 ] as const;
 export type UnpairedScenarioLabel = typeof UnpairedScenarioLabels[number];
 
 export const UnpairedScenariosLabelToId = [
-  [ScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
-  [ScenarioLabel.BrokenPromise, 'disconnect'],
+  [EventScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
+  [EventScenarioLabel.BrokenPromise, 'disconnect'],
 ] as const satisfies readonly [UnpairedScenarioLabel, SurveyKey][];
 
 export const scenarioMatchingQuestionId = (failureMode: 'hacked' | 'locked', scenario: PairedScenario) => {
@@ -71,17 +71,17 @@ export const scenarioMatchingQuestionId = (failureMode: 'hacked' | 'locked', sce
 }
 
 export const MatchingScenariosLabelToId = [
-  [ScenarioLabel.HackedDevice, 'hacked-device'],
-  [ScenarioLabel.LockedDevice, 'locked-device'],
-  [ScenarioLabel.HackedAcct, 'hacked-acct'],
-  [ScenarioLabel.LockedAcct, 'locked-acct'],
-  [ScenarioLabel.HackedSocial, 'hacked-soc'],
-  [ScenarioLabel.LockedSocial, 'locked-soc'],
-  [ScenarioLabel.HackedFinancial, 'hacked-bank'],
-  [ScenarioLabel.LockedFinancial, 'locked-bank'],
-  [ScenarioLabel.HackedPwds, 'hacked-pwds'],
-  [ScenarioLabel.LockedPwds, 'locked-pwds'],
-  [ScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
-  [ScenarioLabel.BrokenPromise, 'disconnect'],
-] as const satisfies readonly [ScenarioLabel, SurveyKey][];
+  [EventScenarioLabel.HackedDevice, 'hacked-device'],
+  [EventScenarioLabel.LockedDevice, 'locked-device'],
+  [EventScenarioLabel.HackedAcct, 'hacked-acct'],
+  [EventScenarioLabel.LockedAcct, 'locked-acct'],
+  [EventScenarioLabel.HackedSocial, 'hacked-soc'],
+  [EventScenarioLabel.LockedSocial, 'locked-soc'],
+  [EventScenarioLabel.HackedFinancial, 'hacked-bank'],
+  [EventScenarioLabel.LockedFinancial, 'locked-bank'],
+  [EventScenarioLabel.HackedPwds, 'hacked-pwds'],
+  [EventScenarioLabel.LockedPwds, 'locked-pwds'],
+  [EventScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
+  [EventScenarioLabel.BrokenPromise, 'disconnect'],
+] as const satisfies readonly [EventScenarioLabel, SurveyKey][];
 

@@ -1,20 +1,25 @@
-import { SurveyKeysPilot6 } from "./pilot6.ts";
-import { SurveyKeysPilot7 } from "./pilot7.ts";
+import { SurveyKeyPilot6, SurveyKeysPilot6 } from "./pilot6.ts";
+import { SurveyKeyPilot7, SurveyKeysPilot7 } from "./pilot7.ts";
+import { SurveyKeyPilot8, SurveyKeysPilot8 } from "./pilot8.ts";
 
-export {SurveyKeysPilot6, SurveyKeysPilot7};
-export const SurveyKeys = SurveyKeysPilot7;
-export type SurveyKey = SurveyKeysPilot6 | SurveyKeysPilot7;
+export {SurveyKeysPilot6, SurveyKeysPilot7, SurveyKeysPilot8};
+export type { SurveyKeyPilot6, SurveyKeyPilot7, SurveyKeyPilot8 }
+export type SurveyKeyAll = SurveyKeyPilot6 | SurveyKeyPilot7 | SurveyKeyPilot8;
+export type SurveyKeyLatest = SurveyKeyPilot8;
 
-export type SurveyResponse<SURVEY_KEY extends SurveyKey> = Record<SURVEY_KEY, string>;
-export type AugmentedSurveyResponse<SURVEY_KEY extends SurveyKey> = SurveyResponse<SURVEY_KEY> & {
+export const SurveyKeys = SurveyKeysPilot8;
+export type SurveyKey = SurveyKeyLatest;
+
+export type SurveyResponse<SURVEY_KEY extends SurveyKeyAll> = Record<SURVEY_KEY, string>;
+export type AugmentedSurveyResponse<SURVEY_KEY extends SurveyKeyAll> = SurveyResponse<SURVEY_KEY> & {
 	participantId: string;
 	startDate: Date;
 //	calendarYearsSinceBirth: number;
 }
-export type SurveyResponses<SURVEY_KEY extends SurveyKey> = ({StartDate: string; birthyear: string;} & SurveyResponse<SURVEY_KEY>)[];
-export type AugmentedSurveyResponses<SURVEY_KEY extends SurveyKey = SurveyKeysPilot7> = AugmentedSurveyResponse<SURVEY_KEY>[];
+export type SurveyResponses<SURVEY_KEY extends SurveyKeyAll> = ({StartDate: string; birthyear: string;} & SurveyResponse<SURVEY_KEY>)[];
+export type AugmentedSurveyResponses<SURVEY_KEY extends SurveyKeyAll = SurveyKeyLatest> = AugmentedSurveyResponse<SURVEY_KEY>[];
 
-export const augmentSurveyResponses = <SURVEY_KEY extends SurveyKey> (responses:  SurveyResponses<SURVEY_KEY>): AugmentedSurveyResponses<SURVEY_KEY> =>
+export const augmentSurveyResponses = <SURVEY_KEY extends SurveyKeyAll> (responses:  SurveyResponses<SURVEY_KEY>): AugmentedSurveyResponses<SURVEY_KEY> =>
 	responses.map( (response, index) =>
 		({...response,
 			participantId: `${index + 1}`,

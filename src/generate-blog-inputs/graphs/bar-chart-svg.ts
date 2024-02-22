@@ -1,7 +1,7 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
-import { LikertLabel, LikertColors, LikertLabels } from "../../analyze-survey-responses/generate/graph-data/likert.ts";
+import { LikertLabel, LikertSeverityColors, LikertLabels } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { ChartParameters } from "./ChartParameters.ts";
 
 export interface BarChartParameters<X_AXIS_CATEGORY extends string = string>  extends ChartParameters{
@@ -139,8 +139,8 @@ export interface LikertSubBarChartParameters<X_AXIS_CATEGORY extends string> ext
 	data: Record<LikertLabel, readonly number[]>,
 }
 
- export const barChartWithLikertSubBarsSvg = <X_AXIS_CATEGORY extends string>({
-	subBarColors = LikertColors,
+ export const barChartWithSeverityLikertSubBarsSvg = <X_AXIS_CATEGORY extends string>({
+	subBarColors = LikertSeverityColors,
 	...args
 }: LikertSubBarChartParameters<X_AXIS_CATEGORY>
 ): string => barChartWithSubBarsSvg({...args, subBarColors, subBarCategories: LikertLabels});;

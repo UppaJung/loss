@@ -136,4 +136,4 @@ export const SurveyKeysPilot6 = {
   "QCompletedStudy": "QCompletedStudy",
   "QDiscomfort	": "QDiscomfort	",
 } as const;
-export type SurveyKeysPilot6 = typeof SurveyKeysPilot6[keyof typeof SurveyKeysPilot6];
+export type SurveyKeyPilot6 = typeof SurveyKeysPilot6[keyof typeof SurveyKeysPilot6];
