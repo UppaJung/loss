@@ -7,7 +7,7 @@ import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedSc
 import { BarGraphs } from "../../../generated-by-analysis/Pilot6/graph-inputs/severity-grouped-bar-charts-data.ts";
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
-import { barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
+import { barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 
 export const generateGraphsPilot6 = (cohort: string = "Pilot6") => {
 	const outputPath = makePath(`./graphs/${cohort}`);

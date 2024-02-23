@@ -11,7 +11,7 @@ import { BarGraphs } from "../../../generated-by-analysis/Pilot7/graph-inputs/se
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
 import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
-import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
+import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 
 export const generateGraphsPilot7 = (cohort: string = "Pilot7") => {

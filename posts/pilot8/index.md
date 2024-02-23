@@ -22,6 +22,8 @@ For the paired scenarios, the intro paragraph covers scope for both the compromi
 
 A few answers were added mid-pilot after 10 participants and then after 20, so the pilot is for testing purposes and not interpretive purposes.
 
+If these 20 participants are representative of the population, a big headline of this study is that data loss is a huge problem and that while tech promises to ensure our memories do not degrade over time, it's collectively failing to deliver that.
+
 ## Results
 
 There were {{ data.numberOfParticipants }} participants in this pilot.  We paid more ($4.50) since the survey now takes a median of ~15 minutes. We learned that the great majority of people have lost photos and emails. Loss, it seems, is expected. This seems to capture something that our event-focused scenarios do not.
@@ -33,14 +35,17 @@ Participants started by writing [loss stories](./loss-stories.md) about the thre
 We then told participants we would "describe technology-related harms that that have happened to others, and ask if they have also happened to" them.
 
 
+
 <!-- ----------------------------------------------------- -->
 <details>
 <summary>New Graphs</summary>
 
 <figure><img src="/graphs/Pilot8/harm-likert-absolute.svg" alt=""/></figure>
 <figure><img src="/graphs/Pilot8/harm-likert-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-photos-absolute.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-emails-absolute.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot8/lost-photos-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot8/lost-emails-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot8/lost-photos-percent-cdf.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot8/lost-emails-percent-cdf.svg" alt=""/></figure>
 
 </details>
 <!-- ----------------------------------------------------- -->

@@ -13,7 +13,7 @@ import { BarGraphs } from "../../../generated-by-analysis/Pilot8/graph-inputs/se
 import { graphCompromisedVsLockedOutSeverity } from "../graphs/compromised-vs-locked-severity-graphs.ts";
 import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-questions/account.ts";
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
-import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/bar-chart-svg.ts";
+import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 
 export const generateGraphsPilot8 = (cohort: string = "Pilot8") => {
@@ -86,19 +86,35 @@ export const generateGraphsPilot8 = (cohort: string = "Pilot8") => {
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
 	}));
-	writeSvg(`lost-photos-absolute`, barChartWithSeverityLikertSubBarsSvg({
-		yType: "absolute",
+	writeSvg(`lost-photos-percent`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
 		xAxisCategoryLabels: HarmScenarioLossDuration.LostPhotos.labels,
-		data: HarmScenarioLossDuration.LostPhotos.counts,
+		data: HarmScenarioLossDuration.LostPhotos.percentsOfResponses,
 		xTitle: "Quantity of Photos/Videos Lost (as period of time)",
-		yTitle: "Number of Participants",
+		yTitle: "Percent of Participants",
 	}));
-	writeSvg(`lost-emails-absolute`, barChartWithSeverityLikertSubBarsSvg({
-		yType: "absolute",
+	writeSvg(`lost-emails-percent`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
 		xAxisCategoryLabels: HarmScenarioLossDuration.LostEmails.labels,
-		data: HarmScenarioLossDuration.LostEmails.counts,
+		data: HarmScenarioLossDuration.LostEmails.percentsOfResponses,
 		xTitle: "Quantity of Emails Lost (as period of time)",
-		yTitle: "Number of Participants",
+		yTitle: "Percent of Participants",
+	}));
+	writeSvg(`lost-photos-percent-cdf`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
+		cdf: "accumulateLeft",
+		xAxisCategoryLabels: HarmScenarioLossDuration.LostPhotos.labels,
+		data: HarmScenarioLossDuration.LostPhotos.percentsOfResponses,
+		xTitle: "Quantity of Photos/Videos Lost (as period of time)",
+		yTitle: "Percent of Participants (CDF)",
+	}));
+	writeSvg(`lost-emails-percent-cdf`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
+		cdf: "accumulateLeft",
+		xAxisCategoryLabels: HarmScenarioLossDuration.LostEmails.labels,
+		data: HarmScenarioLossDuration.LostEmails.percentsOfResponses,
+		xTitle: "Quantity of Emails Lost (as period of time)",
+		yTitle: "Percent of Participants (CDF)",
 	}));
 	writeSvg(`harm-likert-absolute`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "absolute",

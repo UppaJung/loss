@@ -17,6 +17,20 @@ export const labels = [
 	"Broken Promise"
 ];
 export const counts = {
+	"No loss": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
 	"1": [
 		0,
 		4,
@@ -117,6 +131,20 @@ export const counts = {
 	]
 };
 export const percents = {
+	"No loss": [
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	],
 	"1": [
 		0,
 		25,

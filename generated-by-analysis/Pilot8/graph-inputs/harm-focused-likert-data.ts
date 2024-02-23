@@ -34,6 +34,10 @@
 	"7": [
 		2,
 		1
+	],
+	"No loss": [
+		0,
+		0
 	]
 };
 	export const percentsOfResponses = {
@@ -64,6 +68,10 @@
 	"7": [
 		10,
 		5
+	],
+	"No loss": [
+		0,
+		0
 	]
 };
 	export const percentsOfAnswered = {
@@ -94,5 +102,9 @@
 	"7": [
 		11.764705882352942,
 		9.090909090909092
+	],
+	"No loss": [
+		0,
+		0
 	]
 };

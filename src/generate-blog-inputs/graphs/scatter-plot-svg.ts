@@ -1,8 +1,8 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
-import { ChartParameters } from "./ChartParameters.ts";
+import { ChartAxisTitles } from "./chart-svg.ts";
 
-export interface ScatterPlotParameters<X_AXIS_CATEGORY extends string = string>  extends ChartParameters{
+export interface ScatterPlotParameters<X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles{
 	data: readonly {x: number, y: number}[],
 	options?: ChartOptions<"scatter">
 }
