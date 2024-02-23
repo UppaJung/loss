@@ -40,12 +40,12 @@ We then told participants we would "describe technology-related harms that that 
 <details>
 <summary>New Graphs</summary>
 
-<figure><img src="/graphs/Pilot8/harm-likert-absolute.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/harm-likert-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-photos-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-emails-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-photos-percent-cdf.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot8/lost-emails-percent-cdf.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/harm-likert-absolute.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/harm-likert-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/lost-photos-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/lost-emails-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/lost-photos-percent-cdf.svg" alt=""/></figure>
+<figure><img src="/graphs/pilot8/lost-emails-percent-cdf.svg" alt=""/></figure>
 
 </details>
 <!-- ----------------------------------------------------- -->
