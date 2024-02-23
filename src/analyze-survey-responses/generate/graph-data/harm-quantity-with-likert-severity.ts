@@ -12,10 +12,9 @@ import { numeric } from "../../common/numeric.ts";
 import { percentage } from "../../common/numeric.ts";
 import { tallyResponses } from "../../common/tallyResponses.ts";
 import { NoLossLabel } from "./common/likert.ts";
-import { stringToDocument } from "lume/core/utils/dom.ts";
 
 export const tallyLikert = (responses: AugmentedSurveyResponses<SurveyKey>, key: SurveyKey, filters: ((response: AugmentedSurveyResponse<SurveyKey>) => boolean)[]) => {
-  const tallies = filters.map((filter) => tallyResponses(responses.map(response => filter(response) ? response[key] : undefined)));
+  const tallies = filters.map((filter) => tallyResponses(responses.map(response => filter(response) ? response[key] || NoLossLabel : undefined)));
   const counts = Object.fromEntries(
     LikertAndNoLossLabels.map( likertLabel => ([likertLabel, tallies.map(tally => numeric(tally[likertLabel]))]) as const)
   );
