@@ -12,17 +12,19 @@ export const HarmScenarioLabels = [
 	HarmScenarioLabel.LostEmails,
 ] as const;
 
-export const HarmScenarioLabelSurveyKeyPairs = [
+export const HarmScenarioLabelSurveyKeyBasePairs = [
 	[HarmScenarioLabel.LostPhotos, 'photos'],
 	[HarmScenarioLabel.LostEmails, 'emails'],
-//	[HarmScenarioLabel.BrokenPromise, SurveyKeys['disconnect']],
- ] as const satisfies [HarmScenarioLabel, string][];
+ ] as const satisfies [HarmScenarioLabel, unknown][];
 
-export const HarmScenarioLabelHarmQuantityPairs = HarmScenarioLabelSurveyKeyPairs.map(
+export const HarmScenarioLabelSurveyKeyPairs = HarmScenarioLabelSurveyKeyBasePairs.map(
+	([label, key]) => [label, `${key}?`] as const satisfies [HarmScenarioLabel, SurveyKey]);
+
+export const HarmScenarioLabelHarmQuantityPairs = HarmScenarioLabelSurveyKeyBasePairs.map(
 	([label, key]) => [label, `${key}-quantity`] as const satisfies [HarmScenarioLabel, SurveyKey]);
-export const HarmScenarioLabelHarmValuePairs = HarmScenarioLabelSurveyKeyPairs.map( ([label, key]) =>
+export const HarmScenarioLabelHarmValuePairs = HarmScenarioLabelSurveyKeyBasePairs.map( ([label, key]) =>
 	[label, `${key}-value`] as const satisfies [HarmScenarioLabel, SurveyKey]);
-export const HarmScenarioLabelHarmEventsPairs = HarmScenarioLabelSurveyKeyPairs.map( ([label, key]) =>
+export const HarmScenarioLabelHarmEventsPairs = HarmScenarioLabelSurveyKeyBasePairs.map( ([label, key]) =>
 	[label, `${key}-events`] as const satisfies [HarmScenarioLabel, SurveyKey]);
 
 export const HarmScenarioLabelToHarmQuantitySurveyKey = Object.fromEntries(HarmScenarioLabelHarmQuantityPairs) as Record<HarmScenarioLabel, typeof HarmScenarioLabelHarmQuantityPairs[number][1]> satisfies Record<HarmScenarioLabel, SurveyKey>;

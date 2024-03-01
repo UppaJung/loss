@@ -1,4 +1,4 @@
-import { SurveyKey, SurveyKeys } from "../survey-keys/index.ts";
+import { SurveyKey } from "../survey-keys/index.ts";
 
 export const EventScenarioLabel = {
 	HackedDevice: 'Hacked Device',
@@ -13,6 +13,7 @@ export const EventScenarioLabel = {
 	LockedPwds: 'Locked Passwords',
 	ReplacedOrUpgraded: 'Replaced Device/OS',
 	BrokenPromise: 'Broken Promise',
+	Abuse: "Abuse",
 } as const;
 
 export type EventScenarioLabel = typeof EventScenarioLabel[keyof typeof EventScenarioLabel];
@@ -30,26 +31,25 @@ export const EventScenarioLabels = [
 	EventScenarioLabel.LockedPwds,
 	EventScenarioLabel.ReplacedOrUpgraded,
 	EventScenarioLabel.BrokenPromise,
+	EventScenarioLabel.Abuse,
 ] as const;
 
-export const EventScenarioLabelSurveyKeyPairs = [
-	[EventScenarioLabel.HackedDevice, SurveyKeys['hacked-device']],
-	[EventScenarioLabel.LockedDevice, SurveyKeys['locked-device']],
-	[EventScenarioLabel.HackedAcct, SurveyKeys['hacked-acct']],
-	[EventScenarioLabel.LockedAcct, SurveyKeys['locked-acct']],
-	[EventScenarioLabel.HackedSocial, SurveyKeys['hacked-soc']],
-	[EventScenarioLabel.LockedSocial, SurveyKeys['locked-soc']],
-	[EventScenarioLabel.HackedFinancial, SurveyKeys['hacked-bank']],
-	[EventScenarioLabel.LockedFinancial, SurveyKeys['locked-bank']],
-	[EventScenarioLabel.HackedPwds, SurveyKeys['hacked-pwds']],
-	[EventScenarioLabel.LockedPwds, SurveyKeys['locked-pwds']],
-	[EventScenarioLabel.ReplacedOrUpgraded, SurveyKeys['swap-device']],
-	[EventScenarioLabel.BrokenPromise, SurveyKeys['disconnect']],
- ] as const satisfies [EventScenarioLabel, SurveyKey][];
+export const EventScenarioBaseLabelSurveyKeyPairs = [
+	[EventScenarioLabel.HackedDevice, 'hacked-device'],
+	[EventScenarioLabel.LockedDevice, 'locked-device'],
+	[EventScenarioLabel.HackedAcct, 'hacked-acct'],
+	[EventScenarioLabel.LockedAcct, 'locked-acct'],
+	[EventScenarioLabel.HackedSocial, 'hacked-soc'],
+	[EventScenarioLabel.LockedSocial, 'locked-soc'],
+	[EventScenarioLabel.HackedFinancial, 'hacked-bank'],
+	[EventScenarioLabel.LockedFinancial, 'locked-bank'],
+	[EventScenarioLabel.HackedPwds, 'hacked-pwds'],
+	[EventScenarioLabel.LockedPwds, 'locked-pwds'],
+	[EventScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
+	[EventScenarioLabel.BrokenPromise, 'disconnect'],
+	[EventScenarioLabel.Abuse, 'abuse'],
+ ] as const;
 
-export const EventScenarioLabelSurveyKeyMatchPairs = EventScenarioLabelSurveyKeyPairs.map( ([label, key]) => [label, `${key}-match`] as const satisfies [EventScenarioLabel, SurveyKey]);
-export const EventScenarioLabelSurveyKeyInsertPairs = EventScenarioLabelSurveyKeyPairs.map( ([label, key]) => [label, `${key}-insert`] as const satisfies [EventScenarioLabel, SurveyKey]);
-
-export const EventScenarioLabelToSurveyKey = Object.fromEntries(EventScenarioLabelSurveyKeyPairs) as Record<EventScenarioLabel, typeof EventScenarioLabelSurveyKeyPairs[number][1]> satisfies Record<EventScenarioLabel, SurveyKey>;
-export const EventScenarioLabelToMatchSurveyKey = Object.fromEntries(EventScenarioLabelSurveyKeyMatchPairs) as Record<EventScenarioLabel, typeof EventScenarioLabelSurveyKeyMatchPairs[number][1]> satisfies Record<EventScenarioLabel, SurveyKey>;
-export const EventScenarioLabelToInsertSurveyKey = Object.fromEntries(EventScenarioLabelSurveyKeyInsertPairs) as Record<EventScenarioLabel, typeof EventScenarioLabelSurveyKeyInsertPairs[number][1]> satisfies Record<EventScenarioLabel, SurveyKey>;
+ export const EventScenarioLabelSurveyKeyPairs = 
+	EventScenarioBaseLabelSurveyKeyPairs.map( ([label, key]) => [label, `${key}?`] as const satisfies [EventScenarioLabel, SurveyKey]);
+	export const EventScenarioLabelToSurveyKey = Object.fromEntries(EventScenarioLabelSurveyKeyPairs) as Record<EventScenarioLabel, typeof EventScenarioLabelSurveyKeyPairs[number][1]> satisfies Record<EventScenarioLabel, SurveyKey>;

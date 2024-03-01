@@ -1,13 +1,13 @@
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import type { SurveyKey } from "../../survey-keys/index.ts";
-import { MatchingScenariosLabelToId } from "../../decode-questions/matching-question.ts";
+import { MatchingScenariosLabelToPrefix } from "../../decode-questions/matching-question.ts";
 import { tallyLikert } from "./common/likert.ts";
 import { exportVars } from "./common/exportVars.ts";
 
-const labels = MatchingScenariosLabelToId.map( ([label]) => label );
-export const MatchingScenarioKeys = MatchingScenariosLabelToId.map(
-  ([_,k])=> `${k}-lik_1` satisfies SurveyKey
+const labels = MatchingScenariosLabelToPrefix.map( ([label]) => label );
+export const MatchingScenarioKeys = MatchingScenariosLabelToPrefix.map(
+  ([_,k])=> `${k}-lik` satisfies SurveyKey
 );
 
 export const graphEventScenarioLikertBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {

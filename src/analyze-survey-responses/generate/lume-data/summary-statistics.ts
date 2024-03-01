@@ -1,10 +1,9 @@
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
-import { SurveyKeyPilot7 } from "../../survey-keys/index.ts";
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
-export const generateSummaryStatistics = (outPath: string, responses: AugmentedSurveyResponses<SurveyKeyPilot7>) => {
+export const generateSummaryStatistics = (outPath: string, responses: AugmentedSurveyResponses) => {
 		const data = {
 			numberOfParticipants: responses.length,
 		}
