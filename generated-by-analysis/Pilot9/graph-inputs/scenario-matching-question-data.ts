@@ -11,76 +11,76 @@ export const pairedScenarioLabels = [
 ];
 export const compromisedScenarioData = {
 	"Original": [
-		0,
-		0,
 		10,
-		30,
+		5,
+		15,
+		25,
 		10
 	],
 	"Added": [
-		0,
-		0,
+		5,
+		5,
 		0,
 		0,
 		0
 	],
 	"Not Worst": [
-		30,
-		10,
-		10,
-		10,
-		0
+		25,
+		5,
+		5,
+		5,
+		5
 	],
 	"Could Happen": [
+		55,
 		60,
-		50,
-		40,
-		40,
-		50
+		55,
+		60,
+		60
 	],
 	"Impossible": [
+		5,
+		25,
+		25,
 		10,
-		40,
-		40,
-		20,
-		40
+		25
 	]
 };
 export const lockedOutScenarioData = {
 	"Original": [
-		0,
+		5,
 		10,
-		0,
-		20,
-		0
+		5,
+		15,
+		5
 	],
 	"Added": [
+		5,
+		5,
 		0,
 		0,
-		0,
-		0,
-		10
+		5
 	],
 	"Not Worst": [
-		20,
-		10,
-		20,
-		40,
+		15,
+		15,
+		25,
+		35,
 		20
 	],
 	"Could Happen": [
-		50,
-		30,
-		50,
-		30,
-		20
+		55,
+		40,
+		45,
+		40,
+		45
 	],
 	"Impossible": [
+		20,
 		30,
-		50,
-		30,
+		25,
 		10,
-		50
+		25
 	]
 };
 export const unpairedScenarioLabels = [
@@ -91,79 +91,79 @@ export const unpairedScenarioLabels = [
 export const unpairedScenarioData = {
 	"Original": [
 		10,
-		30,
-		10
-	],
-	"Added": [
-		0,
-		0,
-		0
-	],
-	"Not Worst": [
-		20,
 		20,
 		20
 	],
+	"Added": [
+		0,
+		5,
+		0
+	],
+	"Not Worst": [
+		25,
+		25,
+		10
+	],
 	"Could Happen": [
-		60,
 		50,
+		45,
 		50
 	],
 	"Impossible": [
-		10,
-		0,
+		15,
+		5,
 		20
 	]
 };
 export const compromisedAndUnpairedScenarioData = {
 	"Original": [
-		0,
-		0,
 		10,
-		30,
-		10,
-		10,
-		30,
-		10
-	],
-	"Added": [
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0
-	],
-	"Not Worst": [
-		30,
+		5,
+		15,
+		25,
 		10,
 		10,
-		10,
-		0,
-		20,
 		20,
 		20
 	],
+	"Added": [
+		5,
+		5,
+		0,
+		0,
+		0,
+		0,
+		5,
+		0
+	],
+	"Not Worst": [
+		25,
+		5,
+		5,
+		5,
+		5,
+		25,
+		25,
+		10
+	],
 	"Could Happen": [
+		55,
+		60,
+		55,
+		60,
 		60,
 		50,
-		40,
-		40,
-		50,
-		60,
-		50,
+		45,
 		50
 	],
 	"Impossible": [
+		5,
+		25,
+		25,
 		10,
-		40,
-		40,
-		20,
-		40,
-		10,
-		0,
+		25,
+		15,
+		5,
 		20
 	]
 };

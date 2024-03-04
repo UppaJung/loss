@@ -76,3 +76,71 @@ At once point, I had all my photos saved on a computer. This was before the clou
 2. The second most harmful incident I experienced involved sending an offensive text to the wrong person. Unfortunately, it turned out to be the individual I was discussing, leading them to realize I wasn&#39;t their friend. This realization deeply hurt their feelings.  They never spoke to me again. To this day I do not say anything negative to people in texts.
 3. The third instance of harm caused by technology occurred when I mistakenly clicked on the wrong link in an email, providing personal information under the assumption that I was on the legitimate Lord and Taylor website. Fortunately, I didn&#39;t lose any money as the transaction was promptly halted by the fraud detection program when I used a credit card.
 
+
+### Participant 11
+1. *Participant matched this with* **Hacked Social, Abuse**
+The most harmful technology-related harm I&#39;ve experienced is someone sending me pornography online as a child. I had just started middle school and the other person was in high school. We played in an orchestra together. He asked for my number and proceeded to send me pornography. As a child, I wasn&#39;t sure how to handle it, and it definitely aged me.
+2. *Participant matched this with* **Hacked Social, Abuse**
+The second-most harmful technology-related harm would be losing my online friends. I connected with many people on a Discord server starting when I was in 8th grade. A few of them were my school friends, but others were random people online. The drama that ensued defined my life at that time. Looking back on it now, it was weird that people almost double my age had such drama-filled interactions with grade schoolers.
+3. Apps like Instagram, Facebook, or Reddit lead to doomscrolling for me. I find myself spending hours on the apps because I&#39;ve lost track of time or can&#39;t look away.
+
+
+### Participant 12
+1. Probably the most harmful thing has been feeling depressed or anxious because of social media.  Keeping up the Jones&#39;s is a hard feeling to conquer when you see people your own age &quot;&quot;doing better&quot;&quot; supposedly.
+2. Keeping out of arguments with people online that won&#39;t end up mattering anyway because you can&#39;t control how people feel and you can&#39;t convince them.
+3. Addiction to electronic media.
+
+
+### Participant 13
+1. I have lost thousands of dollars gambling money and do not foresee myself stopping this gambling habit. The existence and availability of virtual casinos has rendered me a victim of addiction.
+2. Liked a friend&#39;s boyfriend&#39;s post and that friend broke the relationship between us.
+3. Spent all my time scrolling my phone instead of making friends in my freshman/sophomore year of college.
+
+
+### Participant 14
+1. In the process of applying for jobs, I finally received an offer from a small company as a personal assistant. I stopped my job search and prepared to onboard at this company, but they raised a lot of red flags when they asked me to buy gift cards for the vice president of the company. At this point, I knew it was a scam, so I fully backed out. Luckily I didn&#39;t lose any of my own money and I hadn&#39;t given them too much personal information, but the whole process took me away from the job-hunting process and delayed me from getting a legitimate, paying job.
+2. I was once subject to a data breach. In high school, I was required to make an account on a website to access educational materials and resources. Years later, I found that my data on that website was compromised, and I lost access to the account and some of my personal information was likely leaked. It&#39;s hard to pinpoint the exact consequences of this breach, but I assume that many of the scam emails and calls that I&#39;ve received (and have wasted my time) are a result of this.
+3. One of my streaming accounts was being used by someone else in a different country. They made changes to my profile - nothing substantial or very consequential, but it left me with a huge sense of unease knowing that someone was accessing something personal to me. It felt violating.
+
+
+### Participant 15
+1. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Locked Social, Hacked Financial, Locked Financial, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+I was reliant on my phone to bring in money to pay my storage and my phone crapped out on me.
+2. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Hacked Social, Locked Social, Hacked Financial, Locked Financial, Hacked Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+My laptop broke
+3. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Hacked Social, Locked Social, Hacked Financial, Locked Financial, Hacked Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+My phone broke
+
+
+### Participant 16
+1. *Participant matched this with* **Abuse**
+A rumor about me while in school was circulated all throughout social media for months. It made me feel lonely and exposed and helped drive my mental state into the ground.
+2. The second most harmful technology related harm I&#39;ve experienced is simply my loss of attention. When iPhones first came out it was just something fun to use and a nice tool to have. As time has gone on more and more of my time is now spent on my phone and especially with the rise of things like tik tok, I&#39;ve noticed a significant decline in my ability to concentrate for long periods of time.
+3. The third most harmful technology related harm or loss I&#39;ve experienced is loss of money do to tech. There&#39;s two different ways this effect has been brought about. Before I had a smart phone on me at all times I would pay for everything with cash and sometimes card but I made sure to only buy things I needed or things I had thought through buying. It&#39;s now way too easy to buy things quickly online or in person through things like apple pay and I find myself buying more and more especially as targeted ads get better and better. The other way I&#39;ve lost money is that I now feel like I need to have a smart phone and to have updated technology so I end up spending way more money than in the past on new tech like tablets, speakers, chargers etc.
+
+
+### Participant 17
+1. I think my online shopping addiction is definitely what&#39;s gotten me into the most trouble. I don&#39;t frequent stores in person much, but spend way too much online and have for years. Due to this I have a lot of debt.
+2. The loss of my attention span is the second thing that comes to mind, and I feel like that&#39;s directly from smartphone use. Before smartphones, we weren&#39;t glued to a screen 24/7 the way we are now. I find I don&#39;t even have the patience to watch a TV show or read a book now.
+3. I invested a bit of money in bitcoin a few years back, and sold it at a loss for about $400 which would have been worth something like 80k at the height of bitcoin&#39;s valuation. Sighhh.
+
+
+### Participant 18
+1. The most harmful technology related loss I’ve experienced was not being able to apply for a job because my preliminary test was voided due to a technical issue. I was performing really well on the questions I had done so far and I believed I would have gotten the job if I got to complete my test.
+2. The second most harmful technology related loss was when my gps was not working properly and guided me straight into an open construction night leading into the water. As it was night with no proper lighting, it took us a little bit to realize we were about to head into the water if we kept following the map.
+3. The third most harmful technology related loss was when I was unable to order something for my mother. This was very important to me as we live in different countries and I don’t get to see her for several years at a time.
+
+
+### Participant 19
+1. The biggest and possibly the most idiotic loss I&#39;ve had with a reliance on technology was when my brother said he was having strange symptoms. I messaged him and thought that I got to him and then we talked for a short time. He just kind of stopped responding, so I thought that maybe he just went to sleep. He ended up dying from a PE caused from a recent surgery. Still pretty terrible to think about.
+2. *Participant matched this with* **Lost Photos**
+The second is pretty standard loss of photos from old backups of phones and devices. It still is a great loss for images of my late father and brother.
+3. I experienced harm when I relied too heavily on an OBD reader that didn&#39;t actually pull the code, which caused damage to my car from a lack of repair.
+
+
+### Participant 20
+1. *Participant matched this with* **Hacked Device, Hacked Financial**
+I had my debit card information used without my knowledge. I was charged for a membership fee I was not signed up for and the bank and I went back and forth for a while before they reimbursed me for that
+2. I know my eyesight has suffered from looking at computer screens for most of my life. I wear bifocals now and can barely see without my glasses. This includes at home watching tv.
+3. Losing my phone with all my personal information on it. I found it again, but that was a very stressful few days when I wasn&#39;t sure if I needed to cancel my card and change my passwords. Luckily, I found it.
+

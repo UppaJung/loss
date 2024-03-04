@@ -3,5 +3,5 @@
 // spell-checker: disable
 
 export const data = {
-	"numberOfParticipants": 10
+	"numberOfParticipants": 20
 } as const;

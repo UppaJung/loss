@@ -4,10 +4,10 @@
 
 export const hackedDeviceHowTotal = "0";
 export const hackedDeviceHow = "No participant provided a free-entry response.";
-export const HackedDeviceTypeTotal = "0";
-export const HackedDeviceType = "No participant provided a free-entry response.";
-export const HackedPhoneTypeTotal = "0";
-export const HackedPhoneType = "No participant provided a free-entry response.";
+export const HackedDeviceTypeTotal = "1";
+export const HackedDeviceType = "1 participant provided a free entry response: 'the electronic chip on my card'.";
+export const HackedPhoneTypeTotal = "1";
+export const HackedPhoneType = "1 participant provided a free entry response: 'It was pre-android. A900 flip phone.'.";
 export const HackedTabletTypeTotal = "0";
 export const HackedTabletType = "No participant provided a free-entry response.";
 export const HackedPcTypeTotal = "0";
@@ -48,8 +48,8 @@ export const lockedAcctDurationTotal = "0";
 export const lockedAcctDuration = "No participant provided a free-entry response.";
 export const HackedSocHowTotal = "0";
 export const HackedSocHow = "No participant provided a free-entry response.";
-export const HackedSocTypeTotal = "1";
-export const HackedSocType = "1 participant provided a free entry response: 'Tinder'.";
+export const HackedSocTypeTotal = "2";
+export const HackedSocType = "2 participants provided free entry responses: 'Tinder' and 'Discord'.";
 export const HackedSocWhenTotal = "0";
 export const HackedSocWhen = "No participant provided a free-entry response.";
 export const HackedSocDurationTotal = "0";
