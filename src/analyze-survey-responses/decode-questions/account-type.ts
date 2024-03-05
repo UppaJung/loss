@@ -1,5 +1,5 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
-import { EventScenarioLabel } from "./event-scenario-labels.ts";
+import { EventScenarioLabel } from "./scenario-labels.ts";
 
 export enum AccountTypeQuestion {
   Apple = 'Apple',

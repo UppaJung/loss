@@ -2,18 +2,17 @@ import { decodeDetailedDeviceType, DetailedDeviceTypeList } from "../../decode-q
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { filterAndDecodeExperiencedScenarioResponses } from "./common/filterAndDecodeResponses.ts";
-import { SurveyKeysPilot6 } from "../../survey-keys/index.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 
-export const graphDeviceBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKeysPilot6>) => {
+export const graphDeviceBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = DetailedDeviceTypeList;
 	const data = {
 		"Compromised":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device", decodeDetailedDeviceType("hacked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device?", decodeDetailedDeviceType("hacked")),
 		"Locked Out":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device", decodeDetailedDeviceType("locked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device?", decodeDetailedDeviceType("locked")),
 	} as const;
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

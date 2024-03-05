@@ -1,13 +1,12 @@
 import { AugmentedSurveyResponse, AugmentedSurveyResponses } from "../../survey-keys/index.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import type { SurveyKey } from "../../survey-keys/index.ts";
-import { HarmScenarioLabels } from "../../decode-questions/harm-scenario-labels.ts";
-import { HarmScenarioLabelToHarmValueSurveyKey } from "../../decode-questions/harm-scenario-labels.ts";
+import { HarmScenarioLabels, HarmScenarioLabelsPairedWithLikertHarmSurveyKey } from "../../decode-questions/scenario-labels.ts";
 import { exportVars } from "./common/exportVars.ts";
 import { LikertAndNoLossLabels } from "./common/likert.ts";
 import { HarmAsDurationOfTimeLabelListLeastToGreatest } from "../../decode-questions/harm-as-duration-of-time.ts";
 import { decodeHarmAsDurationOfTime } from "../../decode-questions/harm-as-duration-of-time.ts";
-import { HarmScenarioLabelToHarmQuantitySurveyKey } from "../../decode-questions/harm-scenario-labels.ts";
+import { HarmScenarioLabelToHarmQuantitySurveyKey } from "../../decode-questions/scenario-labels.ts";
 import { numeric } from "../../common/numeric.ts";
 import { percentage } from "../../common/numeric.ts";
 import { tallyResponses } from "../../common/tallyResponses.ts";
@@ -30,7 +29,7 @@ export const graphHarmQuantityWithLikertSeverity = (path: string, responses: Aug
 	const data = Object.fromEntries(
 		HarmScenarioLabels.map( harmScenarioLabel => {
 			const harmValueAsDurationKey = HarmScenarioLabelToHarmQuantitySurveyKey[harmScenarioLabel];
-			const harmValueAsLikertKey = HarmScenarioLabelToHarmValueSurveyKey[harmScenarioLabel];			
+			const harmValueAsLikertKey = HarmScenarioLabelsPairedWithLikertHarmSurveyKey[harmScenarioLabel];			
 			const labels = HarmAsDurationOfTimeLabelListLeastToGreatest;
 			const filters = HarmAsDurationOfTimeLabelListLeastToGreatest.map( harmAsDurationOfTime =>
 				(response: AugmentedSurveyResponse<SurveyKey>) => decodeHarmAsDurationOfTime(response[harmValueAsDurationKey]) === harmAsDurationOfTime

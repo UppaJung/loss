@@ -1,5 +1,5 @@
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
-import { EventScenarioLabelSurveyKeyPairs } from "../../decode-questions/event-scenario-labels.ts";
+import { EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys } from "../../decode-questions/scenario-labels.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { decodeMatchingQuestion } from "../../decode-questions/matching-question.ts";
 import { AnswersIndicatingParticipantExperiencedScenario } from "../../decode-questions/matching-question.ts";
@@ -11,7 +11,7 @@ export const getAgeScenariosMatchedScatterPlotData = (path: string, responses: A
 	const currentYear = new Date().getFullYear();
 	const data: {x: number; y: number}[] = responses.map( (response) => {
 		const calendarYearsSinceBirth = currentYear - parseInt(response.birthyear);
-		const scenariosMatched = EventScenarioLabelSurveyKeyPairs.reduce( (result, [_, surveyKey]) => {
+		const scenariosMatched = EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys.reduce( (result, [_, surveyKey]) => {
 			const answer = decodeMatchingQuestion(response[surveyKey]);
 			if ((AnswersIndicatingParticipantExperiencedScenario as readonly (AnswerToMatchingQuestion | undefined)[]).includes(answer)) {
 				result++;

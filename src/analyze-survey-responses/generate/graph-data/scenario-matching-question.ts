@@ -5,6 +5,8 @@ import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.
 import { percentage } from "../../common/numeric.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
 import { UnpairedScenarioLabels } from "../../decode-questions/matching-question.ts";
+import { HarmScenarioLabelSurveyKeyPairs } from "../../decode-questions/scenario-labels.ts";
+import { HarmScenarioLabels } from "../../decode-questions/scenario-labels.ts";
 
 const pairedScenarioLabels = PairedScenarios;
 
@@ -28,8 +30,8 @@ export const graphScenarioBarChartData = (path: string, responses: AugmentedSurv
 	const compromisedScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(compromisedTallies);
 	const lockedOutScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(lockedOutTallies);
 	
-	const unpairedScenarioLabels = UnpairedScenarioLabels;
-	const unpairedTallies = UnpairedScenariosLabelToId.map( ([_, id]) =>
+	const unpairedScenarioLabels = [...UnpairedScenarioLabels, ...HarmScenarioLabels] as const;
+	const unpairedTallies = [...UnpairedScenariosLabelToId, ...HarmScenarioLabelSurveyKeyPairs].map( ([_, id]) =>
 			responses.map( response => response[id] ).map( decodeMatchingQuestion )
 		).map( tallyResponses );
 	const unpairedScenarioData = aggregateTalliesAnswerToMatchingQuestionAsPercent(unpairedTallies);

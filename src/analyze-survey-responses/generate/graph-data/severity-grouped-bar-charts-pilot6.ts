@@ -9,6 +9,7 @@ import { decodeAccountType } from "../../decode-questions/account.ts";
 import { AccountTypeList } from "../../decode-questions/account.ts";
 import { decodeLockedAccountHow } from "../../decode-questions/account.ts";
 import { SurveyKeysPilot6 } from "../../survey-keys/index.ts";
+import { SurveyKeyPilot6 } from "../../survey-keys/index.ts";
 
 // const RANGE = {count: 3, min: -30, max: 30};
 /*
@@ -17,7 +18,7 @@ import { SurveyKeysPilot6 } from "../../survey-keys/index.ts";
 
 
 
-export const graphSeverityGroupedBarChartsDataPilot6 = (path: string, responses: AugmentedSurveyResponses<SurveyKeysPilot6>) => {
+export const graphSeverityGroupedBarChartsDataPilot6 = (path: string, responses: AugmentedSurveyResponses<SurveyKeyPilot6>) => {
 
 	const graphData = <KEY extends keyof ((typeof responses)[number]), LABEL extends string>(
 		xTitle: string,
@@ -26,6 +27,7 @@ export const graphSeverityGroupedBarChartsDataPilot6 = (path: string, responses:
 		decode: (answer: string) => LABEL | LABEL[] | undefined,
 		labels: LABEL[]
 	) => { //: {KEY: {xTitle: string, labels: LABEL[], data: ReturnType<typeof filterAndDecodeExperiencedScenarioResponses<LABEL>>}} => {
+		// @ts-ignore This won't work with data from other than pilot 6
 		const data = filterAndDecodeExperiencedScenarioResponses(responses, labels, matchKey, r => decode(r[key]));
 		return {[key]: {xTitle, labels, data}};
 	}

@@ -86,33 +86,51 @@ export const lockedOutScenarioData = {
 export const unpairedScenarioLabels = [
 	"Replaced Device/OS",
 	"Broken Promise",
-	"Abuse"
+	"Abuse",
+	"Lost Photos",
+	"Lost Emails",
+	"Mental Health"
 ];
 export const unpairedScenarioData = {
 	"Original": [
 		10,
 		20,
-		20
+		20,
+		35,
+		10.526315789473685,
+		0
 	],
 	"Added": [
 		0,
 		5,
+		0,
+		10,
+		5.2631578947368425,
 		0
 	],
 	"Not Worst": [
 		25,
 		25,
-		10
+		10,
+		30,
+		21.05263157894737,
+		0
 	],
 	"Could Happen": [
 		50,
 		45,
-		50
+		50,
+		20,
+		15.789473684210526,
+		0
 	],
 	"Impossible": [
 		15,
 		5,
-		20
+		20,
+		5,
+		47.36842105263158,
+		0
 	]
 };
 export const compromisedAndUnpairedScenarioData = {
@@ -124,7 +142,10 @@ export const compromisedAndUnpairedScenarioData = {
 		10,
 		10,
 		20,
-		20
+		20,
+		35,
+		10.526315789473685,
+		0
 	],
 	"Added": [
 		5,
@@ -134,6 +155,9 @@ export const compromisedAndUnpairedScenarioData = {
 		0,
 		0,
 		5,
+		0,
+		10,
+		5.2631578947368425,
 		0
 	],
 	"Not Worst": [
@@ -144,7 +168,10 @@ export const compromisedAndUnpairedScenarioData = {
 		5,
 		25,
 		25,
-		10
+		10,
+		30,
+		21.05263157894737,
+		0
 	],
 	"Could Happen": [
 		55,
@@ -154,7 +181,10 @@ export const compromisedAndUnpairedScenarioData = {
 		60,
 		50,
 		45,
-		50
+		50,
+		20,
+		15.789473684210526,
+		0
 	],
 	"Impossible": [
 		5,
@@ -164,6 +194,9 @@ export const compromisedAndUnpairedScenarioData = {
 		25,
 		15,
 		5,
-		20
+		20,
+		5,
+		47.36842105263158,
+		0
 	]
 };

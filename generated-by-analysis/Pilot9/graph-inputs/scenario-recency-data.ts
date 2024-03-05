@@ -30,7 +30,8 @@ export const absoluteData = {
 		1,
 		2,
 		0,
-		4
+		4,
+		0
 	],
 	"1-3 Years": [
 		1,
@@ -44,7 +45,8 @@ export const absoluteData = {
 		0,
 		1,
 		1,
-		2
+		2,
+		0
 	],
 	"3-5 Years": [
 		2,
@@ -58,7 +60,8 @@ export const absoluteData = {
 		0,
 		3,
 		2,
-		0
+		0,
+		3
 	],
 	"5-10 Years": [
 		0,
@@ -72,6 +75,7 @@ export const absoluteData = {
 		1,
 		0,
 		3,
+		2,
 		2
 	],
 	"> 10 years": [
@@ -86,9 +90,11 @@ export const absoluteData = {
 		0,
 		0,
 		1,
-		2
+		2,
+		1
 	],
 	"Other": [
+		0,
 		0,
 		0,
 		0,
@@ -116,7 +122,8 @@ export const percentData = {
 		50,
 		33.333333333333336,
 		0,
-		40
+		40,
+		0
 	],
 	"1-3 Years": [
 		12.5,
@@ -130,7 +137,8 @@ export const percentData = {
 		0,
 		16.666666666666668,
 		14.285714285714286,
-		20
+		20,
+		0
 	],
 	"3-5 Years": [
 		25,
@@ -144,7 +152,8 @@ export const percentData = {
 		0,
 		50,
 		28.571428571428573,
-		0
+		0,
+		50
 	],
 	"5-10 Years": [
 		0,
@@ -158,7 +167,8 @@ export const percentData = {
 		50,
 		0,
 		42.857142857142854,
-		20
+		20,
+		33.333333333333336
 	],
 	"> 10 years": [
 		37.5,
@@ -172,9 +182,11 @@ export const percentData = {
 		0,
 		0,
 		14.285714285714286,
-		20
+		20,
+		16.666666666666668
 	],
 	"Other": [
+		0,
 		0,
 		0,
 		0,

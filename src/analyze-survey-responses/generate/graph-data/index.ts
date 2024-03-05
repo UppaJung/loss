@@ -6,7 +6,7 @@ import { graphScenarioBarChartData } from "./scenario-matching-question.ts";
 import { graphScenarioRecencyBarChartData } from "./scenario-recency.ts";
 import { graphSeverityGroupedBarChartsData } from "./severity-grouped-bar-charts.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
-import { graphEventScenarioLikertBarChartData } from "./likert.ts";
+import { graphScenarioLikertBarChartData } from "./likert.ts";
 import { graphRecoveryDurationBarChartData } from "./recovery-duration.ts";
 import { getAgeScenariosMatchedScatterPlotData } from "./age.ts";
 import { graphHarmScenarioLikertBarChartData } from "./harm-focused-likert.ts";
@@ -20,7 +20,7 @@ export const generateGraphData = (cohort: string, augmentedSurveyResponses: Augm
   graphScenarioRecencyBarChartData(graphDataPath, augmentedSurveyResponses);
   graphRecoveryDurationBarChartData(graphDataPath, augmentedSurveyResponses);
   accountTypeData(graphDataPath, augmentedSurveyResponses);
-  graphEventScenarioLikertBarChartData(graphDataPath, augmentedSurveyResponses);
+  graphScenarioLikertBarChartData(graphDataPath, augmentedSurveyResponses);
   graphHarmScenarioLikertBarChartData(graphDataPath, augmentedSurveyResponses);
   graphHarmQuantityWithLikertSeverity(graphDataPath, augmentedSurveyResponses);
   getAgeScenariosMatchedScatterPlotData(graphDataPath, augmentedSurveyResponses);

@@ -2,8 +2,8 @@ import { SurveyKeys, AugmentedSurveyResponses } from "../../survey-keys/index.ts
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 import { makeSafeForMarkdown } from "../../common/makeSafeForMarkdown.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
-import { EventScenarioLabelSurveyKeyPairs } from "../../decode-questions/event-scenario-labels.ts";
-import { HarmScenarioLabelSurveyKeyPairs } from "../../decode-questions/harm-scenario-labels.ts";
+import { EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys } from "../../decode-questions/scenario-labels.ts";
+import { HarmScenarioLabelSurveyKeyPairs } from "../../decode-questions/scenario-labels.ts";
 
 const {warningHeaderHtml, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
@@ -14,7 +14,7 @@ export const generateLossStoryMarkdown = (outPath: string, responses: AugmentedS
 		);
 		const lossBullets = lossesSafe.map( (lossSafe, index) => {
 			const bulletNumberString = `${index + 1}`;
-			const matchingScenarios = [...EventScenarioLabelSurveyKeyPairs, ...HarmScenarioLabelSurveyKeyPairs].reduce( (r, [label, surveyKey]) => {
+			const matchingScenarios = [...EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys, ...HarmScenarioLabelSurveyKeyPairs].reduce( (r, [label, surveyKey]) => {
 				if (response[surveyKey].indexOf(bulletNumberString) !== -1) {
 					r.push(label);
 				}

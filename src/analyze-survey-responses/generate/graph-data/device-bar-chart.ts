@@ -9,9 +9,9 @@ export const graphDeviceBarChartData = (path: string, responses: AugmentedSurvey
 	const labels = DetailedDeviceTypeList;
 	const data = {
 		"Compromised":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device", decodeDetailedDeviceType("hacked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "hacked-device?", decodeDetailedDeviceType("hacked")),
 		"Locked Out":
-			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device", decodeDetailedDeviceType("locked")),
+			filterAndDecodeExperiencedScenarioResponses(responses, labels, "locked-device?", decodeDetailedDeviceType("locked")),
 	} as const;
 
 const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});

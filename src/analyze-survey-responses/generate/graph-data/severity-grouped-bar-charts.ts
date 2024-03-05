@@ -13,12 +13,11 @@ import { ReplacedDeviceOrOsWhatList } from "../../decode-questions/replaced-devi
 import { decodeReplacedDeviceOrOsHarm } from "../../decode-questions/replaced-device-or-os.ts";
 import { ReplacedDeviceOrOsHarmList } from "../../decode-questions/replaced-device-or-os.ts";
 import { decodeDisconnectWhat, DisconnectWhatList, decodeDisconnectHarm, DisconnectHarmList } from "../../decode-questions/disconnect.ts";
-import { SurveyKey } from "../../survey-keys/index.ts";
 import { decodeAbuseWhat } from "../../decode-questions/abuse.ts";
 import { AbuseWhatList } from "../../decode-questions/abuse.ts";
 
 
-export const graphSeverityGroupedBarChartsData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
+export const graphSeverityGroupedBarChartsData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const graphData = <KEY extends keyof ((typeof responses)[number]), LABEL extends string>(
 		xTitle: string,

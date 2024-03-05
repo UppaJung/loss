@@ -1,13 +1,14 @@
-import { AnswerToMatchingQuestionList, AnswerToMatchingQuestion, decodeMatchingQuestion, MatchingScenariosLabelToId } from "../../decode-questions/matching-question.ts";
+import { AnswerToMatchingQuestionList, AnswerToMatchingQuestion, decodeMatchingQuestion } from "../../decode-questions/matching-question.ts";
 import { countAndPercentMacroSet, numberMacro } from "../../common/latex.ts";
 import { tallyResponses, TotalAnswered } from "../../common/tallyResponses.ts";
 import { aggregateResponses } from "../../common/aggregateResponses.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
+import { EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys } from "../../decode-questions/scenario-labels.ts";
 
 export const generateScenarioMatchingQuestionMacros = (outPath: string, responses: AugmentedSurveyResponses) => {
   const macros = [] as string[];
 
-  for (const [questionName, questionId] of MatchingScenariosLabelToId) {
+  for (const [questionName, questionId] of EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys) {
     const answers = tallyResponses(responses.map(response => decodeMatchingQuestion(response[questionId])).filter(r => r != null) as NonNullable<ReturnType<typeof decodeMatchingQuestion>>[]);
     macros.push(
       numberMacro(`${questionName}${`Answered`}`, answers[TotalAnswered] ?? 0),

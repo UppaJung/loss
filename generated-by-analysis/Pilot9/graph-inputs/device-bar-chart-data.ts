@@ -29,7 +29,7 @@ export const data = {
 			0
 		],
 		"Added": [
-			0,
+			1,
 			0,
 			0,
 			0,
@@ -41,10 +41,10 @@ export const data = {
 			0
 		],
 		"Not Worst": [
-			0,
-			0,
-			0,
-			0,
+			2,
+			1,
+			1,
+			1,
 			0,
 			0,
 			0,
@@ -56,7 +56,7 @@ export const data = {
 	"Locked Out": {
 		"Original": [
 			0,
-			0,
+			1,
 			0,
 			0,
 			0,
@@ -67,7 +67,7 @@ export const data = {
 			0
 		],
 		"Added": [
-			0,
+			1,
 			0,
 			0,
 			0,
@@ -79,11 +79,11 @@ export const data = {
 			0
 		],
 		"Not Worst": [
+			1,
+			1,
 			0,
 			0,
-			0,
-			0,
-			0,
+			1,
 			0,
 			0,
 			0,

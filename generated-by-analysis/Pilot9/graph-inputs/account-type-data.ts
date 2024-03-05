@@ -14,19 +14,19 @@ export const data = {
 			"Compromised": {
 				"Original": [
 					0,
-					0,
+					1,
 					0,
 					0
 				],
 				"Added": [
 					0,
-					0,
+					1,
 					0,
 					0
 				],
 				"Not Worst": [
 					0,
-					0,
+					1,
 					0,
 					0
 				]
@@ -34,21 +34,21 @@ export const data = {
 			"Locked Out": {
 				"Original": [
 					0,
-					0,
+					2,
 					0,
 					0
 				],
 				"Added": [
 					0,
-					0,
+					1,
 					0,
 					0
 				],
 				"Not Worst": [
 					0,
 					0,
-					0,
-					0
+					1,
+					1
 				]
 			}
 		}
@@ -67,14 +67,14 @@ export const data = {
 		"data": {
 			"Compromised": {
 				"Original": [
+					1,
 					0,
 					0,
 					0,
 					0,
 					0,
 					0,
-					0,
-					0
+					2
 				],
 				"Added": [
 					0,
@@ -87,7 +87,7 @@ export const data = {
 					0
 				],
 				"Not Worst": [
-					0,
+					1,
 					0,
 					0,
 					0,
@@ -99,7 +99,7 @@ export const data = {
 			},
 			"Locked Out": {
 				"Original": [
-					0,
+					1,
 					0,
 					0,
 					0,
@@ -119,10 +119,10 @@ export const data = {
 					0
 				],
 				"Not Worst": [
+					3,
 					0,
-					0,
-					0,
-					0,
+					1,
+					1,
 					0,
 					0,
 					0,
@@ -150,10 +150,10 @@ export const data = {
 					0,
 					0,
 					0,
+					2,
 					0,
 					0,
-					0,
-					0,
+					3,
 					0
 				],
 				"Added": [
@@ -168,7 +168,7 @@ export const data = {
 					0
 				],
 				"Not Worst": [
-					0,
+					1,
 					0,
 					0,
 					0,
@@ -185,10 +185,10 @@ export const data = {
 					0,
 					0,
 					0,
+					1,
 					0,
 					0,
-					0,
-					0,
+					2,
 					0
 				],
 				"Added": [
@@ -209,8 +209,8 @@ export const data = {
 					0,
 					0,
 					0,
-					0,
-					0,
+					1,
+					6,
 					0
 				]
 			}

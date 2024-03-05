@@ -1,6 +1,7 @@
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import { SurveyKey } from "../survey-keys/index.ts";
-import { EventScenarioLabel } from "./event-scenario-labels.ts";
+import {  EventScenariosLabelsPairedWithSurveyKeyPrefix } from "./scenario-labels.ts";
+import { EventScenarioLabel } from "./scenario-labels.ts";
 
 export enum AnswerToRecencyQuestionLabels {
   Year1 = 'Within Year',
@@ -20,17 +21,5 @@ export const [decodeRecencyQuestion, AnswerToRecencyQuestionList] = getAnswerDec
   ["other", AnswerToRecencyQuestionLabels.Other],
 ]);
 
-export const ScenarioLabelWithRecencyIdTuples = [
-  [EventScenarioLabel.HackedDevice, 'hacked-device-when'],
-  [EventScenarioLabel.LockedDevice, 'locked-device-when'],
-  [EventScenarioLabel.HackedAcct, 'hacked-acct-when'],
-  [EventScenarioLabel.LockedAcct, 'locked-acct-when'],
-  [EventScenarioLabel.HackedSocial, 'hacked-soc-when'],
-  [EventScenarioLabel.LockedSocial, 'locked-soc-when'],
-  [EventScenarioLabel.HackedFinancial, 'hacked-bank-when'],
-  [EventScenarioLabel.LockedFinancial, 'locked-bank-when'],
-  [EventScenarioLabel.HackedPwds, 'hacked-pwds-when'],
-  [EventScenarioLabel.LockedPwds, 'locked-pwds-when'],
-  [EventScenarioLabel.ReplacedOrUpgraded, 'swap-device-when'],
-  [EventScenarioLabel.BrokenPromise, 'disconnect-when'],
-] as const satisfies [EventScenarioLabel, SurveyKey][];
+export const EventScenarioLabelsPairedWithRecencyQuestionSurveyKeys = EventScenariosLabelsPairedWithSurveyKeyPrefix.map(
+  ([label, prefix]) => [label, `${prefix}-when`]) satisfies [EventScenarioLabel, SurveyKey][];

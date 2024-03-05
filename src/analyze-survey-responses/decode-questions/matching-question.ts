@@ -1,7 +1,7 @@
 import { getMultipleAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import type { SurveyKey } from "../survey-keys/index.ts";
-import { EventScenarioLabel } from "./event-scenario-labels.ts";
+import { EventScenarioLabel } from "./scenario-labels.ts";
 
 // Yes, this happened as part of experience 1 above
 // Yes, this happened as part of experience 2 above
@@ -115,35 +115,3 @@ export const scenarioMatchingQuestionId = (failureMode: 'hacked' | 'locked', sce
     case PairedScenario.Passwords: return `${failureMode}-pwds?` as const satisfies SurveyKey;
   }
 }
-export const MatchingScenariosLabelToPrefix = [
-  [EventScenarioLabel.HackedDevice, 'hacked-device'],
-  [EventScenarioLabel.LockedDevice, 'locked-device'],
-  [EventScenarioLabel.HackedAcct, 'hacked-acct'],
-  [EventScenarioLabel.LockedAcct, 'locked-acct'],
-  [EventScenarioLabel.HackedSocial, 'hacked-soc'],
-  [EventScenarioLabel.LockedSocial, 'locked-soc'],
-  [EventScenarioLabel.HackedFinancial, 'hacked-bank'],
-  [EventScenarioLabel.LockedFinancial, 'locked-bank'],
-  [EventScenarioLabel.HackedPwds, 'hacked-pwds'],
-  [EventScenarioLabel.LockedPwds, 'locked-pwds'],
-  [EventScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
-  [EventScenarioLabel.BrokenPromise, 'disconnect'],
-  [EventScenarioLabel.Abuse, 'abuse'],
-] as const satisfies readonly [EventScenarioLabel, string][];
-
-export const MatchingScenariosLabelToId = [
-  [EventScenarioLabel.HackedDevice, 'hacked-device?'],
-  [EventScenarioLabel.LockedDevice, 'locked-device?'],
-  [EventScenarioLabel.HackedAcct, 'hacked-acct?'],
-  [EventScenarioLabel.LockedAcct, 'locked-acct?'],
-  [EventScenarioLabel.HackedSocial, 'hacked-soc?'],
-  [EventScenarioLabel.LockedSocial, 'locked-soc?'],
-  [EventScenarioLabel.HackedFinancial, 'hacked-bank?'],
-  [EventScenarioLabel.LockedFinancial, 'locked-bank?'],
-  [EventScenarioLabel.HackedPwds, 'hacked-pwds?'],
-  [EventScenarioLabel.LockedPwds, 'locked-pwds?'],
-  [EventScenarioLabel.ReplacedOrUpgraded, 'swap-device?'],
-  [EventScenarioLabel.BrokenPromise, 'disconnect?'],
-  [EventScenarioLabel.Abuse, 'abuse?'],
-] as const satisfies readonly [EventScenarioLabel, SurveyKey][];
-

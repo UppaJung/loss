@@ -1,14 +1,14 @@
 import { TotalAnswered, tallyResponses } from "../../common/tallyResponses.ts";
 import { filterNull } from "../../common/filterNull.ts";
 import { AugmentedSurveyResponses } from "../../survey-keys/index.ts";
-import { EventScenarioLabels } from "../../decode-questions/event-scenario-labels.ts";
-import { AnswerToRecencyQuestionLabels, AnswerToRecencyQuestionList, ScenarioLabelWithRecencyIdTuples, decodeRecencyQuestion } from "../../decode-questions/recency-question.ts";
+import { EventScenarioLabels } from "../../decode-questions/scenario-labels.ts";
+import { AnswerToRecencyQuestionLabels, AnswerToRecencyQuestionList, EventScenarioLabelsPairedWithRecencyQuestionSurveyKeys, decodeRecencyQuestion } from "../../decode-questions/recency-question.ts";
 import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.ts";
 
 export const graphScenarioRecencyBarChartData = (path: string, responses: AugmentedSurveyResponses) => {
 
 	const labels = EventScenarioLabels;
-	const scenarioTallies = ScenarioLabelWithRecencyIdTuples.map( ([_, scenarioId]) => 
+	const scenarioTallies = EventScenarioLabelsPairedWithRecencyQuestionSurveyKeys.map( ([_, scenarioId]) => 
 		tallyResponses(filterNull(responses.map(
 			response => decodeRecencyQuestion(response[scenarioId])
 	))));
