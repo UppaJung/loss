@@ -1,7 +1,9 @@
 import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
 import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
-import { LikertOrNoLossLabel, LikertSeverityColors, LikertAndNoLossLabelsReversed } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+import { LikertSeverityColors } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+import { LikertLabel } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+import { LikertLabels } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 
 export interface ChartAxisTitles {
   xTitle?: string;
@@ -195,18 +197,18 @@ export const barChartWithGroupsSvg = <LEGEND_CATEGORY extends string, X_AXIS_CAT
 
 export interface LikertSubBarChartParameters<CHART_TYPE extends "bar" | "line", X_AXIS_CATEGORY extends string>
 	extends Omit<ChartSvgParameters<CHART_TYPE, X_AXIS_CATEGORY>, "datasets"> {
-	subBarColors?: Record<LikertOrNoLossLabel, string> | string[]
-	data: Record<LikertOrNoLossLabel, readonly number[]>,
+	subBarColors?: Record<LikertLabel, string> | string[]
+	data: Record<LikertLabel, readonly number[]>,
 }
 
  export const barChartWithSeverityLikertSubBarsSvg = <X_AXIS_CATEGORY extends string>({
 		subBarColors = LikertSeverityColors,
 		...args
 	}: LikertSubBarChartParameters<"bar", X_AXIS_CATEGORY>
-): string => barChartWithSubBarsSvg({...args, subBarColors, subBarCategories: LikertAndNoLossLabelsReversed});;
+): string => barChartWithSubBarsSvg({...args, subBarColors, subBarCategories: LikertLabels.toReversed()});;
 
 export const lineChartWithSeverityLikertSubCategoriesSvg = <X_AXIS_CATEGORY extends string>({
 	subBarColors = LikertSeverityColors,
 	...args
 }: LikertSubBarChartParameters<"line", X_AXIS_CATEGORY>
-): string => lineChartWithSubCategoriesSvg({...args, subBarColors, subBarCategories: LikertAndNoLossLabelsReversed});;
+): string => lineChartWithSubCategoriesSvg({...args, subBarColors, subBarCategories: LikertLabels.toReversed()});;

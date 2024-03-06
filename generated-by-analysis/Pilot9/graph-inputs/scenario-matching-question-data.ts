@@ -17,7 +17,7 @@ export const compromisedScenarioData = {
 		25,
 		10
 	],
-	"Added": [
+	"Revised": [
 		5,
 		5,
 		0,
@@ -54,7 +54,7 @@ export const lockedOutScenarioData = {
 		15,
 		5
 	],
-	"Added": [
+	"Revised": [
 		5,
 		5,
 		0,
@@ -100,7 +100,7 @@ export const unpairedScenarioData = {
 		10.526315789473685,
 		0
 	],
-	"Added": [
+	"Revised": [
 		0,
 		5,
 		0,
@@ -147,7 +147,7 @@ export const compromisedAndUnpairedScenarioData = {
 		10.526315789473685,
 		0
 	],
-	"Added": [
+	"Revised": [
 		5,
 		5,
 		0,

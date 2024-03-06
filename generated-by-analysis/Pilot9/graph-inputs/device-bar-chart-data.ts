@@ -28,7 +28,7 @@ export const data = {
 			0,
 			0
 		],
-		"Added": [
+		"Revised": [
 			1,
 			0,
 			0,
@@ -66,7 +66,7 @@ export const data = {
 			0,
 			0
 		],
-		"Added": [
+		"Revised": [
 			1,
 			0,
 			0,

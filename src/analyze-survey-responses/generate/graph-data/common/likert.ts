@@ -9,14 +9,22 @@ export const LikertAndNoLossLabels = [NoLossLabel, ...LikertLabels] as const;
 export const LikertAndNoLossLabelsReversed = LikertAndNoLossLabels.toReversed();
 export type LikertLabel = (typeof LikertLabels)[number];
 export type LikertOrNoLossLabel = (typeof LikertAndNoLossLabels)[number];
+export const SeverityColorsGreatestToLeast= [0, 1, 2, 3, 4, 5, 6].map((inverseSeverity) => {
+  const green = Math.floor(40 * inverseSeverity);
+  const red = Math.floor(219 + 6 * inverseSeverity);
+  const blue = Math.floor(25 * inverseSeverity);
+  const opacity = 1 - 0.06666 * inverseSeverity;
+  return `rgba(${red},${green},${blue},${opacity})` as const;
+});
+export const SeverityColorsLeastToGreatest = SeverityColorsGreatestToLeast.toReversed();
 export const LikertSeverityColors = LikertLabels.reduce((r, label) => {
-  const green = 280 - 40 * parseInt(label);
-  const red = -40 + 40 * parseInt(label);
-  const blue = 0;
-  r[label] = `rgb(${red},${green},${blue})`;
+  r[label] = SeverityColorsLeastToGreatest[parseInt(label) - 1];
   return r;
-}, {[NoLossLabel]: `rgb(240, 240, 240)`} as Record<LikertOrNoLossLabel, string>);
-
+}, {} as Record<LikertLabel, typeof SeverityColorsLeastToGreatest[number]>);
+export const LikertSeverityWithNoLossColors: Record<LikertOrNoLossLabel, string> = {
+  ...LikertSeverityColors,
+  [NoLossLabel]: `rgb(240, 240, 240)`
+};
 
 export const tallyLikert = (responses: AugmentedSurveyResponses<SurveyKey>, keys: SurveyKey[], filter?: (response: AugmentedSurveyResponse<SurveyKey>) => boolean) => {
   const tallies = keys.map((key) => tallyResponses(responses.map(response => (filter == null || filter(response)) ? response[key] : NoLossLabel))

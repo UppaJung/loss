@@ -6,7 +6,7 @@
 	"Lost Photos",
 	"Lost Emails",
 	"Mental Health"
-];
+] as const;
 	export const counts = {
 	"1": [
 		0,
@@ -48,7 +48,7 @@
 		0,
 		0
 	]
-};
+} as const;
 	export const percentsOfResponses = {
 	"1": [
 		0,
@@ -90,7 +90,7 @@
 		0,
 		0
 	]
-};
+} as const;
 	export const percentsOfAnswered = {
 	"1": [
 		0,
@@ -132,4 +132,4 @@
 		0,
 		0
 	]
-};
+} as const;

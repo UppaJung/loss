@@ -3,7 +3,7 @@ import { getReflectedCodeFileInfo } from "../../common/getReflectedCodeFileInfo.
 import type { SurveyKey } from "../../survey-keys/index.ts";
 import { HarmScenarioLabels, HarmScenarioLabelsPairedWithLikertHarmSurveyKey } from "../../decode-questions/scenario-labels.ts";
 import { exportVars } from "./common/exportVars.ts";
-import { LikertAndNoLossLabels } from "./common/likert.ts";
+import { LikertLabels } from "./common/likert.ts";
 import { HarmAsDurationOfTimeLabelListLeastToGreatest } from "../../decode-questions/harm-as-duration-of-time.ts";
 import { decodeHarmAsDurationOfTime } from "../../decode-questions/harm-as-duration-of-time.ts";
 import { HarmScenarioLabelToHarmQuantitySurveyKey } from "../../decode-questions/scenario-labels.ts";
@@ -15,10 +15,10 @@ import { NoLossLabel } from "./common/likert.ts";
 export const tallyLikert = (responses: AugmentedSurveyResponses<SurveyKey>, key: SurveyKey, filters: ((response: AugmentedSurveyResponse<SurveyKey>) => boolean)[]) => {
   const tallies = filters.map((filter) => tallyResponses(responses.map(response => filter(response) ? response[key] || NoLossLabel : undefined)));
   const counts = Object.fromEntries(
-    LikertAndNoLossLabels.map( likertLabel => ([likertLabel, tallies.map(tally => numeric(tally[likertLabel]))]) as const)
+    LikertLabels.map( likertLabel => ([likertLabel, tallies.map(tally => numeric(tally[likertLabel]))]) as const)
   );
   const percentsOfResponses = Object.fromEntries(
-    LikertAndNoLossLabels.map( likertLabel => ([likertLabel, tallies.map(tally => percentage(tally[likertLabel], responses.length))]) as const)
+    LikertLabels.map( likertLabel => ([likertLabel, tallies.map(tally => percentage(tally[likertLabel], responses.length))]) as const)
   );
   return { counts, percentsOfResponses };
 };
@@ -30,8 +30,8 @@ export const graphHarmQuantityWithLikertSeverity = (path: string, responses: Aug
 		HarmScenarioLabels.map( harmScenarioLabel => {
 			const harmValueAsDurationKey = HarmScenarioLabelToHarmQuantitySurveyKey[harmScenarioLabel];
 			const harmValueAsLikertKey = HarmScenarioLabelsPairedWithLikertHarmSurveyKey[harmScenarioLabel];			
-			const labels = HarmAsDurationOfTimeLabelListLeastToGreatest;
-			const filters = HarmAsDurationOfTimeLabelListLeastToGreatest.map( harmAsDurationOfTime =>
+			const labels = HarmAsDurationOfTimeLabelListLeastToGreatest.slice(1);
+			const filters = labels.map( harmAsDurationOfTime =>
 				(response: AugmentedSurveyResponse<SurveyKey>) => decodeHarmAsDurationOfTime(response[harmValueAsDurationKey]) === harmAsDurationOfTime
 			);
 			const tl = tallyLikert(responses, harmValueAsLikertKey, filters);

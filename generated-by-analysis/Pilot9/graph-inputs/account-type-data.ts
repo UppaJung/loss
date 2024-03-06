@@ -18,7 +18,7 @@ export const data = {
 					0,
 					0
 				],
-				"Added": [
+				"Revised": [
 					0,
 					1,
 					0,
@@ -38,7 +38,7 @@ export const data = {
 					0,
 					0
 				],
-				"Added": [
+				"Revised": [
 					0,
 					1,
 					0,
@@ -76,7 +76,7 @@ export const data = {
 					0,
 					2
 				],
-				"Added": [
+				"Revised": [
 					0,
 					0,
 					0,
@@ -108,7 +108,7 @@ export const data = {
 					0,
 					0
 				],
-				"Added": [
+				"Revised": [
 					0,
 					0,
 					0,
@@ -156,7 +156,7 @@ export const data = {
 					3,
 					0
 				],
-				"Added": [
+				"Revised": [
 					0,
 					0,
 					0,
@@ -191,7 +191,7 @@ export const data = {
 					2,
 					0
 				],
-				"Added": [
+				"Revised": [
 					0,
 					0,
 					0,

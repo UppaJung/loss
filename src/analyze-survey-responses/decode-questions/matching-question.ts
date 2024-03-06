@@ -39,39 +39,39 @@ export const [decodeExperienceMatchingQuestion, ExperienceMatchingAnswers] = get
 
 
 export enum AnswerToMatchingQuestion {
-  MatchedTopThree = 'Original',
-  AddToTopThree = 'Added',
+  MatchedThreeWorst = 'Original',
+  RevisedToAddToThreeWorst = 'Revised',
   BelowTopThree = 'Not Worst',
   CouldHappen = 'Could Happen',
   Impossible = 'Impossible',
 };
 
 export const AnswerToMatchingQuestionList = [
-  AnswerToMatchingQuestion.MatchedTopThree,
-  AnswerToMatchingQuestion.AddToTopThree,
+  AnswerToMatchingQuestion.MatchedThreeWorst,
+  AnswerToMatchingQuestion.RevisedToAddToThreeWorst,
   AnswerToMatchingQuestion.BelowTopThree,
   AnswerToMatchingQuestion.CouldHappen,
   AnswerToMatchingQuestion.Impossible,
 ] as const;
 
 export const AnswerToMatchQuestionColors = {
-  [AnswerToMatchingQuestion.MatchedTopThree]: "rgb(196,0,0)",
-  [AnswerToMatchingQuestion.AddToTopThree]: "rgb(224,148,0)",
+  [AnswerToMatchingQuestion.MatchedThreeWorst]: "rgb(196,0,0)",
+  [AnswerToMatchingQuestion.RevisedToAddToThreeWorst]: "rgb(224,148,0)",
   [AnswerToMatchingQuestion.BelowTopThree]:  "rgb(180 ,180 ,224)",
   [AnswerToMatchingQuestion.CouldHappen]:  "rgb(224, 224 ,224)",
   [AnswerToMatchingQuestion.Impossible]: "rgb(248, 248, 248)",
 } satisfies  Record<AnswerToMatchingQuestion, string>;
 
 export const AnswersIndicatingParticipantExperiencedScenario = [
-  AnswerToMatchingQuestion.MatchedTopThree,
-  AnswerToMatchingQuestion.AddToTopThree,
+  AnswerToMatchingQuestion.MatchedThreeWorst,
+  AnswerToMatchingQuestion.RevisedToAddToThreeWorst,
   AnswerToMatchingQuestion.BelowTopThree,
 ] as const;
 export type AnswerIndicatingParticipantExperiencedScenario = typeof AnswersIndicatingParticipantExperiencedScenario[number];
 
 export const [decodeMatchingQuestion] = getAnswerDecoderAndLabels([
-  ["experience", AnswerToMatchingQuestion.MatchedTopThree],
-  ["should have ranked it my", AnswerToMatchingQuestion.AddToTopThree],
+  ["experience", AnswerToMatchingQuestion.MatchedThreeWorst],
+  ["should have ranked it my", AnswerToMatchingQuestion.RevisedToAddToThreeWorst],
   ["should not rank among my three most harmful", AnswerToMatchingQuestion.BelowTopThree],
   ["I do worry", AnswerToMatchingQuestion.CouldHappen],
   ["I do not worry", AnswerToMatchingQuestion.Impossible],

@@ -13,7 +13,7 @@ export const generateScenarioMatchingQuestionMacros = (outPath: string, response
     macros.push(
       numberMacro(`${questionName}${`Answered`}`, answers[TotalAnswered] ?? 0),
       ...countAndPercentMacroSet(`${questionName}${`Yes`}`,
-        aggregateResponses(answers, AnswerToMatchingQuestion.MatchedTopThree, AnswerToMatchingQuestion.AddToTopThree, AnswerToMatchingQuestion.BelowTopThree), answers[TotalAnswered] ?? 0),
+        aggregateResponses(answers, AnswerToMatchingQuestion.MatchedThreeWorst, AnswerToMatchingQuestion.RevisedToAddToThreeWorst, AnswerToMatchingQuestion.BelowTopThree), answers[TotalAnswered] ?? 0),
       ...countAndPercentMacroSet(`${questionName}${`No`}`,
         aggregateResponses(answers, AnswerToMatchingQuestion.CouldHappen, AnswerToMatchingQuestion.Impossible), answers[TotalAnswered] ?? 0),
       ...AnswerToMatchingQuestionList

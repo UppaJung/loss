@@ -15,6 +15,8 @@ import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-qu
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
+import { SeverityColorsLeastToGreatest } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+import { SeverityColorsGreatestToLeast } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 
 export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
@@ -28,6 +30,7 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 			xAxisCategoryLabels: labels,
 			subBarCategories: AnswersIndicatingParticipantExperiencedScenario,
 			data, xTitle,
+			//...(false ? {subBarColors: SeverityColorsLeastToGreatest} : {})
 		}));
 	});
 	writeSvg('scatter-age-vs-scenario-count', scatterPlotSvg({
@@ -67,10 +70,12 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 		yTitle: "Percent of participants",
 	}));
 	writeSvg(`scenario-recency-bar-chart`, barChartWithSubBarsSvg({
-		xAxisCategoryLabels: ScenarioRecency.labels, subBarCategories: AnswerToRecencyQuestionList, data: ScenarioRecency.absoluteData
+		xAxisCategoryLabels: ScenarioRecency.labels, subBarCategories: AnswerToRecencyQuestionList, data: ScenarioRecency.absoluteData,
+		subBarColors: SeverityColorsGreatestToLeast
 	}));
 	writeSvg(`scenario-recovery-duration-bar-chart`, barChartWithSubBarsSvg({
-		xAxisCategoryLabels: RecoveryDuration.labels, subBarCategories: RecoveryDurationLabels, data: RecoveryDuration.absoluteData
+		xAxisCategoryLabels: RecoveryDuration.labels, subBarCategories: RecoveryDurationLabels, data: RecoveryDuration.absoluteData,
+		subBarColors: SeverityColorsGreatestToLeast
 	}));
 	writeSvg(`scenario-harm-likert-absolute`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "absolute",

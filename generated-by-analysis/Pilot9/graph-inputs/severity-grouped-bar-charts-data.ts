@@ -24,7 +24,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				1,
 				0,
@@ -63,7 +63,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				1,
@@ -104,7 +104,7 @@ export const BarGraphs = {
 				1,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -141,7 +141,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -174,7 +174,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -211,7 +211,7 @@ export const BarGraphs = {
 				1,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -244,7 +244,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -277,7 +277,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -320,7 +320,7 @@ export const BarGraphs = {
 				0,
 				1
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -359,7 +359,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -392,7 +392,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				1,
 				0,
@@ -429,7 +429,7 @@ export const BarGraphs = {
 				2,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -470,7 +470,7 @@ export const BarGraphs = {
 				0,
 				2
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -511,7 +511,7 @@ export const BarGraphs = {
 				0,
 				1
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -554,7 +554,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -601,7 +601,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -642,7 +642,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -679,7 +679,7 @@ export const BarGraphs = {
 				4,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -722,7 +722,7 @@ export const BarGraphs = {
 				3,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -765,7 +765,7 @@ export const BarGraphs = {
 				0,
 				1
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -808,7 +808,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -857,7 +857,7 @@ export const BarGraphs = {
 				2,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -900,7 +900,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -931,7 +931,7 @@ export const BarGraphs = {
 				1,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0
@@ -958,7 +958,7 @@ export const BarGraphs = {
 				1,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -991,7 +991,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -1024,7 +1024,7 @@ export const BarGraphs = {
 				2,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				1,
 				0,
@@ -1053,7 +1053,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -1086,7 +1086,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				1,
 				0,
 				0,
@@ -1123,7 +1123,7 @@ export const BarGraphs = {
 				3,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
@@ -1160,7 +1160,7 @@ export const BarGraphs = {
 				0,
 				0
 			],
-			"Added": [
+			"Revised": [
 				0,
 				0,
 				0,
