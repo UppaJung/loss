@@ -5,7 +5,7 @@ date: Git Last Modified
 ---
 
 <div style="display: inline-block; padding: 0.5rem; background-color: rgba(220, 240, 220, 0.5); border-radius: 0.5rem;">
-We are seeking community input into an ongoing research on how technologies fail us. Your feedback can influence our updates to our next survey!
+Your feedback can change what we ask on our next survey! Please post suggestions to or email them to us at ...
 </div>
 
 This research began with the observation that security technologies can fail in two ways, only one of which is typically measured:
