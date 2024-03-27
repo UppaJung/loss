@@ -1,8 +1,18 @@
-.navbar {
+nav.primary {
+  background-color: var(--lightgray);
+  width: calc(100vw - 2rem);
+  top: 0;
+  left: 0;
+  height: 2rem;
+  position: fixed;
+  /* border-bottom-width: 1px;
+  border-bottom-color: var(--darkgray);
+  border-bottom-style: solid; */
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 1rem;
   column-gap: 2rem;
   row-gap: 1rem;
 
@@ -14,6 +24,12 @@
     }
   }
 }
+
+nav div {
+  display: flex;
+  flex-direction: row;
+}
+
 
 .navbar-links {
   padding: 0;

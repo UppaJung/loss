@@ -32,19 +32,17 @@ bodyClass: post
 <hr>
 
 <nav class="navigation">
-  <ul>
     {{ set previousPost = search.previousPage(url, "type=posts") }}
     {{ if previousPost }}
-    <li>
-      ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
-    </li>
+    <div>
+      ← Previous: <a href="{{ previousPost.url }}" rel="prev">{{ previousPost.title }}</a>
+    </div>
     {{ /if }}
 
     {{ set nextPost = search.nextPage(url, "type=posts") }}
     {{ if nextPost }}
-    <li>
-      <strong>Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a> →</strong>
-    </li>
+    <div>
+      <strong>Next: <a href="{{ nextPost.url }}" rel="next">{{ nextPost.title }}</a> →</strong>
+    </div>
     {{ /if }}
-  </ul>
 </nav>

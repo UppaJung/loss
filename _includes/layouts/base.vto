@@ -11,7 +11,7 @@
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="primary">
       <a href="/" class="navbar-home">
         <strong>{{ site.title }}</strong>
       </a>
@@ -26,16 +26,18 @@
       {{ /for }}
       </ul>
 
-      <div class="navbar-search">
+      {{# <div class="navbar-search">
         <div id="search"></div>
-      </div>
+      </div> #}}
     </nav>
 
     <main class="{{ bodyClass }}">
       {{ content |> safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      Serge Egelman, Elena Glassman, Fredrik Heiding, Stuart Schechter, and Chelse Swoopes
+    </footer>
 
     <!-- Current page: {{ url }} -->
   </body>

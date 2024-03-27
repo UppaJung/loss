@@ -1,0 +1,21 @@
+---
+layout: layouts/home.vto
+---
+
+{{ content |> safe }}
+
+{{# {{ set postslist = search.pages("type=posts", "date=desc", 3) }}
+
+<hr>
+
+<h3>Latest {{ if postslist.length == 1 }}Update{{ else }}{{ postslist.length }} Updates{{ /if }}</h3>
+
+{{ include "templates/postslist.vto" }}
+
+{{ set postslist  = search.pages("pinned=true") }}
+
+{{ if postslist.length }}
+  <h2>Pinned Post:</h1>
+  {{ include "templates/postslist.vto" }}
+  <hr>
+{{ /if }} #}}
