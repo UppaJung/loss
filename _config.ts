@@ -18,9 +18,9 @@ const site = lume({
 });
 
 site
-.ignore("README.md")
-.ignore("/README")
-.ignore("/generated-by-analysis")
+  .ignore("README.md")
+  .ignore("/README")
+  .ignore("/generated-by-analysis")
   .copy("img")
   .copy("graphs")
   .use(postcss())

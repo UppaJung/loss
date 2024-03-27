@@ -1,5 +1,5 @@
 export const layout = "layouts/archive.vto";
-export const title = "Posts";
+export const title = "Updates";
 
 export default function* ({ search, paginate }) {
   const posts = search.pages("type=posts", "date=desc");
