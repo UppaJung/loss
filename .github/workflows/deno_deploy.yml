@@ -22,7 +22,7 @@ jobs:
           deno-version: v1.41.3
 
       - name: Build site
-        run: deno task build --location=https://uppajung.github.io/loss/
+        run: deno task build-uharm-org
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
