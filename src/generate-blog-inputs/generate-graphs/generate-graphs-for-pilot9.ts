@@ -15,7 +15,6 @@ import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-qu
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
-import { SeverityColorsLeastToGreatest } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { SeverityColorsGreatestToLeast } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 
 export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {

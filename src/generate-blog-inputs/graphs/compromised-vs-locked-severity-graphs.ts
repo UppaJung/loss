@@ -1,8 +1,6 @@
-import { ChartOptions } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
 import { AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
-import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
 import { barChartSvg } from "./chart-svg.ts";
-
+import type { ChartOptions, ChartDataset } from "./chart.ts";
 
 
 export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatchingQuestion>({
