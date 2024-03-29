@@ -16,7 +16,7 @@ export const [decodeAccountTypeQuestion, AccountTypeQuestionList] = getAnswerDec
 ]);
 
 export const AccountTypeLabelToId = [
-  [EventScenarioLabel.HackedAcct, 'hacked-acct-type'],
+  [EventScenarioLabel.BreachedAcct, 'hacked-acct-type'],
   [EventScenarioLabel.LockedAcct, 'locked-acct-type'],
 ] as const;
 
@@ -43,7 +43,7 @@ export const [decodeSocialAccountTypeQuestion, SocialAccountTypeQuestionList] = 
 ]);
 
 export const SocialAccountTypeLabelToId = [
-  [EventScenarioLabel.HackedAcct, 'hacked-soc-type'],
+  [EventScenarioLabel.BreachedAcct, 'hacked-soc-type'],
   [EventScenarioLabel.LockedAcct, 'locked-soc-type'],
 ] as const;
 
@@ -74,6 +74,6 @@ export const [decodeFinancialAccountTypeQuestion, FinancialAccountTypeQuestionLi
 ]);
 
 export const FinancialAccountTypeLabelToId = [
-  [EventScenarioLabel.HackedAcct, 'hacked-bank-type'],
+  [EventScenarioLabel.BreachedAcct, 'hacked-bank-type'],
   [EventScenarioLabel.LockedAcct, 'locked-bank-type'],
 ] as const;

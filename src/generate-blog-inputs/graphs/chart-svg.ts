@@ -1,14 +1,26 @@
-import { ChartOptions, chart } from "https://deno.land/x/fresh_charts@0.3.1/core.ts";
-import { ChartColors } from "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
-import { ChartDataset } from "https://esm.sh/v128/chart.js@4.3.0/auto/auto.js";
+import {type ChartOptions, type ChartDataset } from "./chart.ts";
+import { chart } from "./chart.ts";
 import { LikertSeverityColors } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { LikertLabel } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { LikertLabels } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+
+// From "https://deno.land/x/fresh_charts@0.3.1/utils.ts";
+/** A set of CSS RGB colors which can be used with charts. */
+export enum ChartColors {
+  Red = "rgb(255, 99, 132)",
+  Orange = "rgb(255, 159, 64)",
+  Yellow = "rgb(255, 205, 86)",
+  Green = "rgb(75, 192, 192)",
+  Blue = "rgb(54, 162, 235)",
+  Purple = "rgb(153, 102, 255)",
+  Grey = "rgb(201, 203, 207)",
+}
 
 export interface ChartAxisTitles {
   xTitle?: string;
   yTitle?: string;
 }
+
 
 export interface ChartSvgParameters<CHART_TYPE extends "line" | "bar", X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles {
 	datasets: ChartDataset<CHART_TYPE>[],
@@ -44,6 +56,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		devicePixelRatio: 1,
 		...chartOptions,
 		plugins: {
+			...("plugins" in chartOptions ? chartOptions.plugins as ChartOptions : {}),
 			legend: {
 				labels: {
 					filter
@@ -81,7 +94,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 			} as NonNullable<ChartOptions<"bar">["scales"]>["y"],
 		},
 	} satisfies ChartOptions<CHART_TYPE> as ChartOptions<CHART_TYPE>;
-	// console.log("Chart", {options, labels, datasets});
+	// console.log("Chart", {options, datasets});
 	if (cdf != null) {
 		// console.log(`Datasets before`, datasets);
 		datasets = (datasets as ChartDataset<"bar" | "line">[]).map( ({data, ...rest}) => {
@@ -118,13 +131,12 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 			datasets,
 		},
 	});
+
 	return svg
-	// Hack to remove textLength values that mess up x axis label
-	.replaceAll(RegExp(`textLength="[\\d\\.]+"`, "g"), "");
+		// Hack to remove textLength values that mess up x axis label
+		.replaceAll(RegExp(`textLength="[\\d\\.]+"`, "g"), "");
 };
 
-// const ChartType = "bar" as const;
-// type ChartType = typeof ChartType;
 
 export const barChartSvg = chartSvg("bar");
 export const lineChartSvg = chartSvg("line");

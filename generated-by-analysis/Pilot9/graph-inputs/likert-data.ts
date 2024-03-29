@@ -3,15 +3,15 @@
 // spell-checker: disable
 
 	export const labels = [
-	"Hacked Device",
+	"Breached Device",
 	"Locked Device",
-	"Hacked Account",
+	"Breached Account",
 	"Locked Account",
-	"Hacked Social",
+	"Breached Social",
 	"Locked Social",
-	"Hacked Financial",
+	"Breached Financial",
 	"Locked Financial",
-	"Hacked Passwords",
+	"Breached Passwords",
 	"Locked Passwords",
 	"Replaced Device/OS",
 	"Broken Promise",

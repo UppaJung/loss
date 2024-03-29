@@ -15,7 +15,6 @@ import { RecoveryDurationLabels } from "../../analyze-survey-responses/decode-qu
 import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/decode-questions/recency-question.ts";
 import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
-import { SeverityColorsLeastToGreatest } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { SeverityColorsGreatestToLeast } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 
 export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
@@ -84,12 +83,59 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Number of Participants",
 	}))
-	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
+	writeSvg(`scenario-harm-likert-percent-answered`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",
 		xAxisCategoryLabels: ScenarioLikert.labels,
 		data: ScenarioLikert.percentsOfAnswered,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
+	}));
+	const topLabelBase = {
+		type: 'label',
+		yValue: 95,
+		backgroundColor: 'rgba(245,245,245)',
+		font: {
+			size: 18
+		}
+	} as const;
+	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
+		xAxisCategoryLabels: ScenarioLikert.labels,
+		data: ScenarioLikert.percentsOfResponses,
+		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
+		yTitle: "Percent of Participants",
+		chartOptions: {
+			plugins:{
+				annotation: {
+					annotations: {
+						// line1: {
+						// 	type: 'line',
+						// 	xMin: "Replaced Device/OS",
+						// 	xMax: "Replaced Device/OS",
+						// 	...({xAdjust: -30} as {}),
+						// 	borderColor: 'rgb(255, 99, 132)',
+						// 	borderWidth: 2,
+						// },
+						label1: {
+							...topLabelBase,
+							xValue: "Locked Passwords",
+							xAdjust: -320,
+							content: ['                    Security Breach/Backfire Event Pairs                    '],
+						},
+						label2: {
+							...topLabelBase,
+							xValue: "Broken Promise",
+							content: ['    Other Events    '],
+						},
+						label3: {
+							...topLabelBase,
+							xValue: "Lost Emails",
+							content: ['        Harms        '],
+						}
+					}
+				}
+			}
+		}
 	}));
 	writeSvg(`lost-photos-percent`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",
