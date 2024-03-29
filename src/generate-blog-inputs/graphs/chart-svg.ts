@@ -1,4 +1,5 @@
-import {chart, type ChartOptions, type ChartDataset } from "./chart.ts";
+import {type ChartOptions, type ChartDataset } from "./chart.ts";
+import { chart } from "./chart.ts";
 import { LikertSeverityColors } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { LikertLabel } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { LikertLabels } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
@@ -55,6 +56,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		devicePixelRatio: 1,
 		...chartOptions,
 		plugins: {
+			...("plugins" in chartOptions ? chartOptions.plugins as ChartOptions : {}),
 			legend: {
 				labels: {
 					filter

@@ -1,5 +1,6 @@
 import { ChartAxisTitles,  } from "./chart-svg.ts";
-import { chart, type ChartDataset, type ChartOptions } from "./chart.ts";
+import { type ChartDataset, type ChartOptions } from "./chart-js-svg/chartFnFactory.ts";
+import { chart } from "./chart.ts";
 
 export interface ScatterPlotParameters<X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles{
 	data: readonly {x: number, y: number}[],

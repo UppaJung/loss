@@ -83,12 +83,49 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Number of Participants",
 	}))
-	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
+	writeSvg(`scenario-harm-likert-percent-answered`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",
 		xAxisCategoryLabels: ScenarioLikert.labels,
 		data: ScenarioLikert.percentsOfAnswered,
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
+	}));
+	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
+		yType: "percent",
+		xAxisCategoryLabels: ScenarioLikert.labels,
+		data: ScenarioLikert.percentsOfResponses,
+		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
+		yTitle: "Percent of Participants",
+		chartOptions: {
+			plugins:{
+				annotation: {
+					annotations: {
+						line1: {
+							type: 'line',
+							xMin: "Replaced Device/OS",
+							xMax: "Replaced Device/OS",
+							...({xAdjust: -30} as {}),
+							borderColor: 'rgb(255, 99, 132)',
+							borderWidth: 2,
+						},
+						label1: {
+							type: 'label',
+							xValue: "Locked Passwords",
+							xAdjust: -300,
+							xMin: "Breached Device",
+							xMax: "Locked Passwords",
+							// xValue: 2.5,
+							yValue: 95,
+							backgroundColor: 'rgba(245,245,245)',
+							content: ['Security Breach/Backfire Pairs'],
+							font: {
+								size: 18
+							}
+						}
+					}
+				}
+			}
+		}
 	}));
 	writeSvg(`lost-photos-percent`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",

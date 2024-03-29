@@ -15,9 +15,9 @@
 
 
 ### Participant 3
-1. *Participant matched this with* **Hacked Financial, Locked Financial**
+1. *Participant matched this with* **Breached Financial, Locked Financial**
 I had my identity stolen after making a purchase online. The hacker stole $6000 from me and it took months to get it resolved with the help of my bank and local police department. I was late on rent and almost got evicted because of the loss of funds.
-2. *Participant matched this with* **Hacked Social, Abuse**
+2. *Participant matched this with* **Breached Social, Abuse**
 I was verbally assaulted on a dating app because I refused to send naked photos. We had only been messaging for a few hours, and he blew up when I said no. I hadn&#39;t met this person and he found my other social media profiles. He DM&#39;d my mom on Facebook and sent her five paragraphs about how horrible I was and how she should be ashamed of me. He threatened to find out where I lived and I had to get the police involved.
 3. *Participant matched this with* **Abuse**
 Someone posted photos they took of me when I was intoxicated at a party without my consent. They tagged me in the photos and refused to take them down or untag me. My boss saw the photos and I was written up for &quot;&quot;unprofessional online behavior.&quot;&quot;
@@ -32,7 +32,7 @@ Losing an important assignment for school because it did not save and my compute
 
 
 ### Participant 5
-1. *Participant matched this with* **Hacked Financial**
+1. *Participant matched this with* **Breached Financial**
 not sure if this was technology related but someone was able to get into my saving account and got $400 and almost got another $400 before i noticed and got it cut off
 2. *Participant matched this with* **Lost Photos**
 my laptop died and it wasnt backed up and I lost all my data
@@ -55,7 +55,7 @@ i had a google account associated with my high school. this account contained a 
 
 
 ### Participant 8
-1. *Participant matched this with* **Hacked Financial, Locked Financial, Hacked Passwords**
+1. *Participant matched this with* **Breached Financial, Locked Financial, Breached Passwords**
 I was using my mobile phone on a site I thought was legitimate; however, my data was stolen.  My bank account was hacked, but my bank refunded my money in a week.
 2. *Participant matched this with* **Lost Photos**
 I solely depend on my computer for working from home.  My battery died and most of my data could not be restored. I purchased on new computer but had to make new spreadsheets from scratch.
@@ -78,9 +78,9 @@ At once point, I had all my photos saved on a computer. This was before the clou
 
 
 ### Participant 11
-1. *Participant matched this with* **Hacked Social, Abuse**
+1. *Participant matched this with* **Breached Social, Abuse**
 The most harmful technology-related harm I&#39;ve experienced is someone sending me pornography online as a child. I had just started middle school and the other person was in high school. We played in an orchestra together. He asked for my number and proceeded to send me pornography. As a child, I wasn&#39;t sure how to handle it, and it definitely aged me.
-2. *Participant matched this with* **Hacked Social, Abuse**
+2. *Participant matched this with* **Breached Social, Abuse**
 The second-most harmful technology-related harm would be losing my online friends. I connected with many people on a Discord server starting when I was in 8th grade. A few of them were my school friends, but others were random people online. The drama that ensued defined my life at that time. Looking back on it now, it was weird that people almost double my age had such drama-filled interactions with grade schoolers.
 3. Apps like Instagram, Facebook, or Reddit lead to doomscrolling for me. I find myself spending hours on the apps because I&#39;ve lost track of time or can&#39;t look away.
 
@@ -104,11 +104,11 @@ The second-most harmful technology-related harm would be losing my online friend
 
 
 ### Participant 15
-1. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Locked Social, Hacked Financial, Locked Financial, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+1. *Participant matched this with* **Breached Device, Locked Device, Breached Account, Locked Account, Locked Social, Breached Financial, Locked Financial, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
 I was reliant on my phone to bring in money to pay my storage and my phone crapped out on me.
-2. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Hacked Social, Locked Social, Hacked Financial, Locked Financial, Hacked Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+2. *Participant matched this with* **Breached Device, Locked Device, Breached Account, Locked Account, Breached Social, Locked Social, Breached Financial, Locked Financial, Breached Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
 My laptop broke
-3. *Participant matched this with* **Hacked Device, Locked Device, Hacked Account, Locked Account, Hacked Social, Locked Social, Hacked Financial, Locked Financial, Hacked Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
+3. *Participant matched this with* **Breached Device, Locked Device, Breached Account, Locked Account, Breached Social, Locked Social, Breached Financial, Locked Financial, Breached Passwords, Locked Passwords, Replaced Device/OS, Broken Promise, Abuse, Lost Photos, Lost Emails**
 My phone broke
 
 
@@ -139,7 +139,7 @@ The second is pretty standard loss of photos from old backups of phones and devi
 
 
 ### Participant 20
-1. *Participant matched this with* **Hacked Device, Hacked Financial**
+1. *Participant matched this with* **Breached Device, Breached Financial**
 I had my debit card information used without my knowledge. I was charged for a membership fee I was not signed up for and the bank and I went back and forth for a while before they reimbursed me for that
 2. I know my eyesight has suffered from looking at computer screens for most of my life. I wear bifocals now and can barely see without my glasses. This includes at home watching tv.
 3. Losing my phone with all my personal information on it. I found it again, but that was a very stressful few days when I wasn&#39;t sure if I needed to cancel my card and change my passwords. Luckily, I found it.

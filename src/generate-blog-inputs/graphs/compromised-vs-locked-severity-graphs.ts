@@ -1,6 +1,6 @@
 import { AnswerToMatchQuestionColors, AnswerToMatchingQuestion } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { barChartSvg } from "./chart-svg.ts";
-import type { ChartOptions, ChartDataset } from "./chart.ts";
+import type { ChartOptions, ChartDataset } from "./chart-js-svg/chartFnFactory.ts";
 
 
 export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatchingQuestion>({

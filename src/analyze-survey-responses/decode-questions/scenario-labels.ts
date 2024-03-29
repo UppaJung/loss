@@ -1,15 +1,15 @@
 import { SurveyKey } from "../survey-keys/index.ts";
 
 export const EventScenarioLabel = {
-	HackedDevice: 'Hacked Device',
+	BreachedDevice: 'Breached Device',
 	LockedDevice: 'Locked Device',
-	HackedAcct: 'Hacked Account',
+	BreachedAcct: 'Breached Account',
 	LockedAcct: 'Locked Account',
-	HackedSocial: 'Hacked Social',
+	BreachedSocial: 'Breached Social',
 	LockedSocial: 'Locked Social',
-	HackedFinancial: 'Hacked Financial',
+	BreachedFinancial: 'Breached Financial',
 	LockedFinancial: 'Locked Financial',
-	HackedPwds: 'Hacked Passwords',
+	BreachedPwds: 'Breached Passwords',
 	LockedPwds: 'Locked Passwords',
 	ReplacedOrUpgraded: 'Replaced Device/OS',
 	BrokenPromise: 'Broken Promise',
@@ -19,15 +19,15 @@ export const EventScenarioLabel = {
 export type EventScenarioLabel = typeof EventScenarioLabel[keyof typeof EventScenarioLabel];
 
 export const EventScenarioLabels = [
-	EventScenarioLabel.HackedDevice,
+	EventScenarioLabel.BreachedDevice,
 	EventScenarioLabel.LockedDevice,
-	EventScenarioLabel.HackedAcct,
+	EventScenarioLabel.BreachedAcct,
 	EventScenarioLabel.LockedAcct,
-	EventScenarioLabel.HackedSocial,
+	EventScenarioLabel.BreachedSocial,
 	EventScenarioLabel.LockedSocial,
-	EventScenarioLabel.HackedFinancial,
+	EventScenarioLabel.BreachedFinancial,
 	EventScenarioLabel.LockedFinancial,
-	EventScenarioLabel.HackedPwds,
+	EventScenarioLabel.BreachedPwds,
 	EventScenarioLabel.LockedPwds,
 	EventScenarioLabel.ReplacedOrUpgraded,
 	EventScenarioLabel.BrokenPromise,
@@ -36,15 +36,15 @@ export const EventScenarioLabels = [
 
 
 export const EventScenariosLabelsPairedWithSurveyKeyPrefix = [
-	[EventScenarioLabel.HackedDevice, 'hacked-device'],
+	[EventScenarioLabel.BreachedDevice, 'hacked-device'],
 	[EventScenarioLabel.LockedDevice, 'locked-device'],
-	[EventScenarioLabel.HackedAcct, 'hacked-acct'],
+	[EventScenarioLabel.BreachedAcct, 'hacked-acct'],
 	[EventScenarioLabel.LockedAcct, 'locked-acct'],
-	[EventScenarioLabel.HackedSocial, 'hacked-soc'],
+	[EventScenarioLabel.BreachedSocial, 'hacked-soc'],
 	[EventScenarioLabel.LockedSocial, 'locked-soc'],
-	[EventScenarioLabel.HackedFinancial, 'hacked-bank'],
+	[EventScenarioLabel.BreachedFinancial, 'hacked-bank'],
 	[EventScenarioLabel.LockedFinancial, 'locked-bank'],
-	[EventScenarioLabel.HackedPwds, 'hacked-pwds'],
+	[EventScenarioLabel.BreachedPwds, 'hacked-pwds'],
 	[EventScenarioLabel.LockedPwds, 'locked-pwds'],
 	[EventScenarioLabel.ReplacedOrUpgraded, 'swap-device'],
 	[EventScenarioLabel.BrokenPromise, 'disconnect'],

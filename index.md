@@ -5,7 +5,7 @@ date: Git Last Modified
 ---
 
 <div style="display: inline-block; padding: 0.5rem; background-color: rgba(220, 240, 220, 0.5); border-radius: 0.5rem;">
-Your feedback can change what we ask on our next survey! Please post suggestions to or email them to us at ...
+Your feedback can change what we ask on our next survey! Please post suggestions to our Mastodon feed or <a href="mailto:team@uharm.org">email them</a>.
 </div>
 
 This research began with the observation that security technologies can fail in two ways, only one of which is typically measured:
@@ -28,3 +28,8 @@ As our research team set out to gauge how frequently security technologies backf
 		</ol>
 </li>
 </ol>
+
+<figure>
+	<img src="/graphs/pilot9/scenario-harm-likert-percent.svg" alt="TBD"/>
+	<caption>The percent of participants who reported experiencing each scenario (full bar) broken down by the Likert severity of harm they reported experiencing (colors).</caption>	
+</figure>
