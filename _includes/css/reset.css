@@ -29,12 +29,20 @@ body {
   --pagefind-ui-font: var(--font-family);
 }
 
+
 main {
-  padding: 2vh 5vw;
+  margin-top: 4rem;
 
   & > :first-child {
     margin-top: 0;
   }
+}
+
+main.body-index {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
 }
 
 a {
@@ -87,10 +95,6 @@ figure figcaption {
   font-family: serif;
 }
 
-
-main {
-  margin-top: 4rem;
-}
 
 footer {
   background-color: var(--white);
