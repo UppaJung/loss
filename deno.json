@@ -9,6 +9,7 @@
     "graphs": "deno run --allow-read --allow-write src/analyze-survey-responses/main.ts; deno run --allow-read --allow-write src/generate-blog-inputs/index.ts",
     "build": "deno task lume",
     "build-uharm-org": "deno task lume --location=https://uharm.org/",
+    "parse-survey": "deno run --allow-read --allow-write src/survey-converter/qsf.ts",
     "serve": "deno task lume -s",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -"
   },
