@@ -1,7 +1,7 @@
 import { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
 import { wrapChartJsToReturnSvg, ChartOptions } from "./wrapChartJsToReturnSvg.ts";
-import type { ChartItem, ChartType, DefaultDataPoint, ChartConfiguration } from "npm:chart.js@4.4.2/";
 import { SvgRewritingOptions, rewriteSvgString } from "./SvgRewritingOptions.ts";
+import type { ChartItem, ChartType, DefaultDataPoint, ChartConfiguration } from "npm:chart.js@4.4.2/";
 
 export function chartFnFactory<
   TType extends ChartType = ChartType,

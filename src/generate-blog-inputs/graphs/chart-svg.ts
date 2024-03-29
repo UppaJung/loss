@@ -131,7 +131,10 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 			datasets,
 		},
 	});
+
 	return svg
+		// Hack to remove textLength values that mess up x axis label
+		.replaceAll(RegExp(`textLength="[\\d\\.]+"`, "g"), "");
 };
 
 

@@ -1,4 +1,4 @@
-import { Rect2D, SvgCanvas, SvgCanvas2DGradient } from "https://esm.sh/stable/red-agate-svg-canvas@0.5.0";
+import { Rect2D, SvgCanvas2DGradient } from "https://esm.sh/stable/red-agate-svg-canvas@0.5.0";
 import { ChartSvgCanvas } from "./ChartSvgCanvas.ts";
 import { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
 
@@ -16,28 +16,17 @@ export function mockHtmlCanvasElementWithSvgCanvas({
 }: SvgRenderingOptions,
   callbackProvidedMockedHTMLCanvasElement: (canvas: HTMLCanvasElement) => void
 ) {
-  const ctx = new ChartSvgCanvas() as SvgCanvas & SvgCanvasExtras;
-  ctx.canvas = {
-    width, height,
-    style: { width: `${width}px`, height: `${height}px` },
-  };
-  ctx.fontHeightRatio = fontHeightRatio;
-  const svgMockCanvas = { getContext: () => ctx } as unknown as HTMLCanvasElement;
+  const ctx = new ChartSvgCanvas({width, height, fontHeightRatio});
   const savedGradient = globalThis.CanvasGradient;
   globalThis.CanvasGradient = SvgCanvas2DGradient as typeof CanvasGradient;
 
   try {
-    callbackProvidedMockedHTMLCanvasElement(svgMockCanvas);
+    callbackProvidedMockedHTMLCanvasElement(ctx.canvas);
   } finally {
     if (savedGradient) {
       globalThis.CanvasGradient = savedGradient;
     }
   }
 
-  let svg = ctx.render(new Rect2D(0, 0, width, height), "px");
-
-  // Hack to remove textLength values that mess up x axis labels
-  svg = svg.replaceAll(RegExp(`textLength="[\\d\\.]+"`, "g"), "");
-
-  return svg;
+  return ctx.render(new Rect2D(0, 0, width, height), "px");
 }
