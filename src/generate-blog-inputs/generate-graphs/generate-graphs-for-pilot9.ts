@@ -90,6 +90,14 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 		xTitle: "Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?",
 		yTitle: "Percent of Affected Participants",
 	}));
+	const topLabelBase = {
+		type: 'label',
+		yValue: 95,
+		backgroundColor: 'rgba(245,245,245)',
+		font: {
+			size: 18
+		}
+	} as const;
 	writeSvg(`scenario-harm-likert-percent`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",
 		xAxisCategoryLabels: ScenarioLikert.labels,
@@ -100,27 +108,29 @@ export const generateGraphsPilot9 = (cohort: string = "Pilot9") => {
 			plugins:{
 				annotation: {
 					annotations: {
-						line1: {
-							type: 'line',
-							xMin: "Replaced Device/OS",
-							xMax: "Replaced Device/OS",
-							...({xAdjust: -30} as {}),
-							borderColor: 'rgb(255, 99, 132)',
-							borderWidth: 2,
-						},
+						// line1: {
+						// 	type: 'line',
+						// 	xMin: "Replaced Device/OS",
+						// 	xMax: "Replaced Device/OS",
+						// 	...({xAdjust: -30} as {}),
+						// 	borderColor: 'rgb(255, 99, 132)',
+						// 	borderWidth: 2,
+						// },
 						label1: {
-							type: 'label',
+							...topLabelBase,
 							xValue: "Locked Passwords",
-							xAdjust: -300,
-							xMin: "Breached Device",
-							xMax: "Locked Passwords",
-							// xValue: 2.5,
-							yValue: 95,
-							backgroundColor: 'rgba(245,245,245)',
-							content: ['Security Breach/Backfire Pairs'],
-							font: {
-								size: 18
-							}
+							xAdjust: -320,
+							content: ['                    Security Breach/Backfire Event Pairs                    '],
+						},
+						label2: {
+							...topLabelBase,
+							xValue: "Broken Promise",
+							content: ['    Other Events    '],
+						},
+						label3: {
+							...topLabelBase,
+							xValue: "Lost Emails",
+							content: ['        Harms        '],
 						}
 					}
 				}

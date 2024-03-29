@@ -5,7 +5,7 @@ date: Git Last Modified
 ---
 
 <div style="display: inline-block; padding: 0.5rem; background-color: rgba(220, 240, 220, 0.5); border-radius: 0.5rem;">
-Your feedback can change what we ask on our next survey! Please post suggestions to our Mastodon feed or <a href="mailto:team@uharm.org">email them</a>.
+Your feedback can change what we ask on our next survey! Please post suggestions to our Mastodon feed or email them to <a href="mailto:team@uharm.org">team@uharm.org</a>.
 </div>
 
 This research began with the observation that security technologies can fail in two ways, only one of which is typically measured:
