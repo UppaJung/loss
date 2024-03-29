@@ -259,7 +259,7 @@ export interface Properties {
   RemovedFieldsets: unknown[]
 }
 
-const writeQuestions = (
+const getSortedQuestions = (
 	flows: Flow[],
 	questionsById: Map<QuestionId, SurveyQuestion>,
 	blocksById: Map<BlockId, SurveyBlockPayloadEntry>,	
@@ -286,10 +286,32 @@ const writeQuestions = (
 		} else {
 			const sf = flow.Flow;
 			const subFlows = sf == null ? [] : Array.isArray(sf) ? sf : [sf];
-			return writeQuestions(subFlows, questionsById, blocksById);
+			return getSortedQuestions(subFlows, questionsById, blocksById);
 		}
 	}).flat();
 }
+
+const choicesToMarkdown = ({Choices, ChoiceOrder}: SurveyQuestionPayload) => {
+	if (Choices == null) {
+		return "";
+	}
+	const choiceObjects = ChoiceOrder == null ? Object.values(Choices) :
+		ChoiceOrder.map( index => Choices[`${index}`]);
+	const choiceStrings = choiceObjects.map( (choice) => choice.Display );
+	if (choiceStrings.length === 7 &&
+		choiceStrings.filter( (s, index) => s == (index+1).toString()).length === 7) {
+			const spaces5 = "&nbsp;&nbsp;&nbsp;&nbsp;";
+		return `\n${spaces5}${spaces5} [ 1 ]${spaces5}[ 2 ]${spaces5}[ 3 ]${spaces5}[ 4 ]${spaces5}[ 5 ]${spaces5}[ 6 ]${spaces5}[ 7 ]&nbsp;&nbsp;&nbsp;`;
+	}
+	const choiceLines = '\n\n  - ' + choiceStrings.join('\n  - ');
+	return choiceLines;
+}
+
+const questionsToMd = (questions: SurveyQuestion[]) => questions.map( q => {
+	const p = q.Payload;
+	return `${p.QuestionText}${choicesToMarkdown(p)}`;
+	}).join("\n\n");
+
 
 const parse = () => {
 	const json = Deno.readTextFileSync("./src/survey-converter/loss.qsf");
@@ -306,13 +328,17 @@ const parse = () => {
 	);
 	const flows = surveyJson.SurveyElements.filter(isSurveyFlow);
 	const flowPayloads = flows.map(flow => flow.Payload);
-	const writtenQuestions = flowPayloads.map( flow => 
-		writeQuestions([flow], questionsById, blocksById)
-	);
+	const orderedQuestions = flowPayloads.map( flow => 
+		getSortedQuestions([flow], questionsById, blocksById)
+	).flat();
 	Deno.mkdirSync("./src/survey-converter/out", {recursive: true});
 	Deno.writeTextFileSync("./src/survey-converter/out/questions-ordered.json",
-		JSON.stringify(writtenQuestions, null, "\t")
+		JSON.stringify(orderedQuestions, null, "\t")
 	);
+	Deno.writeTextFileSync("./questions-ordered.md",
+		questionsToMd(orderedQuestions)
+	);
+	questionsToMd
 	Deno.writeTextFileSync("./src/survey-converter/out/known.json",
 		JSON.stringify({questions, blocks, flows}, null, "\t")
 	);
