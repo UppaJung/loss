@@ -309,8 +309,11 @@ const parse = () => {
 	const writtenQuestions = flowPayloads.map( flow => 
 		writeQuestions([flow], questionsById, blocksById)
 	);
-	console.log(writtenQuestions);
-	Deno.writeTextFileSync("./src/survey-converter/known.json",
+	Deno.mkdirSync("./src/survey-converter/out", {recursive: true});
+	Deno.writeTextFileSync("./src/survey-converter/out/questions-ordered.json",
+		JSON.stringify(writtenQuestions, null, "\t")
+	);
+	Deno.writeTextFileSync("./src/survey-converter/out/known.json",
 		JSON.stringify({questions, blocks, flows}, null, "\t")
 	);
 }
