@@ -50,8 +50,14 @@ export const scatterPlotSvg = <X_AXIS_CATEGORY extends string>({
 		},
 	} satisfies ChartOptions<"scatter">;
 	// console.log("Chart", {options, labels, datasets});
-	const svg = chart<"scatter">({
-		type: "scatter", height: 600, width: 1200, options: chartOptions,
+	/*
+		Object literal may only specify known properties, and 'type' does not exist in type 
+			'SvgRenderingOptions & SvgRewritingOptions &
+				Omit<ChartConfiguration<"scatter", (number | Point | null)[], unknown> | ChartConfigurationCustomTypesPerDataset<...>, "options"> & { ...; }'.
+	*/
+	const svg = chart({
+		type: "scatter",
+		height: 600, width: 1200, options: chartOptions,
 		data: {
 			datasets: [dataset]
 		},
@@ -60,3 +66,6 @@ export const scatterPlotSvg = <X_AXIS_CATEGORY extends string>({
 		// Hack to remove textLength values that mess up x axis label
 		.replaceAll(RegExp(`textLength="[\\d\\.]+"`, "g"), "");
 };
+/*
+Object literal may only specify known properties, and 'type' does not exist in type 'SvgRenderingOptions & SvgRewritingOptions & Omit<ChartConfiguration<keyof ChartTypeRegistry, (number | Point | null)[], unknown> | ChartConfigurationCustomTypesPerDataset<...>, "options"> & { ...; }'.
+*/

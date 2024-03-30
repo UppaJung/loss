@@ -1,10 +1,9 @@
-import type { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
-import { RemoveUnsupportedChartJsOptions } from "./UnsupportedChartJsOptions.ts";
-import type { ChartItem, ChartConfiguration, ChartType, DefaultDataPoint, ChartOptions as UnsafeChartOptions } from "npm:chart.js@4.4.2/";
-import { wrapChartJsToReturnSvgWithTypesUnmodified } from "./wrapChartJsToReturnSvgWithTypesUnmodified.ts";
+// Copyright 2024 Stuart Schechter. All rights reserved. MIT license.
 
-export type ChartOptions<TType extends ChartType = ChartType> = RemoveUnsupportedChartJsOptions<UnsafeChartOptions<TType>>;
-;
+import type { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
+import { mockHtmlCanvasElementWithSvgCanvas } from "./mockHtmlCanvasElementWithSvgCanvas.ts";
+import { RemoveChartJsOptionsUnsupportedForSvgs } from "./UnsupportedChartJsOptions.ts";
+
 /**
  * Wrap the ChartJS Chart class prototype to create a function that creates a factory that replaces
  * the first argument of the constructor (a canvas) with an argument specifying a set of rendering
@@ -16,16 +15,29 @@ export type ChartOptions<TType extends ChartType = ChartType> = RemoveUnsupporte
  * ```
  * @returns A function that returns an SVG string.
  */
+export type SafeChartConfiguration<CHART_CONFIGURATION> = CHART_CONFIGURATION extends {options?: object} ? (
+    Omit<CHART_CONFIGURATION, "options"> &
+      { options?: RemoveChartJsOptionsUnsupportedForSvgs<NonNullable<CHART_CONFIGURATION["options"]>>; }
+  ) : CHART_CONFIGURATION;
 
 export function wrapChartJsToReturnSvg<
-  TType extends ChartType = ChartType,
-  TData = DefaultDataPoint<TType>,
-  TLabel = unknown>(
+  CHART_CONFIGURATION extends {options?: object}
+>(
     chartJsClassPrototype: {
-      new(canvas: ChartItem, args: ChartConfiguration<TType, TData, TLabel>): void;
+      new(canvas: HTMLCanvasElement, configuration: CHART_CONFIGURATION): void;
     }
   ) {
-  return wrapChartJsToReturnSvgWithTypesUnmodified(chartJsClassPrototype) as (svgRenderingOptions: SvgRenderingOptions, args: Omit<ChartConfiguration<TType, TData, TLabel>, "options"> &
-  { options: ChartOptions<TType>; }
-  ) => string;
+    /**
+     * Generate a chart with ChartJS, render to an SVG, and return that SVG in string form.
+     * @param svgRenderingOptions An object specifying the height and width of the SVG as integer values,
+     *  and optionally a fontHeightRatio as a number (default 2).
+     * @param chartJsArguments The object that would otherwise be passed as the second argument to the
+     *  constructor when creating a ChartJS object.
+     * @returns The chart in SVG format in string form.
+     */
+    const chartJsSvg = (svgRenderingOptions: SvgRenderingOptions, chartJsArguments: SafeChartConfiguration<CHART_CONFIGURATION>) =>
+      mockHtmlCanvasElementWithSvgCanvas(svgRenderingOptions, (canvas) => {
+        new chartJsClassPrototype(canvas, chartJsArguments as CHART_CONFIGURATION);
+      });
+    return chartJsSvg;
 };

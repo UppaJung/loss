@@ -1,3 +1,7 @@
+// Copyright 2018-2023 the Deno authors. All rights reserved. MIT license.
+// Modified (significantly enough that I deserve the blame) by Stuart Schechter under MIT License.
+// (Original Deno code at https://github.com/denoland/fresh_charts/blob/312653853994b129905662c3df48260f2651ab96/core.ts)
+
 import { Rect2D, SvgCanvas2DGradient } from "https://esm.sh/stable/red-agate-svg-canvas@0.5.0";
 import { ChartSvgCanvas } from "./ChartSvgCanvas.ts";
 import { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
