@@ -31,6 +31,6 @@ As our research team set out to gauge how frequently security technologies backf
 </ol>
 
 <figure>
-	<img src="/graphs/pilot9/scenario-harm-likert-percent.svg" alt="TBD"/>
+	<img src="/graphs/pilot10/scenario-harm-likert-percent.svg" alt="TBD"/>
 	<caption>The percent of participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right).  Each bar is broken down into colors by the Likert severity of harm each participant reported on a Likert scale.</caption>	
 </figure>

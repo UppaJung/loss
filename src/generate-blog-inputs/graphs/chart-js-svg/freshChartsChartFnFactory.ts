@@ -16,7 +16,7 @@ import { SafeChartConfiguration } from "./wrapChartJsToReturnSvg.ts";
  * @param chartJsClassPrototype 
  * @returns 
  */
-export function freshChartsChartFnFactory<CHART_CONFIGURATION extends {options?: object}>(
+export function freshChartsChartFnFactory<CHART_CONFIGURATION>(
     chartJsClassPrototype: {
       new(canvas: HTMLCanvasElement, args: CHART_CONFIGURATION): void;
     }
@@ -40,7 +40,7 @@ export function freshChartsChartFnFactory<CHART_CONFIGURATION extends {options?:
     }: SvgRenderingOptions & SvgRewritingOptions & SafeChartConfiguration<CHART_CONFIGURATION>
   ): string {
     const svgOptions = { width, height, fontHeightRatio };
-    const chartJsFn = wrapChartJsToReturnSvg<CHART_CONFIGURATION>(chartJsClassPrototype);
+    const chartJsFn = wrapChartJsToReturnSvg(chartJsClassPrototype);
     let svgString = chartJsFn(svgOptions, safeChartConfiguration as SafeChartConfiguration<CHART_CONFIGURATION>);
     svgString = rewriteSvgString(svgString, {svgClass, svgStyle});
     return svgString;

@@ -4,6 +4,8 @@ import type { SvgRenderingOptions } from "./SvgRenderingOptions.ts";
 import { mockHtmlCanvasElementWithSvgCanvas } from "./mockHtmlCanvasElementWithSvgCanvas.ts";
 import { RemoveChartJsOptionsUnsupportedForSvgs } from "./UnsupportedChartJsOptions.ts";
 
+export type ReplaceField<OriginalType, KeyToReplace extends keyof OriginalType, ReplacementValue> =
+  { [key in keyof OriginalType]: key extends KeyToReplace ? ReplacementValue : OriginalType[key] };
 /**
  * Wrap the ChartJS Chart class prototype to create a function that creates a factory that replaces
  * the first argument of the constructor (a canvas) with an argument specifying a set of rendering
@@ -15,14 +17,17 @@ import { RemoveChartJsOptionsUnsupportedForSvgs } from "./UnsupportedChartJsOpti
  * ```
  * @returns A function that returns an SVG string.
  */
-export type SafeChartConfiguration<CHART_CONFIGURATION> = CHART_CONFIGURATION extends {options?: object} ? (
-    Omit<CHART_CONFIGURATION, "options"> &
-      { options?: RemoveChartJsOptionsUnsupportedForSvgs<NonNullable<CHART_CONFIGURATION["options"]>>; }
-  ) : CHART_CONFIGURATION;
+// AWAITING NEW VERSION OF TS WITH THIS FIXED:
+//   https://github.com/microsoft/TypeScript/issues/57863
+export type SafeChartConfiguration<CHART_CONFIGURATION> =
+    CHART_CONFIGURATION extends {options?: object} ? CHART_CONFIGURATION :    
+    // (
+    //   Omit<CHART_CONFIGURATION, "options"> &
+    //     { options: RemoveChartJsOptionsUnsupportedForSvgs<NonNullable<CHART_CONFIGURATION["options"]>>; }
+    // ) :
+    CHART_CONFIGURATION;
 
-export function wrapChartJsToReturnSvg<
-  CHART_CONFIGURATION extends {options?: object}
->(
+export function wrapChartJsToReturnSvg<CHART_CONFIGURATION>(
     chartJsClassPrototype: {
       new(canvas: HTMLCanvasElement, configuration: CHART_CONFIGURATION): void;
     }

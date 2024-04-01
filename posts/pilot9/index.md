@@ -15,9 +15,7 @@ tags:
 Participant 15 appears disingenuous. See how they correlated their loss stories to unrelated scenarios.
 
 Four of the first 20 participants (P16, P17) cited loss of attention, spending too much time on their phone (P13.3) or doomscrolling (P11.3) and addiction (P12).
-Also mentions of "addiction" "depression" (P6) and "anxiety" and discussions of mental health (P2). Stuart added a mental health harm question, but only after 20 participants had completed this pilot.
-
-[To-do list](./to-do.md)
+Also mentions of "addiction" "depression" (P6) and "anxiety" and discussions of mental health (P2). Stuart added a mental health harm question, but only after 20 participants had complete
 
 ### New in this pilot
 

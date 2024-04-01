@@ -1,294 +1,95 @@
-export interface SurveyRoot {
-  SurveyEntry: SurveyEntry;
-  SurveyElements: SurveyElement[];
+import { SurveyRoot, Choice, SurveyQuestion, SurveyBlockPayloadEntry, Flow, SurveyFlow, SurveyQuestionPayload, QuestionId, BlockId } from "./types.d.ts";
+import { isSurveyBlock, isSurveyFlow, isSurveyQuestion } from "./type-guards.ts";
+
+export type FlowType = Exclude<Flow["Type"], "Standard" | "Root"> | "Block";
+
+export interface AugmentedSurveyQuestion extends SurveyQuestion {
+  skipToEndOfBlockIfChoices?: Choice[];
 }
 
-export interface SurveyEntry {
-  SurveyID: string;
-  SurveyName: string;
-  SurveyDescription: string;
-  SurveyOwnerID: string;
-  SurveyBrandID: string;
-  DivisionID: string;
-  SurveyLanguage: string;
-  SurveyActiveResponseSet: string;
-  SurveyStatus: string;
-  SurveyStartDate: string;
-  SurveyExpirationDate: string;
-  SurveyCreationDate: string;
-  CreatorID: string;
-  LastModified: string;
-  LastAccessed: string;
-  LastActivated: string;
-  Deleted: unknown;
+export interface LeafFlowNode {
+  type: "Block";
+  description: string;
+  questions: AugmentedSurveyQuestion[];
 }
 
-export const ElementCodes = {
-	SurveyFlow: "FL",
-	SurveyBlock: "BL",
-	SurveyOptions: "SO",
-	SurveyQuestion: "SQ",	
+export interface ParentFlowNode {
+  type: Exclude<FlowType, "Block">;
+  children: FlowNode[];
 }
 
-export interface SurveyElement {
-  SurveyID: string;
-  Element: string;
-  PrimaryAttribute: string;
-  SecondaryAttribute?: string;
-  TertiaryAttribute?: string;
-  Payload: unknown;
-}
+export type FlowNode = LeafFlowNode | ParentFlowNode;
 
-export interface SurveyQuestion extends SurveyElement {
-	Payload: SurveyQuestionPayload;
-}
-export const isSurveyQuestion = (element: SurveyElement): element is SurveyQuestion =>
-	element.Element === ElementCodes.SurveyQuestion;
-
-
-export interface SurveyQuestionPayload {
-  QuestionText: string;
-  DefaultChoices?: boolean;
-  DataExportTag: string;
-  QuestionID: QuestionId;
-  QuestionType: string;
-  Selector: string;
-  DataVisibility?: DataVisibility;
-  Configuration: Configuration;
-  QuestionDescription: string;
-  ChoiceOrder?: (number | `${number}`)[];
-  Validation: Validation;
-  GradingData?: unknown[];
-  Language: unknown;
-  NextChoiceId?: number;
-  NextAnswerId?: number;
-  SubSelector?: string;
-  Choices?: Choices;
-  QuestionText_Unsafe?: string;
-  DisplayLogic?: DisplayLogic;
-  Answers?: Answers;
-  AnswerOrder?: string[];
-  ChoiceDataExportTags?: boolean;
-  SearchSource?: SearchSource;
-  InPageDisplayLogic?: InPageDisplayLogic;
-  RecodeValues?: RecodeValues;
-  ReferenceQuestionConfig?: ReferenceQuestionConfig;
-  SchemaConfig?: SchemaConfig;
-  DynamicChoicesData?: unknown[];
-}
-
-export interface DataVisibility {
-  Private: boolean
-  Hidden: boolean
-}
-
-export interface Configuration {
-  QuestionDescriptionOption: string
-  TextPosition?: string
-  ChoiceColumnWidth?: number
-  WhiteSpace?: string
-  MobileFirst?: boolean
-  ChoiceColumnWidthPixels?: number
-  RepeatHeaders?: string
-  NumColumns?: number
-  InputWidth?: number
-  InputHeight?: number
-  LabelPosition?: string
-}
-
-export interface Validation {
-  Settings: Settings
-}
-
-export interface Settings {
-  Type: string
-  ForceResponse?: string
-  ForceResponseType?: string
-  MinChars?: string
-  ValidDateType?: string
-  ValidPhoneType?: string
-  ValidZipType?: string
-  ValidNumber?: ValidNumber
-}
-
-export interface ValidNumber {
-  Min: string
-  Max: string
-  NumDecimals: string
-}
-
-export type Choices = Record<`${number}`, Choice>;
-
-export interface Choice {
-  Display: string
-  ExclusiveAnswer?: boolean
-  TextEntry?: string
-  TextEntrySize?: string
-}
-type DisplayLogic = unknown;
-
-// export interface DisplayLogic {
-//   "0": N0
-//   Type: string
-//   inPage: boolean
-// }
-
-
-export type Answers = Record<`${number}`, Answer>;
-
-export interface Answer {
-  Display: string
-}
-
-export interface SearchSource {
-  AllowFreeResponse: string
-}
-
-type InPageDisplayLogic = unknown;
-// export interface InPageDisplayLogic {
-//   "0": N03
-//   Type: string
-//   inPage: boolean
-// }
-
-export type RecodeValues = Record<`${number}`, string>;
-
-export interface ReferenceQuestionConfig {
-  instanceOf: InstanceOf
-}
-
-export interface InstanceOf {
-  id: string
-  version: string
-}
-
-export interface SchemaConfig {
-  ChoiceMapping: ChoiceMapping
-  ChoiceMappingType: string
-  ChoiceTextMapping: ChoiceTextMapping
-  ConfigVersion: string
-  Reconfirm: boolean
-  URL: string
-  XMDConnect: boolean
-}
-
-
-export interface SurveyBlock extends SurveyElement {
-	Payload: SurveyBlockPayload;
-}
-
-export const isSurveyBlock = (element: SurveyElement): element is SurveyBlock =>
-	element.Element === ElementCodes.SurveyBlock;
-
-export type SurveyBlockPayload = Record<`${number}`, SurveyBlockPayloadEntry>;
-
-export interface SurveyBlockPayloadEntry {
-  Type: string;
-  Description: string;
-  ID: BlockId;
-  BlockElements: BlockElement[];
-  Options: Options;
-  SubType?: string;
-}
-
-export interface BlockElement {
-  Type: "Question" | unknown; // string
-  QuestionID?: QuestionId
-  SkipLogic?: SkipLogic[]
-}
-
-export interface SkipLogic {
-  SkipLogicID: number
-  ChoiceLocator: string
-  Condition: string
-  SkipToDestination: string
-  Locator: string
-  SkipToDescription: string
-  Description: string
-  QuestionID: QuestionId
-}
-
-export interface Options {
-  BlockLocking: unknown;
-  RandomizeQuestions: string
-  BlockVisibility: string
-  PreviousButton?: string
-  previousButtonMID?: string
-  NextButton?: string
-  nextButtonMID?: string
-  previousButtonLibraryID?: string
-  nextButtonLibraryID?: string
-}
-
-export type ChoiceMapping = Record<`${number}`, string>;
-export type ChoiceTextMapping = Record<`${number}`, string>;
-
-export interface SurveyFlow extends SurveyElement {
-	Payload: SurveyFlowPayload;
-}
-
-export const isSurveyFlow = (element: SurveyElement): element is SurveyFlow =>
-	element.Element === ElementCodes.SurveyFlow;
-
-export type SurveyFlowPayload = Flow & {type: "Root"};
-
-export type FlowId = `FL_${string}`;
-export type QuestionId = `QID${string}`;
-export type BlockId = `BL_${string}`;
-
-export interface Flow {
-	/**
-	 * "Standard" - a block
-	 * "Group" - a group
-	 * "BlockRandomizer" - a block randomizer with sub-flows
-	 * "Root" - the root flow
-	 */
-  Type: "Root" | "Standard" | "BlockRandomizer" | "Group";
-	/** The block ID at which the flow starts */
-  ID?: BlockId; // set for Standard and BlockRandomizer
-  FlowID: FlowId;
-  Autofill?: undefined[];
-  SubSet?: number;
-  Flow?: Flow[] | Flow;
-  Properties: Properties
-  Description?: string;
-}
-
-export interface Properties {
-  Count: number
-  RemovedFieldsets: unknown[]
-}
-
-const getSortedQuestions = (
-	flows: Flow[],
+const getFlowTree = (
+	flowOrFlows: Flow[] | Flow | undefined,
 	questionsById: Map<QuestionId, SurveyQuestion>,
 	blocksById: Map<BlockId, SurveyBlockPayloadEntry>,	
-): SurveyQuestion[] => {
-	return flows.map( flow => {
+): FlowNode[] => {
+  if (flowOrFlows == null) {
+    return [];
+  }
+  const flows = Array.isArray(flowOrFlows) ? flowOrFlows : [flowOrFlows];
+  if (flows.length === 1 && flows[0].Type === "Root") {
+    // The root node alone should be skipped and replaced by its children
+    const [rootFlow] = flows;
+    const flowsBelowRoot = rootFlow.Flow == null ? [] : Array.isArray(rootFlow.Flow) ? rootFlow.Flow : [rootFlow.Flow];
+    return getFlowTree(flowsBelowRoot, questionsById, blocksById);
+  }
+	return ((flows.map( (flow): FlowNode | null => {
 		if (flow.Type === "Standard" && flow.ID != null) {
 			const block = blocksById.get(flow.ID);
 			if (block == null) {
 				console.warn(`Block with ID ${flow.ID} not found`);
-				return [];
+				return null;
 			}
 			const questions = block.BlockElements
 				.filter( element => element.Type === "Question")
 				.map( element => {
-					const question = element.QuestionID == null ? undefined : questionsById.get(element.QuestionID);
+          const {SkipLogic, QuestionID} = element;
+					const question = QuestionID == null ? undefined : questionsById.get(QuestionID);
 					if (question == null) {
 						console.warn(`Question with ID ${element.QuestionID} not found`);
 						return;
 					}
-					return question;
+          const skipToEndOfBlockIfChoices = (SkipLogic == null) ? [] :
+            SkipLogic.map( skipLogic => {
+              if (skipLogic.SkipToDestination === "ENDOFBLOCK" && skipLogic.QuestionID == question.Payload.QuestionID && skipLogic.Condition === "Selected" ) {
+                const option = (skipLogic.Locator.split("/").pop() ?? "") as `${number}`;
+                return question.Payload.Choices?.[option];
+              }
+            }).filter( x => x != null) as Choice[]
+					return {...question, skipToEndOfBlockIfChoices};
 				})
-				.filter( (question): question is SurveyQuestion => question != null);
-			return questions;
-		} else {
+				.filter( (question) => question != null) as AugmentedSurveyQuestion[];
+			return {
+        type: "Block",
+        description: block.Description,
+        questions
+      } satisfies LeafFlowNode;
+		} else if (flow.Type === "BlockRandomizer" || flow.Type === "Group") {
 			const sf = flow.Flow;
 			const subFlows = sf == null ? [] : Array.isArray(sf) ? sf : [sf];
-			return getSortedQuestions(subFlows, questionsById, blocksById);
-		}
-	}).flat();
+ 			const children = getFlowTree(subFlows, questionsById, blocksById);
+       return {
+        type: flow.Type,
+        children
+      } satisfies ParentFlowNode;
+		} else {
+      console.warn(`Unexpected flow type ${flow.Type}`);
+      return null;
+    }
+	}) satisfies (FlowNode | null)[])
+  .filter( x => x != null ) as FlowNode[]);
+}
+
+const getSortedQuestions = (
+  flowTree: FlowNode[] | FlowNode
+): AugmentedSurveyQuestion[] => {
+  if (Array.isArray(flowTree)) {
+    return flowTree.flatMap(getSortedQuestions);
+  } else {
+    return flowTree.type === "Block" ? flowTree.questions : flowTree.children.flatMap(getSortedQuestions);
+  }
 }
 
 const choicesToMarkdown = ({Choices, ChoiceOrder}: SurveyQuestionPayload) => {
@@ -307,40 +108,106 @@ const choicesToMarkdown = ({Choices, ChoiceOrder}: SurveyQuestionPayload) => {
 	return choiceLines;
 }
 
-const questionsToMd = (questions: SurveyQuestion[]) => questions.map( q => {
+const questionsToMd = (questions: AugmentedSurveyQuestion[]) => questions.map( q => {
 	const p = q.Payload;
-	return `${p.QuestionText}${choicesToMarkdown(p)}`;
-	}).join("\n\n");
+  const skip = (q.skipToEndOfBlockIfChoices == null || q.skipToEndOfBlockIfChoices.length === 0) ? "" :
+    `\n\nSkip to end of block if participant selects ${
+      q.skipToEndOfBlockIfChoices.map( c => `\`${c.Display}\``).join(", ")
+    }`;
+  return `${p.QuestionText}${choicesToMarkdown(p)}${skip}`;
+}).join("\n\n");
 
+const htmlEncode = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-const parse = () => {
-	const json = Deno.readTextFileSync("./src/survey-converter/loss.qsf");
-	const surveyJson = JSON.parse(json) as SurveyRoot;
-	const questions = surveyJson.SurveyElements.filter(isSurveyQuestion);
+const choicesToHtml = ({Choices, ChoiceOrder}: SurveyQuestionPayload, depth: string) => {
+	if (Choices == null) {
+		return "";
+	}
+	const choiceObjects = ChoiceOrder == null ? Object.values(Choices) :
+		ChoiceOrder.map( index => Choices[`${index}`]);
+	const choiceStrings = choiceObjects.map( (choice) => choice.Display );
+  const likert = (choiceStrings.length === 7 &&
+		choiceStrings.filter( (s, index) => s == (index+1).toString()).length === 7);
+	const choiceLines = `${depth}<ul class="${likert ? 'choices-likert' : 'choices'}">${
+    choiceStrings.map( choice =>
+      `${depth}\t<li class="${likert ? 'choice-likert' : 'choice'}">${htmlEncode(choice)}</li>`
+    ).join("")
+  }${depth}</ul>`;
+	return choiceLines;
+}
+
+const questionsToHtml = (flowOrFlows: FlowNode | FlowNode[], depth: string = "\n"): string => {
+  if (Array.isArray(flowOrFlows)) {
+    return flowOrFlows.map ( flow => questionsToHtml(flow, depth)).join();
+  }
+  const flow = flowOrFlows;
+  if (flow.type === "BlockRandomizer" || flow.type === "Group") {
+    return `${depth}<div class="${flow.type}">${
+      questionsToHtml(flow.children, depth + "")
+    }${depth}</div>`;
+  } else if (flow.type === "Block") {
+    return `${depth}<div class="${flow.type}">${
+      flow.questions.map( q => {
+        const p = q.Payload;
+        const skip = (q.skipToEndOfBlockIfChoices == null || q.skipToEndOfBlockIfChoices.length === 0) ? "" :
+          `${depth}\t<div class="note">Skip to end of block if participant selects ${
+            q.skipToEndOfBlockIfChoices.map( c => `\`${htmlEncode(c.Display)}\``).join(", ")
+          }</div>`;
+        return `${depth}\t<div class="question">${
+          depth}\t\t<div class="question-body">${
+          p.QuestionText}${choicesToHtml(p, `${depth}\t\t\t`)
+        }${depth}\t\t</div>${
+        depth}\t</div>${skip}`;
+      }).join("")
+    }${depth}</div>`;
+  } else {
+    return "";
+  }
+}
+
+const parseQsf = (path: string) => {
+  const json = Deno.readTextFileSync(path);
+	const qsfObject = JSON.parse(json) as SurveyRoot;
+	const questions = qsfObject.SurveyElements.filter(isSurveyQuestion);
 	const questionsById = new Map<QuestionId, SurveyQuestion>(
 		questions.map((question) => [question.Payload.QuestionID, question])	
 	);
-	const blocks = surveyJson.SurveyElements.filter(isSurveyBlock);
+	const blocks = qsfObject.SurveyElements.filter(isSurveyBlock);
 	const blocksById = new Map(
 		blocks.map((block) => 
 			Object.values(block.Payload).map( element => [element.ID, element] as const)
 		).flat()
 	);
-	const flows = surveyJson.SurveyElements.filter(isSurveyFlow);
-	const flowPayloads = flows.map(flow => flow.Payload);
-	const orderedQuestions = flowPayloads.map( flow => 
-		getSortedQuestions([flow], questionsById, blocksById)
-	).flat();
+	const flows = qsfObject.SurveyElements.filter(isSurveyFlow);
+  const flowTree = getFlowTree(flows[0].Payload.Flow, questionsById, blocksById);
+  const questionsInFlowOrder = getSortedQuestions(flowTree);
+  return {qsfObject, questions, blocks, flows, questionsById, blocksById, flowTree, questionsInFlowOrder};
+}
+
+const defaultHeader = `
+---
+title: Survey Instrument
+type: supplement
+layout: layouts/survey.vto
+templateEngine: [vto]
+date: Git Last Modified
+---
+`
+const parse = () => {
+	const {questions, blocks, flows, flowTree, questionsInFlowOrder} = parseQsf("./src/survey-converter/loss.qsf");
 	Deno.mkdirSync("./src/survey-converter/out", {recursive: true});
 	Deno.writeTextFileSync("./src/survey-converter/out/questions-ordered.json",
-		JSON.stringify(orderedQuestions, null, "\t")
+		JSON.stringify(questionsInFlowOrder, null, "\t")
 	);
 	Deno.writeTextFileSync("./questions-ordered.md",
-		questionsToMd(orderedQuestions)
+		questionsToMd(questionsInFlowOrder)
 	);
-	questionsToMd
+  Deno.writeTextFileSync("./survey.vto",
+    defaultHeader + questionsToHtml(flowTree)
+  );
 	Deno.writeTextFileSync("./src/survey-converter/out/known.json",
 		JSON.stringify({questions, blocks, flows}, null, "\t")
 	);
+
 }
 parse();

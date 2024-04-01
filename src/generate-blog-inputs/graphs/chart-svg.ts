@@ -1,4 +1,4 @@
-import {type ChartOptions, type ChartDataset } from "./chart.ts";
+import {type ChartOptions, type ChartDataset, type DefaultDataPoint, type ChartType } from "./chart.ts";
 import { chart } from "./chart.ts";
 import { LikertSeverityColors } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { LikertLabel } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
@@ -22,8 +22,10 @@ export interface ChartAxisTitles {
 }
 
 
-export interface ChartSvgParameters<CHART_TYPE extends "line" | "bar", X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles {
-	datasets: ChartDataset<CHART_TYPE>[],
+export interface ChartSvgParameters<CHART_TYPE extends "line" | "bar",
+	TData = DefaultDataPoint<CHART_TYPE>,
+	X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles {
+	datasets: ChartDataset<CHART_TYPE, TData>[],
 	yType?: "percent" | "absolute",
 	cdf?: "accumulateLeft" | "accumulateRight",
 	xAxisCategoryLabels: readonly X_AXIS_CATEGORY[],
@@ -32,7 +34,8 @@ export interface ChartSvgParameters<CHART_TYPE extends "line" | "bar", X_AXIS_CA
 	chartOptions?: ChartOptions<CHART_TYPE>
 }
 
-export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYPE) =>  <X_AXIS_CATEGORY extends string>({
+export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYPE) => 
+	<TData = DefaultDataPoint<CHART_TYPE>, X_AXIS_CATEGORY extends string = string>({
 		yType = 'absolute',
 		xAxisCategoryLabels,
 		cdf,
@@ -41,7 +44,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		yTitle = yType === null ? undefined : `${yType === "percent" ? 'Percent' : 'Number'} of Participants`,
 		xStacked, yStacked,
 		chartOptions = {} as ChartOptions<CHART_TYPE>,
-	}: ChartSvgParameters<CHART_TYPE, X_AXIS_CATEGORY>
+	}: ChartSvgParameters<CHART_TYPE, TData, X_AXIS_CATEGORY>
 ): string => {
 	const previouslySeenSet = new Map<string, number>();
 	const yStacks = new Set(datasets.map( d => d.stack)).size;
@@ -56,7 +59,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		devicePixelRatio: 1,
 		...chartOptions,
 		plugins: {
-			...("plugins" in chartOptions ? chartOptions.plugins as ChartOptions : {}),
+			...("plugins" in chartOptions ? chartOptions.plugins as ChartOptions<CHART_TYPE> : {}),
 			legend: {
 				labels: {
 					filter
@@ -97,38 +100,40 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 	// console.log("Chart", {options, datasets});
 	if (cdf != null) {
 		// console.log(`Datasets before`, datasets);
-		datasets = (datasets as ChartDataset<"bar" | "line">[]).map( ({data, ...rest}) => {
+		datasets = (datasets as ChartDataset<"bar" | "line", TData>[]).map( ({data, ...rest}) => {
 			if (cdf === "accumulateLeft") {
-				data = data.toReversed();
+				data = Array.isArray(data) ? data.toReversed() as TData : data;
 			}
 			let total = 0;
-			data = data.map( (datum) => {
-				if (typeof datum === "number") {
-					total += datum;
-					return total;
-				} else if (Array.isArray(datum)) {
-					total += datum[1];
-					return [datum[0], total];
-				} else if (typeof datum === "object" && datum !== null) {
-					total += datum.y;
-					return {...datum, y: total};
-				} else {
-					return datum;
-				}
-			});
-			if (cdf === "accumulateLeft") {
-				data = data.toReversed();
+			if (Array.isArray(data)) {
+				data = data.map( (datum) => {
+					if (typeof datum === "number") {
+						total += datum;
+						return total;
+					} else if (Array.isArray(datum)) {
+						total += datum[1];
+						return [datum[0], total];
+					} else if (typeof datum === "object" && datum !== null) {
+						total += datum.y;
+						return {...datum, y: total};
+					} else {
+						return datum;
+					}
+				}) as TData;
 			}
-			const replacementDataset = {data, ...rest} as unknown as ChartDataset<CHART_TYPE>;
+			if (cdf === "accumulateLeft") {
+				data = Array.isArray(data) ? data.toReversed() as TData : data;
+			}
+			const replacementDataset = {data, ...rest} as unknown as ChartDataset<CHART_TYPE, TData>;
 			// console.log(`Replacement dataset`, replacementDataset);
 			return replacementDataset;
 		});
 	}
-	const svg = chart<CHART_TYPE>({
-		type: chartType, height: 600, width: 1200, options,
+	const svg = chart({
+		type: chartType, height: 600, width: 1200, options: options,
 		data: {
 			labels: [...xAxisCategoryLabels],
-			datasets,
+			datasets: datasets as ChartDataset<ChartType, TData>[]
 		},
 	});
 
@@ -141,13 +146,13 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 export const barChartSvg = chartSvg("bar");
 export const lineChartSvg = chartSvg("line");
 
-export interface SubBarChartParameters<CHART_TYPE extends "bar" | "line", SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string> extends Omit<ChartSvgParameters<CHART_TYPE, X_AXIS_CATEGORY>, "datasets"> {
+export interface SubBarChartParameters<CHART_TYPE extends ChartType & ("line" | "bar"), SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string> extends Omit<ChartSvgParameters<CHART_TYPE, X_AXIS_CATEGORY>, "datasets"> {
 	subBarCategories: readonly SUB_BAR_CATEGORY[],
 	subBarColors?: Record<SUB_BAR_CATEGORY, string> | string[]
 	data: Record<SUB_BAR_CATEGORY, readonly number[]>,
 }
 
-export const chartWithSubCategoriesSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYPE) =>
+export const chartWithSubCategoriesSvg = <CHART_TYPE extends ChartType & ("line" | "bar")>(chartType: CHART_TYPE) =>
 		<SUB_BAR_CATEGORY extends string, X_AXIS_CATEGORY extends string>({
 		subBarCategories,
 		subBarColors = [ChartColors.Red, ChartColors.Orange, ChartColors.Blue, ChartColors.Green, ChartColors.Purple, ChartColors.Grey],

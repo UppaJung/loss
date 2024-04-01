@@ -58,6 +58,8 @@ Have you ever lost digital photos or videos for any reason? (check <b>all</b> th
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 How many photos or videos have you lost over your lifetime?
 
   - I have never lost any photos or videos
@@ -67,6 +69,8 @@ How many photos or videos have you lost over your lifetime?
   - More than one week of photos and/or videos, but less than one month
   - More than one day of photos and/or videos, but less than one week
   - Less than one day of photos and/or videos
+
+Skip to end of block if participant selects `I have never lost any photos or videos`
 
 Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 1 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 2 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 3 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 4 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 5 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 6 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 7 ]&nbsp;&nbsp;&nbsp;
@@ -114,6 +118,8 @@ Have you ever lost personal emails for any reason? (check <b>all</b> that apply)
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 How many personal emails have you lost over your lifetime?
 
   - I have never lost any emails
@@ -123,6 +129,8 @@ How many personal emails have you lost over your lifetime?
   - More than one week of emails, but less than one month
   - More than one day of emails, but less than one week
   - Less than one day of emails
+
+Skip to end of block if participant selects `I have never lost any emails`
 
 Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 1 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 2 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 3 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 4 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 5 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 6 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 7 ]&nbsp;&nbsp;&nbsp;
@@ -163,6 +171,8 @@ Has your reliance on technology negatively impacted your mental health, such as 
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 1 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 2 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 3 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 4 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 5 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 6 ]&nbsp;&nbsp;&nbsp;&nbsp;[ 7 ]&nbsp;&nbsp;&nbsp;
 
@@ -198,6 +208,8 @@ Have you had a personal electronic device stolen, used by someone without your p
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
 
@@ -276,6 +288,8 @@ Have you been locked out of a personal electronic device for reasons other than 
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 In which of your three most harmful experiences did you include it? (check <b>all</b> that apply)
 <ol>
@@ -404,6 +418,8 @@ Have you had an email or online storage account used by someone without your per
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
 
   - The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want
@@ -461,6 +477,8 @@ Have you been temporarily or permanently locked out of an email or online storag
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
 
@@ -543,6 +561,8 @@ Have you had a social media or direct messaging account stolen, used by someone 
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
 
   - The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want
@@ -604,6 +624,8 @@ Have you been temporarily or permanently locked out of a social media or direct 
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 What type of account were you locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)
 
@@ -690,6 +712,8 @@ Have you had an online bank, brokerage, or payment account compromised? (check <
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
 
   - The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want
@@ -756,6 +780,8 @@ Have you been temporarily or permanently locked out of an online bank, brokerage
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 What type of account were you locked out of? (If you have experienced this more than once please answer based on your worst experience.)
 
@@ -845,6 +871,8 @@ Have you had the passwords stored by your browser or password manager stolen, us
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 From which browser or password manager were the passwords stolen or compromised (hacked)?
 
   - Apple's KeyChain (for Safari browser and iOS, iPadOS, and MacOS)
@@ -899,6 +927,8 @@ Have you been temporarily or permanently locked out of the passwords stored by y
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 Which browser or password manager were you using that you got locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)
 
@@ -982,6 +1012,8 @@ Have you suffered harm, such as lost data or access to accounts, as result of re
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
 
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
+
 What caused the harm?
 
   - Replacing the device
@@ -1035,6 +1067,8 @@ Have you suffered harm, such as losing data, losing access to accounts, or havin
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 What caused the harm?&nbsp;(check <b>all</b> that apply)
 
@@ -1093,6 +1127,8 @@ Have the technologies you or others rely on been used to embarrass or harass you
   - Yes, but I did not describe it above because it should not rank among my three most harmful
   - No, but I do worry that this might happen to me in the future
   - No, and I do not worry that this might happen to me in the future
+
+Skip to end of block if participant selects `No, but I do worry that this might happen to me in the future`, `No, and I do not worry that this might happen to me in the future`
 
 What caused the harm? (check <b>all</b> that apply)
 
