@@ -24,12 +24,12 @@ export const data = {
 			0,
 			0,
 			0,
-			0,
+			1,
 			0,
 			0
 		],
 		"Revised": [
-			1,
+			3,
 			0,
 			0,
 			1,
@@ -37,11 +37,11 @@ export const data = {
 			0,
 			0,
 			0,
-			0,
+			1,
 			0
 		],
 		"Not Worst": [
-			0,
+			1,
 			0,
 			0,
 			0,
@@ -55,14 +55,14 @@ export const data = {
 	},
 	"Locked Out": {
 		"Original": [
-			0,
+			1,
 			0,
 			0,
 			1,
 			0,
 			0,
 			0,
-			0,
+			2,
 			0,
 			0
 		],
@@ -79,14 +79,14 @@ export const data = {
 			0
 		],
 		"Not Worst": [
+			3,
 			1,
 			0,
 			0,
 			0,
 			0,
 			0,
-			0,
-			0,
+			1,
 			0,
 			0
 		]

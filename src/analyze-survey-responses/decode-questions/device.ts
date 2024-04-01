@@ -36,7 +36,7 @@ export enum TabletType {
 export const [decodeTabletTypeQuestion, TabletTypeList] = getAnswerDecoderAndLabels([
 	["iPad", TabletType.iPad],
 	["Android", TabletType.Android],
-	["other", TabletType.Other],
+	[/^other$/, TabletType.Other],
 ]);
 
 export enum ComputerType {
@@ -49,8 +49,8 @@ export enum ComputerType {
 export const [decodeComputerTypeQuestion, ComputerTypeList] = getAnswerDecoderAndLabels([
 	["Mac", ComputerType.Mac],
 	["Windows", ComputerType.Windows],
-	["UNIX", ComputerType.UNIX],
-	["other", ComputerType.Other],
+	["UNIX variant", ComputerType.UNIX],
+	[/^other$/, ComputerType.Other],
 ]);
 
 export const DetailedDeviceTypeList = [...PhoneTypeList, ...TabletTypeList, ...ComputerTypeList];

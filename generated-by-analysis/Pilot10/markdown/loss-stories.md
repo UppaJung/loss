@@ -66,3 +66,125 @@ The second most harmful tech related harm would just be self confidence that is 
 2. I placed an order on a website that was not a legit website, it seemed ok but after the order was placed I realized it was a fake site meant to duplicate another one. I was able to do a chargeback for the order but I had concern about any stolen personal information for awhile.
 3. Missed important communication about an agreement I needed to sign because all discussion was done via email and not in-person.
 
+
+### Participant 10
+1. *Participant matched this with* **Locked Device**
+I left my work laptop on the roof of my car and drove off, forgetting about the laptop for several hours until it was impossible to have retraced my steps to locate the missing machine. I had significant amounts of code and code artifacts on the machine that I had not backed up because I had been unable to successfully complete the git merge because of diff errors.  Once I had a replacement machine, I spent about a year trying to recreate the missing code and code artifacts.
+2. I lost my cellphone while on vacation in a foreign country. Luckily, since I did not have cell coverage in the country and still had my laptop, I was able to connect to wifi and order a replacement phone that arrived at my house shortly after I returned home. I was also able to continue my vacation mostly uninterrupted.
+3. *Participant matched this with* **Breached Device, Lost Photos**
+I was walking in a neighborhood, and noticed a beautiful garden. I stopped, took off my backpack, took out my camera, and walked closer to some of the flowers to take some pictures. While I took pictures, a group of neighborhood kids ran up, snatched my backpack with my laptop in it, and ran off. I had no backups of the data on the laptop, and lost all the personal data I had collected in my lifetime up until that point.
+
+
+### Participant 11
+1. *Participant matched this with* **Mental Health**
+I get frequent migraines that I have attributed to my long hours of work staring at computer screens for several hours at a time.
+2. Once, I was babysitting. The parent had installed cameras in the home to watch me while I was babysitting. They sent me a text at one point saying that they heard their child crying and asked what it was about - the kid had just become upset that I was trying to get him to clean up his toys, but I did not appreciate feeling like I was under surveillance.
+3. n/a
+
+
+### Participant 12
+1. *Participant matched this with* **Breached Account**
+I have been a part of a data leak where I actually had personal information stolen from me before.
+2. *Participant matched this with* **Abuse**
+I have been cyberbullied in the past for some posts that I&#39;ve created on Instagram
+3. I&#39;ve been getting spam calls/emails because I had my personal information out
+
+
+### Participant 13
+1. *Participant matched this with* **Replaced Device/OS, Broken Promise, Lost Emails, Mental Health**
+the most harmful was when i accidenly dropped my usb hard drive with all my information music an ideas in the toilet it didnt work and i couldnt get all the information i had in there so from that day on i havent used a usb an just cloud since
+2. *Participant matched this with* **Locked Social, Broken Promise, Lost Emails, Mental Health**
+i broke my phone one time an i got a new one ordered but i had to get in my old phone to get all the old pictures etc. out of there an i couldnt so i turned the old phone in for credit an had to lose those memories an create more
+3. when i was 7 years old my brother dropped my only device an broke it was a dsi gaming device something i would never forget lost all my game datas an honestly made me never wanna play it again
+
+
+### Participant 14
+1. Car accident where the other driver was texting
+2. *Participant matched this with* **Mental Health**
+Chronic loss of sleep because of time on electronic devices
+3. Personal data loss in online breeches
+
+
+### Participant 15
+1. I would say the worst I have indirectly experienced was my mother losing her identity to an identity thief. She underwent a lot of stress, perhaps well deserved karmically. I had to deal with the repercussions of her being stressed.
+2. *Participant matched this with* **Broken Promise**
+I was operating a bot farm on runescape and consistently had a french hacker using my server and trying to hack into the providers of the server. I am still concerned they somehow have access to my email.
+3. *Participant matched this with* **Broken Promise**
+I haven&#39;t dealt with too many technological losses as I have been somewhat savvy network security aside. Perhaps the third worst was losing my original league of legends account to a hacker of some kind but I never figured out how.
+
+
+### Participant 16
+1. My partner and I look at our screens while in bed.
+2. I have text neck
+3. My child is addicted to iPad
+
+
+### Participant 17
+1. Information being hacked and social security number being put out there.
+2. *Participant matched this with* **Replaced Device/OS, Broken Promise**
+Losing all contacts with no way to recover them at the time.
+3. Someone trying to hack into other accounts that I have.
+
+
+### Participant 18
+1. *Participant matched this with* **Breached Financial, Locked Financial, Breached Passwords, Locked Passwords, Lost Emails**
+I was hacked. My identity was stolen. They took out loans and credit cards in my name. They drained my bank account.
+2. *Participant matched this with* **Locked Device, Locked Passwords, Lost Photos**
+My computer got a virus. I lost all of my files, music, pictures. It was devastating.
+3. The company I work for was hacked and held ransom several years ago. They ended up paying it. But I missed a very important deadline. This cost me in bonus.
+
+
+### Participant 19
+1. Comparison of my own relationship to others. This has caused fights and strain in my relationship
+2. I got in trouble in middle school for sending a mean joking message to someone. This was something that I didn’t understand the consequences of as a young person.
+3. Comparison of my body to others. Especially because most people are editing their bodies anyway. This has caused disordered eating for me
+
+
+### Participant 20
+1. *Participant matched this with* **Mental Health**
+The most harmful technology-related harm I have experienced would be increased sleep deprivation and dependency on my phone. I received my first phone when I was in 6th grade and would stay up late scrolling, watching videos, and playing games. This habit has lessened since then but I am still heavily dependent on my phone and this often leads to me procrastinating on assignments and staying up late for no reason.
+2. *Participant matched this with* **Mental Health**
+The second-most harmful technology-related harm I have experienced would be comparison to other people on social media. Having access to social media as young as I was had negative impacts on my mental health growing up.
+3. *Participant matched this with* **Broken Promise**
+The third-most harmful technology-related loss I have experienced would be the program I was using deleting my work 40 minutes in and me having to redo the assignment quickly before the deadline.
+
+
+### Participant 21
+1. Technology especially in education as prevented me as a student from actually learning as it heavily prevents students from thinking critically and communicating effectively.
+2. *Participant matched this with* **Abuse, Mental Health**
+Technology, more specifically social media, causes comparison between people which can effect self esteem.
+3. Technology can cause misinformation to circulate.
+
+
+### Participant 22
+1. *Participant matched this with* **Abuse, Mental Health**
+A former friend bullied me through social media platforms, trying to keep my in the dark while influencing all of our shared friends.
+2. *Participant matched this with* **Mental Health**
+Social media influenced my eating disorder in past years.
+3. *Participant matched this with* **Abuse**
+I had a former partner lie about our sexual experiences across social media.
+
+
+### Participant 23
+1. *Participant matched this with* **Broken Promise, Lost Photos**
+When my hard drive died I lost pretty much my entire online life from pictures to important files. It wasn&#39;t pretty and there was no way to recover my data it felt incredibly empty at the time
+2. There was a point in time where most of my social life was basically coming from online and when I lost access to that I felt like I had no where else to go. Because I didn&#39;t at the time have a social life with other people
+3. *Participant matched this with* **Broken Promise, Lost Photos, Lost Emails**
+When my Laptop died completely during a overseas business trip not only did that contain all my work related information but it was my only way to do my work on that particular trip
+
+
+### Participant 24
+1. One of the most harmful technology related losses I&#39;ve experienced was when a critical component of a rescue radio system I developed malfunctioned during a field test, delaying a rescue operation and potentially jeopardizing lives. This incident emphasized the importance of thorough testing and continuous improvement in mission-critical technology development.
+2. *Participant matched this with* **Breached Social, Breached Financial, Broken Promise, Mental Health**
+Early in life was getting hacked in the online game &quot;&quot;RuneScape.&quot;&quot; A person I trusted, whom I believed was a friend, betrayed my trust and stole most of my in-game items. This incident not only resulted in a significant loss of virtual possessions but also shattered my sense of security and trust in online interactions. It was a harsh lesson about the dangers of naively trusting others online and the importance of safeguarding personal information and accounts. This was right around the time of the Varrock massacre on 06/06/06. That&#39;s how old school I&#39;m talking.
+3. *Participant matched this with* **Locked Device, Mental Health**
+One of the most impactful turning points in my life occurred in 2014 after a traumatic incident involving the theft of my phone by a drug dealer who then assaulted me. This experience prompted me to reevaluate my life choices, leading me to make the courageous decision to stop using opiates shortly thereafter. Despite the physical and emotional toll of the assault, it served as a catalyst for positive change, marking the beginning of my journey towards recovery and a healthier lifestyle.
+
+
+### Participant 25
+1. How guns and amunitions are made
+2. *Participant matched this with* **Locked Social**
+how to kill
+3. *Participant matched this with* **Breached Social, Abuse**
+How to access acid and how acids are made
+

@@ -42,6 +42,10 @@ main {
 article main {
   margin-top: 0;
   padding-bottom: 0;
+  padding: 0vh 2vw;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main.body-index {

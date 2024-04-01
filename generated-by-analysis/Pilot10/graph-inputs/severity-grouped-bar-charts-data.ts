@@ -17,7 +17,7 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -26,9 +26,9 @@ export const BarGraphs = {
 			],
 			"Revised": [
 				0,
+				3,
 				1,
 				1,
-				0,
 				0,
 				0,
 				0
@@ -39,7 +39,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0
 			]
 		}
@@ -56,7 +56,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -64,8 +64,8 @@ export const BarGraphs = {
 				0
 			],
 			"Revised": [
+				3,
 				1,
-				0,
 				0,
 				1,
 				0,
@@ -75,7 +75,7 @@ export const BarGraphs = {
 				0,
 				0,
 				1,
-				0,
+				1,
 				0,
 				0
 			]
@@ -98,11 +98,11 @@ export const BarGraphs = {
 				0,
 				0,
 				1,
+				1,
 				0,
 				0,
-				0,
-				0,
-				0
+				1,
+				1
 			],
 			"Revised": [
 				0,
@@ -115,13 +115,13 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				2,
+				0,
+				0,
+				1,
 				1,
 				0,
-				0,
-				0,
-				0,
-				0,
-				0,
+				1,
 				0
 			]
 		}
@@ -137,8 +137,8 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
+				3,
 				1,
-				0,
 				0
 			],
 			"Revised": [
@@ -148,9 +148,9 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
 				1,
+				2,
+				2,
 				0
 			]
 		}
@@ -167,10 +167,10 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
 				1,
-				0,
+				1,
+				1,
+				1,
 				0,
 				0
 			],
@@ -183,10 +183,10 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
-				0,
 				1,
+				1,
+				1,
+				2,
 				0,
 				0
 			]
@@ -208,13 +208,13 @@ export const BarGraphs = {
 				0,
 				1,
 				0,
-				0,
+				1,
 				0
 			],
 			"Revised": [
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0
@@ -239,7 +239,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				1,
+				2,
 				0,
 				0,
 				0
@@ -247,7 +247,7 @@ export const BarGraphs = {
 			"Revised": [
 				0,
 				0,
-				0,
+				1,
 				0
 			],
 			"Not Worst": [
@@ -273,14 +273,14 @@ export const BarGraphs = {
 				0,
 				0,
 				1,
-				0,
+				1,
 				0,
 				0
 			],
 			"Revised": [
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0
@@ -326,21 +326,21 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
+				3,
+				0,
 				1,
 				0,
 				0,
 				0,
 				0,
 				0,
-				0,
-				0,
-				0
+				1
 			]
 		}
 	},
@@ -360,16 +360,16 @@ export const BarGraphs = {
 				0
 			],
 			"Revised": [
-				1,
+				2,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				1,
+				2,
+				2,
 				0,
-				0,
-				0
+				1
 			]
 		}
 	},
@@ -394,18 +394,18 @@ export const BarGraphs = {
 			],
 			"Revised": [
 				0,
-				0,
+				1,
 				1,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
-				0,
 				1,
-				0,
+				1,
+				1,
+				1,
+				1,
 				0
 			]
 		}
@@ -423,10 +423,10 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
+				1,
 				0,
 				2,
-				0,
+				1,
 				0
 			],
 			"Revised": [
@@ -442,7 +442,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				2,
 				0
 			]
 		}
@@ -465,10 +465,10 @@ export const BarGraphs = {
 				1,
 				0,
 				0,
+				1,
 				0,
 				0,
-				0,
-				0
+				1
 			],
 			"Revised": [
 				0,
@@ -482,7 +482,7 @@ export const BarGraphs = {
 			],
 			"Not Worst": [
 				0,
-				0,
+				2,
 				0,
 				0,
 				0,
@@ -505,10 +505,10 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				1,
+				2,
 				1,
 				0,
-				0,
+				1,
 				0
 			],
 			"Revised": [
@@ -520,10 +520,10 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				1,
 				0,
 				0,
-				0,
-				0,
+				1,
 				0,
 				0
 			]
@@ -544,9 +544,9 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
+				1,
 				0,
-				0,
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -566,14 +566,14 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
+				2,
+				0,
+				1,
 				0,
 				0,
 				0,
 				0,
-				0,
-				0,
-				0,
-				0,
+				1,
 				1
 			]
 		}
@@ -593,9 +593,9 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
-				0,
 				1,
+				0,
+				2,
 				0,
 				0,
 				0,
@@ -612,14 +612,14 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				1,
+				2,
+				2,
 				0,
 				0,
 				0,
 				0,
 				0,
-				0,
-				0
+				1
 			]
 		}
 	},
@@ -635,7 +635,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				1,
 				0,
 				1,
 				0,
@@ -651,9 +651,9 @@ export const BarGraphs = {
 				0
 			],
 			"Not Worst": [
-				0,
-				0,
-				0,
+				2,
+				1,
+				1,
 				1,
 				0,
 				0
@@ -676,15 +676,15 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				2,
 				0
 			],
 			"Revised": [
 				0,
-				0,
+				1,
 				0,
 				1,
-				1,
+				2,
 				0
 			],
 			"Not Worst": [
@@ -719,8 +719,8 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
-				0
+				1,
+				1
 			],
 			"Revised": [
 				2,
@@ -729,8 +729,8 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
-				0,
+				1,
+				1,
 				0
 			],
 			"Not Worst": [
@@ -758,17 +758,17 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
+				1,
 				0,
 				0,
 				0,
-				0,
-				0,
+				1,
 				0
 			],
 			"Revised": [
 				0,
-				0,
-				0,
+				1,
+				1,
 				1,
 				0,
 				1
@@ -811,24 +811,24 @@ export const BarGraphs = {
 			"Revised": [
 				0,
 				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			],
-			"Not Worst": [
 				1,
 				0,
 				0,
+				1,
+				0,
+				1,
+				0
+			],
+			"Not Worst": [
+				3,
 				0,
 				0,
 				0,
 				0,
 				0,
-				1
+				0,
+				0,
+				2
 			]
 		}
 	},
@@ -854,11 +854,11 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				1,
+				2,
 				0
 			],
 			"Revised": [
-				0,
+				1,
 				0,
 				0,
 				0,
@@ -873,7 +873,7 @@ export const BarGraphs = {
 				0,
 				0,
 				0,
-				0,
+				2,
 				0,
 				0,
 				2,
@@ -893,7 +893,7 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
+				1,
 				0,
 				1,
 				0,
@@ -903,7 +903,7 @@ export const BarGraphs = {
 			"Revised": [
 				0,
 				0,
-				0,
+				1,
 				0,
 				0,
 				0
@@ -911,8 +911,8 @@ export const BarGraphs = {
 			"Not Worst": [
 				0,
 				0,
-				1,
-				1,
+				2,
+				2,
 				0,
 				0
 			]
@@ -927,18 +927,18 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
+				1,
+				1,
 				0
 			],
 			"Revised": [
-				0,
-				2,
+				1,
+				3,
 				0
 			],
 			"Not Worst": [
-				1,
-				1,
+				3,
+				2,
 				0
 			]
 		}
@@ -954,20 +954,20 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
+				2,
 				0,
 				0
 			],
 			"Revised": [
-				1,
-				0,
-				1,
+				2,
+				2,
+				2,
 				0
 			],
 			"Not Worst": [
+				3,
 				1,
-				0,
-				1,
+				2,
 				0
 			]
 		}
@@ -985,22 +985,22 @@ export const BarGraphs = {
 		"data": {
 			"Original": [
 				0,
-				0,
+				2,
 				0,
 				0,
 				0,
 				0
 			],
 			"Revised": [
+				2,
 				1,
-				0,
 				1,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				1,
+				4,
 				0,
 				1,
 				0,
@@ -1019,21 +1019,21 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				1,
-				1,
+				3,
+				2,
 				0,
 				0
 			],
 			"Revised": [
 				1,
-				1,
+				2,
 				0,
 				0
 			],
 			"Not Worst": [
-				1,
-				1,
-				1,
+				4,
+				2,
+				6,
 				0
 			]
 		}
@@ -1048,21 +1048,21 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				1,
+				5,
+				2,
+				3,
 				0
 			],
 			"Revised": [
 				0,
 				0,
-				2,
+				3,
 				0
 			],
 			"Not Worst": [
+				8,
 				3,
-				0,
-				0,
+				2,
 				0
 			]
 		}
@@ -1079,26 +1079,26 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
-				0,
-				0,
-				0,
+				3,
 				1,
+				0,
+				3,
 				0,
 				0
 			],
 			"Revised": [
 				0,
-				0,
+				1,
 				2,
 				0,
 				0,
 				0
 			],
 			"Not Worst": [
-				1,
-				0,
+				3,
 				0,
 				2,
+				4,
 				0,
 				0
 			]
@@ -1118,9 +1118,9 @@ export const BarGraphs = {
 			"Original": [
 				1,
 				0,
-				1,
+				2,
 				0,
-				0,
+				3,
 				0
 			],
 			"Revised": [
@@ -1153,9 +1153,9 @@ export const BarGraphs = {
 		],
 		"data": {
 			"Original": [
+				2,
+				3,
 				1,
-				1,
-				0,
 				0,
 				0,
 				0
