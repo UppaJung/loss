@@ -108,18 +108,21 @@ const choicesToMarkdown = ({Choices, ChoiceOrder}: SurveyQuestionPayload) => {
 	return choiceLines;
 }
 
+
+const html = String.raw;
+const htmlEncode = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 const questionsToMd = (questions: AugmentedSurveyQuestion[]) => questions.map( q => {
 	const p = q.Payload;
   const skip = (q.skipToEndOfBlockIfChoices == null || q.skipToEndOfBlockIfChoices.length === 0) ? "" :
     `\n\nSkip to end of block if participant selects ${
-      q.skipToEndOfBlockIfChoices.map( c => `\`${c.Display}\``).join(", ")
+      q.skipToEndOfBlockIfChoices.map( c => `\`${htmlEncode(c.Display)}\``).join(", ")
     }`;
   return `${p.QuestionText}${choicesToMarkdown(p)}${skip}`;
 }).join("\n\n");
 
-const htmlEncode = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-const choicesToHtml = ({Choices, ChoiceOrder}: SurveyQuestionPayload, depth: string) => {
+const choicesToHtml = ({Choices, ChoiceOrder}: SurveyQuestionPayload, lineSep: string) => {
 	if (Choices == null) {
 		return "";
 	}
@@ -128,38 +131,46 @@ const choicesToHtml = ({Choices, ChoiceOrder}: SurveyQuestionPayload, depth: str
 	const choiceStrings = choiceObjects.map( (choice) => choice.Display );
   const likert = (choiceStrings.length === 7 &&
 		choiceStrings.filter( (s, index) => s == (index+1).toString()).length === 7);
-	const choiceLines = `${depth}<ul class="${likert ? 'choices-likert' : 'choices'}">${
+	const choiceLines = html`${lineSep
+    }<ul class="${likert ? 'choices-likert' : 'choices'}">${
     choiceStrings.map( choice =>
-      `${depth}\t<li class="${likert ? 'choice-likert' : 'choice'}">${htmlEncode(choice)}</li>`
+      html`${lineSep + "\t"
+        }<li class="${likert ? 'choice-likert' : 'choice'}">${htmlEncode(choice)}</li>`
     ).join("")
-  }${depth}</ul>`;
+  }${lineSep}</ul>`;
 	return choiceLines;
 }
 
-const questionsToHtml = (flowOrFlows: FlowNode | FlowNode[], depth: string = "\n"): string => {
+const questionsToHtml = (flowOrFlows: FlowNode | FlowNode[], lineSep: string = "\n"): string => {
   if (Array.isArray(flowOrFlows)) {
-    return flowOrFlows.map ( flow => questionsToHtml(flow, depth)).join();
+    return flowOrFlows.map ( flow => questionsToHtml(flow, lineSep)).join("");
   }
   const flow = flowOrFlows;
   if (flow.type === "BlockRandomizer" || flow.type === "Group") {
-    return `${depth}<div class="${flow.type}">${
-      questionsToHtml(flow.children, depth + "")
-    }${depth}</div>`;
+    return `${lineSep}<div class="${flow.type}">${lineSep + "\t"
+     }<div class="block-header">${
+      flow.type === "BlockRandomizer" ?
+        "Randomize ordering" :
+        "Group"
+     }</div>${
+      questionsToHtml(flow.children, lineSep + "\t")
+    }${lineSep}</div>`;
   } else if (flow.type === "Block") {
-    return `${depth}<div class="${flow.type}">${
+    return html`${lineSep}<div class="${flow.type}">${lineSep + "\t"
+  }<div class="block-header">Block</div>${
       flow.questions.map( q => {
         const p = q.Payload;
         const skip = (q.skipToEndOfBlockIfChoices == null || q.skipToEndOfBlockIfChoices.length === 0) ? "" :
-          `${depth}\t<div class="note">Skip to end of block if participant selects ${
-            q.skipToEndOfBlockIfChoices.map( c => `\`${htmlEncode(c.Display)}\``).join(", ")
+          html`${lineSep + "\t"}<div class="note">Skip to end of block if participant selects ${
+            q.skipToEndOfBlockIfChoices.map( c => `<span class="skip-option">${htmlEncode(c.Display)}</span>`).join(", ")
           }</div>`;
-        return `${depth}\t<div class="question">${
-          depth}\t\t<div class="question-body">${
-          p.QuestionText}${choicesToHtml(p, `${depth}\t\t\t`)
-        }${depth}\t\t</div>${
-        depth}\t</div>${skip}`;
+        return html`${lineSep + "\t"}<div class="question">${
+          lineSep + "\t\t"}<div class="question-body">${
+          p.QuestionText}${choicesToHtml(p, lineSep + "\t\t\t")
+        }${lineSep + "\t\t"}</div>${
+        lineSep + "\t"}</div>${skip}`;
       }).join("")
-    }${depth}</div>`;
+    }${lineSep}</div>`;
   } else {
     return "";
   }
@@ -184,8 +195,7 @@ const parseQsf = (path: string) => {
   return {qsfObject, questions, blocks, flows, questionsById, blocksById, flowTree, questionsInFlowOrder};
 }
 
-const defaultHeader = `
----
+const defaultHeader = `---
 title: Survey Instrument
 type: supplement
 layout: layouts/survey.vto
@@ -204,6 +214,10 @@ const parse = () => {
 	);
   Deno.writeTextFileSync("./survey.vto",
     defaultHeader + questionsToHtml(flowTree)
+      .replaceAll("$\{q:\/\/QID2\/ChoiceTextEntryValue\}", '<i>participant\'s top harm</i>')
+      .replaceAll("$\{q:\/\/QID5\/ChoiceTextEntryValue\}", '<i>participant\'s second harm</i>')
+      .replaceAll("$\{q:\/\/QID6\/ChoiceTextEntryValue\}", '<i>participant\'s third harm</i>')
+
   );
 	Deno.writeTextFileSync("./src/survey-converter/out/known.json",
 		JSON.stringify({questions, blocks, flows}, null, "\t")

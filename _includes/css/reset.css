@@ -39,6 +39,11 @@ main {
   }
 }
 
+article main {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
 main.body-index {
   max-width: 80rem;
   margin-left: auto;

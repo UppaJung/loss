@@ -1,9 +1,9 @@
 .supplement {
   padding: 1vh 2vw;
 }
-.supplement header {
+/* .supplement header {
   padding: 1vh 0;
-}
+} */
 .supplement .title {
   font-size: 4rem;
   font-size: clamp(2rem, 10vw, 4rem);

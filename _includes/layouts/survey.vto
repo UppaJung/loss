@@ -1,0 +1,12 @@
+---
+layout: layouts/base.vto
+bodyClass: supplement
+---
+<article class="supplement" data-pagefind-body>
+  <header>
+    <h1 class=".title">{{ title }}</h1>
+  </header>
+  <main class="survey-instrument">
+    {{ content |> safe }}
+  </main>
+</article>

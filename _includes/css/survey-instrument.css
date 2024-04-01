@@ -1,0 +1,41 @@
+main.survey-instrument {
+  padding: 0vh 2vw;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.survey-instrument .BlockRandomizer,
+main.survey-instrument .Group,
+main.survey-instrument .Block {
+  border-left: 2px solid gray;
+  margin-left: 4px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+main.survey-instrument .question {
+  margin-left: 0.5rem;
+}
+
+main.survey-instrument .block-header {
+  color: white;
+  background-color: gray;
+}
+
+main.survey-instrument .question-body {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+main.survey-instrument .note {
+  display: inline-block;
+  background-color: rgba(128,128, 128, 0.2);
+  color: var(--darkgray);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
