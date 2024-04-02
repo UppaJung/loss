@@ -26,9 +26,11 @@ export interface ChartSvgParameters<CHART_TYPE extends "line" | "bar",
 	TData = DefaultDataPoint<CHART_TYPE>,
 	X_AXIS_CATEGORY extends string = string>  extends ChartAxisTitles {
 	datasets: ChartDataset<CHART_TYPE, TData>[],
+	xType?: "category" | "linear",
 	yType?: "percent" | "absolute",
 	cdf?: "accumulateLeft" | "accumulateRight",
-	xAxisCategoryLabels: readonly X_AXIS_CATEGORY[],
+	hideLegend?: boolean,
+	xAxisCategoryLabels?: readonly X_AXIS_CATEGORY[],
 	xStacked?: true,
 	yStacked?: true,
 	chartOptions?: ChartOptions<CHART_TYPE>
@@ -41,6 +43,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		cdf,
 		datasets,
 		xTitle,
+	  hideLegend=false,
 		yTitle = yType === null ? undefined : `${yType === "percent" ? 'Percent' : 'Number'} of Participants`,
 		xStacked, yStacked,
 		chartOptions = {} as ChartOptions<CHART_TYPE>,
@@ -61,6 +64,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		plugins: {
 			...("plugins" in chartOptions ? chartOptions.plugins as ChartOptions<CHART_TYPE> : {}),
 			legend: {
+				display: !hideLegend,
 				labels: {
 					filter
 				}
@@ -69,7 +73,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 		scales: {
 			x: {
 				...(xStacked ? {stacked: true} : {}),
-				type: 'category',
+				type: xAxisCategoryLabels == null ? "linear" : "category",
 				position: 'bottom',
 				title: {
 					display: xTitle != null,
@@ -83,7 +87,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 				ticks: {
 					precision: 0,
 				},
-				...(yType === 'percent' ? {max: 100} : {}),
+//				...(yType === 'percent' ? {max: 100} : {}),
 				...(yStacked ? {stacked: true} : {}),
 				...(((chartOptions as ChartOptions<"bar">).scales?.y) as  NonNullable<ChartOptions<"bar">["scales"]>["y"]),
 				title: {
@@ -132,7 +136,7 @@ export const chartSvg = <CHART_TYPE extends "line" | "bar">(chartType: CHART_TYP
 	const svg = chart({
 		type: chartType, height: 600, width: 1200, options: options,
 		data: {
-			labels: [...xAxisCategoryLabels],
+			...(xAxisCategoryLabels == null ? {} : {labels: [...xAxisCategoryLabels]}),
 			datasets: datasets as ChartDataset<ChartType, TData>[]
 		},
 	});

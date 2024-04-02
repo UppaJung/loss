@@ -166,3 +166,10 @@ We asked participants who had a device compromised/stolen or locked what type of
 <figure><img src="/graphs/pilot10/abuse-dur-bar-chart.svg" alt="TBD"/></figure>
 </details>
 <!-- ----------------------------------------------------- -->
+<details>
+<summary>Demographics</summary>
+<figure><img src="/graphs/pilot10/age-cdf.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot10/education-percent.svg" alt="TBD"/></figure>
+<figure><img src="/graphs/pilot10/gender-percent.svg" alt="TBD"/></figure>
+</details>
+<!-- ----------------------------------------------------- -->

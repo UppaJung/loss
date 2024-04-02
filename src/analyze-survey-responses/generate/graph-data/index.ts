@@ -11,6 +11,7 @@ import { graphRecoveryDurationBarChartData } from "./recovery-duration.ts";
 import { getAgeScenariosMatchedScatterPlotData } from "./age.ts";
 import { graphHarmScenarioLikertBarChartData } from "./harm-focused-likert.ts";
 import { graphHarmQuantityWithLikertSeverity } from "./harm-quantity-with-likert-severity.ts";
+import { generateDemographicGraphData } from "./demographics.ts";
 
 export const generateGraphData = (cohort: string, augmentedSurveyResponses: AugmentedSurveyResponses<SurveyKey>) => {
 	const graphDataPath = makePath(`generated-by-analysis/${cohort}/graph-inputs`);
@@ -24,4 +25,5 @@ export const generateGraphData = (cohort: string, augmentedSurveyResponses: Augm
   graphHarmScenarioLikertBarChartData(graphDataPath, augmentedSurveyResponses);
   graphHarmQuantityWithLikertSeverity(graphDataPath, augmentedSurveyResponses);
   getAgeScenariosMatchedScatterPlotData(graphDataPath, augmentedSurveyResponses);
+  generateDemographicGraphData(graphDataPath, augmentedSurveyResponses);
 }

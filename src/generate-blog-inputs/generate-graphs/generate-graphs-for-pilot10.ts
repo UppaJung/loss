@@ -6,7 +6,8 @@ import * as RecoveryDuration from "../../../generated-by-analysis/Pilot10/graph-
 import * as ScenarioLikert from "../../../generated-by-analysis/Pilot10/graph-inputs/likert-data.ts";
 import * as HarmScenarioLossDuration from "../../../generated-by-analysis/Pilot10/graph-inputs/harm-quantity-with-likert-severity-data.ts";
 import * as HarmScenarioLikert from "../../../generated-by-analysis/Pilot10/graph-inputs/harm-focused-likert-data.ts";
-import * as AgeVsScenariosMatched from "../../../generated-by-analysis/Pilot10/graph-inputs/age-data.ts";
+import * as Age from "../../../generated-by-analysis/Pilot10/graph-inputs/age-data.ts";
+import * as Demographics from "../../../generated-by-analysis/Pilot10/graph-inputs/demographics-data.ts";
 import { data as AccountTypeData } from "../../../generated-by-analysis/Pilot10/graph-inputs/account-type-data.ts";
 import { AnswerToMatchingQuestionList, AnswersIndicatingParticipantExperiencedScenario } from "../../analyze-survey-responses/decode-questions/matching-question.ts";
 import { BarGraphs } from "../../../generated-by-analysis/Pilot10/graph-inputs/severity-grouped-bar-charts-data.ts";
@@ -16,6 +17,8 @@ import { AnswerToRecencyQuestionList } from "../../analyze-survey-responses/deco
 import { barChartWithSeverityLikertSubBarsSvg, barChartWithSubBarsSvg } from "../graphs/chart-svg.ts";
 import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 import { SeverityColorsGreatestToLeast } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
+import { lineChartSvg } from "../graphs/chart-svg.ts";
+import { barChartSvg } from "../graphs/chart-svg.ts";
 
 export const generateGraphsPilot10 = (cohort: string = "Pilot10") => {
 	const outputPath = makePath(`./graphs/${cohort}`);
@@ -35,7 +38,7 @@ export const generateGraphsPilot10 = (cohort: string = "Pilot10") => {
 	writeSvg('scatter-age-vs-scenario-count', scatterPlotSvg({
 		xTitle: "Age",
 		yTitle: "Number of Scenarios Matched",
-		data: AgeVsScenariosMatched.data,
+		data: Age.ageScenarioScatterData,
 	}));
 	writeSvg(`device-bar-chart`, graphCompromisedVsLockedOutSeverity({
 		matchingQuestions: AnswersIndicatingParticipantExperiencedScenario,
@@ -108,14 +111,6 @@ export const generateGraphsPilot10 = (cohort: string = "Pilot10") => {
 			plugins:{
 				annotation: {
 					annotations: {
-						// line1: {
-						// 	type: 'line',
-						// 	xMin: "Replaced Device/OS",
-						// 	xMax: "Replaced Device/OS",
-						// 	...({xAdjust: -30} as {}),
-						// 	borderColor: 'rgb(255, 99, 132)',
-						// 	borderWidth: 2,
-						// },
 						label1: {
 							...topLabelBase,
 							xValue: "Locked Passwords",
@@ -136,6 +131,34 @@ export const generateGraphsPilot10 = (cohort: string = "Pilot10") => {
 				}
 			}
 		}
+	}));
+	writeSvg(`age-cdf`, lineChartSvg({
+		xType: "linear",
+		yType: "percent",
+		hideLegend: true,
+		xTitle: "Age (calendar years since birth)",
+		datasets: [{
+			data: Age.agePercentPoints,
+		}],
+		cdf: "accumulateRight",
+	}));
+	writeSvg(`education-percent`, barChartSvg({
+		yType: "percent",
+		hideLegend: true,
+		xTitle: "Education",
+		xAxisCategoryLabels: Demographics.education.labels,
+		datasets: [{
+			data: Demographics.educationPercent.data,
+		}],
+	}));
+	writeSvg(`gender-percent`, barChartSvg({
+		yType: "percent",
+		hideLegend: true,
+		xTitle: "Gender Identification",
+		xAxisCategoryLabels: Demographics.gender.labels,
+		datasets: [{
+			data: Demographics.genderPercent.data,
+		}],
 	}));
 	writeSvg(`lost-photos-percent`, barChartWithSeverityLikertSubBarsSvg({
 		yType: "percent",

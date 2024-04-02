@@ -1,4 +1,4 @@
-import { SurveyRoot, Choice, SurveyQuestion, SurveyBlockPayloadEntry, Flow, SurveyFlow, SurveyQuestionPayload, QuestionId, BlockId } from "./types.d.ts";
+import { SurveyRoot, Choice, SurveyQuestion, SurveyBlockPayloadEntry, Flow, SurveyQuestionPayload, QuestionId, BlockId } from "./types.d.ts";
 import { isSurveyBlock, isSurveyFlow, isSurveyQuestion } from "./type-guards.ts";
 
 export type FlowType = Exclude<Flow["Type"], "Standard" | "Root"> | "Block";
