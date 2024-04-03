@@ -5,11 +5,12 @@ layout: layouts/survey.vto
 templateEngine: [vto]
 date: Git Last Modified
 ---
-
-<div class="Block">
-	<div class="block-header">Block</div>
-	<div class="question">
-		<div class="question-body"><p dir="ltr"><span style="font-size: 19px;"><b>Introduction</b></span><br>
+<div class="Group">
+	<div class="block-header">Group</div>
+	<div class="Block">
+		<div class="block-header">Block: Consent (block names not exposed to participants)</div>
+		<div class="question">
+			<div class="question-body"><p dir="ltr"><span style="font-size: 19px;"><b>Introduction</b></span><br>
 In this survey we will ask you to recall and describe up to three experiences in which you suffered significant harm or loss due to your reliance on technology.&nbsp;The harms or losses could be recent or could have occurred long ago.</p><br>
 Please be sure not to share any information in their responses that could identify yourself or others.<br>
 <br>
@@ -40,42 +41,44 @@ If you have questions, concerns, or complaints, or think the research has hurt y
 <br>
 To withdraw your consent from this study, return this task via Prolific.<br>
 <br>
-Otherwise, continue.
+Otherwise, continue.</div>
+
 		</div>
+
 	</div>
-</div>
-<div class="Block">
-	<div class="block-header">Block</div>
-	<div class="question">
-		<div class="question-body">For the first three questions, please recall the three most harmful technology-related harms or losses you have experienced. Take your time! These three questions may take half of the time budgeted to complete the survey.
-		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">Describe the most harmful technology-related harm or loss you have experienced:
-		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">Describe the second-most harmful technology-related harm or loss you have experienced:
-		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">Describe the third-most harmful technology-related harm or loss you have experienced:
-		</div>
-	</div>
-</div>
-<div class="BlockRandomizer">
-	<div class="block-header">Randomize ordering</div>
 	<div class="Block">
-		<div class="block-header">Block</div>
+		<div class="block-header">Block: Collect Events (block names not exposed to participants)</div>
 		<div class="question">
-			<div class="question-body">Have you ever lost digital photos or videos for any reason? (check <b>all</b> that apply)<br>
+			<div class="question-body">For the first three questions, please recall the three most harmful technology-related harms or losses you have experienced. Take your time! These three questions may take half of the time budgeted to complete the survey.</div>
+
+		</div>
+		<div class="question">
+			<div class="question-body">Describe the most harmful technology-related harm or loss you have experienced:</div>
+
+		</div>
+		<div class="question">
+			<div class="question-body">Describe the second-most harmful technology-related harm or loss you have experienced:</div>
+
+		</div>
+		<div class="question">
+			<div class="question-body">Describe the third-most harmful technology-related harm or loss you have experienced:</div>
+
+		</div>
+
+	</div>
+	<div class="BlockRandomizer">
+		<div class="block-header">Randomize</div>
+		<div class="Block">
+			<div class="block-header">Block: photos (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Have you ever lost digital photos or videos for any reason? (check <b>all</b> that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -86,12 +89,15 @@ Otherwise, continue.
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">How many photos or videos have you lost over your lifetime?
+			<div class="question">
+				<div class="question-body">How many photos or videos have you lost over your lifetime?</div>
 				<ul class="choices">
 					<li class="choice">I have never lost any photos or videos</li>
 					<li class="choice">More than five years of photos and/or videos</li>
@@ -100,25 +106,28 @@ Otherwise, continue.
 					<li class="choice">More than one week of photos and/or videos, but less than one month</li>
 					<li class="choice">More than one day of photos and/or videos, but less than one week</li>
 					<li class="choice">Less than one day of photos and/or videos</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">I have never lost any photos or videos</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">I have never lost any photos or videos</span></div>
-		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">What events contributed to your loss of photos and videos? (check <b>all</b> that apply)
+			<div class="question">
+				<div class="question-body">What events contributed to your loss of photos and videos? (check <b>all</b> that apply)</div>
 				<ul class="choices">
 					<li class="choice">A phone storing the photos/videos was stolen</li>
 					<li class="choice">A phone storing the photos/videos broke or failed</li>
@@ -141,21 +150,23 @@ Otherwise, continue.
 					<li class="choice">An online account that stored the photos/videos was deleted because of disuse</li>
 					<li class="choice">An online account that stored the photos/videos locked deleted because of lack of payment</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Block">
-		<div class="block-header">Block</div>
-		<div class="question">
-			<div class="question-body">Have you ever lost personal emails for any reason? (check <b>all</b> that apply)<br>
+		<div class="Block">
+			<div class="block-header">Block: emails (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Have you ever lost personal emails for any reason? (check <b>all</b> that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -166,12 +177,15 @@ Otherwise, continue.
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">How many personal emails have you lost over your lifetime?
+			<div class="question">
+				<div class="question-body">How many personal emails have you lost over your lifetime?</div>
 				<ul class="choices">
 					<li class="choice">I have never lost any emails</li>
 					<li class="choice">More than five years of emails</li>
@@ -180,25 +194,28 @@ Otherwise, continue.
 					<li class="choice">More than one week of emails, but less than one month</li>
 					<li class="choice">More than one day of emails, but less than one week</li>
 					<li class="choice">Less than one day of emails</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">I have never lost any emails</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">I have never lost any emails</span></div>
-		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">What events contributed to your loss of personal emails? (check <b>all</b> that apply)
+			<div class="question">
+				<div class="question-body">What events contributed to your loss of personal emails? (check <b>all</b> that apply)</div>
 				<ul class="choices">
 					<li class="choice">After leaving a school, I lost access to a school email account before I could make copies of my emails</li>
 					<li class="choice">After leaving a job, I lost access to personal emails I had exchanged via a work email account and had meant to make copies of</li>
@@ -214,21 +231,23 @@ Otherwise, continue.
 					<li class="choice">A computer or hard drive storing the emails was lost</li>
 					<li class="choice">A computer or hard drive storing the emails was stolen</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Block">
-		<div class="block-header">Block</div>
-		<div class="question">
-			<div class="question-body">Has your reliance on technology negatively impacted your mental health, such as by causing addition, depression, anxiety, or loss of attention? (check <b>all</b> that apply)<br>
+		<div class="Block">
+			<div class="block-header">Block: mental (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Has your reliance on technology negatively impacted your mental health, such as by causing addition, depression, anxiety, or loss of attention? (check <b>all</b> that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -239,25 +258,29 @@ Otherwise, continue.
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How has technology negatively impacted your mental health? (check <b>all</b> that apply)
+			<div class="question">
+				<div class="question-body">How has technology negatively impacted your mental health? (check <b>all</b> that apply)</div>
 				<ul class="choices">
 					<li class="choice">Loss of attention</li>
 					<li class="choice">Anxiety</li>
@@ -266,42 +289,47 @@ Otherwise, continue.
 					<li class="choice">Social media addiction</li>
 					<li class="choice">Other addiction</li>
 					<li class="choice">Other mental health impact (please describe)</li>
+
 				</ul>
+
 			</div>
+
 		</div>
+
 	</div>
-</div>
-<div class="Block">
-	<div class="block-header">Block</div>
-	<div class="question">
-		<div class="question-body">We will now describe 13 technology-related events that have harmed others, and ask if they have also happened to you.<br><br>(This is the bulk of the remainder of the study. After this, we will only be asking four short/multiple choice questions.)<br>
+	<div class="Block">
+		<div class="block-header">Block: Scenario intro (block names not exposed to participants)</div>
+		<div class="question">
+			<div class="question-body">We will now describe 13 technology-related events that have harmed others, and ask if they have also happened to you.<br><br>(This is the bulk of the remainder of the study. After this, we will only be asking four short/multiple choice questions.)<br></div>
+
 		</div>
+
 	</div>
-</div>
-<div class="BlockRandomizer">
-	<div class="block-header">Randomize ordering</div>
-	<div class="Group">
-		<div class="block-header">Group</div>
-		<div class="Block">
-			<div class="block-header">Block</div>
-			<div class="question">
-				<div class="question-body">The next two experiences we will ask about&nbsp;involve personal electronic&nbsp;<b>devices</b>, such as phones, computers, or tablets. We will ask if you have experienced the compromise of one of your devices (e.g., having it stolen or used in a way that you would not want to permit) or whether you have experienced being locked out of one of your devices.<br><br>We have a different sections asking about your experiences with online accounts, so please limit your answers to experiences in which a you were locked out of a personal&nbsp;<i>device, </i>or a personal<i>&nbsp;device</i> was compromised.
-				</div>
-			</div>
-		</div>
-		<div class="BlockRandomizer">
-			<div class="block-header">Randomize ordering</div>
+	<div class="BlockRandomizer">
+		<div class="block-header">Randomize</div>
+		<div class="Group">
+			<div class="block-header">Group</div>
 			<div class="Block">
-				<div class="block-header">Block</div>
+				<div class="block-header">Block: device-only (block names not exposed to participants)</div>
 				<div class="question">
-					<div class="question-body">Have you had a personal electronic device stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br />
+					<div class="question-body">The next two experiences we will ask about&nbsp;involve personal electronic&nbsp;<b>devices</b>, such as phones, computers, or tablets. We will ask if you have experienced the compromise of one of your devices (e.g., having it stolen or used in a way that you would not want to permit) or whether you have experienced being locked out of one of your devices.<br><br>We have a different sections asking about your experiences with online accounts, so please limit your answers to experiences in which a you were locked out of a personal&nbsp;<i>device, </i>or a personal<i>&nbsp;device</i> was compromised.</div>
+
+				</div>
+
+			</div>
+			<div class="BlockRandomizer">
+				<div class="block-header">Randomize</div>
+				<div class="Block">
+					<div class="block-header">Block: hacked-device (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you had a personal electronic device stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br />
 <br />
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -312,12 +340,15 @@ Otherwise, continue.
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
+					<div class="question">
+						<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)</div>
 						<ul class="choices">
 							<li class="choice">The device was compromised remotely (e.g., via a virus or malware)</li>
 							<li class="choice">The device was stolen</li>
@@ -326,49 +357,54 @@ Otherwise, continue.
 							<li class="choice">The device was used by someone with my permission, but who did something else I would not have permitted if asked</li>
 							<li class="choice">The device was used in a way that I later regretted permitting</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of device was it?
+					<div class="question">
+						<div class="question-body">What type of device was it?</div>
 						<ul class="choices">
 							<li class="choice">Phone</li>
 							<li class="choice">Tablet (e.g. iPad, Galaxy Tab)</li>
 							<li class="choice">Computer (Mac, PC, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of phone was it?
+					<div class="question">
+						<div class="question-body">What type of phone was it?</div>
 						<ul class="choices">
 							<li class="choice">iPhone</li>
 							<li class="choice">Android phone (e.g., Galaxy, Pixel, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of tablet was it?
+					<div class="question">
+						<div class="question-body">What type of tablet was it?</div>
 						<ul class="choices">
 							<li class="choice">iPad</li>
 							<li class="choice">Android (e.g., Galaxy Tab, Pixel Tablet)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of computer was it?
+					<div class="question">
+						<div class="question-body">What type of computer was it?</div>
 						<ul class="choices">
 							<li class="choice">Mac running MacOS</li>
 							<li class="choice">PC running Windows</li>
 							<li class="choice">PC running Linux or other UNIX variant</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -376,11 +412,12 @@ Otherwise, continue.
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long did it take you to regain access to the device?
+					<div class="question">
+						<div class="question-body">How long did it take you to regain access to the device?</div>
 						<ul class="choices">
 							<li class="choice">I never lost access to the device</li>
 							<li class="choice">Less than a day</li>
@@ -388,38 +425,41 @@ Otherwise, continue.
 							<li class="choice">More than a week, but I eventually did regain access to the device</li>
 							<li class="choice">I never regained access to the device</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
-			</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you been locked out of a personal electronic device for reasons other than it being stolen or compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
+				<div class="Block">
+					<div class="block-header">Block: locked-device (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you been locked out of a personal electronic device for reasons other than it being stolen or compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -430,78 +470,87 @@ Otherwise, continue.
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">In which of your three most harmful experiences did you include it? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">In which of your three most harmful experiences did you include it? (check <b>all</b> that apply)
 <ol>
 	<li><i>participant's top harm</i></li>
 	<li><i>participant's second harm</i></li>
 	<li><i>participant's third harm</i></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">1</li>
 							<li class="choice">2</li>
 							<li class="choice">3</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Where should you have included it in your ranking of harmful experiences? Recall that the three experiences you described were:<ol>
+					<div class="question">
+						<div class="question-body">Where should you have included it in your ranking of harmful experiences? Recall that the three experiences you described were:<ol>
 	<li><i>participant's top harm</i></li>
 	<li><i>participant's second harm</i></li>
 	<li><i>participant's third harm</i></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">The most harmful experience (before item 1)</li>
 							<li class="choice">The second-most harmful experience (before item 2)</li>
 							<li class="choice">The third-most harmful experience (before item 3)</li>
 							<li class="choice">Less harmful than item 3</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of device were you locked out of?&nbsp;(If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
+					<div class="question">
+						<div class="question-body">What type of device were you locked out of?&nbsp;(If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)</div>
 						<ul class="choices">
 							<li class="choice">Phone</li>
 							<li class="choice">Tablet (e.g. iPad, Galaxy Tab)</li>
 							<li class="choice">Computer (Mac, PC, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of phone was it?
+					<div class="question">
+						<div class="question-body">What type of phone was it?</div>
 						<ul class="choices">
 							<li class="choice">iPhone</li>
 							<li class="choice">Android phone (e.g., Galaxy, Pixel, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of tablet was it?
+					<div class="question">
+						<div class="question-body">What type of tablet was it?</div>
 						<ul class="choices">
 							<li class="choice">iPad</li>
 							<li class="choice">Android phone (e.g., Galaxy Tab, Pixel Tablet)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of computer was it?
+					<div class="question">
+						<div class="question-body">What type of computer was it?</div>
 						<ul class="choices">
 							<li class="choice">Mac running MacOS</li>
 							<li class="choice">PC running Windows</li>
 							<li class="choice">PC running Linux or other UNIX variant</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What factors led to you getting locked out of the device? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">What factors led to you getting locked out of the device? (check <b>all</b> that apply)</div>
 						<ul class="choices">
 							<li class="choice">I forgot a PIN or password</li>
 							<li class="choice">The device no longer recognized my fingerprint</li>
@@ -511,11 +560,12 @@ Otherwise, continue.
 							<li class="choice">The device broke due to physical impact (e.g., dropped)</li>
 							<li class="choice">The device broke for reasons other than physical impact</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the device. Who most likely changed the PIN or password last?
+					<div class="question">
+						<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the device. Who most likely changed the PIN or password last?</div>
 						<ul class="choices">
 							<li class="choice">I did</li>
 							<li class="choice">My spouse or partner</li>
@@ -529,32 +579,35 @@ Otherwise, continue.
 							<li class="choice">Someone else I know</li>
 							<li class="choice">Someone I don't know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Did you eventually regain access to the data stored on the device?
+					<div class="question">
+						<div class="question-body">Did you eventually regain access to the data stored on the device?</div>
 						<ul class="choices">
 							<li class="choice">I never recovered any of the data from the device</li>
 							<li class="choice">I regained access to only some of the data on the device, but some was permanently lost</li>
 							<li class="choice">I regained access to all of the data on the device</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long were you locked out of the device?
+					<div class="question">
+						<div class="question-body">How long were you locked out of the device?</div>
 						<ul class="choices">
 							<li class="choice">Less than a day</li>
 							<li class="choice">Between a day and a week</li>
 							<li class="choice">More than a week but not permanently</li>
 							<li class="choice">Permanently (I never regained use of the device)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen?
+					<div class="question">
+						<div class="question-body">How long ago did this happen?</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -562,54 +615,60 @@ Otherwise, continue.
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Group">
-		<div class="block-header">Group</div>
-		<div class="Block">
-			<div class="block-header">Block</div>
-			<div class="question">
-				<div class="question-body">The next two experiences we will ask about involve <b>personal email or online storage accounts</b>, such as Google Accounts (Gmail, Google Drive), Apple iCloud accounts, or Microsoft Accounts (Hotmail/Outlook/OneDrive). We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.&nbsp;Work email accounts typically are not personal email accounts, unless you are self employed and use the same account for the majority of your work and personal emails.<br />
+		<div class="Group">
+			<div class="block-header">Group</div>
+			<div class="Block">
+				<div class="block-header">Block: acct-only (block names not exposed to participants)</div>
+				<div class="question">
+					<div class="question-body">The next two experiences we will ask about involve <b>personal email or online storage accounts</b>, such as Google Accounts (Gmail, Google Drive), Apple iCloud accounts, or Microsoft Accounts (Hotmail/Outlook/OneDrive). We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.&nbsp;Work email accounts typically are not personal email accounts, unless you are self employed and use the same account for the majority of your work and personal emails.<br />
 <br />
 We have a different sections asking about your experiences with personal electronic devices and other types of online accounts, so please limit your answers to experiences that involve <b>personal email or online storage accounts</b>.<br />
-&nbsp;
+&nbsp;</div>
+
 				</div>
+
 			</div>
-		</div>
-		<div class="BlockRandomizer">
-			<div class="block-header">Randomize ordering</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you had an email or online storage account used by someone without your permission, used in a way that your regretted permitting, or otherwise compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
+			<div class="BlockRandomizer">
+				<div class="block-header">Randomize</div>
+				<div class="Block">
+					<div class="block-header">Block: hacked-acct (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you had an email or online storage account used by someone without your permission, used in a way that your regretted permitting, or otherwise compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -620,12 +679,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
+					<div class="question">
+						<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)</div>
 						<ul class="choices">
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want</li>
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that I would not have permitted if asked</li>
@@ -633,21 +695,23 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">The account was used by someone I knew without my permission</li>
 							<li class="choice">The account was accessed by someone I did not know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of account was it?
+					<div class="question">
+						<div class="question-body">What type of account was it?</div>
 						<ul class="choices">
 							<li class="choice">Google Account (Gmail, Google Drive, etc.)</li>
 							<li class="choice">Microsoft Account (Hotmail, Outlook, OneDrive, Microsoft 365, etc.)</li>
 							<li class="choice">Apple (Apple ID, iCloud, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -655,11 +719,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long did it take you to regain access to the account?
+					<div class="question">
+						<div class="question-body">How long did it take you to regain access to the account?</div>
 						<ul class="choices">
 							<li class="choice">I never lost access</li>
 							<li class="choice">Less than a day</li>
@@ -667,38 +732,41 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">More than a week, but I eventually did regain access to the account</li>
 							<li class="choice">I never regained access to the account</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
-			</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you been temporarily or permanently locked out of an email or online storage account for reasons other than it being compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
+				<div class="Block">
+					<div class="block-header">Block: locked-acct (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you been temporarily or permanently locked out of an email or online storage account for reasons other than it being compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -709,12 +777,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -722,21 +793,23 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of account were you locked out of?
+					<div class="question">
+						<div class="question-body">What type of account were you locked out of?</div>
 						<ul class="choices">
 							<li class="choice">Google Account (Gmail, Google Drive, etc.)</li>
 							<li class="choice">Microsoft Account (Hotmail, Outlook, OneDrive, Microsoft 365, etc.)</li>
 							<li class="choice">Apple (Apple ID, iCloud, etc.)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)</div>
 						<ul class="choices">
 							<li class="choice">I forgot a PIN or password</li>
 							<li class="choice">The PIN or password was recently changed</li>
@@ -749,11 +822,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">I lost the electronic file or document in which I had stored the PIN or password</li>
 							<li class="choice">The account was locked or deleted because I had not used it for a long time</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?
+					<div class="question">
+						<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?</div>
 						<ul class="choices">
 							<li class="choice">I did</li>
 							<li class="choice">My spouse or partner</li>
@@ -767,64 +841,71 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Someone else I know</li>
 							<li class="choice">Someone I don't know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long were you locked out of the account?
+					<div class="question">
+						<div class="question-body">How long were you locked out of the account?</div>
 						<ul class="choices">
 							<li class="choice">Less than a day</li>
 							<li class="choice">Between a day and a week</li>
 							<li class="choice">More than a week but not permanently</li>
 							<li class="choice">Permanently (I never regained access to the account)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Group">
-		<div class="block-header">Group</div>
-		<div class="Block">
-			<div class="block-header">Block</div>
-			<div class="question">
-				<div class="question-body">The next two experiences we will ask about involve <b>social media or direct messaging accounts</b>, such as Facebook, Instagram, Twitter/X, SnapChat, WhatsApp, WeChat, and Signal. We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.<br>
-<br>
-We have a different sections asking about your experiences with personal electronic devices and other types of online accounts, so please limit your answers to experiences that involve <b>social media or direct messaging accounts.</b>
-				</div>
-			</div>
-		</div>
-		<div class="BlockRandomizer">
-			<div class="block-header">Randomize ordering</div>
+		<div class="Group">
+			<div class="block-header">Group</div>
 			<div class="Block">
-				<div class="block-header">Block</div>
+				<div class="block-header">Block: soc-only (block names not exposed to participants)</div>
 				<div class="question">
-					<div class="question-body">Have you had a social media or direct messaging account stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised? (check <b>all</b>&nbsp;that apply)<br>
+					<div class="question-body">The next two experiences we will ask about involve <b>social media or direct messaging accounts</b>, such as Facebook, Instagram, Twitter/X, SnapChat, WhatsApp, WeChat, and Signal. We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.<br>
+<br>
+We have a different sections asking about your experiences with personal electronic devices and other types of online accounts, so please limit your answers to experiences that involve <b>social media or direct messaging accounts.</b></div>
+
+				</div>
+
+			</div>
+			<div class="BlockRandomizer">
+				<div class="block-header">Randomize</div>
+				<div class="Block">
+					<div class="block-header">Block: hacked-soc (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you had a social media or direct messaging account stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -835,12 +916,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
+					<div class="question">
+						<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)</div>
 						<ul class="choices">
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want</li>
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that I would not have permitted if asked</li>
@@ -848,11 +932,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">The account was used by someone I knew without my permission</li>
 							<li class="choice">The account was accessed by someone I did not know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of account was it?
+					<div class="question">
+						<div class="question-body">What type of account was it?</div>
 						<ul class="choices">
 							<li class="choice">Facebook</li>
 							<li class="choice">Instagram</li>
@@ -862,11 +947,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">WeChat</li>
 							<li class="choice">Signal</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen?
+					<div class="question">
+						<div class="question-body">How long ago did this happen?</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -874,11 +960,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long did it take you to regain access to the account?
+					<div class="question">
+						<div class="question-body">How long did it take you to regain access to the account?</div>
 						<ul class="choices">
 							<li class="choice">I never lost access</li>
 							<li class="choice">Less than a day</li>
@@ -886,38 +973,41 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">More than a week, but I eventually did regain access to the account</li>
 							<li class="choice">I never regained access to the account</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
-			</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you been temporarily or permanently locked out of a social media or direct messaging account for reasons other than it being compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
+				<div class="Block">
+					<div class="block-header">Block: locked-soc (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you been temporarily or permanently locked out of a social media or direct messaging account for reasons other than it being compromised (hacked)? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -928,12 +1018,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What type of account were you locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">What type of account were you locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Facebook</li>
 							<li class="choice">Instagram</li>
@@ -943,11 +1036,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">WeChat</li>
 							<li class="choice">Signal</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)</div>
 						<ul class="choices">
 							<li class="choice">I forgot a PIN or password</li>
 							<li class="choice">The PIN or password was recently changed</li>
@@ -960,11 +1054,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">I lost the electronic file or document in which I had stored the PIN or password</li>
 							<li class="choice">The account was locked or deleted because I had not used it for a long time</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?
+					<div class="question">
+						<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?</div>
 						<ul class="choices">
 							<li class="choice">I did</li>
 							<li class="choice">My spouse or partner</li>
@@ -978,11 +1073,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Someone else I know</li>
 							<li class="choice">Someone I don't know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen?
+					<div class="question">
+						<div class="question-body">How long ago did this happen?</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -990,64 +1086,71 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long were you locked out of the account?
+					<div class="question">
+						<div class="question-body">How long were you locked out of the account?</div>
 						<ul class="choices">
 							<li class="choice">Less than a day</li>
 							<li class="choice">Between a day and a week</li>
 							<li class="choice">More than a week but not permanently</li>
 							<li class="choice">Permanently (I never regained access to the account)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Group">
-		<div class="block-header">Group</div>
-		<div class="Block">
-			<div class="block-header">Block</div>
-			<div class="question">
-				<div class="question-body">The next two experiences we will ask about involve <b>online bank, brokerage, or payment accounts</b>, including credit card accounts, cryptocurrency, PayPal, and Venmo. We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.<br>
-<br>
-We have a different sections asking about your experiences with personal electronic devices and other types of online accounts, so please limit your answers to experiences that involve <b>online bank, brokerage, or payment accounts</b>.
-				</div>
-			</div>
-		</div>
-		<div class="BlockRandomizer">
-			<div class="block-header">Randomize ordering</div>
+		<div class="Group">
+			<div class="block-header">Group</div>
 			<div class="Block">
-				<div class="block-header">Block</div>
+				<div class="block-header">Block: bank-only (block names not exposed to participants)</div>
 				<div class="question">
-					<div class="question-body">Have you had an online bank, brokerage, or payment account compromised? (check <b>all</b>&nbsp;that apply)<br>
+					<div class="question-body">The next two experiences we will ask about involve <b>online bank, brokerage, or payment accounts</b>, including credit card accounts, cryptocurrency, PayPal, and Venmo. We will ask if you have experienced the compromise of one of these accounts (e.g., having it used by someone without your permission or in a way you would not permit) or whether you have experienced being locked out of one of these accounts.<br>
+<br>
+We have a different sections asking about your experiences with personal electronic devices and other types of online accounts, so please limit your answers to experiences that involve <b>online bank, brokerage, or payment accounts</b>.</div>
+
+				</div>
+
+			</div>
+			<div class="BlockRandomizer">
+				<div class="block-header">Randomize</div>
+				<div class="Block">
+					<div class="block-header">Block: hacked-bank (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you had an online bank, brokerage, or payment account compromised? (check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1058,12 +1161,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)
+					<div class="question">
+						<div class="question-body">What best describes what happened? (If you experienced multiple harms of this type, answer the questions based on your most harmful experience.)</div>
 						<ul class="choices">
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want</li>
 							<li class="choice">The account was used by someone I knew with my permission, but they used it in a way that I would not have permitted if asked</li>
@@ -1071,11 +1177,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">The account was used by someone I knew without my permission</li>
 							<li class="choice">The account was accessed by someone I did not know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What type of account was it?
+					<div class="question">
+						<div class="question-body">What type of account was it?</div>
 						<ul class="choices">
 							<li class="choice">Credit Card</li>
 							<li class="choice">Credit Union</li>
@@ -1086,11 +1193,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Cryptocurrency</li>
 							<li class="choice">Bank</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1098,11 +1206,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long did it take you to regain access to the account?
+					<div class="question">
+						<div class="question-body">How long did it take you to regain access to the account?</div>
 						<ul class="choices">
 							<li class="choice">I never lost access</li>
 							<li class="choice">Less than a day</li>
@@ -1110,46 +1219,49 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">More than a week, but I eventually did regain access to the account</li>
 							<li class="choice">I never regained access to the account</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please estimate the amount lost, and never recovered, in dollars.
+					<div class="question">
+						<div class="question-body">Please estimate the amount lost, and never recovered, in dollars.</div>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please estimate the amount lost but later recovered or restored to your account, in dollars.
+					<div class="question">
+						<div class="question-body">Please estimate the amount lost but later recovered or restored to your account, in dollars.</div>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
-			</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you been temporarily or permanently locked out of an online bank, brokerage, or payment account for reasons other than it being compromised (hacked)?&nbsp;(check <b>all</b>&nbsp;that apply)<br />
+				<div class="Block">
+					<div class="block-header">Block: locked-bank (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you been temporarily or permanently locked out of an online bank, brokerage, or payment account for reasons other than it being compromised (hacked)?&nbsp;(check <b>all</b>&nbsp;that apply)<br />
 <br />
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1160,12 +1272,15 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">What type of account were you locked out of? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">What type of account were you locked out of? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Bank</li>
 							<li class="choice">Credit Union</li>
@@ -1176,11 +1291,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Paypal</li>
 							<li class="choice">Venmo</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">What factors led to you getting locked out of the account? (check <b>all</b> that apply)</div>
 						<ul class="choices">
 							<li class="choice">I forgot a PIN or password</li>
 							<li class="choice">the correct PIN or password no longer worked</li>
@@ -1193,11 +1309,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">I lost the electronic file or document in which I had stored the PIN or password</li>
 							<li class="choice">The account was locked or deleted because I had not used it for a long time</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?
+					<div class="question">
+						<div class="question-body">You reported that a changed PIN or password may have caused you to be locked out of the account. Who most likely changed the PIN or password last?</div>
 						<ul class="choices">
 							<li class="choice">I did</li>
 							<li class="choice">My spouse or partner</li>
@@ -1211,11 +1328,12 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Someone else I know</li>
 							<li class="choice">Someone I don't know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen?
+					<div class="question">
+						<div class="question-body">How long ago did this happen?</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1223,68 +1341,75 @@ We have a different sections asking about your experiences with personal electro
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long were you locked out of the account?
+					<div class="question">
+						<div class="question-body">How long were you locked out of the account?</div>
 						<ul class="choices">
 							<li class="choice">Less than a day</li>
 							<li class="choice">Between a day and a week</li>
 							<li class="choice">More than a week but not permanently</li>
 							<li class="choice">Permanently (I never regained access to it)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please estimate the consequences of being locked out of your account in units of dollars.
+					<div class="question">
+						<div class="question-body">Please estimate the consequences of being locked out of your account in units of dollars.</div>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Group">
-		<div class="block-header">Group</div>
-		<div class="Block">
-			<div class="block-header">Block</div>
-			<div class="question">
-				<div class="question-body">The next two experiences we will ask about involve&nbsp;the practice of storing passwords in your browser or password manager, so that your browser or password manager can remember them for your future use. For example, you might let Safari store passwords in your Apple Keychain, Chrome store your password in your Google Account, or you might use a separate password manager like 1Password, BitwWarden, DashLane, Keeper, KeePass, or LastPass.<br />
-<br />
-The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from relying on your browser of password manager to store your passwords.
-				</div>
-			</div>
-		</div>
-		<div class="BlockRandomizer">
-			<div class="block-header">Randomize ordering</div>
+		<div class="Group">
+			<div class="block-header">Group</div>
 			<div class="Block">
-				<div class="block-header">Block</div>
+				<div class="block-header">Block: pwds-only (block names not exposed to participants)</div>
 				<div class="question">
-					<div class="question-body">Have you had the passwords stored by your browser or password manager stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
+					<div class="question-body">The next two experiences we will ask about involve&nbsp;the practice of storing passwords in your browser or password manager, so that your browser or password manager can remember them for your future use. For example, you might let Safari store passwords in your Apple Keychain, Chrome store your password in your Google Account, or you might use a separate password manager like 1Password, BitwWarden, DashLane, Keeper, KeePass, or LastPass.<br />
+<br />
+The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from relying on your browser of password manager to store your passwords.</div>
+
+				</div>
+
+			</div>
+			<div class="BlockRandomizer">
+				<div class="block-header">Randomize</div>
+				<div class="Block">
+					<div class="block-header">Block: hacked-pwds (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you had the passwords stored by your browser or password manager stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1295,12 +1420,15 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">From which browser or password manager were the passwords stolen or compromised (hacked)?
+					<div class="question">
+						<div class="question-body">From which browser or password manager were the passwords stolen or compromised (hacked)?</div>
 						<ul class="choices">
 							<li class="choice">Apple's KeyChain (for Safari browser and iOS, iPadOS, and MacOS)</li>
 							<li class="choice">Google's Password Manager (for Chrome browser, and Android OS)</li>
@@ -1312,11 +1440,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">KeePass</li>
 							<li class="choice">LastPass</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">How long ago did this happen? (If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1324,11 +1453,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long did it take you to regain access to the compromised account?
+					<div class="question">
+						<div class="question-body">How long did it take you to regain access to the compromised account?</div>
 						<ul class="choices">
 							<li class="choice">I never lost access</li>
 							<li class="choice">Less than a day</li>
@@ -1336,38 +1466,41 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">More than a week, but I eventually did regain access to the account</li>
 							<li class="choice">I never regained access to the account</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
-			</div>
-			<div class="Block">
-				<div class="block-header">Block</div>
-				<div class="question">
-					<div class="question-body">Have you been temporarily or permanently locked out of the passwords stored by your browser or password manager?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
+				<div class="Block">
+					<div class="block-header">Block: locked-pwds (block names not exposed to participants)</div>
+					<div class="question">
+						<div class="question-body">Have you been temporarily or permanently locked out of the passwords stored by your browser or password manager?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 						<ul class="choices">
 							<li class="choice">Yes, this happened as part of experience 1 above</li>
 							<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1378,12 +1511,15 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 							<li class="choice">No, but I do worry that this might happen to me in the future</li>
 							<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 						</ul>
+					<div class="note">Skip to end of block if participant selects 						<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 						<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 					</div>
-				</div>
-				<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-				<div class="question">
-					<div class="question-body">Which browser or password manager were you using that you got locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)
+					<div class="question">
+						<div class="question-body">Which browser or password manager were you using that you got locked out of?&nbsp;(If you have experienced this more than once please answer based on your worst experience.)</div>
 						<ul class="choices">
 							<li class="choice">Apple's KeyChain (for Safari browser and iOS, iPadOS, and MacOS)</li>
 							<li class="choice">Google's Password Manager (for Chrome browser, and Android OS)</li>
@@ -1395,11 +1531,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">KeePass</li>
 							<li class="choice">LastPass</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">What factors led to you getting locked out of your passwords? (check <b>all</b> that apply)
+					<div class="question">
+						<div class="question-body">What factors led to you getting locked out of your passwords? (check <b>all</b> that apply)</div>
 						<ul class="choices">
 							<li class="choice">I forgot a PIN, password, or master password</li>
 							<li class="choice">the correct PIN, password, or master password no longer worked</li>
@@ -1411,11 +1548,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">I lost the electronic file or document in which I had stored the PIN, password, or master password</li>
 							<li class="choice">The account was locked or deleted because I had not used it for a long time</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">You reported that a changed PIN, password, or password may have caused you to be locked out of your password manager's passwords. Who most likely changed the PIN or password last?
+					<div class="question">
+						<div class="question-body">You reported that a changed PIN, password, or password may have caused you to be locked out of your password manager's passwords. Who most likely changed the PIN or password last?</div>
 						<ul class="choices">
 							<li class="choice">I did</li>
 							<li class="choice">My spouse or partner</li>
@@ -1429,11 +1567,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">Someone else I know</li>
 							<li class="choice">Someone I don't know</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long ago did this happen?
+					<div class="question">
+						<div class="question-body">How long ago did this happen?</div>
 						<ul class="choices">
 							<li class="choice">Within the past year (since one year ago today)</li>
 							<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1441,51 +1580,57 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 							<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 							<li class="choice">More than 10 years ago</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">How long were you locked out of your passwords?
+					<div class="question">
+						<div class="question-body">How long were you locked out of your passwords?</div>
 						<ul class="choices">
 							<li class="choice">Less than a day</li>
 							<li class="choice">Between a day and a week</li>
 							<li class="choice">More than a week but not permanently</li>
 							<li class="choice">Permanently (I never regained access to them)</li>
 							<li class="choice">Other (please describe)</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-						<ul class="choices-likert">
-							<li class="choice-likert">1</li>
-							<li class="choice-likert">2</li>
-							<li class="choice-likert">3</li>
-							<li class="choice-likert">4</li>
-							<li class="choice-likert">5</li>
-							<li class="choice-likert">6</li>
-							<li class="choice-likert">7</li>
+					<div class="question likert">
+						<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+						<ul class="choices">
+							<li class="choice">1</li>
+							<li class="choice">2</li>
+							<li class="choice">3</li>
+							<li class="choice">4</li>
+							<li class="choice">5</li>
+							<li class="choice">6</li>
+							<li class="choice">7</li>
+
 						</ul>
+
 					</div>
-				</div>
-				<div class="question">
-					<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+					<div class="question">
+						<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Block">
-		<div class="block-header">Block</div>
-		<div class="question">
-			<div class="question-body">Have you suffered harm, such as lost data or access to accounts, as result of replacing or upgrading one of your devices or the software on it?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
+		<div class="Block">
+			<div class="block-header">Block: swap-device (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Have you suffered harm, such as lost data or access to accounts, as result of replacing or upgrading one of your devices or the software on it?&nbsp;(check <b>all</b>&nbsp;that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1496,31 +1641,36 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">What caused the harm?
+			<div class="question">
+				<div class="question-body">What caused the harm?</div>
 				<ul class="choices">
 					<li class="choice">Replacing the device</li>
 					<li class="choice">Upgrading or replacing software on the device</li>
 					<li class="choice">Other (please explain)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">What did you lose? (check <strong>all</strong> that apply)
+			<div class="question">
+				<div class="question-body">What did you lose? (check <strong>all</strong> that apply)</div>
 				<ul class="choices">
 					<li class="choice">Data on the device shared by many applications, such as documents or photos</li>
 					<li class="choice">Data within certain apps</li>
 					<li class="choice">Access to apps or services that the app had access to</li>
 					<li class="choice">Other (please explain)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long ago did this happen?
+			<div class="question">
+				<div class="question-body">How long ago did this happen?</div>
 				<ul class="choices">
 					<li class="choice">Within the past year (since one year ago today)</li>
 					<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1528,49 +1678,53 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 					<li class="choice">More than 10 years ago</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long did it take you to recover?
+			<div class="question">
+				<div class="question-body">How long did it take you to recover?</div>
 				<ul class="choices">
 					<li class="choice">Less than a day</li>
 					<li class="choice">Between a day and a week</li>
 					<li class="choice">More than a week but I eventually recovered</li>
 					<li class="choice">I never fully recovered</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+			<div class="question">
+				<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Block">
-		<div class="block-header">Block</div>
-		<div class="question">
-			<div class="question-body">Have you suffered harm, such as losing data, losing access to accounts, or having technology fail you when you really needed it, because a device, app, or other technology behaved in a way that you did not understand or expect, because it behaved differently from what was promised, or because it failed to live up to expectations for quality and reliability (it had defects or bugs)? (check&nbsp;<strong>all</strong> that apply)<br />
+		<div class="Block">
+			<div class="block-header">Block: disconnect (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Have you suffered harm, such as losing data, losing access to accounts, or having technology fail you when you really needed it, because a device, app, or other technology behaved in a way that you did not understand or expect, because it behaved differently from what was promised, or because it failed to live up to expectations for quality and reliability (it had defects or bugs)? (check&nbsp;<strong>all</strong> that apply)<br />
 <br />
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1581,22 +1735,26 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">What caused the harm?&nbsp;(check <b>all</b> that apply)
+			<div class="question">
+				<div class="question-body">What caused the harm?&nbsp;(check <b>all</b> that apply)</div>
 				<ul class="choices">
 					<li class="choice">The technology behaved in a way that I did not expect or understand (e.g., I had assumed data was automatically saved when it had not)</li>
 					<li class="choice">The technology broke a promise that it had made (e.g., an app reported that data was backed up when it was not)</li>
 					<li class="choice">There technology was unreliable or of low quality</li>
 					<li class="choice">Other (please explain)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">What harm did you suffer? (check <b>all</b>&nbsp;that apply)
+			<div class="question">
+				<div class="question-body">What harm did you suffer? (check <b>all</b>&nbsp;that apply)</div>
 				<ul class="choices">
 					<li class="choice">I lost data</li>
 					<li class="choice">I lost access to accounts or services</li>
@@ -1605,11 +1763,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">The technology put my safety in danger</li>
 					<li class="choice">The technology embarrassed me or made me look bad</li>
 					<li class="choice">Other (please explain)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long ago did this happen?
+			<div class="question">
+				<div class="question-body">How long ago did this happen?</div>
 				<ul class="choices">
 					<li class="choice">Within the past year (since one year ago today)</li>
 					<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1617,49 +1776,53 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 					<li class="choice">More than 10 years ago</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long did it take you to recover?
+			<div class="question">
+				<div class="question-body">How long did it take you to recover?</div>
 				<ul class="choices">
 					<li class="choice">Less than a day</li>
 					<li class="choice">Between a day and a week</li>
 					<li class="choice">More than a week but I eventually recovered</li>
 					<li class="choice">I never fully recovered</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
+			<div class="question">
+				<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
 			</div>
+
 		</div>
-	</div>
-	<div class="Block">
-		<div class="block-header">Block</div>
-		<div class="question">
-			<div class="question-body">Have the technologies you or others rely on been used to embarrass or harass you? (check&nbsp;<strong>all</strong> that apply)<br>
+		<div class="Block">
+			<div class="block-header">Block: abuse (block names not exposed to participants)</div>
+			<div class="question">
+				<div class="question-body">Have the technologies you or others rely on been used to embarrass or harass you? (check&nbsp;<strong>all</strong> that apply)<br>
 <br>
 <span style="font-size:11px;">Recall that the three experiences you described were:</span>
 <ol>
 	<li><span style="font-size:11px;"><i>participant's top harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's second harm</i></span></li>
 	<li><span style="font-size:11px;"><i>participant's third harm</i></span></li>
-</ol>
+</ol></div>
 				<ul class="choices">
 					<li class="choice">Yes, this happened as part of experience 1 above</li>
 					<li class="choice">Yes, this happened as part of experience 2 above</li>
@@ -1670,12 +1833,15 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Yes, but I did not describe it above because it should not rank among my three most harmful</li>
 					<li class="choice">No, but I do worry that this might happen to me in the future</li>
 					<li class="choice">No, and I do not worry that this might happen to me in the future</li>
+
 				</ul>
+			<div class="note">Skip to end of block if participant selects 				<span class="skip-option">No, but I do worry that this might happen to me in the future</span>
+, 				<span class="skip-option">No, and I do not worry that this might happen to me in the future</span>
+</div>
+
 			</div>
-		</div>
-		<div class="note">Skip to end of block if participant selects <span class="skip-option">No, but I do worry that this might happen to me in the future</span>, <span class="skip-option">No, and I do not worry that this might happen to me in the future</span></div>
-		<div class="question">
-			<div class="question-body">What caused the harm? (check <b>all</b> that apply)
+			<div class="question">
+				<div class="question-body">What caused the harm? (check <b>all</b> that apply)</div>
 				<ul class="choices">
 					<li class="choice">I used the technology in a way that I did not intend and that led to my embarrassment</li>
 					<li class="choice">I used the technology in a way that I did intend and that led to my embarrassment</li>
@@ -1683,11 +1849,12 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Others used technology in a way that unintentionally embarrassed me</li>
 					<li class="choice">Others used technology to intentionally embarrass me</li>
 					<li class="choice">Other (please explain)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long ago did this happen?
+			<div class="question">
+				<div class="question-body">How long ago did this happen?</div>
 				<ul class="choices">
 					<li class="choice">Within the past year (since one year ago today)</li>
 					<li class="choice">Within the past 3 years (but not within the past year)</li>
@@ -1695,51 +1862,56 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 					<li class="choice">Within the past 10 years (but not within the past 5 years)</li>
 					<li class="choice">More than 10 years ago</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
-		</div>
-		<div class="question">
-			<div class="question-body">How long did it take you to recover?
+			<div class="question">
+				<div class="question-body">How long did it take you to recover?</div>
 				<ul class="choices">
 					<li class="choice">Less than a day</li>
 					<li class="choice">Between a day and a week</li>
 					<li class="choice">More than a week but I eventually recovered</li>
 					<li class="choice">I never fully recovered</li>
 					<li class="choice">Other (please describe)</li>
+
 				</ul>
+
 			</div>
+			<div class="question likert">
+				<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?</div>
+				<ul class="choices">
+					<li class="choice">1</li>
+					<li class="choice">2</li>
+					<li class="choice">3</li>
+					<li class="choice">4</li>
+					<li class="choice">5</li>
+					<li class="choice">6</li>
+					<li class="choice">7</li>
+
+				</ul>
+
+			</div>
+			<div class="question">
+				<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<div class="Block">
+		<div class="block-header">Block: Demographics Base/Universal (block names not exposed to participants)</div>
+		<div class="question">
+			<div class="question-body">Almost done! Now we just need your year of birth, level of education, gender, and a final question about any discomfort with this survey.</div>
+
 		</div>
 		<div class="question">
-			<div class="question-body">Please rank the severity of the harm or loss on a scale of 1 (not harmful at all) to 7 (extremely harmful)?
-				<ul class="choices-likert">
-					<li class="choice-likert">1</li>
-					<li class="choice-likert">2</li>
-					<li class="choice-likert">3</li>
-					<li class="choice-likert">4</li>
-					<li class="choice-likert">5</li>
-					<li class="choice-likert">6</li>
-					<li class="choice-likert">7</li>
-				</ul>
-			</div>
+			<div class="question-body">What is your year of birth?</div>
+
 		</div>
 		<div class="question">
-			<div class="question-body">Is there anything more we should know about how this happened or the harm you suffered as a result?
-			</div>
-		</div>
-	</div>
-</div>
-<div class="Block">
-	<div class="block-header">Block</div>
-	<div class="question">
-		<div class="question-body">Almost done! Now we just need your year of birth, level of education, gender, and a final question about any discomfort with this survey.
-		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">What is your year of birth?
-		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">What is the highest level of school you have completed or the highest degree you have received?&nbsp;
+			<div class="question-body">What is the highest level of school you have completed or the highest degree you have received?&nbsp;</div>
 			<ul class="choices">
 				<li class="choice">Less than high school degree</li>
 				<li class="choice">High school graduate (high school diploma or equivalent including GED)</li>
@@ -1750,25 +1922,28 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 				<li class="choice">Doctoral degree</li>
 				<li class="choice">Professional degree (JD, MD)</li>
 				<li class="choice">Prefer not to answer</li>
+
 			</ul>
+
 		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">How do you describe yourself?
+		<div class="question">
+			<div class="question-body">How do you describe yourself?</div>
 			<ul class="choices">
 				<li class="choice">Male</li>
 				<li class="choice">Female</li>
 				<li class="choice">Non-binary / third gender</li>
 				<li class="choice">Prefer to self-describe</li>
 				<li class="choice">Prefer not to say</li>
+
 			</ul>
+
 		</div>
+
 	</div>
-</div>
-<div class="Block">
-	<div class="block-header">Block</div>
-	<div class="question">
-		<div class="question-body">Did you choose not complete any question or part of this study?
+	<div class="Block">
+		<div class="block-header">Block: Discomfort (block names not exposed to participants)</div>
+		<div class="question">
+			<div class="question-body">Did you choose not complete any question or part of this study?</div>
 			<ul class="choices">
 				<li class="choice">I chose to skip questions so I could complete this study faster.</li>
 				<li class="choice">I should not select this answer.</li>
@@ -1777,11 +1952,15 @@ The following questions&nbsp;<b>only</b>&nbsp;relate to harm that results from r
 				<li class="choice">I completed the this entire study despite significant discomfort.</li>
 				<li class="choice">I completed this entire study despite mild discomfort.</li>
 				<li class="choice">I completed this entire study with no discomfort.</li>
+
 			</ul>
+
 		</div>
-	</div>
-	<div class="question">
-		<div class="question-body">We are sorry that participating in this study caused some discomfort. We invite you to explain as much as you are comfortable sharing about&nbsp;your reason for discomfort.
+		<div class="question">
+			<div class="question-body">We are sorry that participating in this study caused some discomfort. We invite you to explain as much as you are comfortable sharing about&nbsp;your reason for discomfort.</div>
+
 		</div>
+
 	</div>
+
 </div>

@@ -6,7 +6,7 @@ main.survey-instrument {
 }
 
 main.survey-instrument .BlockRandomizer,
-main.survey-instrument .Group,
+main.survey-instrument .Group:not(:first-of-type),
 main.survey-instrument .Block {
   border-left: 2px solid gray;
   margin-left: 4px;
@@ -28,6 +28,18 @@ main.survey-instrument .question-body {
   margin-bottom: 0.5rem;
 }
 
+main.survey-instrument .likert ul {
+  display: flex;
+  flex-direction: row;
+}
+
+main.survey-instrument .likert ul li {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
 main.survey-instrument .note {
   display: inline-block;
   background-color: rgba(128,128, 128, 0.2);
@@ -39,3 +51,6 @@ main.survey-instrument .note {
   padding-right: 0.5rem;
 }
 
+main.survey-instrument .skip-option {
+  font-style: italic;
+}
