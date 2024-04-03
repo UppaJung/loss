@@ -1,4 +1,4 @@
-import { SurveyRoot, Choice, SurveyQuestion, SurveyBlockPayloadEntry, Flow, SurveyQuestionPayload, QuestionId, BlockId } from "./types.d.ts";
+import { SurveyRoot, Choice, SurveyQuestion, SurveyBlockPayloadEntry, Flow, QuestionId, BlockId } from "./types.d.ts";
 import { isSurveyBlock, isSurveyFlow, isSurveyQuestion } from "./type-guards.ts";
 
 export type FlowType = Exclude<Flow["Type"], "Standard" | "Root"> | "Block";
@@ -99,40 +99,12 @@ const getSortedQuestions = (
 
 const htmlEncode = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-
-// const choicesToMarkdown = ({Choices, ChoiceOrder}: SurveyQuestionPayload) => {
-// 	if (Choices == null) {
-// 		return "";
-// 	}
-// 	const choiceObjects = ChoiceOrder == null ? Object.values(Choices) :
-// 		ChoiceOrder.map( index => Choices[`${index}`]);
-// 	const choiceStrings = choiceObjects.map( (choice) => choice.Display );
-// 	if (choiceStrings.length === 7 &&
-// 		choiceStrings.filter( (s, index) => s == (index+1).toString()).length === 7) {
-// 			const spaces5 = "&nbsp;&nbsp;&nbsp;&nbsp;";
-// 		return `\n${spaces5}${spaces5} [ 1 ]${spaces5}[ 2 ]${spaces5}[ 3 ]${spaces5}[ 4 ]${spaces5}[ 5 ]${spaces5}[ 6 ]${spaces5}[ 7 ]&nbsp;&nbsp;&nbsp;`;
-// 	}
-// 	const choiceLines = '\n\n  - ' + choiceStrings.join('\n  - ');
-// 	return choiceLines;
-// }
-
-
-// const questionsToMd = (questions: AugmentedSurveyQuestion[]) => questions.map( q => {
-// 	const p = q.Payload;
-//   const skip = (q.skipToEndOfBlockIfChoices == null || q.skipToEndOfBlockIfChoices.length === 0) ? "" :
-//     `\n\nSkip to end of block if participant selects ${
-//       q.skipToEndOfBlockIfChoices.map( c => `\`${htmlEncode(c.Display)}\``).join(", ")
-//     }`;
-//   return `${p.QuestionText}${choicesToMarkdown(p)}${skip}`;
-// }).join("\n\n");
-
-
-export const surveyFormatterFactory = (callbacks: {
+export const surveyFormatterFactory = <RCHOICE, RQUESTION, RBLOCK>(callbacks: {
   onBlockRandomizer: (args: {depth: number, children: string[]}) => string,
   onGroup: (args: {depth: number, children: string[]}) => string,
-  onBlock: (args: {depth: number, description: string, children: string[]}) => string,
-  onQuestion: (args: {depth: number, children: string[], questionText: string, raw: AugmentedSurveyQuestion}) => string,
-  onChoice: (args: {depthOfQuestion: number, choiceString: string, choiceIndex: number, choice: Choice, allChoices: Choice[]}) => string,
+  onBlock: (args: {depth: number, description: string, children: RQUESTION[]}) => string,
+  onQuestion: (args: {depth: number, children: RCHOICE[], questionText: string, raw: AugmentedSurveyQuestion}) => RQUESTION,
+  onChoice: (args: {depthOfQuestion: number, choiceString: string, choiceIndex: number, choice: Choice, allChoices: Choice[]}) => RCHOICE,
 }) => {
   const recursive = (flowNode: FlowNode, depth: number): string => {
     if (flowNode.type === "BlockRandomizer") {
@@ -213,13 +185,6 @@ const htmlFormatter = surveyFormatterFactory({
           ).join(", ")
        )
     );
-    // ) html`${depthToTabs(depth)}<div class="question${isLikert7 ? ' likert' : ''}">${"\n"}${depthToTabs(depth + 1)
-    //   }<div class="question-body">${"\n"}${depthToTabs(depth + 2)
-    //     }${questionText}${"\n"}${depthToTabs(depth + 1)
-    //     }</div>${"\n"}${children.length == 0 ? "" :  `${depthToTabs(depth + 1)
-    //       }<ul class="choices">${"\n" + children.join("") + depthToTabs(depth + 1)}</ul>${"\n"}`
-    //     }${skip}${depthToTabs(depth)
-    //  }</div>${"\n"}`;
   },
 })
 const parseQsf = (path: string) => {
