@@ -1,4 +1,6 @@
-import * as QSF from "./types.d.ts";
+import * as QSF from "./types.ts";
+
+export const isNonNull = <T>(x: T | null | undefined): x is NonNullable<T> => x != null;
 
 export const ElementCodes = {
 	SurveyFlow: "FL",
