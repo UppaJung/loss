@@ -1,4 +1,4 @@
-import { TotalAnswered, tallyResponses } from "../../../common/tallyResponses.ts";
+import { TotalAnswered, TotalResponses, tallyResponses } from "../../../common/tallyResponses.ts";
 import { AugmentedSurveyResponses, AugmentedSurveyResponse } from "../../../survey-keys/index.ts";
 import { numeric, percentage } from "../../../common/numeric.ts";
 import type { SurveyKey } from "../../../survey-keys/index.ts";
@@ -26,14 +26,18 @@ export const LikertSeverityWithNoLossColors: Record<LikertOrNoLossLabel, string>
   [NoLossLabel]: `rgb(240, 240, 240)`
 };
 
-export const tallyLikert = (responses: AugmentedSurveyResponses<SurveyKey>, keys: SurveyKey[], filter?: (response: AugmentedSurveyResponse<SurveyKey>) => boolean) => {
-  const tallies = keys.map((key) => tallyResponses(responses.map(response => (filter == null || filter(response)) ? response[key] : NoLossLabel))
+export const tallyLikert = (
+  responses: AugmentedSurveyResponses<SurveyKey>,
+  keys: SurveyKey[],
+  filter?: (response: AugmentedSurveyResponse<SurveyKey>, key: SurveyKey) => boolean
+) => {
+  const tallies = keys.map((key) => tallyResponses(responses.filter( r => filter == null ? true : filter(r, key)).map(response => response[key]))
   );
   const counts = Object.fromEntries(
     LikertAndNoLossLabels.map(likertLabel => ([likertLabel, tallies.map(tally => numeric(tally[likertLabel]))]) as const)
   );
   const percentsOfResponses = Object.fromEntries(
-    LikertAndNoLossLabels.map(likertLabel => ([likertLabel, tallies.map(tally => percentage(tally[likertLabel], responses.length))]) as const)
+    LikertAndNoLossLabels.map(likertLabel => ([likertLabel, tallies.map(tally => percentage(tally[likertLabel], tally[TotalResponses]))]) as const)
   );
   const percentsOfAnswered = Object.fromEntries(
     LikertAndNoLossLabels.map(likertLabel => ([likertLabel, tallies.map(tally => percentage(tally[likertLabel], tally[TotalAnswered]))]) as const)

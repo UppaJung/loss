@@ -14,7 +14,7 @@ import { generateBlogInputs } from "./src/generate-blog-inputs/index.ts";
 generateBlogInputs();
 
 const site = lume({
-  location: new URL("https://example.com/"),
+  location: new URL("https://uharm.org/"),
 });
 
 site

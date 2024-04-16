@@ -2,15 +2,16 @@ import { SurveyKeyPilot6, SurveyKeysPilot6 } from "./pilot6.ts";
 import { SurveyKeyPilot7, SurveyKeysPilot7 } from "./pilot7.ts";
 import { SurveyKeyPilot8, SurveyKeysPilot8 } from "./pilot8.ts";
 import { SurveyKeyPilot9, SurveyKeysPilot9 } from "./pilot9.ts";
+import { SurveyKeyPilot11, SurveyKeysPilot11 } from "./pilot11.ts";
 
 type AugmentedResponseKeys = "participantId" | "startDate";
 
-export {SurveyKeysPilot6, SurveyKeysPilot7, SurveyKeysPilot8};
-export type { SurveyKeyPilot6, SurveyKeyPilot7, SurveyKeyPilot8, SurveyKeyPilot9 }
-export type SurveyKeyAll = SurveyKeyPilot6 | SurveyKeyPilot7 | SurveyKeyPilot8 | SurveyKeyPilot9 | AugmentedResponseKeys;
-export type SurveyKeyLatest = SurveyKeyPilot9 | AugmentedResponseKeys;
+export {SurveyKeysPilot6, SurveyKeysPilot7, SurveyKeysPilot8, SurveyKeysPilot9, SurveyKeysPilot11};
+export type { SurveyKeyPilot6, SurveyKeyPilot7, SurveyKeyPilot8, SurveyKeyPilot9, SurveyKeyPilot11 }
+export type SurveyKeyAll = SurveyKeyPilot6 | SurveyKeyPilot7 | SurveyKeyPilot8 | SurveyKeyPilot9 | SurveyKeyPilot11 | AugmentedResponseKeys;
+export type SurveyKeyLatest = SurveyKeyPilot11 | AugmentedResponseKeys;
 
-export const SurveyKeys = SurveyKeysPilot9;
+export const SurveyKeys = SurveyKeysPilot11;
 export type SurveyKey = SurveyKeyLatest;
 
 export type SurveyResponse<SURVEY_KEY extends SurveyKeyAll> = Record<SURVEY_KEY, string>;

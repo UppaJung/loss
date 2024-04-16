@@ -1,5 +1,7 @@
 export const TotalAnswered = '_totalAnswered';
 export type TotalAnswered = typeof TotalAnswered;
+export const TotalResponses = '_totalResponses';
+export type TotalResponses = typeof TotalResponses;
 
 /**
  * Given an array of values, create a map of each value to the number of times it appears in the array.
@@ -22,4 +24,4 @@ export const tallyResponses = <RESPONSE extends string>(
       res[TotalAnswered] = (res[TotalAnswered] ?? 0) + 1;
     }
     return res;
-  }, {} as Record<RESPONSE | TotalAnswered, number>);
+  }, {[TotalResponses]: responses.length} as Record<RESPONSE | TotalAnswered, number>);

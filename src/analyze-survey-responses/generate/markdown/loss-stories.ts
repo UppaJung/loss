@@ -4,10 +4,18 @@ import { makeSafeForMarkdown } from "../../common/makeSafeForMarkdown.ts";
 import { SurveyKey } from "../../survey-keys/index.ts";
 import { EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys } from "../../decode-questions/scenario-labels.ts";
 import { HarmScenarioLabelSurveyKeyPairs } from "../../decode-questions/scenario-labels.ts";
+import { decodeCalendarYearsSinceBirthFromBirthYearString } from "../../decode-questions/demographics.ts";
 
 const {warningHeaderHtml, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
-export const generateLossStoryMarkdown = (outPath: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
+export const generateLossStoryMarkdown = (
+	outPath: string,
+	responses: AugmentedSurveyResponses<SurveyKey>,
+	{
+		includeProlificIds
+	} : {
+		includeProlificIds?: boolean
+	} = {}) => {
 	const responseMd = responses.map( response => {
 		const lossesSafe = [SurveyKeys.Loss1, SurveyKeys.Loss2, SurveyKeys.Loss3].map( (key) => 
 			makeSafeForMarkdown(response[key])
@@ -24,7 +32,11 @@ export const generateLossStoryMarkdown = (outPath: string, responses: AugmentedS
 				`*Participant matched this with* **${matchingScenarios.join(", ")}**\n`;
 			return `${bulletNumberString}. ${matchingScenarioDescriptor}${lossSafe}${"\n"}`;
 		}).join("");
-		return `### Participant ${response.participantId}${"\n"}${lossBullets}${"\n"}`
+		const id = includeProlificIds ? ` (${response.PROLIFIC_PID})` : '';
+		const responseDurationSeconds = parseInt(response["Duration (in seconds)"]);
+		const responseTime = isNaN(responseDurationSeconds) ? '' : ` (${Math.floor(responseDurationSeconds/60)}:${(responseDurationSeconds % 60).toString().padStart(2, '0')})`;
+		const demographics = `${response.gender}, Age ${decodeCalendarYearsSinceBirthFromBirthYearString()(response.birthyear)}, ${response.education} ${responseTime}`;
+		return `### Participant ${response.participantId}: ${demographics}${id}${"\n"}${lossBullets}${"\n"}`
 	}).join("\n");
 
 	Deno.writeTextFileSync(`${outPath}/${codeFileNameWithoutExtension}.md`, warningHeaderHtml + responseMd);

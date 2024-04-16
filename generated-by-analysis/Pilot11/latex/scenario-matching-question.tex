@@ -1,0 +1,468 @@
+\newcommand*{\BreachedDeviceAnswered}{20}
+\newcommand*{\BreachedDeviceYes}{6}
+\newcommand*{\BreachedDeviceYesOutOf}{20}
+\newcommand*{\BreachedDeviceYesPercent}{30\%}
+\newcommand*{\BreachedDeviceYesExpr}{6 of 20 (30\%)}
+\newcommand*{\BreachedDeviceYesExprNoDenom}{6 (30\%)}
+\newcommand*{\BreachedDeviceNo}{14}
+\newcommand*{\BreachedDeviceNoOutOf}{20}
+\newcommand*{\BreachedDeviceNoPercent}{70\%}
+\newcommand*{\BreachedDeviceNoExpr}{14 of 20 (70\%)}
+\newcommand*{\BreachedDeviceNoExprNoDenom}{14 (70\%)}
+\newcommand*{\BreachedDeviceOriginal}{0}
+\newcommand*{\BreachedDeviceOriginalOutOf}{20}
+\newcommand*{\BreachedDeviceOriginalPercent}{0\%}
+\newcommand*{\BreachedDeviceOriginalExpr}{0 of 20 (0\%)}
+\newcommand*{\BreachedDeviceOriginalExprNoDenom}{0 (0\%)}
+\newcommand*{\BreachedDeviceRevised}{3}
+\newcommand*{\BreachedDeviceRevisedOutOf}{20}
+\newcommand*{\BreachedDeviceRevisedPercent}{15\%}
+\newcommand*{\BreachedDeviceRevisedExpr}{3 of 20 (15\%)}
+\newcommand*{\BreachedDeviceRevisedExprNoDenom}{3 (15\%)}
+\newcommand*{\BreachedDeviceNotWorst}{3}
+\newcommand*{\BreachedDeviceNotWorstOutOf}{20}
+\newcommand*{\BreachedDeviceNotWorstPercent}{15\%}
+\newcommand*{\BreachedDeviceNotWorstExpr}{3 of 20 (15\%)}
+\newcommand*{\BreachedDeviceNotWorstExprNoDenom}{3 (15\%)}
+\newcommand*{\BreachedDeviceCouldHappen}{9}
+\newcommand*{\BreachedDeviceCouldHappenOutOf}{20}
+\newcommand*{\BreachedDeviceCouldHappenPercent}{45\%}
+\newcommand*{\BreachedDeviceCouldHappenExpr}{9 of 20 (45\%)}
+\newcommand*{\BreachedDeviceCouldHappenExprNoDenom}{9 (45\%)}
+\newcommand*{\BreachedDeviceImpossible}{5}
+\newcommand*{\BreachedDeviceImpossibleOutOf}{20}
+\newcommand*{\BreachedDeviceImpossiblePercent}{25\%}
+\newcommand*{\BreachedDeviceImpossibleExpr}{5 of 20 (25\%)}
+\newcommand*{\BreachedDeviceImpossibleExprNoDenom}{5 (25\%)}
+\newcommand*{\LockedDeviceAnswered}{20}
+\newcommand*{\LockedDeviceYes}{6}
+\newcommand*{\LockedDeviceYesOutOf}{20}
+\newcommand*{\LockedDeviceYesPercent}{30\%}
+\newcommand*{\LockedDeviceYesExpr}{6 of 20 (30\%)}
+\newcommand*{\LockedDeviceYesExprNoDenom}{6 (30\%)}
+\newcommand*{\LockedDeviceNo}{14}
+\newcommand*{\LockedDeviceNoOutOf}{20}
+\newcommand*{\LockedDeviceNoPercent}{70\%}
+\newcommand*{\LockedDeviceNoExpr}{14 of 20 (70\%)}
+\newcommand*{\LockedDeviceNoExprNoDenom}{14 (70\%)}
+\newcommand*{\LockedDeviceOriginal}{2}
+\newcommand*{\LockedDeviceOriginalOutOf}{20}
+\newcommand*{\LockedDeviceOriginalPercent}{10\%}
+\newcommand*{\LockedDeviceOriginalExpr}{2 of 20 (10\%)}
+\newcommand*{\LockedDeviceOriginalExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedDeviceRevised}{2}
+\newcommand*{\LockedDeviceRevisedOutOf}{20}
+\newcommand*{\LockedDeviceRevisedPercent}{10\%}
+\newcommand*{\LockedDeviceRevisedExpr}{2 of 20 (10\%)}
+\newcommand*{\LockedDeviceRevisedExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedDeviceNotWorst}{2}
+\newcommand*{\LockedDeviceNotWorstOutOf}{20}
+\newcommand*{\LockedDeviceNotWorstPercent}{10\%}
+\newcommand*{\LockedDeviceNotWorstExpr}{2 of 20 (10\%)}
+\newcommand*{\LockedDeviceNotWorstExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedDeviceCouldHappen}{10}
+\newcommand*{\LockedDeviceCouldHappenOutOf}{20}
+\newcommand*{\LockedDeviceCouldHappenPercent}{50\%}
+\newcommand*{\LockedDeviceCouldHappenExpr}{10 of 20 (50\%)}
+\newcommand*{\LockedDeviceCouldHappenExprNoDenom}{10 (50\%)}
+\newcommand*{\LockedDeviceImpossible}{4}
+\newcommand*{\LockedDeviceImpossibleOutOf}{20}
+\newcommand*{\LockedDeviceImpossiblePercent}{20\%}
+\newcommand*{\LockedDeviceImpossibleExpr}{4 of 20 (20\%)}
+\newcommand*{\LockedDeviceImpossibleExprNoDenom}{4 (20\%)}
+\newcommand*{\BreachedAccountAnswered}{20}
+\newcommand*{\BreachedAccountYes}{5}
+\newcommand*{\BreachedAccountYesOutOf}{20}
+\newcommand*{\BreachedAccountYesPercent}{25\%}
+\newcommand*{\BreachedAccountYesExpr}{5 of 20 (25\%)}
+\newcommand*{\BreachedAccountYesExprNoDenom}{5 (25\%)}
+\newcommand*{\BreachedAccountNo}{15}
+\newcommand*{\BreachedAccountNoOutOf}{20}
+\newcommand*{\BreachedAccountNoPercent}{75\%}
+\newcommand*{\BreachedAccountNoExpr}{15 of 20 (75\%)}
+\newcommand*{\BreachedAccountNoExprNoDenom}{15 (75\%)}
+\newcommand*{\BreachedAccountOriginal}{2}
+\newcommand*{\BreachedAccountOriginalOutOf}{20}
+\newcommand*{\BreachedAccountOriginalPercent}{10\%}
+\newcommand*{\BreachedAccountOriginalExpr}{2 of 20 (10\%)}
+\newcommand*{\BreachedAccountOriginalExprNoDenom}{2 (10\%)}
+\newcommand*{\BreachedAccountRevised}{1}
+\newcommand*{\BreachedAccountRevisedOutOf}{20}
+\newcommand*{\BreachedAccountRevisedPercent}{5\%}
+\newcommand*{\BreachedAccountRevisedExpr}{1 of 20 (5\%)}
+\newcommand*{\BreachedAccountRevisedExprNoDenom}{1 (5\%)}
+\newcommand*{\BreachedAccountNotWorst}{2}
+\newcommand*{\BreachedAccountNotWorstOutOf}{20}
+\newcommand*{\BreachedAccountNotWorstPercent}{10\%}
+\newcommand*{\BreachedAccountNotWorstExpr}{2 of 20 (10\%)}
+\newcommand*{\BreachedAccountNotWorstExprNoDenom}{2 (10\%)}
+\newcommand*{\BreachedAccountCouldHappen}{13}
+\newcommand*{\BreachedAccountCouldHappenOutOf}{20}
+\newcommand*{\BreachedAccountCouldHappenPercent}{65\%}
+\newcommand*{\BreachedAccountCouldHappenExpr}{13 of 20 (65\%)}
+\newcommand*{\BreachedAccountCouldHappenExprNoDenom}{13 (65\%)}
+\newcommand*{\BreachedAccountImpossible}{2}
+\newcommand*{\BreachedAccountImpossibleOutOf}{20}
+\newcommand*{\BreachedAccountImpossiblePercent}{10\%}
+\newcommand*{\BreachedAccountImpossibleExpr}{2 of 20 (10\%)}
+\newcommand*{\BreachedAccountImpossibleExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedAccountAnswered}{20}
+\newcommand*{\LockedAccountYes}{7}
+\newcommand*{\LockedAccountYesOutOf}{20}
+\newcommand*{\LockedAccountYesPercent}{35\%}
+\newcommand*{\LockedAccountYesExpr}{7 of 20 (35\%)}
+\newcommand*{\LockedAccountYesExprNoDenom}{7 (35\%)}
+\newcommand*{\LockedAccountNo}{13}
+\newcommand*{\LockedAccountNoOutOf}{20}
+\newcommand*{\LockedAccountNoPercent}{65\%}
+\newcommand*{\LockedAccountNoExpr}{13 of 20 (65\%)}
+\newcommand*{\LockedAccountNoExprNoDenom}{13 (65\%)}
+\newcommand*{\LockedAccountOriginal}{2}
+\newcommand*{\LockedAccountOriginalOutOf}{20}
+\newcommand*{\LockedAccountOriginalPercent}{10\%}
+\newcommand*{\LockedAccountOriginalExpr}{2 of 20 (10\%)}
+\newcommand*{\LockedAccountOriginalExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedAccountRevised}{1}
+\newcommand*{\LockedAccountRevisedOutOf}{20}
+\newcommand*{\LockedAccountRevisedPercent}{5\%}
+\newcommand*{\LockedAccountRevisedExpr}{1 of 20 (5\%)}
+\newcommand*{\LockedAccountRevisedExprNoDenom}{1 (5\%)}
+\newcommand*{\LockedAccountNotWorst}{4}
+\newcommand*{\LockedAccountNotWorstOutOf}{20}
+\newcommand*{\LockedAccountNotWorstPercent}{20\%}
+\newcommand*{\LockedAccountNotWorstExpr}{4 of 20 (20\%)}
+\newcommand*{\LockedAccountNotWorstExprNoDenom}{4 (20\%)}
+\newcommand*{\LockedAccountCouldHappen}{10}
+\newcommand*{\LockedAccountCouldHappenOutOf}{20}
+\newcommand*{\LockedAccountCouldHappenPercent}{50\%}
+\newcommand*{\LockedAccountCouldHappenExpr}{10 of 20 (50\%)}
+\newcommand*{\LockedAccountCouldHappenExprNoDenom}{10 (50\%)}
+\newcommand*{\LockedAccountImpossible}{3}
+\newcommand*{\LockedAccountImpossibleOutOf}{20}
+\newcommand*{\LockedAccountImpossiblePercent}{15\%}
+\newcommand*{\LockedAccountImpossibleExpr}{3 of 20 (15\%)}
+\newcommand*{\LockedAccountImpossibleExprNoDenom}{3 (15\%)}
+\newcommand*{\BreachedSocialAnswered}{20}
+\newcommand*{\BreachedSocialYes}{8}
+\newcommand*{\BreachedSocialYesOutOf}{20}
+\newcommand*{\BreachedSocialYesPercent}{40\%}
+\newcommand*{\BreachedSocialYesExpr}{8 of 20 (40\%)}
+\newcommand*{\BreachedSocialYesExprNoDenom}{8 (40\%)}
+\newcommand*{\BreachedSocialNo}{12}
+\newcommand*{\BreachedSocialNoOutOf}{20}
+\newcommand*{\BreachedSocialNoPercent}{60\%}
+\newcommand*{\BreachedSocialNoExpr}{12 of 20 (60\%)}
+\newcommand*{\BreachedSocialNoExprNoDenom}{12 (60\%)}
+\newcommand*{\BreachedSocialOriginal}{5}
+\newcommand*{\BreachedSocialOriginalOutOf}{20}
+\newcommand*{\BreachedSocialOriginalPercent}{25\%}
+\newcommand*{\BreachedSocialOriginalExpr}{5 of 20 (25\%)}
+\newcommand*{\BreachedSocialOriginalExprNoDenom}{5 (25\%)}
+\newcommand*{\BreachedSocialRevised}{0}
+\newcommand*{\BreachedSocialRevisedOutOf}{20}
+\newcommand*{\BreachedSocialRevisedPercent}{0\%}
+\newcommand*{\BreachedSocialRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\BreachedSocialRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\BreachedSocialNotWorst}{3}
+\newcommand*{\BreachedSocialNotWorstOutOf}{20}
+\newcommand*{\BreachedSocialNotWorstPercent}{15\%}
+\newcommand*{\BreachedSocialNotWorstExpr}{3 of 20 (15\%)}
+\newcommand*{\BreachedSocialNotWorstExprNoDenom}{3 (15\%)}
+\newcommand*{\BreachedSocialCouldHappen}{9}
+\newcommand*{\BreachedSocialCouldHappenOutOf}{20}
+\newcommand*{\BreachedSocialCouldHappenPercent}{45\%}
+\newcommand*{\BreachedSocialCouldHappenExpr}{9 of 20 (45\%)}
+\newcommand*{\BreachedSocialCouldHappenExprNoDenom}{9 (45\%)}
+\newcommand*{\BreachedSocialImpossible}{3}
+\newcommand*{\BreachedSocialImpossibleOutOf}{20}
+\newcommand*{\BreachedSocialImpossiblePercent}{15\%}
+\newcommand*{\BreachedSocialImpossibleExpr}{3 of 20 (15\%)}
+\newcommand*{\BreachedSocialImpossibleExprNoDenom}{3 (15\%)}
+\newcommand*{\LockedSocialAnswered}{20}
+\newcommand*{\LockedSocialYes}{6}
+\newcommand*{\LockedSocialYesOutOf}{20}
+\newcommand*{\LockedSocialYesPercent}{30\%}
+\newcommand*{\LockedSocialYesExpr}{6 of 20 (30\%)}
+\newcommand*{\LockedSocialYesExprNoDenom}{6 (30\%)}
+\newcommand*{\LockedSocialNo}{14}
+\newcommand*{\LockedSocialNoOutOf}{20}
+\newcommand*{\LockedSocialNoPercent}{70\%}
+\newcommand*{\LockedSocialNoExpr}{14 of 20 (70\%)}
+\newcommand*{\LockedSocialNoExprNoDenom}{14 (70\%)}
+\newcommand*{\LockedSocialOriginal}{3}
+\newcommand*{\LockedSocialOriginalOutOf}{20}
+\newcommand*{\LockedSocialOriginalPercent}{15\%}
+\newcommand*{\LockedSocialOriginalExpr}{3 of 20 (15\%)}
+\newcommand*{\LockedSocialOriginalExprNoDenom}{3 (15\%)}
+\newcommand*{\LockedSocialRevised}{0}
+\newcommand*{\LockedSocialRevisedOutOf}{20}
+\newcommand*{\LockedSocialRevisedPercent}{0\%}
+\newcommand*{\LockedSocialRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\LockedSocialRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\LockedSocialNotWorst}{3}
+\newcommand*{\LockedSocialNotWorstOutOf}{20}
+\newcommand*{\LockedSocialNotWorstPercent}{15\%}
+\newcommand*{\LockedSocialNotWorstExpr}{3 of 20 (15\%)}
+\newcommand*{\LockedSocialNotWorstExprNoDenom}{3 (15\%)}
+\newcommand*{\LockedSocialCouldHappen}{8}
+\newcommand*{\LockedSocialCouldHappenOutOf}{20}
+\newcommand*{\LockedSocialCouldHappenPercent}{40\%}
+\newcommand*{\LockedSocialCouldHappenExpr}{8 of 20 (40\%)}
+\newcommand*{\LockedSocialCouldHappenExprNoDenom}{8 (40\%)}
+\newcommand*{\LockedSocialImpossible}{6}
+\newcommand*{\LockedSocialImpossibleOutOf}{20}
+\newcommand*{\LockedSocialImpossiblePercent}{30\%}
+\newcommand*{\LockedSocialImpossibleExpr}{6 of 20 (30\%)}
+\newcommand*{\LockedSocialImpossibleExprNoDenom}{6 (30\%)}
+\newcommand*{\BreachedFinancialAnswered}{20}
+\newcommand*{\BreachedFinancialYes}{8}
+\newcommand*{\BreachedFinancialYesOutOf}{20}
+\newcommand*{\BreachedFinancialYesPercent}{40\%}
+\newcommand*{\BreachedFinancialYesExpr}{8 of 20 (40\%)}
+\newcommand*{\BreachedFinancialYesExprNoDenom}{8 (40\%)}
+\newcommand*{\BreachedFinancialNo}{12}
+\newcommand*{\BreachedFinancialNoOutOf}{20}
+\newcommand*{\BreachedFinancialNoPercent}{60\%}
+\newcommand*{\BreachedFinancialNoExpr}{12 of 20 (60\%)}
+\newcommand*{\BreachedFinancialNoExprNoDenom}{12 (60\%)}
+\newcommand*{\BreachedFinancialOriginal}{7}
+\newcommand*{\BreachedFinancialOriginalOutOf}{20}
+\newcommand*{\BreachedFinancialOriginalPercent}{35\%}
+\newcommand*{\BreachedFinancialOriginalExpr}{7 of 20 (35\%)}
+\newcommand*{\BreachedFinancialOriginalExprNoDenom}{7 (35\%)}
+\newcommand*{\BreachedFinancialRevised}{0}
+\newcommand*{\BreachedFinancialRevisedOutOf}{20}
+\newcommand*{\BreachedFinancialRevisedPercent}{0\%}
+\newcommand*{\BreachedFinancialRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\BreachedFinancialRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\BreachedFinancialNotWorst}{1}
+\newcommand*{\BreachedFinancialNotWorstOutOf}{20}
+\newcommand*{\BreachedFinancialNotWorstPercent}{5\%}
+\newcommand*{\BreachedFinancialNotWorstExpr}{1 of 20 (5\%)}
+\newcommand*{\BreachedFinancialNotWorstExprNoDenom}{1 (5\%)}
+\newcommand*{\BreachedFinancialCouldHappen}{10}
+\newcommand*{\BreachedFinancialCouldHappenOutOf}{20}
+\newcommand*{\BreachedFinancialCouldHappenPercent}{50\%}
+\newcommand*{\BreachedFinancialCouldHappenExpr}{10 of 20 (50\%)}
+\newcommand*{\BreachedFinancialCouldHappenExprNoDenom}{10 (50\%)}
+\newcommand*{\BreachedFinancialImpossible}{2}
+\newcommand*{\BreachedFinancialImpossibleOutOf}{20}
+\newcommand*{\BreachedFinancialImpossiblePercent}{10\%}
+\newcommand*{\BreachedFinancialImpossibleExpr}{2 of 20 (10\%)}
+\newcommand*{\BreachedFinancialImpossibleExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedFinancialAnswered}{20}
+\newcommand*{\LockedFinancialYes}{6}
+\newcommand*{\LockedFinancialYesOutOf}{20}
+\newcommand*{\LockedFinancialYesPercent}{30\%}
+\newcommand*{\LockedFinancialYesExpr}{6 of 20 (30\%)}
+\newcommand*{\LockedFinancialYesExprNoDenom}{6 (30\%)}
+\newcommand*{\LockedFinancialNo}{14}
+\newcommand*{\LockedFinancialNoOutOf}{20}
+\newcommand*{\LockedFinancialNoPercent}{70\%}
+\newcommand*{\LockedFinancialNoExpr}{14 of 20 (70\%)}
+\newcommand*{\LockedFinancialNoExprNoDenom}{14 (70\%)}
+\newcommand*{\LockedFinancialOriginal}{3}
+\newcommand*{\LockedFinancialOriginalOutOf}{20}
+\newcommand*{\LockedFinancialOriginalPercent}{15\%}
+\newcommand*{\LockedFinancialOriginalExpr}{3 of 20 (15\%)}
+\newcommand*{\LockedFinancialOriginalExprNoDenom}{3 (15\%)}
+\newcommand*{\LockedFinancialRevised}{0}
+\newcommand*{\LockedFinancialRevisedOutOf}{20}
+\newcommand*{\LockedFinancialRevisedPercent}{0\%}
+\newcommand*{\LockedFinancialRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\LockedFinancialRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\LockedFinancialNotWorst}{3}
+\newcommand*{\LockedFinancialNotWorstOutOf}{20}
+\newcommand*{\LockedFinancialNotWorstPercent}{15\%}
+\newcommand*{\LockedFinancialNotWorstExpr}{3 of 20 (15\%)}
+\newcommand*{\LockedFinancialNotWorstExprNoDenom}{3 (15\%)}
+\newcommand*{\LockedFinancialCouldHappen}{10}
+\newcommand*{\LockedFinancialCouldHappenOutOf}{20}
+\newcommand*{\LockedFinancialCouldHappenPercent}{50\%}
+\newcommand*{\LockedFinancialCouldHappenExpr}{10 of 20 (50\%)}
+\newcommand*{\LockedFinancialCouldHappenExprNoDenom}{10 (50\%)}
+\newcommand*{\LockedFinancialImpossible}{4}
+\newcommand*{\LockedFinancialImpossibleOutOf}{20}
+\newcommand*{\LockedFinancialImpossiblePercent}{20\%}
+\newcommand*{\LockedFinancialImpossibleExpr}{4 of 20 (20\%)}
+\newcommand*{\LockedFinancialImpossibleExprNoDenom}{4 (20\%)}
+\newcommand*{\BreachedPasswordsAnswered}{20}
+\newcommand*{\BreachedPasswordsYes}{7}
+\newcommand*{\BreachedPasswordsYesOutOf}{20}
+\newcommand*{\BreachedPasswordsYesPercent}{35\%}
+\newcommand*{\BreachedPasswordsYesExpr}{7 of 20 (35\%)}
+\newcommand*{\BreachedPasswordsYesExprNoDenom}{7 (35\%)}
+\newcommand*{\BreachedPasswordsNo}{13}
+\newcommand*{\BreachedPasswordsNoOutOf}{20}
+\newcommand*{\BreachedPasswordsNoPercent}{65\%}
+\newcommand*{\BreachedPasswordsNoExpr}{13 of 20 (65\%)}
+\newcommand*{\BreachedPasswordsNoExprNoDenom}{13 (65\%)}
+\newcommand*{\BreachedPasswordsOriginal}{2}
+\newcommand*{\BreachedPasswordsOriginalOutOf}{20}
+\newcommand*{\BreachedPasswordsOriginalPercent}{10\%}
+\newcommand*{\BreachedPasswordsOriginalExpr}{2 of 20 (10\%)}
+\newcommand*{\BreachedPasswordsOriginalExprNoDenom}{2 (10\%)}
+\newcommand*{\BreachedPasswordsRevised}{1}
+\newcommand*{\BreachedPasswordsRevisedOutOf}{20}
+\newcommand*{\BreachedPasswordsRevisedPercent}{5\%}
+\newcommand*{\BreachedPasswordsRevisedExpr}{1 of 20 (5\%)}
+\newcommand*{\BreachedPasswordsRevisedExprNoDenom}{1 (5\%)}
+\newcommand*{\BreachedPasswordsNotWorst}{4}
+\newcommand*{\BreachedPasswordsNotWorstOutOf}{20}
+\newcommand*{\BreachedPasswordsNotWorstPercent}{20\%}
+\newcommand*{\BreachedPasswordsNotWorstExpr}{4 of 20 (20\%)}
+\newcommand*{\BreachedPasswordsNotWorstExprNoDenom}{4 (20\%)}
+\newcommand*{\BreachedPasswordsCouldHappen}{7}
+\newcommand*{\BreachedPasswordsCouldHappenOutOf}{20}
+\newcommand*{\BreachedPasswordsCouldHappenPercent}{35\%}
+\newcommand*{\BreachedPasswordsCouldHappenExpr}{7 of 20 (35\%)}
+\newcommand*{\BreachedPasswordsCouldHappenExprNoDenom}{7 (35\%)}
+\newcommand*{\BreachedPasswordsImpossible}{6}
+\newcommand*{\BreachedPasswordsImpossibleOutOf}{20}
+\newcommand*{\BreachedPasswordsImpossiblePercent}{30\%}
+\newcommand*{\BreachedPasswordsImpossibleExpr}{6 of 20 (30\%)}
+\newcommand*{\BreachedPasswordsImpossibleExprNoDenom}{6 (30\%)}
+\newcommand*{\LockedPasswordsAnswered}{20}
+\newcommand*{\LockedPasswordsYes}{7}
+\newcommand*{\LockedPasswordsYesOutOf}{20}
+\newcommand*{\LockedPasswordsYesPercent}{35\%}
+\newcommand*{\LockedPasswordsYesExpr}{7 of 20 (35\%)}
+\newcommand*{\LockedPasswordsYesExprNoDenom}{7 (35\%)}
+\newcommand*{\LockedPasswordsNo}{13}
+\newcommand*{\LockedPasswordsNoOutOf}{20}
+\newcommand*{\LockedPasswordsNoPercent}{65\%}
+\newcommand*{\LockedPasswordsNoExpr}{13 of 20 (65\%)}
+\newcommand*{\LockedPasswordsNoExprNoDenom}{13 (65\%)}
+\newcommand*{\LockedPasswordsOriginal}{2}
+\newcommand*{\LockedPasswordsOriginalOutOf}{20}
+\newcommand*{\LockedPasswordsOriginalPercent}{10\%}
+\newcommand*{\LockedPasswordsOriginalExpr}{2 of 20 (10\%)}
+\newcommand*{\LockedPasswordsOriginalExprNoDenom}{2 (10\%)}
+\newcommand*{\LockedPasswordsRevised}{0}
+\newcommand*{\LockedPasswordsRevisedOutOf}{20}
+\newcommand*{\LockedPasswordsRevisedPercent}{0\%}
+\newcommand*{\LockedPasswordsRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\LockedPasswordsRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\LockedPasswordsNotWorst}{5}
+\newcommand*{\LockedPasswordsNotWorstOutOf}{20}
+\newcommand*{\LockedPasswordsNotWorstPercent}{25\%}
+\newcommand*{\LockedPasswordsNotWorstExpr}{5 of 20 (25\%)}
+\newcommand*{\LockedPasswordsNotWorstExprNoDenom}{5 (25\%)}
+\newcommand*{\LockedPasswordsCouldHappen}{5}
+\newcommand*{\LockedPasswordsCouldHappenOutOf}{20}
+\newcommand*{\LockedPasswordsCouldHappenPercent}{25\%}
+\newcommand*{\LockedPasswordsCouldHappenExpr}{5 of 20 (25\%)}
+\newcommand*{\LockedPasswordsCouldHappenExprNoDenom}{5 (25\%)}
+\newcommand*{\LockedPasswordsImpossible}{8}
+\newcommand*{\LockedPasswordsImpossibleOutOf}{20}
+\newcommand*{\LockedPasswordsImpossiblePercent}{40\%}
+\newcommand*{\LockedPasswordsImpossibleExpr}{8 of 20 (40\%)}
+\newcommand*{\LockedPasswordsImpossibleExprNoDenom}{8 (40\%)}
+\newcommand*{\ReplacedDeviceOSAnswered}{20}
+\newcommand*{\ReplacedDeviceOSYes}{8}
+\newcommand*{\ReplacedDeviceOSYesOutOf}{20}
+\newcommand*{\ReplacedDeviceOSYesPercent}{40\%}
+\newcommand*{\ReplacedDeviceOSYesExpr}{8 of 20 (40\%)}
+\newcommand*{\ReplacedDeviceOSYesExprNoDenom}{8 (40\%)}
+\newcommand*{\ReplacedDeviceOSNo}{12}
+\newcommand*{\ReplacedDeviceOSNoOutOf}{20}
+\newcommand*{\ReplacedDeviceOSNoPercent}{60\%}
+\newcommand*{\ReplacedDeviceOSNoExpr}{12 of 20 (60\%)}
+\newcommand*{\ReplacedDeviceOSNoExprNoDenom}{12 (60\%)}
+\newcommand*{\ReplacedDeviceOSOriginal}{3}
+\newcommand*{\ReplacedDeviceOSOriginalOutOf}{20}
+\newcommand*{\ReplacedDeviceOSOriginalPercent}{15\%}
+\newcommand*{\ReplacedDeviceOSOriginalExpr}{3 of 20 (15\%)}
+\newcommand*{\ReplacedDeviceOSOriginalExprNoDenom}{3 (15\%)}
+\newcommand*{\ReplacedDeviceOSRevised}{0}
+\newcommand*{\ReplacedDeviceOSRevisedOutOf}{20}
+\newcommand*{\ReplacedDeviceOSRevisedPercent}{0\%}
+\newcommand*{\ReplacedDeviceOSRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\ReplacedDeviceOSRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\ReplacedDeviceOSNotWorst}{5}
+\newcommand*{\ReplacedDeviceOSNotWorstOutOf}{20}
+\newcommand*{\ReplacedDeviceOSNotWorstPercent}{25\%}
+\newcommand*{\ReplacedDeviceOSNotWorstExpr}{5 of 20 (25\%)}
+\newcommand*{\ReplacedDeviceOSNotWorstExprNoDenom}{5 (25\%)}
+\newcommand*{\ReplacedDeviceOSCouldHappen}{7}
+\newcommand*{\ReplacedDeviceOSCouldHappenOutOf}{20}
+\newcommand*{\ReplacedDeviceOSCouldHappenPercent}{35\%}
+\newcommand*{\ReplacedDeviceOSCouldHappenExpr}{7 of 20 (35\%)}
+\newcommand*{\ReplacedDeviceOSCouldHappenExprNoDenom}{7 (35\%)}
+\newcommand*{\ReplacedDeviceOSImpossible}{5}
+\newcommand*{\ReplacedDeviceOSImpossibleOutOf}{20}
+\newcommand*{\ReplacedDeviceOSImpossiblePercent}{25\%}
+\newcommand*{\ReplacedDeviceOSImpossibleExpr}{5 of 20 (25\%)}
+\newcommand*{\ReplacedDeviceOSImpossibleExprNoDenom}{5 (25\%)}
+\newcommand*{\BrokenPromiseAnswered}{20}
+\newcommand*{\BrokenPromiseYes}{9}
+\newcommand*{\BrokenPromiseYesOutOf}{20}
+\newcommand*{\BrokenPromiseYesPercent}{45\%}
+\newcommand*{\BrokenPromiseYesExpr}{9 of 20 (45\%)}
+\newcommand*{\BrokenPromiseYesExprNoDenom}{9 (45\%)}
+\newcommand*{\BrokenPromiseNo}{11}
+\newcommand*{\BrokenPromiseNoOutOf}{20}
+\newcommand*{\BrokenPromiseNoPercent}{55\%}
+\newcommand*{\BrokenPromiseNoExpr}{11 of 20 (55\%)}
+\newcommand*{\BrokenPromiseNoExprNoDenom}{11 (55\%)}
+\newcommand*{\BrokenPromiseOriginal}{7}
+\newcommand*{\BrokenPromiseOriginalOutOf}{20}
+\newcommand*{\BrokenPromiseOriginalPercent}{35\%}
+\newcommand*{\BrokenPromiseOriginalExpr}{7 of 20 (35\%)}
+\newcommand*{\BrokenPromiseOriginalExprNoDenom}{7 (35\%)}
+\newcommand*{\BrokenPromiseRevised}{0}
+\newcommand*{\BrokenPromiseRevisedOutOf}{20}
+\newcommand*{\BrokenPromiseRevisedPercent}{0\%}
+\newcommand*{\BrokenPromiseRevisedExpr}{0 of 20 (0\%)}
+\newcommand*{\BrokenPromiseRevisedExprNoDenom}{0 (0\%)}
+\newcommand*{\BrokenPromiseNotWorst}{2}
+\newcommand*{\BrokenPromiseNotWorstOutOf}{20}
+\newcommand*{\BrokenPromiseNotWorstPercent}{10\%}
+\newcommand*{\BrokenPromiseNotWorstExpr}{2 of 20 (10\%)}
+\newcommand*{\BrokenPromiseNotWorstExprNoDenom}{2 (10\%)}
+\newcommand*{\BrokenPromiseCouldHappen}{5}
+\newcommand*{\BrokenPromiseCouldHappenOutOf}{20}
+\newcommand*{\BrokenPromiseCouldHappenPercent}{25\%}
+\newcommand*{\BrokenPromiseCouldHappenExpr}{5 of 20 (25\%)}
+\newcommand*{\BrokenPromiseCouldHappenExprNoDenom}{5 (25\%)}
+\newcommand*{\BrokenPromiseImpossible}{6}
+\newcommand*{\BrokenPromiseImpossibleOutOf}{20}
+\newcommand*{\BrokenPromiseImpossiblePercent}{30\%}
+\newcommand*{\BrokenPromiseImpossibleExpr}{6 of 20 (30\%)}
+\newcommand*{\BrokenPromiseImpossibleExprNoDenom}{6 (30\%)}
+\newcommand*{\AbuseAnswered}{20}
+\newcommand*{\AbuseYes}{9}
+\newcommand*{\AbuseYesOutOf}{20}
+\newcommand*{\AbuseYesPercent}{45\%}
+\newcommand*{\AbuseYesExpr}{9 of 20 (45\%)}
+\newcommand*{\AbuseYesExprNoDenom}{9 (45\%)}
+\newcommand*{\AbuseNo}{11}
+\newcommand*{\AbuseNoOutOf}{20}
+\newcommand*{\AbuseNoPercent}{55\%}
+\newcommand*{\AbuseNoExpr}{11 of 20 (55\%)}
+\newcommand*{\AbuseNoExprNoDenom}{11 (55\%)}
+\newcommand*{\AbuseOriginal}{7}
+\newcommand*{\AbuseOriginalOutOf}{20}
+\newcommand*{\AbuseOriginalPercent}{35\%}
+\newcommand*{\AbuseOriginalExpr}{7 of 20 (35\%)}
+\newcommand*{\AbuseOriginalExprNoDenom}{7 (35\%)}
+\newcommand*{\AbuseRevised}{1}
+\newcommand*{\AbuseRevisedOutOf}{20}
+\newcommand*{\AbuseRevisedPercent}{5\%}
+\newcommand*{\AbuseRevisedExpr}{1 of 20 (5\%)}
+\newcommand*{\AbuseRevisedExprNoDenom}{1 (5\%)}
+\newcommand*{\AbuseNotWorst}{1}
+\newcommand*{\AbuseNotWorstOutOf}{20}
+\newcommand*{\AbuseNotWorstPercent}{5\%}
+\newcommand*{\AbuseNotWorstExpr}{1 of 20 (5\%)}
+\newcommand*{\AbuseNotWorstExprNoDenom}{1 (5\%)}
+\newcommand*{\AbuseCouldHappen}{4}
+\newcommand*{\AbuseCouldHappenOutOf}{20}
+\newcommand*{\AbuseCouldHappenPercent}{20\%}
+\newcommand*{\AbuseCouldHappenExpr}{4 of 20 (20\%)}
+\newcommand*{\AbuseCouldHappenExprNoDenom}{4 (20\%)}
+\newcommand*{\AbuseImpossible}{7}
+\newcommand*{\AbuseImpossibleOutOf}{20}
+\newcommand*{\AbuseImpossiblePercent}{35\%}
+\newcommand*{\AbuseImpossibleExpr}{7 of 20 (35\%)}
+\newcommand*{\AbuseImpossibleExprNoDenom}{7 (35\%)}

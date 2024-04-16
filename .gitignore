@@ -7,3 +7,5 @@ _bin
 /graphs
 /out
 out/
+
+/analysis-output-private/

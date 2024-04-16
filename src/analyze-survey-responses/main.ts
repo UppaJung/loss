@@ -44,6 +44,11 @@ const analyzeCohort = (responses: Record<SurveyKey, string>[], cohort: string) =
   const markdownPath = makePath(`generated-by-analysis/${cohort}/markdown`);
   generateLossStoryMarkdown(markdownPath, augmentedSurveyResponses);
 
+  // Generate markdown files with prolific IDs that must not be committed
+  // to the public repository
+  const privatePath = makePath(`analysis-output-private/${cohort}/markdown`);
+  generateLossStoryMarkdown(privatePath, augmentedSurveyResponses, {includeProlificIds: true});
+  
   // Generate latex macros
   const latexPath = makePath(`generated-by-analysis/${cohort}/latex`);
   generateScenarioMatchingQuestionMacros(latexPath, augmentedSurveyResponses);

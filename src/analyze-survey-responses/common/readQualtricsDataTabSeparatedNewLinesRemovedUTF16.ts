@@ -14,7 +14,7 @@ export const readQualtricsDataTabSeparatedNewLinesRemovedUTF16 = async (path: st
   const [idLine, _questionTextLine, _jsonHeaderLine, ...responseLines] = tabSeparatedDataFileAsString.split("\n");
 
   // Convert the tab-delimited line of question IDs into an array.
-  const idArray = idLine.split("\t");
+  const idArray = idLine.split("\t").map(id => id.trim());
 
   // Each line contains one participant's responses.
   // Transform each response into an Object mapping question IDs to response strings, and make an array of those for all participants.

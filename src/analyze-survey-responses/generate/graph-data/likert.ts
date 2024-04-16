@@ -8,7 +8,13 @@ import { ScenarioLabels, LikertHarmSurveyKeys } from "../../decode-questions/sce
 
 
 export const graphScenarioLikertBarChartData = (path: string, responses: AugmentedSurveyResponses<SurveyKey>) => {
-	const toExport = {labels: ScenarioLabels, ...tallyLikert(responses, LikertHarmSurveyKeys)};
+	const toExport = {
+		labels: ScenarioLabels,
+		...tallyLikert(
+			responses,
+			LikertHarmSurveyKeys,
+			(response, key) => (response[(key.slice(0, -4) + "?") as SurveyKey] ?? "").length > 0
+	)};
 	const {warningHeaderTs, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 	
 	Deno.writeTextFileSync(`${path}/${codeFileNameWithoutExtension}-data.ts`,
