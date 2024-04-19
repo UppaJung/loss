@@ -33,22 +33,15 @@ const parseQsf = (path: string) => {
   return {qsfObject, questions, blocks, rootFlow, questionsById, blocksById, flowTree, questionsInFlowOrder};
 }
 
-const defaultHeader = `---
-title: Survey Instrument
-type: supplement
-layout: layouts/survey.vto
-templateEngine: [vto]
-date: Git Last Modified
----
-`
+
 const parse = () => {
 	const {questions, blocks, rootFlow, flowTree, questionsInFlowOrder} = parseQsf("./src/survey-converter/loss.qsf");
 	Deno.mkdirSync("./src/survey-converter/out", {recursive: true});
 	Deno.writeTextFileSync("./src/survey-converter/out/questions-ordered.json",
 		JSON.stringify(questionsInFlowOrder, null, "\t")
 	);
-  Deno.writeTextFileSync("./survey.vto",
-    defaultHeader + toHtml(flowTree)
+  Deno.writeTextFileSync("./survey-content.vto",
+    toHtml(flowTree)
       .replaceAll("$\{q:\/\/QID2\/ChoiceTextEntryValue\}", '<i>participant\'s top harm</i>')
       .replaceAll("$\{q:\/\/QID5\/ChoiceTextEntryValue\}", '<i>participant\'s second harm</i>')
       .replaceAll("$\{q:\/\/QID6\/ChoiceTextEntryValue\}", '<i>participant\'s third harm</i>')

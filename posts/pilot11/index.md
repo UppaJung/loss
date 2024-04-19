@@ -25,7 +25,7 @@ Participant (PID ending 184) **Removed from data following message with particip
 > Hi. Before processing payment, I'm reviewing your response to the survey about online harms. Your written answers for the three worst instances of "harm or loss you have experienced" do not appear to be about anything you report to have experienced personally. When you connected other questions to those essay answers, we cannot make sense of them. For example, "the technologies you or others rely on [being] used to embarrass or harass you" does not seem to be part of "Reduced attention and symptoms of ADHD". Can you help us make sense of your response?
 
 
-Participant 20 (PID ending d78)
+Participant 19 (PID ending d78)
   - Replied that they had lost photos/videos, checking the cause as "A phone storing the photos/videos was stolen"
   - Replied no to "Have you had a personal electronic device stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised (hacked)?"
   - Replied that social was hacked in that "The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want" which associated with their written response "When my data was used to steal my identity and people were using my password and credentials to do criminal activities"
