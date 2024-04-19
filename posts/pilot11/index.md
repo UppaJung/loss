@@ -17,14 +17,13 @@ tags:
 
 **Due to a survey error*, the first 10 participants were only assigned (at random) to 2 of 3 loss-focused scenarios. (When we added mental health, a 2 choose 2 to randomize order became 3 choose 2). The percents of participants who responded to these are adjusted to be among only those who were asked.
 
-Participant (PID ending 184)
+Participant (PID ending 184) **Removed from data following message with participant**
   - Provide three things that were not personal harm descriptions for the three harms
   - Matched abuse and lost photos to items those descriptions that were not harms
   - Responded to lost emails: "Yes, and while I did not describe it above, I should have ranked it my most harmful", then, when asked how many emails were lost, responded "I have never lost any emails".
 
 > Hi. Before processing payment, I'm reviewing your response to the survey about online harms. Your written answers for the three worst instances of "harm or loss you have experienced" do not appear to be about anything you report to have experienced personally. When you connected other questions to those essay answers, we cannot make sense of them. For example, "the technologies you or others rely on [being] used to embarrass or harass you" does not seem to be part of "Reduced attention and symptoms of ADHD". Can you help us make sense of your response?
 
-** Removed from data following message with participant **
 
 Participant 20 (PID ending d78)
   - Replied that they had lost photos/videos, checking the cause as "A phone storing the photos/videos was stolen"
