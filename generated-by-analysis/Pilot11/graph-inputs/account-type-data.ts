@@ -14,13 +14,13 @@ export const data = {
 			"Compromised": {
 				"Original": [
 					0,
-					1,
+					2,
 					0,
-					1
+					2
 				],
 				"Revised": [
 					0,
-					1,
+					0,
 					0,
 					0
 				],
@@ -34,7 +34,7 @@ export const data = {
 			"Locked Out": {
 				"Original": [
 					0,
-					1,
+					2,
 					0,
 					1
 				],
@@ -47,8 +47,8 @@ export const data = {
 				"Not Worst": [
 					0,
 					2,
-					0,
-					2
+					1,
+					3
 				]
 			}
 		}
@@ -69,7 +69,7 @@ export const data = {
 				"Original": [
 					4,
 					1,
-					0,
+					1,
 					0,
 					0,
 					0,
@@ -87,7 +87,7 @@ export const data = {
 					0
 				],
 				"Not Worst": [
-					2,
+					3,
 					1,
 					0,
 					0,
@@ -119,7 +119,7 @@ export const data = {
 					0
 				],
 				"Not Worst": [
-					2,
+					4,
 					0,
 					1,
 					0,
@@ -147,7 +147,7 @@ export const data = {
 			"Compromised": {
 				"Original": [
 					3,
-					2,
+					3,
 					0,
 					0,
 					0,
@@ -175,7 +175,7 @@ export const data = {
 					0,
 					0,
 					0,
-					0,
+					1,
 					0
 				]
 			},
@@ -188,7 +188,7 @@ export const data = {
 					1,
 					0,
 					0,
-					2,
+					3,
 					0
 				],
 				"Revised": [
@@ -204,13 +204,13 @@ export const data = {
 				],
 				"Not Worst": [
 					0,
-					0,
-					0,
+					1,
 					0,
 					0,
 					1,
-					0,
 					1,
+					0,
+					2,
 					1
 				]
 			}

@@ -18,19 +18,19 @@ export const data = {
 	"Compromised": {
 		"Original": [
 			0,
+			1,
 			0,
 			0,
 			0,
 			0,
 			0,
-			0,
-			0,
+			1,
 			0,
 			0
 		],
 		"Revised": [
 			1,
-			1,
+			0,
 			0,
 			0,
 			0,
@@ -42,13 +42,13 @@ export const data = {
 		],
 		"Not Worst": [
 			0,
-			3,
+			4,
 			0,
 			0,
 			0,
 			0,
 			0,
-			0,
+			1,
 			0,
 			0
 		]
@@ -62,7 +62,7 @@ export const data = {
 			0,
 			0,
 			0,
-			0,
+			1,
 			0,
 			0
 		],

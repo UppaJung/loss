@@ -19,6 +19,7 @@ export const graphCompromisedVsLockedOutSeverity = <ANSWER extends AnswerToMatch
 	colors?: Record<ANSWER, string>,
 	xTitle?: string,
 	yTitle?: string,
+	maxY?: number,
 	chartOptions?: ChartOptions<"bar">
 	}, 
 ): string => {

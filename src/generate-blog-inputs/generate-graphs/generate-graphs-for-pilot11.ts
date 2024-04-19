@@ -72,6 +72,7 @@ export const generateGraphsPilot11 = (cohort: string = "Pilot11") => {
 		}, 
 		xTitle: "Scenario",
 		yTitle: "Percent of participants",
+		maxY: 100,
 	}));
 	writeSvg(`scenario-recency-bar-chart`, barChartWithSubBarsSvg({
 		xAxisCategoryLabels: ScenarioRecency.labels, subBarCategories: AnswerToRecencyQuestionList, data: ScenarioRecency.absoluteData,

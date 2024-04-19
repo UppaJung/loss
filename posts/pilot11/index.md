@@ -17,12 +17,14 @@ tags:
 
 **Due to a survey error*, the first 10 participants were only assigned (at random) to 2 of 3 loss-focused scenarios. (When we added mental health, a 2 choose 2 to randomize order became 3 choose 2). The percents of participants who responded to these are adjusted to be among only those who were asked.
 
-Participant 16 (PID ending 184)
+Participant (PID ending 184)
   - Provide three things that were not personal harm descriptions for the three harms
   - Matched abuse and lost photos to items those descriptions that were not harms
   - Responded to lost emails: "Yes, and while I did not describe it above, I should have ranked it my most harmful", then, when asked how many emails were lost, responded "I have never lost any emails".
 
 > Hi. Before processing payment, I'm reviewing your response to the survey about online harms. Your written answers for the three worst instances of "harm or loss you have experienced" do not appear to be about anything you report to have experienced personally. When you connected other questions to those essay answers, we cannot make sense of them. For example, "the technologies you or others rely on [being] used to embarrass or harass you" does not seem to be part of "Reduced attention and symptoms of ADHD". Can you help us make sense of your response?
+
+** Removed from data following message with participant **
 
 Participant 20 (PID ending d78)
   - Replied that they had lost photos/videos, checking the cause as "A phone storing the photos/videos was stolen"
@@ -38,6 +40,19 @@ They replied:
 > Yes I had phone stolen and it was my designated company work phone. It was stolen from my car. I selected no I do not worry about this happening in the future because I no longer have a work phone because my company discontinued that program. I hope that makes sense
 
 Perhaps we should ask who the "someone I knew" is in these situations.
+
+
+Participant 21, perhaps a lost opportunity in matching (missed broken promise)
+
+Participant 23 had odd matchings (maybe age related at 67?), missed broken promise
+
+Participant 24, not great matchings (missed broken promise)
+
+Participant 28, lots of work-related (not personal) stories
+
+
+**Theme**, broken promise seems to be written in a way that isn't leading to matches.
+
 
 ## Results
 

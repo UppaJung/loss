@@ -11,16 +11,16 @@ export const gender = {
 		"Prefer not to say"
 	],
 	"tallies": {
-		"_totalResponses": 20,
-		"Female": 8,
-		"_totalAnswered": 20,
-		"Male": 10,
+		"_totalResponses": 29,
+		"Female": 12,
+		"_totalAnswered": 29,
+		"Male": 15,
 		"Non-binary/third": 1,
 		"Prefer not to say": 1
 	},
 	"data": [
-		10,
-		8,
+		15,
+		12,
 		1,
 		0,
 		1
@@ -36,17 +36,17 @@ export const genderPercent = {
 	],
 	"tallies": {
 		"_totalResponses": 100,
-		"Female": 40,
-		"Male": 50,
-		"Non-binary/third": 5,
-		"Prefer not to say": 5
+		"Female": 41.37931034482759,
+		"Male": 51.724137931034484,
+		"Non-binary/third": 3.4482758620689653,
+		"Prefer not to say": 3.4482758620689653
 	},
 	"data": [
-		50,
-		40,
-		5,
+		51.724137931034484,
+		41.37931034482759,
+		3.4482758620689653,
 		0,
-		5
+		3.4482758620689653
 	]
 } as const;
 export const education = {
@@ -62,23 +62,23 @@ export const education = {
 		"Decline to Answer"
 	],
 	"tallies": {
-		"_totalResponses": 20,
-		"Some College": 4,
-		"_totalAnswered": 20,
-		"Bachelor's": 4,
+		"_totalResponses": 29,
+		"Some College": 7,
+		"_totalAnswered": 29,
+		"Bachelor's": 6,
 		"Doctoral": 1,
-		"High School": 4,
-		"Associate": 2,
+		"High School": 6,
+		"Associate": 4,
 		"Master's": 3,
 		"Professional": 1,
 		"< High School": 1
 	},
 	"data": [
 		1,
+		6,
+		7,
 		4,
-		4,
-		2,
-		4,
+		6,
 		3,
 		1,
 		1,
@@ -99,24 +99,24 @@ export const educationPercent = {
 	],
 	"tallies": {
 		"_totalResponses": 100,
-		"Some College": 20,
-		"Bachelor's": 20,
-		"Doctoral": 5,
-		"High School": 20,
-		"Associate": 10,
-		"Master's": 15,
-		"Professional": 5,
-		"< High School": 5
+		"Some College": 24.137931034482758,
+		"Bachelor's": 20.689655172413794,
+		"Doctoral": 3.4482758620689653,
+		"High School": 20.689655172413794,
+		"Associate": 13.793103448275861,
+		"Master's": 10.344827586206897,
+		"Professional": 3.4482758620689653,
+		"< High School": 3.4482758620689653
 	},
 	"data": [
-		5,
-		20,
-		20,
-		10,
-		20,
-		15,
-		5,
-		5,
+		3.4482758620689653,
+		20.689655172413794,
+		24.137931034482758,
+		13.793103448275861,
+		20.689655172413794,
+		10.344827586206897,
+		3.4482758620689653,
+		3.4482758620689653,
 		0
 	]
 } as const;

@@ -1,11 +1,12 @@
 import { generateScenarioMatchingQuestionMacros } from "./generate/latex-data-macros/scenario-matching-question.ts";
 import { getPathOfMostRecentInputTsvFile } from "./common/getPathOfMostRecentInputTsvFile.ts";
 import { readQualtricsDataTabSeparatedNewLinesRemovedUTF16 } from "./common/readQualtricsDataTabSeparatedNewLinesRemovedUTF16.ts";
-import { SurveyKey, augmentSurveyResponses } from "./survey-keys/index.ts";
+import { SurveyKey, SurveyKeys, augmentSurveyResponses } from "./survey-keys/index.ts";
 import { generateLossStoryMarkdown } from "./generate/markdown/loss-stories.ts";
 import { generateSummaryStatistics } from "./generate/lume-data/summary-statistics.ts";
 import { generateGraphData } from "./generate/graph-data/index.ts";
 import { generateFreeTextMacros } from "./generate/lume-data/free-text.ts";
+import { responseIdsToRemove } from "./generate/graph-data/data-adjustments.ts";
 
 const getResponsesFromMostRecentInputDataFile = async () => {
   const fileInfo = await getPathOfMostRecentInputTsvFile();
@@ -27,10 +28,16 @@ const analyzeCohort = (responses: Record<SurveyKey, string>[], cohort: string) =
   // Filter out unfinished responses
   const finishedResponses = responses.filter(response => (response.Finished ?? "").toLocaleLowerCase() === "true");
 
-  // Augment responses with participantId and startDate
-  const augmentedSurveyResponses = augmentSurveyResponses(finishedResponses);
+  // Filter out bogus responses
+  const filteredResponses = finishedResponses.filter(response =>
+    !responseIdsToRemove.has(response[SurveyKeys.ResponseId]));
+  const numberFiltered = finishedResponses.length - filteredResponses.length;
+  console.log(`Removed ${numberFiltered} responses deemed invalid.`)
 
-  console.log(`Analyzing ${cohort} with ${finishedResponses.length} finished responses of ${responses.length} total.`);
+  // Augment responses with participantId and startDate
+  const augmentedSurveyResponses = augmentSurveyResponses(filteredResponses);
+
+  console.log(`Analyzing ${cohort} with ${filteredResponses.length} finished responses of ${responses.length} total.`);
 
   // Generate data for graphs (which are generated later, outside of git tracked data, so as not to pollute the git repository)
   generateGraphData(cohort, augmentedSurveyResponses);

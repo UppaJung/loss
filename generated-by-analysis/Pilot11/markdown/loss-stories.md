@@ -121,22 +121,14 @@ Another significant harm I&#39;ve experienced due to technology was the loss of 
 3. My dad got replaced by an automatic system at his work so he was out of a job for more than 2 weeks since nobody would hire him at the time. We suffered a lot and then he started drinking heavily because of it, can&#39;t help but wonder if I&#39;d be in a better position if they didn&#39;t screw him out a job.
 
 
-### Participant 16: Male, Age 57, Bachelor's degree in college (4-5 year)  (17:15)
-1. *Participant matched this with* **Abuse**
-Reduced attention and symptoms of ADHD, extensive screen time and digital media use, especially among children and adolescents, has been linked to attention problems and ADHD-like symptoms. The repetitive attentional shifts and multitasking involved in technology use may impair executive functioning and the brain&#39;s ability to rest in its default mode.
-2. *Participant matched this with* **Lost Photos**
-Service disruptions and loss of business, technological failures or glitches in critical infrastructure and digital services can lead to service disruptions that result in significant losses for businesses. This includes lost revenue, inability to serve customers, and damage to a company&#39;s reputation.
-3. Property damage and liability claims: Businesses can face property damage claims  accidentally damage a customer&#39;s equipment or assets during installation or service. There are also liability risks from injuries
-
-
-### Participant 17: Male, Age 32, Master's degree  (26:26)
+### Participant 16: Male, Age 32, Master's degree  (26:26)
 1. *Participant matched this with* **Breached Financial**
 I was part of the Sony security leak which occurred around the year 2012, where users had their credit card information leaked. I wasn&#39;t aware of the leak until I tried to use my debit card and it was declined due to insufficient funds. Eventually, the stolen money was returned to the balance on my account and I received a new card.
 2. I was over-reliant on my phone reminding me of an important task: a scheduled meeting with members of the governing board. Though the phone gave me a background notification, it never gave an audible notification or interrupted what I was doing to remind me, it simply blended into the rest of the notifications on my phone. This caused embarrassment as well as missed opportunity to convey needed information to the board.
 3. I was writing a final exam for my English 102 class in my first year of college, and I hadn’t saved it in several hours, but as I was finishing up the editing process, Microsoft Word crashed and I lost ~4 hours of work.
 
 
-### Participant 18: Female, Age 43, High school graduate (high school diploma or equivalent including GED)  (31:07)
+### Participant 17: Female, Age 43, High school graduate (high school diploma or equivalent including GED)  (31:07)
 1. *Participant matched this with* **Mental Health**
 I think I was addicted to World of Warcraft years ago. when the Burning Crusade came out I was so enmeshed into it I let a lot of real life things go. I had pet birds and I literally forgot to feed them for a few days and they died. I would wake up and start gaming and game all day and into the night where I would pass out at my computer. I still feel terrible talking about this and it happened almost 20 years ago. it is one of the worst things I did in my life and I am so ashamed of it that I lied about what happened and now that I am older I wont let my kids have pet birds because of the trauma.
 2. *Participant matched this with* **Abuse, Mental Health**
@@ -145,7 +137,7 @@ I have a teen daughter and some of the other girls at her school made memes abou
 a couple of years ago my bank account was hacked and cleared out. it was a pain. I had to spend a lot of time to prove that I am really me (to the bank) and that I wasnt in another state making purchases at multiple stores while I was at work. they treated me like I was the criminal trying to scam them! it took over a month to get everything sorted but it was extremely frustrating and it wasted a lot of my time. it really made me mad and it still does that the fake debit card they used had a &quot;&quot;broken&quot;&quot; strip so people had to manually enter it. those stores never checked ID for that. it seems like it would have been common sense to do that to me.
 
 
-### Participant 19: Male, Age 44, High school graduate (high school diploma or equivalent including GED)  (30:47)
+### Participant 18: Male, Age 44, High school graduate (high school diploma or equivalent including GED)  (30:47)
 1. I have developed carpal tunnel syndrome and some eye damage due to lighting
 2. *Participant matched this with* **Breached Financial, Mental Health**
 i have developed some anxiety
@@ -153,9 +145,91 @@ i have developed some anxiety
 I have developed some mental distress dealing with people on social media
 
 
-### Participant 20: Male, Age 28, Master's degree  (14:00)
+### Participant 19: Male, Age 28, Master's degree  (14:00)
 1. *Participant matched this with* **Breached Social, Locked Social, Breached Financial, Broken Promise, Lost Photos, Lost Emails, Mental Health**
 When my data was used to steal my identity and people were using my password and credentials to do criminal activities
 2. When a battery pack in my EV car disconnected and I lossed sudden power in my car and I almost got into a wreck going down a hill
 3. When a battery pack exploded on my backpack and almost started a fire
+
+
+### Participant 20: Male, Age 47, Bachelor's degree in college (4-5 year)  (14:35)
+1. *Participant matched this with* **Breached Financial**
+I had my debit card information stolen on a golf course by a beverage cart employee.  I noticed I had charges for a hotel in Paris and some other charges outside the country.  I had to call and get my card cancelled and fortunately my money was reimbursed.  I called the golf course and that employee apparently left the job.
+2. *Participant matched this with* **Broken Promise**
+A computer that I had bought, after a couple years quit working.  It wasn&#39;t the biggest deal in the world but it was annoying and I had to buy another one.
+3. My credit union was hacked by some computer hacker and the online banking was down for over a week.  As far as I know, none of personal data was compromised and I didn&#39;t lose any money but it was frustrating not to be able to handle banking needs online and I had to go and wait in long lines to get services done.
+
+
+### Participant 21: Female, Age 42, Associate degree in college (2-year)  (13:38)
+1. Once a long time ago I took my car to be service and it was required that I pay a fee to have an electronic diagnostic completed. The diagnostic made an error determining what the problem was with my vehicle and I paid for work that never needed to be completed. I had to argue with the manager of the station for them to correct the problem.
+2. Once when I was dealing with Ebay, an unauthorized charge was made using my pay pal account. When I called Ebay, they said they couldn&#39;t do anything about it and when I contacted PayPal they said the same thing. It was a hassle that took a long time to resolve.
+3. *Participant matched this with* **Lost Photos**
+Once, several years ago, when I purchased a new phone and needed to transfer my data from the old phone to the new phone the transfer capability&#39;s did not work as intended.  As a result, I lost a lot of pictures and phone numbers that I did NOT want to lose.
+
+
+### Participant 22: Male, Age 29, High school graduate (high school diploma or equivalent including GED)  (18:37)
+1. *Participant matched this with* **Mental Health**
+well social media was the key to the harm because it allows people to talk recklessly and it started a back and forth fight with a previous friend i had. the fact you can hide behind a computer gives people the ability to feel untouchable.
+2. *Participant matched this with* **Mental Health**
+second most harmful situation would be getting addicted to the game runescape. although it doesnt cause physical harm it did develop into a mental addiction. all i cared about was playing the game and my grades dropped because of it.
+3. *Participant matched this with* **Mental Health**
+constantly seeing negative news article or posts by people on social media.
+
+
+### Participant 23: Male, Age 67, Some college but no degree  (23:03)
+1. *Participant matched this with* **Lost Photos, Mental Health**
+We get severe storms here. Watching the weather is very important. We stream so the internet connection is very important. The connection was lost and then so were we. we did not know whether to shelter in place or not.
+2. *Participant matched this with* **Locked Device, Broken Promise, Mental Health**
+Right in the middle of a doctors visit on the web, our router decides it is going to act up. No doctor no more. We had to reset the router and then all the internet settings to get connected again and then wait for another tele-doc appointment.
+3. *Participant matched this with* **Locked Financial, Abuse, Mental Health**
+We were paying a bill at the dentist office ($4500) with our debit card. Well it was declined and caused us great embarrassment. We had to drive to the bank, withdraw cash and then drive back to the dentist office.
+
+
+### Participant 24: Male, Age 25, Some college but no degree  (29:02)
+1. The worst one for me was my computer breaking down and being unable to turn on. This prevented me from doing my schoolwork and halted my academics.
+2. *Participant matched this with* **Lost Photos**
+My phone being lost was pretty harmful to me since I was not able to back up the pictures from that phone and so I lost so many pictures and videos that I can never get back.
+3. My television fell and completely broke the screen. This made me have to buy a new television since I had no other at the time that was of similar quality.
+
+
+### Participant 25: Male, Age 31, Some college but no degree  (35:04)
+1. *Participant matched this with* **Lost Photos, Mental Health**
+When my computer I depended on stopped working
+2. My laptop stopped working
+3. *Participant matched this with* **Mental Health**
+My Xbox wouldn&#39;t come on
+
+
+### Participant 26: Male, Age 43, Bachelor's degree in college (4-5 year)  (32:34)
+1. *Participant matched this with* **Broken Promise**
+There was a day I went for grocery shopping. i had picked the items on my list but couldn&#39;t make payment because my card was malfunction at the point. Hence, I had to drop the items because my card was the only payment option available then.
+2. *Participant matched this with* **Broken Promise**
+I experienced an internet downtime during an important virtual meeting with the top staffs of the organization I was working with. I was super frustrated. It took a while before it was restored.
+3. *Participant matched this with* **Breached Account, Locked Account, Broken Promise, Mental Health**
+I remember I was a victim of cybercrime few years ago. The password to one of my accounts was hacked and personal information was accessed
+
+
+### Participant 27: Female, Age 25, High school graduate (high school diploma or equivalent including GED)  (18:44)
+1. *Participant matched this with* **Breached Account, Breached Social, Broken Promise, Lost Photos**
+One time I had one of my social media accounts compromised. Someone had gained unauthorized access to my account and locked me out of my own account. I had no way of getting back into my account. They changed my whole account and erased all of my information and used my account as their own. I lost all my followers and media I had posted on it previously. I was using this account fairly frequently too.
+2. *Participant matched this with* **Abuse, Mental Health**
+One time I was harassed by an unknown social media user. They sent me endless threatening messages and images to my instant messages. I experienced psychological and emotional harm due to the content they had repeatedly sent to me during this time. I had to take a break from social media following their harassment of me. This was also on an account I used frequently.
+3. *Participant matched this with* **Broken Promise, Mental Health**
+One time I was relying on my old laptop to help me complete a critical assignment that was due for one of my classes that night. The computer ended up freezing, crashing and shutting down. I lost all of my work and was unable to submit my assignment and get the credit I so desperately needed for my class. I experience severe psychological and emotional harm because of my dependence on this piece of technology to help me complete my assignment properly.
+
+
+### Participant 28: Female, Age 40, Bachelor's degree in college (4-5 year)  (40:36)
+1. *Participant matched this with* **Broken Promise**
+My research associates and I had one dedicated computer that could not be connected to the network at the location because of security reasons. Alot of data was stored on this laptop over time.  We kept intending to back it up with an external harddrive but never really got around to it.  This persisted for several months, until the amount of data stored in this file was decently large.  Then one day, a new research assistant accidentally copied over the file. All our data was lost.  It took us weeks to reenter all the information, in a more secure manner this time.  However, some of the data was irreplaceable.  It had a significant impact on several of our projects and they had to be restarted in order to have the correct data to analysize.
+2. *Participant matched this with* **Breached Device**
+Our databases were compromised by an outside threat.  The database contained information that was covered under HIPPA.  We spent a week contacting the individuals to let them know that their information may have been breached.  We also had to increase of digital security after the breach.
+3. *Participant matched this with* **Breached Passwords, Abuse, Lost Emails**
+All my passwords were compromised by a disgruntled employee.  The IT employee left on unfriendly terms and wanted to punish the management.  He was able to gain access to several files and delete important information. Nothing was lost, but it took a considerable amount of time and effort to create them again, and address the security issues. It was very frustrating time.
+
+
+### Participant 29: Female, Age 36, Associate degree in college (2-year)  (48:52)
+1. the most harmful tech-related harm or loss I&#39;ve experienced happhened 3 years ago. I&#39;d just gotten my laptop brand new to begin a side hustle online. I was on several platforms similar to Prolific, when I accepted to participate in a study that paid better than most studies. It required me to download a broser extension and it turned out to be a malicious extension that really did a number on my computer, encypting the hard drive then locking me out, ultimately. I had to pay $230 to get the storage partitioned and have a professional reinstall Windows, from a USB drive on my device to use the &#39;clean&#39; section on it.
+2. The community college I attended used our SSNs as our student ID numbers at the time I was attending. A couple years after graduating, I received a letter in the mail that notified me that my name, DOB, and SSN had been accidentally emailed to a about 2000 other students. It wasn&#39;t exclusively my details, but a list of about 300 students&#39; details. I haven&#39;t incurred a direct loss yet, but I do believe thaIt the random notifications I got later on, that someone had made a credit inquiry with my details, was related to this incident.
+3. *Participant matched this with* **Breached Device, Mental Health**
+My ex and I had a relatively solid relationship at first, but due to our own self esteem issues and insecurities, we let our paranoias about each other having social media or the ability to easily cheat completely destroy our relationship.
 
