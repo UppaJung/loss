@@ -1,5 +1,4 @@
 import { getMultipleAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
-import { getAnswerDecoderAndLabels } from "../common/getAnswerDecoderAndLabels.ts";
 import type { SurveyKey } from "../survey-keys/index.ts";
 import { EventScenarioLabel } from "./scenario-labels.ts";
 
@@ -69,13 +68,36 @@ export const AnswersIndicatingParticipantExperiencedScenario = [
 ] as const;
 export type AnswerIndicatingParticipantExperiencedScenario = typeof AnswersIndicatingParticipantExperiencedScenario[number];
 
-export const [decodeMatchingQuestion] = getAnswerDecoderAndLabels([
-  ["experience", AnswerToMatchingQuestion.MatchedThreeWorst],
-  ["should have ranked it my", AnswerToMatchingQuestion.RevisedToAddToThreeWorst],
-  ["should not rank among my three most harmful", AnswerToMatchingQuestion.BelowTopThree],
-  ["I do worry", AnswerToMatchingQuestion.CouldHappen],
-  ["I do not worry", AnswerToMatchingQuestion.Impossible],
-]);
+export const decodeMatchingQuestion = (answer: string): AnswerToMatchingQuestion | undefined => {
+  const answers = decodeExperienceMatchingQuestion(answer);
+  if (
+    answers.includes(ExperienceMatchingAnswer.OriginallyMostHarmful) ||
+    answers.includes(ExperienceMatchingAnswer.OriginallySecondMostHarmful) ||
+    answers.includes(ExperienceMatchingAnswer.OriginallyThirdMostHarmful)
+  ) {
+    return AnswerToMatchingQuestion.MatchedThreeWorst;
+  } else if (
+    answers.includes(ExperienceMatchingAnswer.RetrospectivelyMostHarmful) ||
+    answers.includes(ExperienceMatchingAnswer.RetrospectivelySecondMostHarmful) ||
+    answers.includes(ExperienceMatchingAnswer.RetrospectivelyThirdMostHarmful)
+  ) {
+    return AnswerToMatchingQuestion.RevisedToAddToThreeWorst;
+  } else if (answers.includes(ExperienceMatchingAnswer.NotAmongMostHarmful)) {
+    return AnswerToMatchingQuestion.BelowTopThree;
+  } else if (answers.includes(ExperienceMatchingAnswer.CouldHappen)) {
+    return AnswerToMatchingQuestion.CouldHappen;
+  } else if (answers.includes(ExperienceMatchingAnswer.Impossible)) {
+    return AnswerToMatchingQuestion.Impossible;
+  }
+  return;
+}
+// export const [decodeMatchingQuestion] = getMultipleAnswerDecoderAndLabels([
+//   ["experience", AnswerToMatchingQuestion.MatchedThreeWorst],
+//   ["should have ranked it my", AnswerToMatchingQuestion.RevisedToAddToThreeWorst],
+//   ["should not rank among my three most harmful", AnswerToMatchingQuestion.BelowTopThree],
+//   ["I do worry", AnswerToMatchingQuestion.CouldHappen],
+//   ["I do not worry", AnswerToMatchingQuestion.Impossible],
+// ]);
 
 export enum PairedScenario {
   Device = 'Device',

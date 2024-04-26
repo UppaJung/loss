@@ -8,4 +8,4 @@ tags:
   - stories
 ---
 
-{{ include "../../generated-by-analysis/Pilot10/markdown/loss-stories.md" }}
+{{ include "../../generated-by-analysis/Pilot11/markdown/loss-stories.md" }}

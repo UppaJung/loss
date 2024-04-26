@@ -19,7 +19,6 @@ import { scatterPlotSvg } from "../graphs/scatter-plot-svg.ts";
 import { SeverityColorsGreatestToLeast } from "../../analyze-survey-responses/generate/graph-data/common/likert.ts";
 import { lineChartSvg } from "../graphs/chart-svg.ts";
 import { barChartSvg } from "../graphs/chart-svg.ts";
-import { rgb24 } from "lume/deps/colors.ts";
 
 export const generateGraphsPilot11 = (cohort: string = "Pilot11") => {
 	const outputPath = makePath(`./graphs/${cohort}`);

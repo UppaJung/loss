@@ -14,7 +14,7 @@ export const getAgeScenariosMatchedScatterPlotData = (path: string, responses: A
 		}
 		const scenariosMatched = EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys.reduce( (result, [_, surveyKey]) => {
 			const answer = decodeMatchingQuestion(response[surveyKey]);
-			if ((AnswersIndicatingParticipantExperiencedScenario as readonly (AnswerToMatchingQuestion | undefined)[]).includes(answer)) {
+			if (answer != null && (AnswersIndicatingParticipantExperiencedScenario as readonly (AnswerToMatchingQuestion | undefined)[]).includes(answer)) {
 				result++;
 			}
 			return result;

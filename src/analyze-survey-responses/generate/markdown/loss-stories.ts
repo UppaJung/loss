@@ -5,6 +5,8 @@ import { SurveyKey } from "../../survey-keys/index.ts";
 import { EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys } from "../../decode-questions/scenario-labels.ts";
 import { HarmScenarioLabelSurveyKeyPairs } from "../../decode-questions/scenario-labels.ts";
 import { decodeCalendarYearsSinceBirthFromBirthYearString } from "../../decode-questions/demographics.ts";
+import { decodeExperienceMatchingQuestion } from "../../decode-questions/index.ts";
+import { ExperienceMatchingAnswer } from "../../decode-questions/matching-question.ts";
 
 const {warningHeaderHtml, codeFileNameWithoutExtension} = getReflectedCodeFileInfo({'import.meta.url': import.meta.url});
 
@@ -20,10 +22,12 @@ export const generateLossStoryMarkdown = (
 		const lossesSafe = [SurveyKeys.Loss1, SurveyKeys.Loss2, SurveyKeys.Loss3].map( (key) => 
 			makeSafeForMarkdown(response[key])
 		);
-		const lossBullets = lossesSafe.map( (lossSafe, index) => {
-			const bulletNumberString = `${index + 1}`;
+		const lossBullets = lossesSafe.map( (lossSafe, lossIndex) => {
+			const bulletNumberString = `${lossIndex + 1}`;
+			const originalThree = [ExperienceMatchingAnswer.OriginallyMostHarmful, ExperienceMatchingAnswer.OriginallySecondMostHarmful, ExperienceMatchingAnswer.OriginallyThirdMostHarmful] as const
+			const matchLossIndex = originalThree[lossIndex];
 			const matchingScenarios = [...EventScenarioLabelsPairedWithMatchingQuestionSurveyKeys, ...HarmScenarioLabelSurveyKeyPairs].reduce( (r, [label, surveyKey]) => {
-				if (response[surveyKey].indexOf(bulletNumberString) !== -1) {
+				if (decodeExperienceMatchingQuestion(response[surveyKey]).includes(matchLossIndex)) {
 					r.push(label);
 				}
 				return r;
