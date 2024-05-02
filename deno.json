@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.2/"
+    "lume/": "https://deno.land/x/lume@v2.1.4/"
   },
   "lock": false,
   "tasks": {
@@ -11,7 +11,7 @@
     "build-uharm-org": "deno task lume --location=https://uharm.org/",
     "parse-survey": "deno run --allow-read --allow-write src/survey-converter/qsf.ts",
     "serve": "deno task lume -s",
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -"
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -"
   },
   "lint": {
     "rules": {
