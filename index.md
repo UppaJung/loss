@@ -10,20 +10,20 @@ Your feedback can change what we ask on our next survey! Please post suggestions
 </div>
 
 <h3>Why don't we know how often security technologies backfire?</h3>
-We started this research with the observation that we know far less about the scale of harm we collectively suffer from security technologies backfiring against us than we do about security technologies failing to protect us from others (breaches). For example, we know more about the prevalence with which people's email or social accounts are broken into than the prevalence with which people are permanently locked out of these accounts.
+We started this research because we know far less about the scale of harm we collectively suffer from security technologies backfiring against us than we do about security technologies failing to protect us from others (breaches). For example, we know more about the prevalence with which people's email or social accounts are broken into than the prevalence with which people are permanently locked out of these accounts.
 
-Backfires are rarely reported or measured because, unlike breaches, there is no legislation requiring their reporting; most backfires impact one user at a time, at a scale too small to be newsworthy; and users often blame themselves. The companies that build and deploy security technologies rarely suffer consequences when their products backfire—measuring backfires could only call attention to a technology's potential for harm, making fewer willing to use them. Yet, security technologies can cause as much harm when they backfire as when they are breached; they can prevent us from accessing and services at times of critical need, or even permanently.
+Backfires are rarely reported or measured because, unlike breaches, there is no legislation requiring their reporting. Further, most backfires impact one user at a time, at a scale too small to be newsworthy, and users often blame themselves. Yet, security technologies can cause as much harm when they backfire as when they are breached; they can prevent us from accessing and services at times of critical need, or they can lock us out permanently. The companies that build and deploy security technologies rarely suffer consequences when their products backfire. These companies are reluctant to measure backfires, and are even more reluctant to report their measurements, as doing so would call attention to their product's potential for harm, leading fewer people to use them. The potential for security technology to backfire will not be addressed unless outsiders draw attention it, or compel companies to report incidents of backfiring.
 
-As our research team set out to gauge the prevalence with which security technologies backfire, and the scale of the collective harm that results, we realized we lacked a baseline for the prevalence and harm we collectively suffer from all the ways in which we have come to rely on technology and how it can fail us. And so, we designed a survey to investigate two complementary questions:
+As our research team set out to gauge the prevalence with which security technologies backfire, and the scale of the collective harm that results, we encountered a challenge: we lacked a baseline for the prevalence and harm we collectively suffer from all the ways in which we have come to rely on technology and how it can fail us. And so, we expanded our survey to answer two complementary questions:
 
 <style>
 	ol ol { list-style-type: lower-alpha; } and ol ol ol { list-style-type: lower-roman; }
 </style>
 <ol>
-<li>What are the worst experiences people have with technology failing us, being used against us, or otherwise causing harm?</li>
+<li>What is the collective harm of technology failing us, being used against us, or otherwise causing harm?</li>
 <li>What is the prevalence and collective harm caused by security technologies backfiring...
 		<ol>
-		<li>as compared to the harms that result from those technologies being breached, and</li>
+		<li>as compared to the harms that result from those technologies failing to protect us from breaches, and</li>
 		<li>as compared to the broader harms that result from technology failing us, being used against us, or otherwise causing harm?</li>
 		</ol>
 </li>
