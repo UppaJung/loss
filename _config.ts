@@ -8,14 +8,30 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import pageFind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import feed from "lume/plugins/feed.ts";
+//import footnotes from "https://deno.land/x/lume_markdown_plugins/footnotes.ts";
+
+import footnote from "npm:markdown-it-footnote";
+import anchor from "npm:markdown-it-anchor";
 
 // Generate graphs that need not be stored in the repository but are needed for the blog.
 import { generateBlogInputs } from "./src/generate-blog-inputs/index.ts";
 generateBlogInputs();
 
+
+const markdown = {
+  plugins: [
+    [anchor, { level: 3}],
+    footnote,
+  ],
+};
 const site = lume({
   location: new URL("https://uharm.org/"),
+}, {
+  markdown
 });
+
+// site.hooks.addMarkdownItPlugin(anchor, { level: 2 });
+// site.hooks.addMarkdownItPlugin(footnote);
 
 site
   .ignore("README.md")
@@ -23,6 +39,7 @@ site
   .ignore("/generated-by-analysis")
   .copy("img")
   .copy("graphs")
+//  .use(footnotes())
   .use(postcss())
   .use(date())
   .use(codeHighlight())
