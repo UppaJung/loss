@@ -38,7 +38,7 @@ As our research team set out to gauge the prevalence with which security technol
 We surveyed people to ask about 13 harm events they may or may not have suffered, as well as three harms that need not be attributed to a single specific event.
 
 <figure>
-	<img src="/graphs/pilot11/scenario-harm-likert-percent.svg" alt="TBD"/>
+	<img src="/graphs/Pilot11/scenario-harm-likert-percent.svg" alt="TBD"/>
 	<figcaption>The percent of <i>pilot</i> participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right). Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar). Each bar is broken down into colors by the Likert severity of harm each participant reported on a Likert scale.</figcaption><b>Figure 1</b>	
 </figure>
 
@@ -66,7 +66,7 @@ Some of those events and harms, such as the one about mental health[^mental], we
 One might wonder whether participants would have attributed the same significance to these events and harms significant had we not prompted them with questions about them and asked them to rate them on a 7-point scale. This is why, prior to introducing these events and harms, we began our survey by asking participants simply to describe, without prompting, "the three most harmful technology-related harms or losses" they had experienced. When we later asked about each of the 13 events and 3 harms specific to our survey, we asked participants if they included the event or harm as part of three worst harms they had described unprompted, or whether, in retrospect, they should have included it. See Figure 2 which reveals, for example, that every one of the pilot participants who reported mental-health harms connected this concern back to one of the their initial three experiences they described in free responses.
 
 <figure>
-  <img src="/graphs/pilot11/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
+  <img src="/graphs/Pilot11/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
   <figcaption>The percent of <i>pilot</i> participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right). Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar). Each bar is broken down into colors based on whether the participant connected the experience/harm to one of the three worst experiences they described at the start of the study ("original"), whether they said they should have included the experience/harm as one of their three worst ("revised"), or whether it did not warrant a position in their top three ("not worst"). Those that had suffered the experience/harm are broken down into those who believe the harm could or could not happen to them.</figcaption><b>Figure 2</b>
 </figure>
 
