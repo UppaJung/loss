@@ -14,6 +14,8 @@ Your feedback can change what we ask on our next survey! Please post suggestions
 </div>
 <div>&nbsp;</div>
 
+## Research Questions
+
 ### How much harm results from the security technologies we rely on backfiring against us?
 We started this research because we know far less about the scale of harm we collectively suffer from security technologies backfiring against us than we do about security technologies failing to protect us from others (breaches). For example, we know more about the prevalence with which people's email or social accounts are broken into than the prevalence with which people are permanently locked out of these accounts.
 
@@ -37,7 +39,7 @@ As our research team set out to gauge the prevalence with which security technol
 </li>
 </ol> -->
 
-## Our research approach
+## Research Approach
 
 We [surveyed](/design) participants via Prolific to ask about 16 topics: 13 harm events they may or may not have suffered, as well as three harms that need not be attributed to a single specific event.
 
@@ -51,7 +53,7 @@ We asked about both breach events and backfire events for the security protectin
   - (3/4) email accounts,
   - (5/6) social media accounts,
   - (7/8) financial accounts, and 
-  - (9/10) stored passwords (password manager accounts)—a total of ten events (five breach events each paired with a backfire event).
+  - (9/10) stored passwords (password manager accounts).
 	
 We also asked about three events that were not specifically security related and did not have breach/backfire pairings:
   - (11) losing data when replacing a device (e.g., upgrading a phone),
@@ -76,7 +78,15 @@ One might wonder whether participants would have attributed the same significanc
 
 For more details, see our [full survey](/design) and the [full set of reports and graphs from our most-recent pilot](/posts/pilot11).
 
+## We Need Your Help!
 
+**Help us improve our survey *before* we run our full study**. Unlike traditional peer review, provided after participants have taken the time and effort to participate and researchers have paid them, your feedback can help us revise our survey *before* we share it with participants.
 
+We believe science should be more open, transparent, and collaborative. That's why we've shared the [history](/pilots) of our pilot studies, [all of our data analysis tools and blogging tools](https://github.com/UppaJung/loss)[^qsf-code], and why we're sharing our work before submitting it for publication so that we can get community feedback.[^scooped]
 
+[^qsf-code]: That includes the [code](https://github.com/UppaJung/loss/tree/main/src/survey-converter) that turns exported Qualtrics surveys (`.qsf` files) into the beautiful HTML you see [here](/design).
 
+[^scooped]: Too many researchers are afraid to get feedback and seek collaboration out of fears of getting "scooped". As an alternative to secrecy, we would like to promote the approach of sharing ideas early, often, and in public view.
+
+<!-- Hack to add space before footnotes -->
+<div style="height: 3rem;">&nbsp</div>
