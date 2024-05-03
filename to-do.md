@@ -3,9 +3,9 @@ title: To-do list and design questions
 layout: layouts/home.vto
 templateEngine: [vto, md]
 date: Git Last Modified
-menu:
-  visible: true
-  title: To do
+# menu:
+#   visible: true
+#   title: To do
 ---
 
 ### Language consistency
