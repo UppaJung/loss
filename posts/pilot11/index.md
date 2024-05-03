@@ -1,5 +1,5 @@
 ---
-title: Pilot 11
+title: Pilot 11 Updates
 # author: <a href="https://www.stuartschechter.org">Stuart</a>
 templateEngine: [vto, md]
 date: Git Last Modified
@@ -8,98 +8,57 @@ tags:
   - methodology
 ---
 
-[Qualtrics](https://harvard.az1.qualtrics.com/survey-builder/SV_4VJxxO9vcLYIN2C)
+Authorized members of the research team can access the [Qualtrics survey](https://harvard.az1.qualtrics.com/survey-builder/SV_4VJxxO9vcLYIN2C) here. Others can see the survey contents [here](/design).
 
+Stuart manually read all 30 responses, [took notes](./stuarts-data-notes), identified two participants to follow-up with, and removed one participant who appeared not to have participated in good faith. All messages and responses are in those [notes](./stuarts-data-notes).
 
-### New in this pilot
+## New in this pilot
 
-### Data notes
+We added a new topic: mental-health harm.
 
-**Due to a survey error*, the first 10 participants were only assigned (at random) to 2 of 3 loss-focused scenarios. (When we added mental health, a 2 choose 2 to randomize order became 3 choose 2). The percents of participants who responded to these are adjusted to be among only those who were asked.
+After a large number of responses in Pilot 10 that appeared to be automated, disingenuous, or otherwise not provided in good faith, we noted in both the Prolific advertisement and the consent form that we would be manually reviewing every response before approving it and releasing compensation.
 
-Participant (PID ending 184) **Removed from data following message with participant**
-  - Provide three things that were not personal harm descriptions for the three harms
-  - Matched abuse and lost photos to items those descriptions that were not harms
-  - Responded to lost emails: "Yes, and while I did not describe it above, I should have ranked it my most harmful", then, when asked how many emails were lost, responded "I have never lost any emails".
-
-> Hi. Before processing payment, I'm reviewing your response to the survey about online harms. Your written answers for the three worst instances of "harm or loss you have experienced" do not appear to be about anything you report to have experienced personally. When you connected other questions to those essay answers, we cannot make sense of them. For example, "the technologies you or others rely on [being] used to embarrass or harass you" does not seem to be part of "Reduced attention and symptoms of ADHD". Can you help us make sense of your response?
-
-
-Participant 19 (PID ending d78)
-  - Replied that they had lost photos/videos, checking the cause as "A phone storing the photos/videos was stolen"
-  - Replied no to "Have you had a personal electronic device stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised (hacked)?"
-  - Replied that social was hacked in that "The account was used by someone I knew with my permission, but they used it in a way that they knew I would not want" which associated with their written response "When my data was used to steal my identity and people were using my password and credentials to do criminal activities"
-  - Yet, seems to have put effort in. Took time to write "Tons of my friends were sent thousands of spam messages from my account and I had to warn them about it"
-  - "The account was used by someone I knew without my permission"
-
-I sent.
-> Thanks for participating in our survey. I am writing to request a clarification. When asked how you had lost photos/videos, you checked "A phone storing the photos/videos was stolen". When asked "Have you had a personal electronic device stolen, used by someone without your permission, used in a way that you did not permit or later regretted permitting, or otherwise compromised (hacked)", you selected "No, and I do not worry that this might happen to me in the future". Can you clarify whether you had a phone stolen and help us resolve this inconsistency?
-
-They replied:
-> Yes I had phone stolen and it was my designated company work phone. It was stolen from my car. I selected no I do not worry about this happening in the future because I no longer have a work phone because my company discontinued that program. I hope that makes sense
-
-Perhaps we should ask who the "someone I knew" is in these situations.
-
-
-Participant 21, perhaps a lost opportunity in matching (missed broken promise)
-
-Participant 23 had odd matchings (maybe age related at 67?), missed broken promise
-
-Participant 24, not great matchings (missed broken promise)
-
-Participant 28, lots of work-related (not personal) stories
-
-
-**Theme**, broken promise seems to be written in a way that isn't leading to matches.
-
+We increased the payment to $4.50 per participant as the median time to take the survey increased from 15 to 20 minutes.
 
 ## Results
 
-There were {{ data.numberOfParticipants }} participants in this pilot.  We paid more ($4.50) since the survey now takes a median of ~15 minutes. We learned that the great majority of people have lost photos and emails. Loss, it seems, is expected. This seems to capture something that our event-focused scenarios do not.
+There were {{ data.numberOfParticipants }} participants in this pilot. 
 
-The new event-focused scenarios seem to capture a good deal of what our old event-focused scenarios missed.
+**Due to a survey error**, the first 10 participants were only assigned (at random) to 2 of 3 loss-focused scenarios. (When we added mental health, a 2 choose 2 to randomize order became 3 choose 2). The percents of participants who responded to these are adjusted to be among only those who were asked about the harm.
+
+We were so surprised that over 80\% of participants linked the mental health topic back to one of their three-worst tech harms that we manually checked the data. Participants 1, 7, and 8 were not asked about mental health due to the survey error impacting the first 10 participants. Of the 26 others asked, one can see from the [loss stories](./loss-stories.md) (and the raw survey data that we double-checked) that 22 did indeed connect mental health back to their three worst harms.
 
 Participants started by writing [loss stories](./loss-stories.md) about the three worst technology-related harms they had experienced. 
 
-We then told participants we would "describe technology-related harms that that have happened to others, and ask if they have also happened to" them.
 
+<!-- <figure><img src="/graphs/Pilot11/harm-likert-absolute.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot11/harm-likert-percent.svg" alt=""/></figure> -->
 
-
-<!-- ----------------------------------------------------- -->
-<details>
-<summary>New Graphs</summary>
-
-<figure><img src="/graphs/Pilot11/harm-likert-absolute.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot11/harm-likert-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot11/lost-photos-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot11/lost-emails-percent.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot11/lost-photos-percent-cdf.svg" alt=""/></figure>
-<figure><img src="/graphs/Pilot11/lost-emails-percent-cdf.svg" alt=""/></figure>
-
-</details>
-<!-- ----------------------------------------------------- -->
 
 <!-- ----------------------------------------------------- -->
 <details>
 <summary>Summary Across Scenarios</summary>
 
 <figure>
-  <img src="/graphs/Pilot11/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
-  <figcaption>The percent of participants who had experienced each harm scenario. Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar).</figcaption>
+  <img src="/graphs/Pilot11/scenario-harm-likert-percent.svg" alt="TBD"/>
+  <figcaption>The percent of <i>pilot</i> participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right). Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar). Each bar is broken down into colors by the Likert severity of harm each participant reported on a Likert scale.</figcaption>
 </figure>
-<figure><img src="/graphs/Pilot11/scenario-harm-likert-absolute.svg" alt="TBD"/></figure>
-<figure><img src="/graphs/Pilot11/scenario-harm-likert-percent.svg" alt="TBD"/></figure>
+<figure>
+  <img src="/graphs/Pilot11/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm event."/>
+  <figcaption>The percent of <i>pilot</i> participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right). Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar). Each bar is broken down into colors based on whether the participant connected the experience/harm to one of the three worst experiences they described at the start of the study ("original"), whether they said they should have included the experience/harm as one of their three worst ("revised"), or whether it did not warrant a position in their top three ("not worst"). Those that had suffered the experience/harm are broken down into those who believe the harm could or could not happen to them.</figcaption>
+</figure>
+<!-- <figure><img src="/graphs/Pilot11/scenario-harm-likert-absolute.svg" alt="TBD"/></figure> -->
 
 When participants reported having suffered one of the described scenarios, we asked them how recently they had experienced it.
 
 <figure>
   <img src="/graphs/Pilot11/scenario-recency-bar-chart.svg" alt="A bar chart summarizing how recently participants who had experienced each harm scenario."/>
-  <figcaption>The absolute number of participants who had experienced each harm scenario for each level of recency.</figcaption>
+  <figcaption>The absolute number of participants who had experienced each harm event for each level of recency.</figcaption>
 </figure>
 
 <figure>
   <img src="/graphs/Pilot11/scenario-recovery-duration-bar-chart.svg" alt=""/>
-  <figcaption>Recovery duration for each scenario (absolute figures).</figcaption>
+  <figcaption>Recovery duration for each harm event (absolute figures).</figcaption>
 </figure>
 
 <figure>
@@ -201,6 +160,14 @@ We asked participants who had a device compromised/stolen or locked what type of
 <summary>Scenario: Abuse</summary>
 <figure><img src="/graphs/Pilot11/abuse-how-bar-chart.svg" alt="TBD"/></figure>
 <figure><img src="/graphs/Pilot11/abuse-dur-bar-chart.svg" alt="TBD"/></figure>
+</details>
+<!-- ----------------------------------------------------- -->
+<details>
+<summary>Lost photos and emails</summary>
+<figure><img src="/graphs/Pilot11/lost-photos-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot11/lost-emails-percent.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot11/lost-photos-percent-cdf.svg" alt=""/></figure>
+<figure><img src="/graphs/Pilot11/lost-emails-percent-cdf.svg" alt=""/></figure>
 </details>
 <!-- ----------------------------------------------------- -->
 <details>

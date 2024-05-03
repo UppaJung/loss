@@ -2,7 +2,7 @@
 title: Pilot 6
 # author: <a href="https://www.stuartschechter.org">Stuart</a>
 templateEngine: [vto, md]
-date: Git Last Modified
+date: 2024-01-10
 tags:
   - background
   - methodology
