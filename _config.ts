@@ -20,7 +20,7 @@ generateBlogInputs();
 
 const markdown = {
   plugins: [
-    [anchor, { level: 3}],
+    [anchor, { level: 1}],
     footnote,
   ],
 };

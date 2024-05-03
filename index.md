@@ -5,14 +5,14 @@ templateEngine: [md, vto]
 date: Git Last Modified
 ---
 
-<!-- <div style="display: block; padding: 0.5rem; background-color: rgba(220, 240, 220, 0.5); border-bottom-right-radius: 0.5rem; border-bottom-left-radius: 0.5rem; margin-left: auto; margin-right: auto; text-align: center;">
-Your feedback can change what we ask on our next survey! Please post suggestions to our Mastodon feed or email them to <a href="mailto:team@uharm.org">team@uharm.org</a>.
-</div> -->
+<div style="display: block; padding: 0.5rem; background-color: rgba(200, 255, 200, 1);; border-bottom-right-radius: 0.75rem; border-bottom-left-radius: 0.75rem; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.5rem;">
+<b>Your feedback can change what we ask on our next survey!</b> See <a href="#we-need-your-help!">below</a>.
+</div>
 
-<div style="display: block; position: fixed; z-index: 255; bottom: 0; background-color: rgba(200, 255, 200, 1); padding: 0.75rem; border-top-right-radius: 0.75rem; border-top-left-radius: 0.75rem; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.2rem;">
+<!-- <div style="display: block; position: fixed; z-index: 255; bottom: 0; background-color: rgba(200, 255, 200, 1); padding: 0.75rem; border-top-right-radius: 0.75rem; border-top-left-radius: 0.75rem; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.2rem;">
 <b>Your feedback can change what we ask on our next survey!</b> Please post suggestions to our Mastodon feed or email them to <a href="mailto:team@uharm.org">team@uharm.org</a>.
 </div>
-<div>&nbsp;</div>
+<div>&nbsp;</div> -->
 
 ## Research Questions
 
@@ -69,20 +69,29 @@ Some of those topics, such as the one about mental health[^mental], were inspire
 
 [^mental]: The prevalence of mental-health harms reported was so high we re-checked our data. Note that following the first ten participants of this pilot, we discovered that participants were only randomly assigned two of the three harms. We fixed this for the remaining participants, and corrected the percentages of those who reported each harm remove those who weren't given the opportunity to report that harm. We had already made this adjustment when noticing just how prevalent mental-health concerns were among our (relatively small) pilot group. Of 29 participants, 26 were presented the question about mental health and 22 connected it to one of their three worst experiences with technology.
 
-One might wonder whether participants would have attributed the same significance to these technologies, events, and harms had we not prompted them with questions about them and asked them to rate them on a 7-point scale. This is why, prior to introducing these events and harms, we began our survey by asking participants simply to describe, without prompting, "the three most harmful technology-related harms or losses" they had experienced. We left it to the participant to infer the scope of what we considered technology and what harms we might want to know about. When we later asked about each of the 13 events and 3 harms specific to our survey, we asked participants if they included the event or harm as part of three worst harms they had described unprompted, or whether, in retrospect, they should have included it. See Figure 2 which reveals, for example, that every one of the pilot participants who reported mental-health harms connected this concern back to one of the their initial three experiences they described in free responses.
+One might wonder whether participants would have attributed the same significance to these technologies, events, and harms had we not prompted them with questions about them and asked them to rate them on a 7-point scale. This is why, prior to introducing these events and harms, we began our survey by asking participants simply to describe, without prompting, "the three most harmful technology-related harms or losses" they had experienced. We left it to the participant to infer the scope of what we considered technology and what harms we might want to know about. When we later asked about each of the 13 events and 3 harms specific to our survey, we asked participants if they included the event or harm as part of three worst harms they had described unprompted, or whether, in retrospect, they should have included it. 
+
+You can read the [three most-harmful events each *pilot* participant described](posts/pilot11/loss-stories) along with the topics they associated with each.
+
+You can also the fraction of events and harms that participants' connected to one of their three events they described illustrated in Figure 2. That figure reveals, for example, that every all but one of the pilot participants who reported mental-health harms connected this concern back to one of the their initial three experiences they described in free responses.
 
 <figure>
   <img src="/graphs/Pilot11/scenario-bar-chart.svg" alt="A bar chart summarizing the percent of participants who had experienced each harm scenario."/>
   <figcaption>The percent of <i>pilot</i> participants who reported experiencing events causing harms (the 13 bars on the left) or technology-related harms that they did not need to associate with specific events (the 3 bars on the right). Losses due to failures of security measures to protect participants from attack are paired (left bar) against harms due to security measures themselves harming participants (right bar). Each bar is broken down into colors based on whether the participant connected the experience/harm to one of the three worst experiences they described at the start of the study ("original"), whether they said they should have included the experience/harm as one of their three worst ("revised"), or whether it did not warrant a position in their top three ("not worst"). Those that had suffered the experience/harm are broken down into those who believe the harm could or could not happen to them.</figcaption><b>Figure 2</b>
 </figure>
 
-For more details, see our [full survey](/design) and the [full set of reports and graphs from our most-recent pilot](/posts/pilot11).
-
 ## We Need Your Help!
 
 **Help us improve our survey *before* we run our full study**. Unlike traditional peer review, provided after participants have taken the time and effort to participate and researchers have paid them, your feedback can help us revise our survey *before* we share it with participants.
 
 We believe science should be more open, transparent, and collaborative. That's why we've shared the [history](/pilots) of our pilot studies, [all of our data analysis tools and blogging tools](https://github.com/UppaJung/loss)[^qsf-code], and why we're sharing our work before submitting it for publication so that we can get community feedback.[^scooped]
+
+We have shared [the advertisement for our survey and the full contents of the survey](/design) and the [full set of reports and graphs from our most-recent pilot](/posts/pilot11).
+
+You can share your feedback however you like. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org). You can provide public feedback as part of a discussion by commenting on our Fediverse/Mastodon threads, or @ us in your own threads([Stuart](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). You can also publish your feedback anywhere else on the web and send us a link. Do try to get us feedback **by May 14th**, as we hope to start conducting our full survey on May 20th.
+
+
+
 
 [^qsf-code]: That includes the [code](https://github.com/UppaJung/loss/tree/main/src/survey-converter) that turns exported Qualtrics surveys (`.qsf` files) into the beautiful HTML you see [here](/design).
 
