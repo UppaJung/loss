@@ -88,7 +88,7 @@ We believe science should be more open, transparent, and collaborative. That's w
 
 We have shared [the advertisement for our survey and the full contents of the survey](/design) and the [full set of reports and graphs from our most-recent pilot](/posts/pilot11).
 
-You can share your feedback however you like. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org). You can provide public feedback as part of a discussion by commenting on our Fediverse/Mastodon threads, or @ us in your own threads([Stuart](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). You can also publish your feedback anywhere else on the web and send us a link. Do try to get us feedback **by May 14th**, as we hope to start conducting our full survey on May 20th.
+You can share your feedback however you like. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org). You can provide public feedback as part of a discussion by commenting on our Fediverse/Mastodon threads, or @ us in your own threads([Stuart](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). You can also publish your feedback anywhere else on the web and send us a link.
 
 
 
