@@ -39,7 +39,7 @@ site
   .ignore("/generated-by-analysis")
   .copy("img")
   .copy("graphs")
-//  .use(footnotes())
+  .copy("js")
   .use(postcss())
   .use(date())
   .use(codeHighlight())

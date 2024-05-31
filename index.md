@@ -9,11 +9,6 @@ date: Git Last Modified
 <b>Your feedback can change what we ask in this survey. Please help!</b> <a href="#we-need-your-help!">Details below</a>
 </div>
 
-<!-- <div style="display: block; position: fixed; z-index: 255; bottom: 0; background-color: rgba(200, 255, 200, 1); padding: 0.75rem; border-top-right-radius: 0.75rem; border-top-left-radius: 0.75rem; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.2rem;">
-<b>Your feedback can change what we ask on our next survey!</b> Please post suggestions to our Mastodon feed or email them to <a href="mailto:team@uharm.org">team@uharm.org</a>.
-</div>
-<div>&nbsp;</div> -->
-
 ## Research Questions
 
 ### How much harm results from the security technologies we rely on backfiring against us?
@@ -23,6 +18,7 @@ Backfires are rarely reported or measured because, unlike breaches, there is no 
 
 ### How much harm results from all the technology we rely on backfiring against us?
 As our research team set out to gauge the prevalence with which security technologies backfire, and the scale of the collective harm that results, we encountered a challenge: we lacked a baseline for the prevalence and harm we collectively suffer from the ways in which all the technology we have come to rely on can fail us. And so, we endeavored to also how often technology, loosely defined, fails us, is used against us, or otherwise causes harm.
+
 
 <!-- answer two complementary questions:
 
@@ -82,20 +78,32 @@ You can also the fraction of events and harms that participants' connected to on
 
 ## We Need Your Help!
 
-**Help us improve our survey *before* we run our full study**. Unlike traditional peer review, provided after participants have taken the time and effort to participate and researchers have paid them, your feedback can help us revise our survey *before* we share it with participants.
+**The suggestions you provide *now* can improve our survey *before* we next share it with participants.**[^traditional-peer-review]
 
-We believe science should be more open, transparent, and collaborative. That's why we've shared the [history](/pilots) of our pilot studies, [all of our data analysis tools and blogging tools](https://github.com/UppaJung/loss)[^qsf-code], and why we're sharing our work before submitting it for publication so that we can get community feedback.[^scooped]
+We believe science should be more open, transparent, and collaborative. That's why we're publicly sharing our work for community feedback without concern for whether this will make the work less attractive to traditional scientific publications.[^scooped] We've shared [the advertisement for our survey and the full contents of the survey](/design), the [full set of reports and graphs from our most-recent pilot](/posts/pilot11), past results and notes from our earlier [pilot studies](/pilots), and [all of our data analysis tools and blogging tools](https://github.com/UppaJung/loss)[^qsf-code].
 
-We have shared [the advertisement for our survey and the full contents of the survey](/design) and the [full set of reports and graphs from our most-recent pilot](/posts/pilot11).
+Please share your suggestions, and help us demonstrate the benefits of open science, using the medium of your choice. You can share publicly by commenting on our [Mastodon thread](https://mastodon.social/@MildlyAggrievedScientist/), or start your own Fediverse thread and tag us ([@eglassman@hci.social](https://hci.social/@eglassman@hci.social) [@v0max@infosec.exchange](https://infosec.exchange/@v0max@infosec.exchange) [@MildlyAggrievedScientist@mastodon.social](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). If you prefer, publish your feedback anywhere on the public web and send us a link. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org).
 
-You can share your feedback however you like. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org). You can provide public feedback as part of a discussion by commenting on our Fediverse/Mastodon threads, or @ us in your own threads([Stuart](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). You can also publish your feedback anywhere else on the web and send us a link.
+<!-- <div
+  class="fediverse-favourites-list"
+  data-favourited-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+></div>
+<div
+  class="fediverse-reblogged-list"
+  data-reblogged-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+></div>
+<div
+  class="fediverse-comments"
+  data-responses-to-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+  exclude="NetTroll42"
+  data-hide-root-comment="true"
+></div> -->
 
-
-
+[^traditional-peer-review]: Traditional peer review comes too late to improve human-subjects experiments. By the time it arrives, participants have already provided their time and effort, researchers have spent their participant budget, and key members of the team have often graduated or otherwise changed institutions/jobs. The only thing to be done with the feedback is to update the write-up to reflect what researchers wish they had done had their peers' suggestions arrived earlier.
 
 [^qsf-code]: That includes the [code](https://github.com/UppaJung/loss/tree/main/src/survey-converter) that turns exported Qualtrics surveys (`.qsf` files) into the beautiful HTML you see [here](/design).
 
-[^scooped]: Too many researchers are afraid to get feedback and seek collaboration out of fears of getting "scooped". As an alternative to secrecy, we would like to promote the approach of sharing ideas early, often, and in public view.
+[^scooped]: Researchers often are afraid to seek out feedback and collaboration out of fears of getting "scooped", opting instead to keep their work secret. Modern publishing permits us to protect the provenance of our ideas by sharing them early, often, and in public view for automatic archival.
 
 <!-- Hack to add space before footnotes -->
 <div style="height: 3rem;">&nbsp</div>
