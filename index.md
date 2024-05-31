@@ -6,7 +6,7 @@ date: Git Last Modified
 ---
 
 <div style="display: block; padding: 0.5rem; background-color: rgba(200, 255, 200, 1);; border-bottom-right-radius: 0.75rem; border-bottom-left-radius: 0.75rem; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.5rem;">
-<b>Your feedback can change what we ask in this survey. Please help!</b> <a href="#we-need-your-help!">Details below</a>
+<b>Your suggestions can change what we ask in this survey. Please help!</b> <a href="#we-need-your-help!">Details below</a>
 </div>
 
 ## Research Questions
