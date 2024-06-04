@@ -84,20 +84,20 @@ We believe science should be more open, transparent, and collaborative. That's w
 
 Please share your suggestions, and help us demonstrate the benefits of open science, using the medium of your choice. You can share publicly by commenting on our [Mastodon thread](https://mastodon.social/@MildlyAggrievedScientist/), or start your own Fediverse thread and tag us ([@fredheiding@infosec.exchange](https://infosec.exchange/@fredheiding@infosec.exchange) [@eglassman@hci.social](https://hci.social/@eglassman@hci.social) [@v0max@infosec.exchange](https://infosec.exchange/@v0max@infosec.exchange) [@MildlyAggrievedScientist@mastodon.social](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). If you prefer, publish your feedback anywhere on the public web and send us a link. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org).
 
-<!-- <div
+<div
   class="fediverse-favourites-list"
-  data-favourited-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+  data-favourited-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
 ></div>
 <div
   class="fediverse-reblogged-list"
-  data-reblogged-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+  data-reblogged-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
 ></div>
 <div
   class="fediverse-comments"
-  data-responses-to-url="https://mastodon.social/@MildlyAggrievedScientist/XXX"
+  data-responses-to-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
   exclude="NetTroll42"
   data-hide-root-comment="true"
-></div> -->
+></div>
 
 [^traditional-peer-review]: Traditional peer review comes too late to improve human-subjects experiments. By the time it arrives, participants have already provided their time and effort, researchers have spent their participant budget, and key members of the team have often graduated or otherwise changed institutions/jobs. The only thing to be done with the feedback is to update the write-up to reflect what researchers wish they had done had their peers' suggestions arrived earlier.
 
