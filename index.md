@@ -95,8 +95,6 @@ Please share your suggestions, and help us demonstrate the benefits of open scie
 <div
   class="fediverse-comments"
   data-responses-to-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
-  exclude="NetTroll42"
-  data-hide-root-comment="true"
 ></div>
 
 [^traditional-peer-review]: Traditional peer review comes too late to improve human-subjects experiments. By the time it arrives, participants have already provided their time and effort, researchers have spent their participant budget, and key members of the team have often graduated or otherwise changed institutions/jobs. The only thing to be done with the feedback is to update the write-up to reflect what researchers wish they had done had their peers' suggestions arrived earlier.
