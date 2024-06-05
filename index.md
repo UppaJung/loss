@@ -84,14 +84,14 @@ We believe science should be more open, transparent, and collaborative. That's w
 
 Please share your suggestions, and help us demonstrate the benefits of open science, using the medium of your choice. You can share publicly by commenting on our [Mastodon thread](https://mastodon.social/@MildlyAggrievedScientist/112560494273989305), or start your own Fediverse thread and tag us ([@fredheiding@infosec.exchange](https://infosec.exchange/@fredheiding@infosec.exchange) [@eglassman@hci.social](https://hci.social/@eglassman@hci.social) [@v0max@infosec.exchange](https://infosec.exchange/@v0max@infosec.exchange) [@MildlyAggrievedScientist@mastodon.social](https://mastodon.social/@MildlyAggrievedScientist@mastodon.social)). If you prefer, publish your feedback anywhere on the public web and send us a link. If you want to send us private feedback, you can email us at [team@uharm.org](mailto:team@uharm.org).
 
-<div
+<!-- <div
   class="fediverse-favourites-list"
   data-favourited-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
 ></div>
 <div
   class="fediverse-reblogged-list"
   data-reblogged-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
-></div>
+></div> -->
 <div
   class="fediverse-comments"
   data-responses-to-url="https://mastodon.social/@MildlyAggrievedScientist/112560494273989305"
